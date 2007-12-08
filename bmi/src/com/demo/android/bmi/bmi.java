@@ -34,13 +34,14 @@ public class bmi extends Activity {
 
     		TextView result = (TextView)findViewById(R.id.result);
     		result.setText("Your BMI is "+nf.format(BMI));
+    		
     		//Give health advice
     		if(BMI>25){
     			showAlert("Warning", "You need go diet", "ok", false);
     		}else if(BMI<20){
     			showAlert("Warning", "You need eat more", "ok", false);
     		}else{
-    			showAlert("Congrat", "You are in good shape", "ok", false);
+    			showAlert("Congratulation", "You are in good shape", "ok", false);
     		}
     		
     		//Add error checking
