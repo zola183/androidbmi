@@ -1,6 +1,7 @@
 package com.demo.android.bmi;
 
 import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class bmi extends Activity {
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
@@ -33,18 +35,18 @@ public class bmi extends Activity {
     		double BMI = weight / (height * height);
 
     		TextView result = (TextView)findViewById(R.id.result);
-    		result.setText("Your BMI is "+nf.format(BMI));
-    		
+    		result.setText(getString(R.string.bmi_result) +nf.format(BMI));
     		//Give health advice
     		if(BMI>25){
-    			showAlert("Warning", "You need go diet", "ok", false);
+    			showAlert("Warning", getString(R.string.advice_heavy), "ok", false);
     		}else if(BMI<20){
-    			showAlert("Warning", "You need eat more", "ok", false);
+    			showAlert("Warning", getString(R.string.advice_light), "ok", false);
     		}else{
-    			showAlert("Congratulation", "You are in good shape", "ok", false);
+    			showAlert("Congratulation", getString(R.string.advice_average), "ok", false);
     		}
     		
     		//Add error checking
     	}
     };
+    
 }
