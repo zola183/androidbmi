@@ -29,7 +29,7 @@ Google 的創辦人之一 Sergey Brin 也在在 Android 軟體開發工具(SDK)�
 在可見的將來，基於 Android 平台的手機程式設計將像今日的 PC 程式設計一樣普及。
 }}}
 
-'Android' 是一個基於 Linux 核心(kernel) 的開放手機平台作業系統，與 Windows Mobile、Symbian 作業系統在同一級別。
+'Android' 是一個基於 Linux 核心(kernel) 的開放手機平台作業系統，與 [http://www.microsoft.com/taiwan/windowsmobile/default.mspx Windows Mobile]、[http://www.symbian.com/ Symbian] 作業系統在同一級別。
 Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個完整的應用程式框架，採用較符合商用限制的 Apache 版權，
 其上提供 Google 自製的 Java 運行環境 (稱作 Dalvik，與 Sun 的 J2ME 不同)，並提供免費的開發工具(SDK)，便於應用程式開發者學習、使用。
 
