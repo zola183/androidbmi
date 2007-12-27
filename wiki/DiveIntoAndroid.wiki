@@ -28,7 +28,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
   # [IntroAndroid 初探 Android]
   # [InstallAndroid 簡單安裝 Android]
-  # 開始閱讀程式
+  # [ReadSource 開始閱讀程式]
   # 程式介面
   # 程式邏輯
   # 完成 BMI 程式
