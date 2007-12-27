@@ -1,6 +1,7 @@
 #summary 簡單安裝 Android
 
-Android 提供免費而且跨平台的整合開發環境，只要電腦能連接上網路，我們隨時都能下載相關工具下來並開始開發 Android 應用程式。有了輕鬆易用的開發工具，我們可以馬上將心力專注於創造應用程式上。= 系統需求 =撰寫 Android 的應用程式，需要一套個人電腦系統。至於作業系統的部份，幾個主流作業系統都有支援。支援的作業系統如下：    * Windows XP 或 Vista    * Mac OS X 10.4.8 或之後版本 (適用 x86 架構的 Intel Mac)    * Linux (官方於 Ubuntu 6.10 Dapper Drake 上測試) 另外、還需要安裝這些 Android 開發環境所需程式，這些工具都是可以免費上網取得的：    * Eclipse IDE，一個多用途的開發工具平台。      你可以下載安裝 Eclipse 3.2 或 3.3 (代號 Europa) 版。      請注意你選擇的版本需包含 Eclipse Java 開發工具插件(Java Development Tool Plugin, JDT)。      大多數 Eclipse IDE 包中都已含有 JDT 插件，不過建議您直接選擇 Europa Java 版本下載。    * ADT，基於 Eclipse 的 Android 開發工具插件 (Android Development Tools plugin)。    * 其他開發環境工具          o JDK 5 或 JDK 6
+Android 提供免費而且跨平台的整合開發環境，只要電腦能連接上網路，我們隨時都能下載相關工具下來並開始開發 Android 應用程式。有了輕鬆易用的開發工具，我們可以馬上將心力專注於創造應用程式上。= 系統需求 =撰寫 Android 的應用程式，需要一套個人電腦系統。至於作業系統的部份，幾個主流作業系統都有支援。支援的作業系統如下：    * Windows XP 或 Vista    * Mac OS X 10.4.8 或之後版本 (適用 x86 架構的 Intel Mac)    * Linux (官方於 Ubuntu 6.10 Dapper Drake 上測試) 我們需要安裝一些 Android 開發環境所需的程式工具，這些工具都是可以免費上網取得的：    * Eclipse IDE，一個多用途的開發工具平台。      你可以下載安裝 Eclipse 3.2 或 3.3 (代號 Europa) 版。      請注意你選擇的版本需包含 Eclipse Java 開發工具插件(Java Development Tool Plugin, JDT)。      大多數 Eclipse IDE 包中都已含有 JDT 插件，不過建議您直接選擇 Europa Java 版本下載。    * ADT，基於 Eclipse 的 Android 開發工具插件 (Android Development Tools plugin)。
+    * Android SDK，Android 程式開發套件，包含 Android 手機模擬器(Emulator)。    * 其他開發環境工具          o JDK 5 或 JDK 6
             你需要安裝 Java 開發工具 JDK 5 或 JDK 6。            只安裝 Java 運行環境 JRE 是不夠的，你需要安裝 Java 開發環境 JDK)。            要注意的是 Android 與 Java Gnu 編譯器 (gcj) 還不相容。          o 非必要安裝：Linux 和 Mac 環境上需要自動編譯的話可以自行安裝 Apache Ant 1.6.5 或之後版本，Windows 環境上則需要 Apache Ant 1.7 或之後版本。 = 安裝流程 =
 
 Android 的安裝流程可以分為五個步驟
@@ -38,5 +39,5 @@ Eclipse 不需要安裝，直接開啟 Eclipse 資料夾，點擊 Eclipse 即可
 == 5. 設定 Android SDK ==
 
 打開偏好設定頁面(Preference)，選擇 Android 標籤，在 SDK Location 欄位按下 " Browse..."鍵，選擇剛剛解壓縮完的 android_sdk 檔案夾所在地，然後按下視窗右下角的套用(Apply) 按鈕。這樣一來，Android SDK 就算是設定好啦。
-    
+
 [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案]
