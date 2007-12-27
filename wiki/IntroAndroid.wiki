@@ -25,6 +25,10 @@ Google 的創辦人之一 Sergey Brin 也在在 Android 軟體開發工具(SDK)�
 
 = Android 是什麼 =
 
+{{{
+在可見的將來，基於 Android 平台的手機程式設計將像今日的 PC 程式設計一樣普及。
+}}}
+
 'Android' 是一個基於 Linux 核心(kernel) 的開放手機平台作業系統，與 Windows Mobile、Symbian 作業系統在同一級別。
 Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個完整的應用程式框架，採用較符合商用限制的 Apache 版權，
 其上提供 Google 自製的 Java 運行環境 (稱作 Dalvik，與 Sun 的 J2ME 不同)，並提供免費的開發工具(SDK)，便於應用程式開發者學習、使用。
@@ -42,9 +46,9 @@ Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個�
 
 == 參考連結 ==
 
-開放手持裝置聯盟(Open Handset Alliance) http://www.openhandsetalliance.com/
-Google Android 開發者部落格 http://android-developers.blogspot.com/
-Android 開發者大賽網站 http://code.google.com/android/adc.html
-Android 文件 http://code.google.com/android/documentation.html
-http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html
-CNet專訪：Google手機平台背後的原創者 http://www.zdnet.com.tw/news/comm/0,2000085675,20125898,00.htm
+ * 開放手持裝置聯盟(Open Handset Alliance) http://www.openhandsetalliance.com/
+ * Google Android 開發者部落格 http://android-developers.blogspot.com/
+ * Android 開發者大賽網站 http://code.google.com/android/adc.html
+ * Android 文件 http://code.google.com/android/documentation.html
+ * http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html
+ * CNet專訪：Google手機平台背後的原創者 http://www.zdnet.com.tw/news/comm/0,2000085675,20125898,00.htm
