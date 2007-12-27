@@ -7,4 +7,6 @@
 
 = 目錄 =
 
-  # [初探 Android IntroAndroid]
+  # [IntroAndroid 初探 Android]
+  # 開始閱讀程式
+  # 程式邏輯
