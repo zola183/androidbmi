@@ -3,40 +3,27 @@
 
 = 使用 Android 模擬器 =
 
-試運行 NotePad 程式
+我們已經開啟了 NotePad 專案。現在先不急著寫程式，我們花點時間來看看怎麼執行 Android 程式吧。
 
-我們已經開啟了 NotePad 專案。現在先不急著寫程式，我們花點時間來看看怎麼運行 Android 程式吧。
+要執行 NotePad 程式前，我們得設定一些用來執行 NotePad 程式的參數。以後使用其他程式專案時，我們也能用同樣的方式，讓這些程式在我們的開發環境中運行。
 
-要運行 NotePad 程式前，我們得設定一些用來運行 NotePad 程式的參數，以後遇上其他程式你也能用同樣的方式讓這些程式在你的開發環境中運行。
-首先，我們透過選單 Run-> Open Run->Dialog 進入運行環境參數設定畫面。
+首先，我們透過「執行」選單，選擇「開啟執行參數設定」(Run-> Open Run Dialog...) 進入運行環境參數設定畫面。
 
 進入設定畫面後，在視窗左側會有一整排 Eclipse 支援的運行設定，我們從中找到 "Android Application"(Android 應用程式)項目，按下滑鼠右鍵，點選 "New"(新增)選項。
 
+選擇 「New」 選項後，在「Android Application」項目下方會多出一筆執行項目。
 
-選擇 New 選項後在 "Android Application" 項目下方會新增一筆
+點選「Browse...」按鈕，開啟「專案選擇」（Project Selection）視窗，選擇「NotesList」專案並點選「OK」按鈕，以選擇要執行的專案。
 
-- 點選 Browse...
+在 Activity 選單中，點選「com.google.android.notepad.NotesList」
 
-- 雙擊 NotesList
+至此我們就完成了執行參數的設定。 點選「Run」按鈕，Eclipse 就會啟動 Android 模擬器。
 
-- 在 Activity 選單中，點選 com.google.android.notepad.NotesList
+== 閱讀參考 == * 如何開啟 Hello World 程式 http://code.google.com/android/intro/hello-android.html 
+    
+= 操作 Android 模擬器 =
 
-- 點選 Run
-
-  - 模擬器就被啟動了
-
-= 操作模擬器 =
-
- 模擬器的映像檔會保存住你之前安裝的程式與操作。所以當你想要回覆一個乾淨的模擬環境時，你得移除模擬器的映像檔。
-模擬器的映像檔在 Windows 上映像檔會保存在 C:\Documents and Settings\\Application Data\\Local Settings\Android\userdata.img 。
-在 Mac 或 Linux 上則會保存在 ~/.android/userdata.img ，可以在模擬器關閉的狀況下，以指令 rm  /.android/userdata.img 刪除。
-
-線上閱讀參考
-
-    * 模擬器操作細節 http://code.google.com/android/reference/emulator.html
-
-
-我們已經，那麼，怎麼移除安裝到模擬器上的程式哩?
+我們已經順利地啟動了模擬器，那麼，該怎麼移除安裝到模擬器上的程式哩?
 
 Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-sdk/tools 中)，我們可以用裡面的 shell 工具連上模擬器來移除應用程式。
 
@@ -61,5 +48,13 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
     # ls
     -rw-r--r-- system   system    1325833 2007-11-11 20:59 ApiDemos.apk
 }}}
+
+ 模擬器的映像檔會保存住你之前安裝的程式與操作。所以當你想要回覆一個乾淨的模擬環境時，你得移除模擬器的映像檔。
+模擬器的映像檔在 Windows 上映像檔會保存在 C:\Documents and Settings\\Application Data\\Local Settings\Android\userdata.img 。
+在 Mac 或 Linux 上則會保存在 ~/.android/userdata.img ，可以在模擬器關閉的狀況下，以指令 rm  /.android/userdata.img 刪除。
+
+線上閱讀參考
+
+    * 模擬器操作細節 http://code.google.com/android/reference/emulator.html
 
 [DiveIntoAndroid 回目錄] | [ReadSource 開始閱讀程式]
