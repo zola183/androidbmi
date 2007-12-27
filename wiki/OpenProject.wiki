@@ -1,0 +1,17 @@
+#summary 開啟現有專案
+#labels tw
+
+1. 開啟(匯入)專案
+
+- 選「開啟已經存在的專案」(Create project from existing source)
+
+   - 開啟已存在 Android 專案 (android_sdk/sample/NotePad)
+
+- [Act 說明專案頁面的幾個欄位]
+
+如果開啟後目錄圖示上有問題，可以試著修復專案屬性。
+在 Package Explorer "NotePad" 專案的檔案圖示上點選右鍵->Android Tools->Fix Project Properties。
+
+專案圖示上點右鍵後可於 Android Tools 選單中選擇修復專案屬性。
+
+[DiveIntoAndroid 回目錄] | [PlayEmulator 操作模擬器]
