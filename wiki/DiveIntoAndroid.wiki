@@ -20,18 +20,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
   * gasolin，項目發起人，也是本書的主筆。你可以寫信至 gasolin+android(at)gmail(dot)com 聯絡作者。
   * Crota，在項目初期提供建議等許多協助。你可以寫信至 kcee.tw+android(at)gmail(dot)com 聯絡作者。
 
-= 目標讀者 =
-
-本書的目標讀者是這些人，你是否也是其中之一呢？
-
- * Windows/Mac/Linux 各平台使用者
- * 想學寫 Android 手機應用程式的人
- * 想知道如何取得 Android 免費開發工具與資源的人
- * 懂英文能上網的人
- * 想知道怎麼查 Android 線上文件的人
- * 有點物件導向(OO) 程式經驗的人
- * J2ME/Java 學習者/開發者
-
 = 簡介 =
 
 「深入淺出 Android 手機應用程式設計」將以開發實例講解 Android 程式開發，協助台灣人參與 Android 大獎賽。
@@ -43,7 +31,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [OpenProject 開啟現有專案]
   # [PlayEmulator 操作模擬器]
   # [ReadSource 開始閱讀程式]
-  # 程式介面
+  # [AndroidUI 程式介面]
   # 程式邏輯
   # 完成 BMI 程式
   # 使用 google code 分享程式

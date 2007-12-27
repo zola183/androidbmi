@@ -1,8 +1,20 @@
-#summary One-sentence summary of this page.
+#summary 開始閱讀程式
 
-= Introduction =
+= 建立新程式專案 =
 
 Add your content here.
+
+= 程式專案架構 =
+
+==  src/ 原始碼(source)目錄 ==
+
+== res/ 資源(Resource)目錄 ==
+
+==  Android 清單 ==
+
+== Referenced Libraries / 參考函式庫目錄 ==
+
+== 表達使用者介面 ==
 
 
 = Details =
