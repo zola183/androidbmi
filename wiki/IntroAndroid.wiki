@@ -1,5 +1,5 @@
+#summary 初探 Android
 #labels tw
-#初探 Android
 
 = 2007年末最大的衝擊 =
 
