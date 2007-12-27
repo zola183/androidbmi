@@ -1,12 +1,21 @@
+#summary 深入淺出 Android 手機應用程式設計
 #labels tw
-#深入淺出 Android 手機應用程式設計
+
+= 授權 =
+
+歡迎到 http://code.google.com/p/androidbmi/wiki/IntroAndroid 閱讀本書。
+也歡迎使用留言功能提供建議。
+本書的文字、圖片、程式碼皆不歡迎轉載，也不可使用於商業用途。
+
 
 = 簡介 =
 
-以開發實例講解 Android 程式開發
+「深入淺出 Android 手機應用程式設計」將以開發實例講解 Android 程式開發，協助台灣人參與 Android 大獎賽。
 
 = 目錄 =
 
   # [IntroAndroid 初探 Android]
+  # 從創意開始
+  # 安裝
   # 開始閱讀程式
   # 程式邏輯
