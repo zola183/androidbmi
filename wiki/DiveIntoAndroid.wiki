@@ -3,7 +3,9 @@
 
 = 授權 =
 
+http://creativecommons.org.tw/files/icon_by.gif
 http://creativecommons.org.tw/files/icon_nc.gif
+http://creativecommons.org.tw/files/icon_nd.gif
 
 歡迎到 http://code.google.com/p/androidbmi/wiki/IntroAndroid 閱讀本書。
 也歡迎使用留言功能提供建議。
