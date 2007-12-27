@@ -7,6 +7,9 @@
 也歡迎使用留言功能提供建議。
 本書的文字、圖片、程式碼皆不歡迎轉載，也不可使用於商業用途。
 
+= 作者 =
+
+gasolin，你可以寫信至 gasolin+android[at]gmail[dot]com 聯絡作者。
 
 = 簡介 =
 
@@ -15,7 +18,8 @@
 = 目錄 =
 
   # [IntroAndroid 初探 Android]
-  # 從創意開始
-  # 安裝
+  # [InstallAndroid 簡單安裝 Android]
   # 開始閱讀程式
+  # 程式介面
   # 程式邏輯
+  # 完成 BMI 程式
