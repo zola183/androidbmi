@@ -17,8 +17,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 作者 =
 
-gasolin，項目發起人。你可以寫信至 gasolin+android(at)gmail(dot)com 聯絡作者。
-Crota，在項目初期提供建議等許多協助。你可以寫信至 kcee.tw+android(at)gmail(dot)com 聯絡作者。
+  * gasolin，項目發起人，也是本書的主筆。你可以寫信至 gasolin+android(at)gmail(dot)com 聯絡作者。
+  * Crota，在項目初期提供建議等許多協助。你可以寫信至 kcee.tw+android(at)gmail(dot)com 聯絡作者。
 
 = 簡介 =
 
