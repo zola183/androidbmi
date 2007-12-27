@@ -60,7 +60,7 @@ Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個�
 }}}
 
 試想看看，當我們擁有了一台能夠上網，能夠依照自己的期望自由修改、調配功能的手機，我們會用它來施展什麼創意?
-Android 大獎賽提供了一些方向：
+[http://code.google.com/android/adc.html Android 大獎賽首頁]上提供了一些方向：
 
 
 你的心裡可能已經有了關於手機程式的絕好創意，
@@ -72,4 +72,4 @@ Android 大獎賽提供了一些方向：
 提供你初次開發手機程式介面的注意事項、Android 資料應用程式的運作過程，
 與詳細的 Android 資料應用程式碼解說。
 
-[DiveIntoAndroid 回目錄] | [IntroAndroid 簡單安裝 Android]
+[DiveIntoAndroid 回目錄] | [InstallAndroid 簡單安裝 Android]
