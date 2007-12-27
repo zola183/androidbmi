@@ -71,3 +71,5 @@ Android 大獎賽提供了一些方向：
 本書的內容可以協助你快速地理解 Android 平台的概念，
 提供你初次開發手機程式介面的注意事項、Android 資料應用程式的運作過程，
 與詳細的 Android 資料應用程式碼解說。
+
+[DiveIntoAndroid 回目錄] | [IntroAndroid 簡單安裝 Android]
