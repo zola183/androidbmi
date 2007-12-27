@@ -3,8 +3,12 @@
 
 = 授權 =
 
+http://creativecommons.org.tw/files/icon_nc.gif
+
 歡迎到 http://code.google.com/p/androidbmi/wiki/IntroAndroid 閱讀本書。
 也歡迎使用留言功能提供建議。
+
+本書採用創用CC：「姓名標示─非商業性─禁止改作」[http://creativecommons.org/licenses/by-nc-nd/2.5/tw/legalcode 授權條款]
 本書的文字、圖片、程式碼皆不歡迎轉載，也不可使用於商業用途。
 
 = 作者 =
