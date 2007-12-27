@@ -4,7 +4,8 @@
 = 2007年末最大的衝擊 =
 
 {{{
-目前有 15 億使用者可以透過電腦在網路上看到 Google 廣告。若手機使用者也能上網，其潛在使用者則可以達到 30 億。
+目前有 15 億使用者可以透過電腦在網路上看到 Google 廣告。
+若手機使用者也能上網，其潛在使用者則可以達到 30 億。
 }}}
 
 2007年11月5日，Google 與其他33家手機製造商(包含摩托羅拉、宏達電、三星、LG)、手機晶片供應商、軟硬體供應商、電信業者所聯合組成的開放手持裝置聯盟(Open Handset Alliance)
@@ -21,3 +22,29 @@ Google 的創辦人之一 Sergey Brin 也在在 Android 軟體開發工具(SDK)�
 並宣佈了將舉辦送出總獎金達到 1000 萬美元(3 億多台幣)的開發者大獎賽，
 鼓勵程式開發者去深入探究 Android 平台的能力，寫出具創意、實用性十足、
 能提供使用者更好的手機使用經驗的應用程式。
+
+= Android 是什麼 =
+
+'Android' 是一個基於 Linux 核心(kernel) 的開放手機平台作業系統，與 Windows Mobile、Symbian 作業系統在同一級別。
+Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個完整的應用程式框架，採用較符合商用限制的 Apache 版權，
+其上提供 Google 自製的 Java 運行環境 (稱作 Dalvik，與 Sun 的 J2ME 不同)，並提供免費的開發工具(SDK)，便於應用程式開發者學習、使用。
+
+而免費的跨平台開發工具，更鼓勵了有一些物件導向或視窗程式開發經驗的開發者能在短時間裡上手，保證有能力開發 Android 程式的軟體人才不虞缺乏；
+1000 萬美元的大獎賽則提供了足夠的誘因，讓第一支 Android 手機正式面市前就有各式各樣的應用程式可使用。
+
+從不同角度來說，Android代表著
+{{{
+一個嶄新的開放原始碼作業系統平台、
+一個友善的免費應用程式開發環境、
+一個與世界各地的程式開發者站在相同起跑點的公平競爭機會、
+一份豐厚的獎金。
+}}}
+
+== 參考連結 ==
+
+開放手持裝置聯盟(Open Handset Alliance) http://www.openhandsetalliance.com/
+Google Android 開發者部落格 http://android-developers.blogspot.com/
+Android 開發者大賽網站 http://code.google.com/android/adc.html
+Android 文件 http://code.google.com/android/documentation.html
+http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html
+CNet專訪：Google手機平台背後的原創者 http://www.zdnet.com.tw/news/comm/0,2000085675,20125898,00.htm
