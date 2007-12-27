@@ -28,6 +28,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
   # [IntroAndroid 初探 Android]
   # [InstallAndroid 簡單安裝 Android]
+  # [OpenProject 開啟現有專案]
+  # [PlayEmulator 操作模擬器]
   # [ReadSource 開始閱讀程式]
   # 程式介面
   # 程式邏輯

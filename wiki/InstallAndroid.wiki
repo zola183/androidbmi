@@ -1,15 +1,23 @@
 #summary 簡單安裝 Android
 
-= Introduction =
+Android 提供免費而且跨平台的整合開發環境，只要電腦能連接上網路，我們隨時都能下載相關工具下來並開始開發 Android 應用程式。有了輕鬆易用的開發工具，我們可以馬上將心力專注於創造應用程式上。= 系統需求 =撰寫 Android 的應用程式，需要一套個人電腦系統。至於作業系統的部份，幾個主流作業系統都有支援。支援的作業系統如下：    * Windows XP 或 Vista    * Mac OS X 10.4.8 或之後版本 (適用 x86 架構的 Intel Mac)    * Linux (官方於 Ubuntu 6.10 Dapper Drake 上測試) 另外、還需要安裝這些 Android 開發環境所需程式，這些工具都是可以免費上網取得的：    * Eclipse IDE      你可以下載安裝 Eclipse 3.2 或 3.3 (代號 Europa) 版。      請注意你選擇的版本需包含 Eclipse Java 開發工具插件(Java Development Tool Plugin, JDT)。      大多數 Eclipse IDE 包中都已含有 JDT 插件，不過建議您直接選擇 Europa Java 版本下載。    * Android 開發工具插件(Android Development Tools plugin)。    * 其他開發環境工具          o 你需要安裝 Java 開發工具 JDK 5 或 JDK 6。            只安裝 Java 運行環境 JRE 是不夠的，你需要安裝 Java 開發環境 JDK)。            要注意的是 Android 與 Java Gnu 編譯器 (gcj) 還不相容。          o Linux 和 Mac 環境上需要自動編譯的話可以自行安裝 Apache Ant 1.6.5 或之後版本，Windows 環境上則需要 Apache Ant 1.7 或之後版本 (非必要安裝)。 = 安裝流程 =
+詳細的安裝流程如下： 
 
-Add your content here.
+1. 首先從 [http://code.google.com/android/download.html Android 官方網站]下載 Android 軟體開發套件 (Software Development Kit, SDK)
+    下載下來的 SDK 檔案需要先解壓縮。Windows 平台需要先另行安裝解壓縮程式，如免費的 [http://www.7-zip.org/zh-tw/ 7-zip]。    解壓縮後會出現一個資料夾。為了之後描述方便，我們將解壓縮後的 Android SDK 檔案夾命名為「android_sdk」。2. 接著我們需要下載 Android 的整合開發環境。    目前 Android 應用程式只支援使用「Java」程式語言來編寫 Android 應用程式。所以開發前必須先安裝 Java 開發套件(Java Development Kit, JDK)。    各平台的 JDK 可至 http://java.sun.com 下載。 Mac OS X 作業系統則已內建 JDK。    安裝好 JDK 後，我們可以前往 [http://www.eclipse.org/downloads/ Eclipse] 網站下載 Eclipse 這個方便的整合開發環境。    下載 Eclipse 時請選「Eclipse IDE for Java Developers」或「Eclipse IDE for Java EE Developers」這兩種版本，只有這兩種版本才會預裝 Eclipse JDT 插件，    範例中所選擇的是「Eclipse IDE for Java Developers」版本。
+下載完同樣先解壓縮到適當目錄下。Eclipse 不需要安裝，直接開啟 Eclipse 資料夾，點擊 Eclipse 即可開始執行 Eclipse 整合開發環境。    第一次啟動時會彈出視窗讓你決定預設的工作目錄。一般使用 Eclipse 預設的工作目錄即可。    進入到 Eclipse IDE 後，不必急著四處觀望。我們先來安裝 Android 開發工具插件。    找到螢幕上方的選單列， 選擇 "Help->Software Updates->Find and Install" 選項，這選項會帶出一個新視窗。
+    
+    選擇 "Search for new features to install" (搜尋新功能供安裝)選項，按下 "Next" (下一步)鍵。出現設定畫面。
 
+選擇右上角的 "New Remote Site" (新增遠端網站)選項，會彈出一個 "New Update Site" (新增更新網站)輸入框。
 
-= Details =
+在輸入框中輸入插件的名稱(Name) "ADT" 跟網址(URL) "https://dl-ssl.google.com/android/eclipse/"，按下 "OK" 按鈕離開。
+按下 "Finish" 按紐繼續下一步。Eclipse 會花一點時間尋找合適的版本。選取版本安裝完會提示需重新啟動 Eclipse，按下 "OK" 重新啟動。
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+參考資料 http://code.google.com/android/intro/installing.html#installingplugin
 
-[DiveIntoAndroid 回目錄] | [ReadSource 開始閱讀程式]
+3. 設定 SDK
+
+打開偏好設定頁面(Preference)，選擇 Android 標籤，在 SDK Location 欄位按下 " Browse..."鍵，選擇剛剛解壓縮完的 android_sdk 檔案夾所在地，然後按下視窗右下角的套用(Apply) 按鈕。這樣一來，Android SDK 就算是設定好啦。
+    
+[DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案]
