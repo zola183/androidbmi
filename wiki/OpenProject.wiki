@@ -1,7 +1,7 @@
 #summary 開啟現有專案
 #labels tw
 
-1. 開啟(匯入)專案
+= 開啟(匯入)專案 =
 
 - 選「開啟已經存在的專案」(Create project from existing source)
 
