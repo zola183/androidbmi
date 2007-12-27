@@ -9,7 +9,7 @@
 
 = 作者 =
 
-gasolin，你可以寫信至 gasolin+android[at]gmail[dot]com 聯絡作者。
+gasolin，你可以寫信至 gasolin+android(at)gmail(dot)com 聯絡作者。
 
 = 簡介 =
 
