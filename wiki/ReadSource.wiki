@@ -36,13 +36,18 @@
 
 ==  src/ 原始碼(source)資料夾 ==
 
+src 目錄中包含了一個 Android 應用程式中所需的各個程式碼檔案。這些檔案被包在對應 package 的子目錄下。(如本章的 BMI 例子中，子目錄指的就是 /src/com/demo/android/bmi/)src 目錄中比較關鍵的程式有:1. bmi.java這個檔案的檔名會隨著你在建立一個新的程式專案畫面中所填入的「Activity Name」的不同而改變。這是新程式專案中的主要程式區塊。我們開發 Android 程式的多數時間都是在此和 Android 打交道。2. R.javaR.java 檔是自動產生的。會由 ADT 插件自動根據你放入 res 目錄的 XML 描述文件、圖像等資源，同步修改更新 R.java 這個中介檔案。所有的 Android 程式中都會有以 R.java 為名的這個檔案，你完全不需要，也應避免手工修改 R.java 這個檔案。R.java 中自動產生的 「R」 類別就像是個字典一樣，包含了使用者介面、圖像、字串等各式的資源與相應的編號(id)。Android 應用程式中很多時候會需要透過 R 類別調用資源。
+
 == res/ 資源(Resource)資料夾 ==
+
+「res」 目錄中存放所有程式中用到的資源檔案。"資源檔案"指的是資料檔案，或編譯時會被轉換成程式一部分的 XML 描述檔。Android 針對放在 「res」 目錄下的不同子目錄的資源，會有各自不同處理方式。因此我們寫程式時，最好能搞清楚各目錄下分別可放置的內容。res/ 中的程式:3. layout/ 版面配置(layout)目錄「layout」目錄包含所有使用 XML 格式的介面描述檔。「layout」 中的 XML 介面描述檔就像寫網頁時用到的 HTML 檔案一樣，用來描述螢幕上的版面編排與使用的介面元件。XML 介面描述檔描述的內容可以是整張螢幕，也可以只描述一部分的介面。雖然你也能直接通過 Java 來建立使用者介面，不過透過 XML 描述檔來建立使用者介面相對更簡單，架構也更清晰，以後維護時更容易釐清問題。使用時會透過 「R.java」 檔中自動產生的 「R」 類別來調用。4. values/ 參數值(value)目錄「values」 目錄包含所有使用 XML 格式的參數值描述檔，在此可以描述一些額外的資源如字串、顏色、風格等。使用時也是透過 「R」 類別來調用。
 
 ==  Android 清單 ==
 
+5. AndroidManifest.xml「AndroidManifest.xml」 是 Android 程式的功能清單，應用程式在這裡列出該程式所提供的功能。當應用程式開啟時，會提供諸如內容提供者(ContentProvider)、處理的資料類型、實際運行的類別、跨應用程式的資訊等等訊息。    查看 Android 應用程式的檔案組織方式與用途    http://code.google.com/android/kb/commontasks.html#filelist
+    
 == Referenced Libraries / 參考函式庫資料夾 ==
 
-== 表達使用者介面 ==
+6. Referenced Libraries「Referenced Libraries」 的作用是將 Android 平台裡所有可呼叫的類別、方法函式，分門別類地列出，好方便開發者來參考與調用。
 
-
-[DiveIntoAndroid 回目錄] | [AndroidUI 程式介面]
+[DiveIntoAndroid 回目錄] | [AndroidUI 使用者介面]
