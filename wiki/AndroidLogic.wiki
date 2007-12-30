@@ -1,0 +1,25 @@
+#summary 程式流程
+#labels tw
+
+接著要進入主要程式邏輯的內容囉。打開 「src/com.demo.android.bmi」 目錄下的 「bmi.java」檔案，Eclipse+Android 開發工具已經幫我們預先建立好了基本的程式邏輯。
+其預設的內容如下
+
+    1  package com.demo.android.bmi;
+    2
+    3  import android.app.Activity;
+    4  import android.os.Bundle;
+    5
+    6  public class bmi extends Activity {
+    7      /** Called when the activity is first created. */
+    8      @Override
+    9      public void onCreate(Bundle icicle) {
+    10         super.onCreate(icicle);
+    11         setContentView(R.layout.main);
+    12     }
+    13 }
+
+比起什麼都對稱的 XML 介面描述檔來說，這個以 Java 程式語言寫成的檔案要難讀得多。
+我們將程式直接拆開，分成幾個部份來講解這個「bmi.java」 檔案的內容：
+
+
+< [BmiUI 設計使用者介面] | [DiveIntoAndroid 回目錄] | 完成 BMI 程式 >
