@@ -1,27 +1,48 @@
 #summary 開始閱讀程式
 
+在前幾章我們已經學到怎麼開啟現有的專案，也導覽過了整個 NotePad 應用程式的流程。現在我們從設計一個簡單實用的身高體重指數計算(BMI)應用程式開始，學習用來理解 NotePad 應用程式所需的基礎。
+
+維基百科上這麼介紹 BMI 身高體重指數：
+{{{身高體重指數（又稱身體質量指數，英文為Body Mass Index，簡稱BMI）是一個計算值。...當我們需要比較及分析一個人的體重對於不同高度的人所帶來的健康影響時，BMI值是一個中立而可靠的指標。 }}}
+簡而言之，我們要設計的程式就是允許輸入身高體重，按下「計算 BMI」鍵後就在螢幕上顯示 BMI 值，並彈出「你應該節食囉」、或「你應該多吃點」...等健康建議。健康建議的判斷寫得很簡單。只要 BMI 值超過 「25」 時就算偏胖、BMI 值低於 「20」 就算偏瘦。畢竟我們想學的關鍵不在 BMI 跟健康建議本身，而是 Android 程式的運作方式。    參考資源 http://zh.wikipedia.org/wiki/身高體重指數我們這就先從建立一個新的程式專案開始吧。
+
 = 建立新程式專案 =
 
-Add your content here.
+首先，我們照前面章節的教學，建立一個新的程式專案。並將新專案名稱命名為 BMI。
+在「內容」欄裡，我們選擇「在工作區域中建立新專案」(Create new project in workspace)。這時，如果在"選擇欄"取消掉勾選「使用預設目錄」(Use default location) 選項，我們就可以切換儲存專案的資料夾。大部分的時候我們並不需去改動這個選項，而是直接使用預設的資料夾。
+
+前面章節中都是開啟現有的專案，因此那些專案屬性 (Properties) 等內容都被自動填寫好了。這章中我們新建了專案，必須自行填寫專案相關的屬性。
+
+我們在此對"New Android Project" 對話框中出現的這些欄位作些簡單的說明：
+
+|| 名稱  || 描述 ||
+|| Project Name || 包含這個項目的資料夾的名稱 ||
+|| Package Name || 套件(Package)名稱，JAVA 的習慣是用套件名稱來區分不同的類別(class)。依照專案的不同，我們會起不同的路徑名稱 ||
+|| Activity Name || 這是項目的主要類別的名稱，這個類別是一個 Android 的 Activity 類別的子類別。一個 Activity 類別是一個簡單的啟動程式和控制程式的類別。它可以根據需要建立界面 |||| Application Name || 顯示在應用程式上的標題 ||
+
+我們在欄位中分別填入以下的值：
+
+|| 名稱  || 值 ||
+|| Project Name || BMI ||
+|| Package Name || com.demo.android.bmi ||
+|| Activity Name || bmi |||| Application Name || BMI ||
+
+填好值後按下「Finish」 按鈕，就建立好新專案了。回到 Eclipse 主畫面，我們注意到在 Package Explorer 視窗中已順利新增加了一個 bmi 目錄。
 
 = 程式專案架構 =
 
-==  src/ 原始碼(source)目錄 ==
+乍看之下 Android 插件幫我們建立了不少檔案。檢視新建立的 bmi 檔案夾中的內容，我們可以將一個 Android 應用程式基本的檔案結構歸納成如下：
+我們來看看 Android 應用程式的基本檔案結構，以及各自所負責的內容。
 
-== res/ 資源(Resource)目錄 ==
+==  src/ 原始碼(source)資料夾 ==
+
+== res/ 資源(Resource)資料夾 ==
 
 ==  Android 清單 ==
 
-== Referenced Libraries / 參考函式庫目錄 ==
+== Referenced Libraries / 參考函式庫資料夾 ==
 
 == 表達使用者介面 ==
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
 
 [DiveIntoAndroid 回目錄] | [AndroidUI 程式介面]
