@@ -33,7 +33,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [ReadSource 開始閱讀程式]
   # [AndroidUI 使用者介面]
   # [BmiUI 設計使用者介面]
-  # [AndroidLogic 程式邏輯]
+  # [AndroidLogic 程式流程]
   # 完成 BMI 程式
   # 使用 google code 分享程式
 
