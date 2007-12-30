@@ -59,4 +59,4 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
 
     * 模擬器操作細節 http://code.google.com/android/reference/emulator.html
 
-[DiveIntoAndroid 回目錄] | [ReadSource 開始閱讀程式]
+< [OpenProject 開啟現有專案] | [DiveIntoAndroid 回目錄] | [ReadSource 開始閱讀程式] >

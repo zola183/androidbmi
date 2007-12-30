@@ -50,4 +50,4 @@ src 目錄中包含了一個 Android 應用程式中所需的各個程式碼檔�
 
 6. Referenced Libraries「Referenced Libraries」 的作用是將 Android 平台裡所有可呼叫的類別、方法函式，分門別類地列出，好方便開發者來參考與調用。
 
-[DiveIntoAndroid 回目錄] | [AndroidUI 使用者介面]
+< [PlayEmulator 操作模擬器] | [DiveIntoAndroid 回目錄] | [AndroidUI 使用者介面] >
