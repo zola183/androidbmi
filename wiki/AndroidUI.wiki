@@ -18,4 +18,4 @@
 
 既然找到了「Hello World, bmi」字串，我們就試著將 android:text 屬性值從「Hello World, bmi」改成 「哈囉，BMI」，然後執行看看吧。結果發現 Android 模擬器中文嘛也通，字型也相當漂亮。
 
-[DiveIntoAndroid 回目錄] | 
+[DiveIntoAndroid 回目錄] | [BmiUI 設計使用者介面]
