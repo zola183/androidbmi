@@ -46,4 +46,4 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 設定好 Android SDK 後，我們就擁有了一個完整的 Android 開發環境。
 我們先來看看 Android SDK 中提供的一些範例，好了解 Android 到底能做些什麼。
 
-[DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案]
+< [IntroAndroid 初探 Android] | [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案] >

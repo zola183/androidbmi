@@ -37,4 +37,4 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # 完成 BMI 程式
   # 使用 google code 分享程式
 
-[IntroAndroid >> 從頭開始閱讀]
+[IntroAndroid 從頭開始閱讀] >
