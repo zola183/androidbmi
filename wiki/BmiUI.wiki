@@ -1,0 +1,29 @@
+#summary 設計使用者介面
+#labels tw
+
+= 視圖 =
+
+我們在前面的過程裡，已經學到如何在 Android 應用程式中替換 TextView 介面元件顯示的純文字內容。那麼...這個經驗能不能直接用到 BMI 應用程式的設計上呢？我們先回過頭來想想 BMI 應用程式最少應該需要什麼些什麼元件。
+
+為了輸入 BMI 程式所需的身高體重值，大致上我們需要兩個 TestView 元件用來提示填入身高體重數字，另外也需要兩個文字輸入欄位用來填入身高體重數字。我們還需要一個按鈕來開始計算，而計算完也需要一個 TestView 元件來顯示計算結果。於是初版的 BMI 應用程式介面的樣子就浮現出來了。
+
+軟體設計的過程中常常會需要頻繁改變使用者介面，改著改著就累積起了一些經驗，也歸納出了許多應對之道。如著名的 MVC 模式。Google Android 為我們考慮了介面修改問題。Android 所採用的解決介面修改問題方式，是採用目前比較流行的解決方案--即如前所見的，將介面描述部份的程式碼，抽取到程式外部的 XML 描述文件中。
+
+=  查閱文件 =
+
+話說回來，我們從哪得知其他介面元件的蹤影呢？其中一個方法是查閱文件。
+
+Android 文件網站上找到各種可用介面元件列表。
+ 
+
+    http://code.google.com/android/reference/view-gallery.html
+
+
+例如我們想查看 EditText 的內容，我們可以點進 EditText 連結查看其內容。
+http://code.google.com/android/reference/android/widget/EditText.html
+
+你會看到一個詳細地驚人的網頁。
+
+EditText 繼承了 TextView 介面元件，所以 EditText 擁有所有 TextView 介面元件的特性。此外，你也會看到 EditText 有些特殊屬性，如 「android:numeric」(僅允許輸入數字)，或「android:phoneNumber」(僅允許輸入電話號碼)。我們可以在 XML 描述檔中，透過將 EditText 的參數「android:numeric」 指定為 「true」，以限制使用者只能在 EditText 文字欄位中輸入數字。
+
+[DiveIntoAndroid 回目錄] |
