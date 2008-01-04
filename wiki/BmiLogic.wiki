@@ -1,0 +1,98 @@
+#summary 完成 BMI 程式
+#labels tw
+
+至此，我們已經完成了 bmi 程式的介面設計，並且理解了了新建立的程式。剩下我們要做的，只剩下為 BMI 程式加上程式邏輯囉。
+
+很幸運的是，BMI 程式中用到的並不是什麼神秘的演算法，你甚至可以透過搜尋引擎找到中文的範例。
+
+我們來回顧一下我們的目標與設計進度。
+
+完整的程式如下：
+{{{
+    package com.demo.android.bmi;
+
+    import java.text.DecimalFormat;
+    import android.app.Activity;
+    import android.os.Bundle;
+    import android.view.View;
+    import android.view.View.OnClickListener;
+    import android.widget.Button;
+    import android.widget.EditText;
+    import android.widget.TextView;
+
+    public class bmi extends Activity {
+        /** Called when the activity is first created. */
+        @Override
+        public void onCreate(Bundle icicle) {
+            super.onCreate(icicle);
+            setContentView(R.layout.main);
+           
+            //Listen for button clicks
+            Button button = (Button)findViewById(R.id.submit);
+            button.setOnClickListener(calcBMI);
+        }
+
+        private OnClickListener calcBMI = new OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                DecimalFormat nf = new DecimalFormat("0.0");
+                EditText fieldheight = (EditText)findViewById(R.id.height);
+                EditText fieldweight = (EditText)findViewById(R.id.weight);
+                double height = Double.parseDouble(fieldheight.getText().toString())/100;
+                double weight = Double.parseDouble(fieldweight.getText().toString());
+                double BMI = weight / (height * height);
+
+                TextView result = (TextView)findViewById(R.id.result);
+                result.setText("Your BMI is "+nf.format(BMI));
+
+                //Give health advice
+                if(BMI>25){
+                    showAlert("Warning", "You need go diet", "ok", false);
+                }else if(BMI<20){
+                    showAlert("Warning", "You need eat more", "ok", false);
+                }else{
+                    showAlert("Congratulation", "You are in good shape", "ok", false);
+                }
+            }
+        };
+    }
+}}}
+
+我們已經能從介面上輸入身高體重的數字，接著要做的是在程式裡取出身高體重欄位中的數值，並套用 bmi 的算式算出結果。
+我們會學到：導入其他用到的模組、如何取得介面元件、如何對按鈕設定動作。
+
+從上面的完整程式中，我們看到上面介紹到的程式主體都還在，不過也增加了一些內容。這些內容即我們的主要程式邏輯。
+
+
+= 講解 =
+
+{{{
+    Button button = (Button)findViewById(R.id.submit);
+}}}
+
+宣告一個 button 實體，透過 findViewById 方法，從資源檔中取得對應的介面元件。
+
+R.id.submit 對應到 XML 描述檔的資源是
+{{{
+    <Button id="@+id/submit"
+    />
+}}}
+為了確保宣告的型別跟 XML 描述檔中描述的介面元件型別一致，好使程式運作正常，我們在 「indViewById」 方法前加上 「(Button)」修飾，強制將取得的資源型別設成 「button」型別。
+{{{
+button.setOnClickListener(new OnClickListener(){
+});
+}}}
+
+這句包含了「 button.setOnClickListener」與其中的 「OnClickListener」兩個類別。
+「setOnClickListener」是 button （按鈕）實體的方法。
+
+= 結語 =
+
+這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
+
+Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、SMS、Google Map、Web Cam、3D、遊戲、Webkit、XMPP 等等進階的主題。
+
+希望讀者能以此小書出發，開發出自己的 Android 程式。
+
+也歡迎留言反應讀後感言，或分享自己寫的程式。
