@@ -35,6 +35,5 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [BmiUI 設計使用者介面]
   # [AndroidLogic 程式流程]
   # [BmiLogic 完成 BMI 程式]
-  # 使用 google code 分享程式
 
 [IntroAndroid 從頭開始閱讀] >
