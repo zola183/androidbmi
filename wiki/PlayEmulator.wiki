@@ -51,14 +51,20 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
     -rw-r--r-- system   system    1325833 2007-11-11 20:59 ApiDemos.apk
 }}}
 
-{{{
+
 模擬器的映像檔會保存住你之前安裝的程式與操作。所以當你想要回覆一個乾淨的模擬環境時，你得移除模擬器的映像檔。
 
+{{{
 在 Windows 上，模擬器的映像檔會保存在 C:\Documents and Settings\使用者帳號目錄\Local Settings\Application Data\\Local Settings\Android\userdata.img 。
 在 Mac 或 Linux 上則會保存在 ~/.android/userdata.img 。
-
-我們可以在模擬器關閉的狀況下，以指令 rm  /.android/userdata.img 刪除模擬器的映像檔。
 }}}
+
+我們可以在模擬器關閉的狀況下，以指令 
+{{{
+rm  /.android/userdata.img
+}}}
+刪除模擬器的映像檔。
+
 
 線上閱讀參考
 
