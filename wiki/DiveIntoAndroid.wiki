@@ -1,4 +1,4 @@
-#summary 深入淺出 Android 手機應用程式設計
+#summary 深入淺出 Android -- Google 手機應用程式設計
 #labels tw
 
 = 授權 =
