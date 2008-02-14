@@ -37,12 +37,16 @@ public class bmi extends Activity {
     		TextView result = (TextView)findViewById(R.id.result);
     		result.setText(getString(R.string.bmi_result) +nf.format(BMI));
     		//Give health advice
+    		TextView fieldresult = (TextView)findViewById(R.id.result);
     		if(BMI>25){
-    			showAlert("Warning", getString(R.string.advice_heavy), "ok", false);
+    			//showAlert("Warning", getString(R.string.advice_heavy), "ok", false);
+    			fieldresult.setText(R.string.advice_heavy);
     		}else if(BMI<20){
-    			showAlert("Warning", getString(R.string.advice_light), "ok", false);
+    			//showAlert("Warning", getString(R.string.advice_light), "ok", false);
+    			fieldresult.setText(R.string.advice_light);
     		}else{
-    			showAlert("Congratulation", getString(R.string.advice_average), "ok", false);
+    			//showAlert("Congratulation", getString(R.string.advice_average), "ok", false);
+    			fieldresult.setText(R.string.advice_average);
     		}
     		
     		//Add error checking
