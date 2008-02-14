@@ -27,7 +27,7 @@ EditText 繼承了 TextView 介面元件，所以 EditText 擁有所有 TextView
 
 一個基本的身高(Height)輸入欄位的 EditText 介面描述如下：
 {{{
-    <EditText id="@+id/height"
+    <EditText android:id="@+id/height"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:numeric="true"
@@ -41,21 +41,21 @@ EditText 繼承了 TextView 介面元件，所以 EditText 擁有所有 TextView
     android:numeric="true"
     android:text=""
 }}}
-將 「android:numeric」 指定為 「true」，可以限制使用者只能在 EditText 文字欄位中輸入數字。「android:text」屬性則是指定EditText 介面元件預設顯示的文字(數字)。
+將 「android:numeric」 指定為 「true」，可以限制使用者只能在 EditText 文字欄位中輸入數字。「android:text」屬性則是指定 EditText 介面元件預設顯示的文字(數字)。
 {{{
-    <EditText id="@+id/height"
+    <EditText android:id="@+id/height"
         />
 }}}
-談了 EditText 中的各種「android:」開頭的屬性，還有個擺在各屬性最前頭的「id」屬性沒談。程式會透過 id 屬性來調用特定介面元件，要使用一個介面元件的第一件事是定義出介面描述檔，之後與這個介面有關的操作，都得根據 id 來在程式中調用這個介面元件。
+談了 EditText 中的各種「android:」開頭的屬性，還有個擺在各屬性最前頭的「android:id」屬性沒談。程式會透過 android:id 屬性來調用特定介面元件，要使用一個介面元件的第一件事是定義出介面描述檔，之後與這個介面有關的操作，都得根據 android:id 來在程式中調用這個介面元件。
 
-i前面說過，為了易於閱讀(可讀性)，最好將屬性分行列出。而我們的範例卻將 id 屬性直接擺在 EditText 標籤後。其實這麼做同樣是為了易於閱讀，當然你也可以將「id」屬性分行列出，或是將「id」屬性放在屬性列表的中間或最後頭。
+i前面說過，為了易於閱讀(可讀性)，最好將屬性分行列出。而我們的範例卻將 android:id 屬性直接擺在 EditText 標籤後。其實這麼做同樣是為了易於閱讀，當然你也可以將「android:id」屬性分行列出，或是將「android:id」屬性放在屬性列表的中間或最後頭。
 
-id 屬性的內容長得比較特別：
+android:id 屬性的內容長得比較特別：
 {{{
     @+id/height
 }}}
 
-「height」是這個介面元件的 id。程式中會使用「R.id.height」來取得這個介面元件。「＠+id」 的意思是「R」類別會自動配置一個位址給這個 id。「R」類別的內容可以透過查看 R.java 得知。
+「height」是這個介面元件的 android:id。程式中會使用「R.id.height」來取得這個介面元件。「＠+id」 的意思是「R」類別會自動配置一個位址給這個 android:id。「R」類別的內容可以透過查看 R.java 得知。
 打開 R.java，你可以看到：
 {{{
     /* AUTO-GENERATED FILE.  DO NOT MODIFY.
@@ -109,7 +109,7 @@ id 屬性的內容長得比較特別：
             android:layout_height="wrap_content"
             android:text="身高 (cm)"
             />
-        <EditText id="@+id/height"
+        <EditText android:id="@+id/height"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:numeric="true"
@@ -120,18 +120,18 @@ id 屬性的內容長得比較特別：
             android:layout_height="wrap_content"
             android:text="體重 (kg)"
             />
-         <EditText id="@+id/weight"
+         <EditText android:id="@+id/weight"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:numeric="true"
             android:text=""
             />
-         <Button id="@+id/submit"
+         <Button android:id="@+id/submit"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="計算 BMI"
             />
-         <TextView id="@+id/result"
+         <TextView android:id="@+id/result"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text=""
