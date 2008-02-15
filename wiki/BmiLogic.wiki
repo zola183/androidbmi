@@ -47,7 +47,7 @@
                 result.setText("Your BMI is "+nf.format(BMI));
 
                 //Give health advice
-                TextView fieldresult = (TextView)findViewById(R.id.suggest);
+                TextView fieldsuggest = (TextView)findViewById(R.id.suggest);
                 if(BMI>25){
                     //showAlert("Warning", "You need go diet", "ok", false);
                     fieldsuggest.setText(R.string.advice_heavy);
