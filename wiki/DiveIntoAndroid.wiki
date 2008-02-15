@@ -37,3 +37,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [BmiLogic 完成 BMI 程式]
 
 [IntroAndroid 從頭開始閱讀] >
+
+== 備註 ==
+
+  * 本書已更新，相容於 2008/02/14 釋出的新 SDK。
