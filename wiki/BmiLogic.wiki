@@ -47,12 +47,16 @@
                 result.setText("Your BMI is "+nf.format(BMI));
 
                 //Give health advice
+                TextView fieldresult = (TextView)findViewById(R.id.result);
                 if(BMI>25){
-                    showAlert("Warning", "You need go diet", "ok", false);
+                    //showAlert("Warning", "You need go diet", "ok", false);
+                    fieldresult.setText(R.string.advice_heavy);
                 }else if(BMI<20){
-                    showAlert("Warning", "You need eat more", "ok", false);
+                    //showAlert("Warning", "You need eat more", "ok", false);
+                    fieldresult.setText(R.string.advice_light);
                 }else{
-                    showAlert("Congratulation", "You are in good shape", "ok", false);
+                    //showAlert("Congratulation", "You are in good shape", "ok", false);
+                    fieldresult.setText(R.string.advice_average);
                 }
             }
         };
