@@ -23,26 +23,38 @@ public class bmi extends Activity {
         button.setOnClickListener(calcBMI);
     }
 
+    private EditText fieldheight;
+    private EditText fieldweight;
+    private TextView result;
+    private TextView fieldsuggest;
+    private void findViews()
+    {
+    	fieldheight = (EditText)this.findViewById(R.id.height);
+		fieldweight = (EditText)this.findViewById(R.id.weight);
+		result = (TextView)findViewById(R.id.result);
+		fieldsuggest = (TextView)findViewById(R.id.suggest);
+    }
+    
     private OnClickListener calcBMI = new OnClickListener()
     {
     	public void onClick(View v)
     	{
+    		/*
+    		 * Main operations
+    		 */
     		DecimalFormat nf = new DecimalFormat("0.0");
-    		EditText fieldheight = (EditText)findViewById(R.id.height);
-    		EditText fieldweight = (EditText)findViewById(R.id.weight);
+    		findViews();
     		double height = Double.parseDouble(fieldheight.getText().toString())/100;
     		double weight = Double.parseDouble(fieldweight.getText().toString());
     		double BMI = weight / (height * height);
 
-    		TextView result = (TextView)findViewById(R.id.result);
     		result.setText(getString(R.string.bmi_result) +nf.format(BMI));
     		//Give health advice
-    		TextView fieldsuggest = (TextView)findViewById(R.id.suggest);
     		if(BMI>25){
     			//showAlert("Warning", getString(R.string.advice_heavy), "ok", false);
     			fieldsuggest.setText(R.string.advice_heavy_tw);
     		}else if(BMI<20){
-    			//showAlert("Warning", getString(R.string.advice_light), "ok", false);
+     			//showAlert("Warning", getString(R.string.advice_light), "ok", false);
     			fieldsuggest.setText(R.string.advice_light_tw);
     		}else{
     			//showAlert("Congratulation", getString(R.string.advice_average), "ok", false);
