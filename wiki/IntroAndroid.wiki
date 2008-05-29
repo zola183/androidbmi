@@ -29,9 +29,12 @@ Google 的創辦人之一 Sergey Brin 也在在 Android 軟體開發工具(SDK)�
 在可見的將來，基於 Android 平台的手機程式設計將像今日的 PC 程式設計一樣普及。
 }}}
 
-'Android' 是一個基於 [http://www.kernel.org/ Linux 核心(kernel)] 的開放手機平台作業系統，與 [http://www.microsoft.com/taiwan/windowsmobile/default.mspx Windows Mobile]、[http://www.symbian.com/ Symbian] 作業系統在同一級別。
-Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個完整的應用程式框架，採用較符合商用限制的 Apache 版權，
-其上提供 Google 自製的 Java 運行環境 (稱作 Dalvik，與 Sun 的 J2ME 不同)，並提供免費的開發工具(SDK)，便於應用程式開發者學習、使用。
+'Android' 是一個基於 [http://www.kernel.org/ Linux 核心(kernel)] 的開放手機平台作業系統，與 [http://www.microsoft.com/taiwan/windowsmobile/default.mspx Windows Mobile]、[http://www.symbian.com/ Symbian] 等手機作業系統在同一級別。
+對於設備製造商來說，它是個免費的平台，不用每出一台手機就要被手機作業系統廠商收取費用。Android 也是個開放的平台，只要廠商有能力，就可以自行在這個平台上加入特有的裝置或功能，不受手機作業系統廠商限制。
+對於開發者來說，Android 平台上的應用程式可相容各型 Android 手機，免去為各種不同機型的手機開發的困擾。Android 有先進的網路、繪圖、與3D處理能力，可以用來提供更好的使用者體驗。
+對於使用者來說，Android 是一個用於手機的系統。使用者想換手機時，可以在不同廠牌，同樣使用 Android 的手機之間選擇，並且很容易地將如聯絡簿等資料轉換到新手機上。
+
+Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個完整的應用程式框架，採用較符合商用限制的 Apache 版權，其上提供 Google 自製的 Java 運行環境 (稱作 Dalvik，與 Sun 的 J2ME 不同)，並提供免費的開發工具(SDK)，便於應用程式開發者學習、使用。
 
 而免費的跨平台開發工具，更鼓勵了有一些物件導向或視窗程式開發經驗的開發者能在短時間裡上手，保證有能力開發 Android 程式的軟體人才不虞缺乏；
 1000 萬美元的大獎賽則提供了足夠的誘因，讓第一支 Android 手機正式面市前就有各式各樣的應用程式可使用。
@@ -64,12 +67,12 @@ Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個�
 
 
 你的心裡可能已經有了關於手機程式的絕好創意，
-準備贏取一份高達1000萬台幣的獎金，
-成為大獎賽中全球前 50 個最具創意的個人或團隊；
-或是你只是想在 Android 開放手機平台上實現其他封閉手機上無法達成的需求；
+你想在 Android 開放手機平台上實現其他封閉手機上無法達成的需求；
 無論想要達成何種目的，你都需要一些為了達成創意所需的協助。
 本書的內容可以協助你快速地理解 Android 平台的概念，
 提供你初次開發手機程式介面的注意事項、Android 資料應用程式的運作過程，
 與詳細的 Android 資料應用程式碼解說。
 
-[DiveIntoAndroid 回目錄] | [InstallAndroid 簡單安裝 Android]
+要開發 Android 應用程式，你甚至不需要擁有實機。 Google 已經為我們提供了各個主要平台(Windows、Mac、Linux) 上可用的開發工具包，開發工具包中也包含了 Android 手機模擬器，讓我們在電腦上就能完成所有的手機應用程式開發工作。接著我們就先來安裝 Android 開發工具。
+
+[DiveIntoAndroid 回目錄] | [InstallAndroid 簡單安裝 Android 開發工具]

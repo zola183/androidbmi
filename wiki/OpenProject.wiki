@@ -4,7 +4,7 @@
 = 開啟(匯入)專案 =
 
 我們回到 Eclipse 環境來。開啟選單 File->New->Project，會彈出「New Project」對話視窗。
-Eclipse 是通用的編輯環境，因此根據你所安裝的插件而支援許多不同種類的專案。
+Eclipse 是通用的編輯環境，可根據你所安裝的不同插件而支援許多種類的專案。
 點擊 「Android」 資料夾下的「Android Project」，會開啟「New Android Project」對話視窗。
 
 我們將開啟 Android SDK 中提供的 NotePad 範例。在「New Android Project」對話視窗中，點選 "Browse..."按鈕以選擇「開啟已經存在的專案」(Create project from existing source)。我們在此選擇位於「android_sdk/sample」目錄中的 Android 應用程式專案 (android_sdk/sample/NotePad)。
@@ -19,4 +19,4 @@ Eclipse 是通用的編輯環境，因此根據你所安裝的插件而支援許
 在「Package Explorer」的 「NotesList」 專案檔案夾圖示上點選右鍵，從「Android Tools」選單中選擇「修復專案屬性」(Fix Project Properties)。
 (Android Tools->Fix Project Properties)
 
-< [InstallAndroid 簡單安裝 Android] | [DiveIntoAndroid 回目錄] | [PlayEmulator 操作模擬器] >
+< [InstallAndroid 簡單安裝 Android 開發工具] | [DiveIntoAndroid 回目錄] | [PlayEmulator 操作模擬器] >

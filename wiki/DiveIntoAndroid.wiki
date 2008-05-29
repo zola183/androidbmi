@@ -27,7 +27,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 = 目錄 =
 
   # [IntroAndroid 初探 Android]
-  # [InstallAndroid 簡單安裝 Android]
+  # [InstallAndroid 簡單安裝 Android 開發工具]
   # [OpenProject 開啟現有專案]
   # [PlayEmulator 操作模擬器]
   # [ReadSource 開始閱讀程式]
@@ -35,6 +35,11 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [BmiUI 設計使用者介面]
   # [AndroidLogic 程式流程]
   # [BmiLogic 完成 BMI 程式]
+  
+  規劃中
+  # [BmiRefactor 重構程式]
+  # [AndroidMenu 加入選單]
+  # [AndroidDialog 加入對話框]
 
 [IntroAndroid 從頭開始閱讀] >
 
