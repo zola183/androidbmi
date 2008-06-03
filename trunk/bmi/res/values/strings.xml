@@ -7,11 +7,10 @@
     <string name="bmi_btn">計算 BMI</string>
     <string name="bmi_result">你的 BMI 值是 </string>
     <string name="report_title">BMI Report</string>
-    <string name="report_msg">Not correct</string>
     <string name="about_title">About Android BMI</string>
     <string name="about_msg">Android BMI Calc 0.3\n
     		made by gasolin\n\n
     		gasolin+android [at] gmail.com</string>
-	<string name="options_label">Options...</string>
+	<string name="options_label">About...</string>
 	<string name="ok_label">OK</string>
 </resources>

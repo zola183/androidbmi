@@ -31,14 +31,4 @@
 	    android:layout_height="wrap_content" 
 	    android:text="@string/bmi_btn"
 	    />
-	<TextView android:id="@+id/result" 
-	    android:layout_width="fill_parent" 
-	    android:layout_height="wrap_content" 
-	    android:text=""
-	    />
-	<TextView android:id="@+id/suggest" 
-	    android:layout_width="fill_parent" 
-	    android:layout_height="wrap_content" 
-	    android:text=""
-	    />
 </LinearLayout>
