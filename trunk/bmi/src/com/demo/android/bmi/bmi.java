@@ -12,10 +12,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-//import android.widget.TextView;
 
 public class bmi extends Activity {
-
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
@@ -51,7 +49,8 @@ public class bmi extends Activity {
     		b.putString("KEY_HEIGHT", fieldheight.getText().toString());
     		b.putString("KEY_WEIGHT", fieldweight.getText().toString());
     		i.putExtras(b);
-    		startActivity(i);
+    		//startActivity(i);
+    		startSubActivity(i, 0x1337); //any number as id
     	}
     };
 
