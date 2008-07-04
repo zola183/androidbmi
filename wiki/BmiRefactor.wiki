@@ -80,6 +80,7 @@
     //Listen for button clicks
     private void setListensers() {
     	calcbutton.setOnClickListener(calcBMI);
+   }
 }}}
 
 如此一來，我們就將程式邏輯與介面元件的宣告分離開來，達成我們重構的目的。
