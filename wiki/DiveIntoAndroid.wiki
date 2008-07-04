@@ -22,7 +22,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 簡介 =
 
-「深入淺出 Android 手機應用程式設計」將以開發實例講解 Android 程式開發，協助台灣人參與 Android 大獎賽。
+「深入淺出 Android 手機應用程式設計」將以開發實例講解 Android 程式開發，協助讀者了解 Android 手機應用程式設計。
 
 = 目錄 =
 
