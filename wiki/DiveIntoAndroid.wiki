@@ -35,10 +35,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [BmiUI 設計使用者介面]
   # [AndroidLogic 程式流程]
   # [BmiLogic 完成 BMI 程式]
+  # [BmiRefactor 重構程式]
   
   規劃中
   # [AndroidDebug 偵錯]
-  # [BmiRefactor 重構程式]
   # [AndroidMenu 加入選單]
   # [AndroidDialog 加入對話框]
   # [AndroidActivity 加入新頁面]
