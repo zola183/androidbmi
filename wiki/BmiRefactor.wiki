@@ -110,3 +110,15 @@
     	calcbutton.setOnClickListener(calcBMI);
     }
 }}}
+
+= 結語 =
+
+這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
+
+Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、SMS、Google Map、Web Cam、3D、遊戲、Webkit、XMPP 等等進階的主題。
+
+希望讀者能以此小書出發，開發出自己的 Android 程式。
+
+也歡迎留言反應讀後感言，或分享自己寫的程式。
+
+< [BmiLogic 完成 BMI 程式] | [DiveIntoAndroid 回目錄] 
