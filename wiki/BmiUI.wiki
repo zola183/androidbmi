@@ -146,7 +146,7 @@ android:id 屬性的內容長得比較特別：
 
 我們可以啟動模擬器檢視執行結果。
 
-介面元件照著 XML 描述檔的描述順利地展示了出來。而且身高體重欄位也只能輸入數字(或是你可以直接用電腦鍵盤，或看著模擬器鍵盤上綠色的數字輸入)。
+介面元件照著 XML 描述檔的描述順利地展示了出來。而且身高體重欄位也只能輸入數字(你可以直接用電腦鍵盤輸入，或按著模擬器上綠色的虛擬數字鍵盤輸入)。
 
 打開 R.java 檔 ，你可以看到：
 {{{
@@ -194,6 +194,7 @@ R.java 檔案中，會根據 xml 描述檔生成對應的 id 與自動指定位�
 目前的 ADT 版本還沒提供方便地視覺化拖拉介面元件的介面開發方式。鑑於目前 ADT 版本還很低，以後也許會加入這樣的 GUI 拖拉設計工具。
 不過也已經有人寫出來了對應 Android 的 GUI 拖拉設計工具。
 
+DroidDraw - Android GUI 拖拉設計工具
 http://code.google.com/p/droiddraw/
 
-< [AndroidUI 使用者介面] | [DiveIntoAndroid 回目錄] | [AndroidLogic 程式流程] >
+< [AndroidUI 描述使用者介面] | [DiveIntoAndroid 回目錄] | [AndroidLogic 程式流程] >

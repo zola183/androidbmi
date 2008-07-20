@@ -1,7 +1,7 @@
 #summary 程式流程
 #labels tw
 
-接著要進入主要程式邏輯的內容囉。打開 「src/com.demo.android.bmi」 目錄下的 「bmi.java」檔案，Eclipse+Android 開發工具已經幫我們預先建立好了基本的程式邏輯。
+接著要觀察主要程式邏輯的內容囉。打開 「src/com.demo.android.bmi」 目錄下的 「bmi.java」檔案，Eclipse+Android 開發工具已經幫我們預先建立好了基本的程式邏輯。
 其預設的內容如下
 {{{
     1  package com.demo.android.bmi;
@@ -30,7 +30,7 @@
     package com.demo.android.bmi;
 }}}
 這一行的作用是指出這個檔案所在的名稱空間。「package」(套件)是其關鍵字。使用名稱空間的原因是程式一旦擴展到擴展到某個大小，程式中的變數名稱、方法名稱、類別名稱難免重複，
-這時就可以將定義的名稱區隔管理在package下，以避免相互衝突的情形發生。Java 的 package 設計成與檔案系統結構相對應，如我們的 package 設定是 「package com.demo.android.bmi」，則這個類別就該在指定目錄的「com/demo/android/bmi」路徑下可以找到。
+這時就可以將定義的名稱區隔管理在 package 下，以避免相互衝突的情形發生。Java 的 package 設計成與檔案系統結構相對應，如我們的 package 設定是 「package com.demo.android.bmi」，則這個類別就該在指定目錄的「com/demo/android/bmi」路徑下可以找到。
 
 同時也別忘了 Java 程式語言每段敘述語句的結尾處，與大部分的程式語言一樣需加上一個分號「;」，以表示一行程式敘述的結束。
 

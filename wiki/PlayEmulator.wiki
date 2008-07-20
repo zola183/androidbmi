@@ -20,9 +20,6 @@
 
 至此我們就完成了執行參數的設定。 點選「Run」按鈕，Eclipse 就會啟動 Android 模擬器。
 
-== 閱讀參考 ==
-
- * 如何開啟 Hello World 程式 http://code.google.com/android/intro/hello-android.html 
     
 = 操作 Android 模擬器 =
 

@@ -29,7 +29,7 @@ Google 的創辦人之一 Sergey Brin 也在在 Android 軟體開發工具(SDK)�
 在可見的將來，基於 Android 平台的手機程式設計將像今日的 PC 程式設計一樣普及。
 }}}
 
-'Android' 是一個基於 [http://www.kernel.org/ Linux 核心(kernel)] 的開放手機平台作業系統，與 [http://www.microsoft.com/taiwan/windowsmobile/default.mspx Windows Mobile]、[http://www.symbian.com/ Symbian] 等手機作業系統在同一級別。
+「Android」是一個基於 [http://www.kernel.org/ Linux 核心(kernel)] 的開放手機平台作業系統，與 [http://www.microsoft.com/taiwan/windowsmobile/default.mspx Windows Mobile]、[http://www.symbian.com/ Symbian] 等手機作業系統在同一級別。
 對於設備製造商來說，它是個免費的平台，不用每出一台手機就要被手機作業系統廠商收取費用。Android 也是個開放的平台，只要廠商有能力，就可以自行在這個平台上加入特有的裝置或功能，不受手機作業系統廠商限制。
 對於開發者來說，Android 平台上的應用程式可相容各型 Android 手機，免去為各種不同機型的手機開發的困擾。Android 有先進的網路、繪圖、與3D處理能力，可以用來提供更好的使用者體驗。
 對於使用者來說，Android 是一個用於手機的系統。使用者想換手機時，可以在不同廠牌，同樣使用 Android 的手機之間選擇，並且很容易地將如聯絡簿等資料轉換到新手機上。
@@ -43,8 +43,7 @@ Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個�
 {{{
 一個嶄新的開放原始碼作業系統平台、
 一個友善的免費應用程式開發環境、
-一個與世界各地的程式開發者站在相同起跑點的公平競爭機會、
-一份豐厚的獎金。
+一個與世界各地的程式開發者站在相同起跑點的公平競爭機會。
 }}}
 
 == 參考連結 ==

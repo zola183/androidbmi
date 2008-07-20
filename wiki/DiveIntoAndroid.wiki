@@ -34,7 +34,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
  (BMI)
   # [ReadSource 開始閱讀程式]
-  # [AndroidUI 使用者介面]
+  # [AndroidUI 描述使用者介面]
   # [BmiUI 設計使用者介面]
   # [AndroidLogic 程式流程]
   # [BmiLogic 完成 BMI 程式]
@@ -56,9 +56,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 規劃中
   
- (進階)  
+(進階)  
 
   # [AndroidDebug 偵錯]
+  # [MeniFest 規格設定單]
   # [AndroidMenu 加入選單]
   # [AndroidDialog 加入對話框] inflate
   # [AndroidPreference 儲存資訊]
