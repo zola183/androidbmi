@@ -26,16 +26,16 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 目錄 =
 
-  # [IntroAndroid 初探 Android]  (基礎)
+  # (基礎) [IntroAndroid 初探 Android] 
   # [InstallAndroid 簡單安裝 Android 開發工具]
   # [OpenProject 開啟現有專案]
   # [PlayEmulator 操作模擬器]
-  # [ReadSource 開始閱讀程式]  (BMI)
+  # (BMI) [ReadSource 開始閱讀程式] 
   # [AndroidUI 描述使用者介面]
   # [BmiUI 設計使用者介面]
   # [AndroidLogic 程式流程]
   # [BmiLogic 完成 BMI 程式]
-  # [BmiRefactor 重構程式]  (中階)
+  # (中階) [BmiRefactor 重構程式] 
 
 範例:
 
@@ -50,16 +50,12 @@ http://creativecommons.org.tw/files/icon_nd.gif
   
 
 規劃中
-  
-(進階)  
 
   # [AndroidDebug 偵錯]
   # [AndroidDialog 加入對話框] inflate
   # [AndroidMenu 加入選單]
-  # [AndroidActivity 加入新頁面] Intent
+  # [AndroidActivity 加入新頁面] Intent ManiFest
   # [AndroidPreference 儲存資訊]
-  # [ManiFest 設定貨單]
-  # [MultiLang 支援多語言]
 
 (TODO)
   # [ListView 列表]
@@ -71,6 +67,9 @@ http://creativecommons.org.tw/files/icon_nd.gif
  # tab
  # spinner
  # [ContentProvider 與其他程式共用資料]
+
+(進階) 
+  # [MultiLang 支援多語言]
    
 (OX Game)
   # Draw
@@ -84,6 +83,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
 (MAP)
 
 (Browser)
+
+(XMPP)
 
 (Widget)
 
