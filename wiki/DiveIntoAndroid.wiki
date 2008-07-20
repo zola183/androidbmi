@@ -26,28 +26,72 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 目錄 =
 
+ (基礎)
   # [IntroAndroid 初探 Android]
   # [InstallAndroid 簡單安裝 Android 開發工具]
   # [OpenProject 開啟現有專案]
   # [PlayEmulator 操作模擬器]
+
+ (BMI)
   # [ReadSource 開始閱讀程式]
   # [AndroidUI 使用者介面]
   # [BmiUI 設計使用者介面]
   # [AndroidLogic 程式流程]
   # [BmiLogic 完成 BMI 程式]
-  # [BmiRefactor 重構程式]
-  
-  規劃中
-  # [AndroidDebug 偵錯]
-  # [AndroidMenu 加入選單]
-  # [AndroidDialog 加入對話框]
-  # [AndroidActivity 加入新頁面]
-  # [AndroidResolution 切換螢幕模式]
-  # [AndroidInput 處理輸入]
 
+ (中階)
+  # [BmiRefactor 重構程式]
+
+範例:
+
+ # BMI
 
 [IntroAndroid 從頭開始閱讀] >
 
 == 備註 ==
 
+  * 2008/7/4 新增 [BmiRefactor 重構程式] 一章
   * 本書相容於 2008/02/14 釋出的 m5 SDK。
+  
+
+規劃中
+  
+ (進階)  
+
+  # [AndroidDebug 偵錯]
+  # [AndroidMenu 加入選單]
+  # [AndroidDialog 加入對話框] inflate
+  # [AndroidPreference 儲存資訊]
+  # [AndroidActivity 加入新頁面] Intent
+  # [MultiLang 支援多語言]
+
+(TODO)
+  # [ListView 列表]
+  # [CustomField 自定欄位]
+  # [StatusNotification 通知]
+  # [ContentProvider 與其他程式共用資料]
+
+(Avarta)
+ # tab
+ # spinner
+ # [ContentProvider 與其他程式共用資料]
+   
+(OX Game)
+  # Draw
+  # Pics
+  # [AndroidResolution 切換螢幕模式]
+  # [AndroidInput 處理輸入]
+  # Media
+
+(3D)
+
+(MAP)
+
+(Browser)
+
+(Widget)
+
+範例:
+
+ # TODO LIST
+ 
