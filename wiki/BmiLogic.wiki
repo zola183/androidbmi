@@ -97,4 +97,4 @@ button.setOnClickListener(new OnClickListener(){
 「setOnClickListener」是 button （按鈕）實體的方法。
 
 
-< [AndroidLogic 程式流程] | [DiveIntoAndroid 回目錄] | [BmiRefactor 重構程式] >
+< [AndroidLogic 解讀程式流程] | [DiveIntoAndroid 回目錄] | [BmiRefactor 重構程式] >

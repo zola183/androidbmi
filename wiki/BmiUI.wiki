@@ -23,7 +23,7 @@ http://code.google.com/android/reference/android/widget/EditText.html
 
 你會看到一個詳細地驚人的網頁。
 
-EditText 繼承了 TextView 介面元件，所以 EditText 擁有所有 TextView 介面元件的特性。此外，你也會看到 EditText 有些特殊屬性，如 「android:numeric」(僅允許輸入數字)，或「android:phoneNumber」(僅允許輸入電話號碼)。我們可以在 XML 描述檔中，透過將 EditText 的參數「android:numeric」 指定為 「true」，以限制使用者只能在 EditText 文字欄位中輸入數字。
+EditText 繼承了 TextView 介面元件，所以 EditText 擁有所有 TextView 介面元件的特性。此外，你也會看到 EditText 有些特殊屬性，如 「android:numeric="true"」(僅允許輸入數字)、「android:phoneNumber="true"」(僅允許輸入電話號碼)，或「android:autoLink="all"」(自動將文字轉成超連結)。我們可以在 XML 描述檔中，透過將 EditText 的參數「android:numeric」 指定為 「true」，以限制使用者只能在 EditText 文字欄位中輸入數字。
 
 一個基本的身高(Height)輸入欄位的 EditText 介面描述如下：
 {{{
@@ -42,6 +42,7 @@ EditText 繼承了 TextView 介面元件，所以 EditText 擁有所有 TextView
     android:text=""
 }}}
 將 「android:numeric」 指定為 「true」，可以限制使用者只能在 EditText 文字欄位中輸入數字。「android:text」屬性則是指定 EditText 介面元件預設顯示的文字(數字)。
+
 {{{
     <EditText android:id="@+id/height"
         />
@@ -197,4 +198,4 @@ R.java 檔案中，會根據 xml 描述檔生成對應的 id 與自動指定位�
 DroidDraw - Android GUI 拖拉設計工具
 http://code.google.com/p/droiddraw/
 
-< [AndroidUI 描述使用者介面] | [DiveIntoAndroid 回目錄] | [AndroidLogic 程式流程] >
+< [AndroidUI 描述使用者介面] | [DiveIntoAndroid 回目錄] | [AndroidLogic 解讀程式流程] >

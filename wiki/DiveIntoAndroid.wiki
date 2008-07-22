@@ -26,16 +26,16 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 目錄 =
 
-  # (基礎) [IntroAndroid 初探 Android] 
+  # [IntroAndroid 初探 Android] (基礎) 
   # [InstallAndroid 簡單安裝 Android 開發工具]
   # [OpenProject 開啟現有專案]
   # [PlayEmulator 操作模擬器]
-  # (BMI) [ReadSource 開始閱讀程式] 
+  # [ReadSource 開始閱讀程式] (BMI) 
   # [AndroidUI 描述使用者介面]
   # [BmiUI 設計使用者介面]
-  # [AndroidLogic 程式流程]
+  # [AndroidLogic 解讀程式流程]
   # [BmiLogic 完成 BMI 程式]
-  # (中階) [BmiRefactor 重構程式] 
+  # [BmiRefactor 重構程式] (中階) 
 
 範例:
 
@@ -47,15 +47,15 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
   * 2008/7/4 新增 [BmiRefactor 重構程式] 一章
   * 本書相容於 2008/02/14 釋出的 m5 SDK。
-  
 
 規劃中
 
-  # [AndroidDebug 偵錯]
+  # [AndroidDebug 記錄與偵錯] log
+  # [LifeCycle 活動的生命週期] LifeCycle
+  # [AndroidActivity 加入新活動] ManiFest Intent
+  # [AndroidPreference 儲存資訊]
   # [AndroidDialog 加入對話框] inflate
   # [AndroidMenu 加入選單]
-  # [AndroidActivity 加入新頁面] Intent ManiFest
-  # [AndroidPreference 儲存資訊]
 
 (TODO)
   # [ListView 列表]
