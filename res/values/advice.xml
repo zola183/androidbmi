@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="advice_light">You need eat more</string>
+    <string name="advice_average">You are in good shape</string>
+    <string name="advice_heavy">You need go diet</string>
+    <string name="advice_light_tw">你該多吃點</string>
+    <string name="advice_average_tw">體型很棒喔</string>
+    <string name="advice_heavy_tw">你該節食了</string>
+</resources>
