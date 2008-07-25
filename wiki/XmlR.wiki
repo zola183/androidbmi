@@ -27,7 +27,7 @@ android:id 屬性的內容長得比較特別：
 
 沒錯，如果 Android 是直接使用 XML 來儲存介面描述到手機上的話，一定會佔用比起現在大的多的檔案空間。解決的方法是Android 並不直接使用 XML 檔案，而是透過 Android 開發工具，自動將 XML 描述檔轉換成資源檔案。一旦應用程式要使用某個介面或是任何種類的資源(字串、圖片、圖示、音效...)，都使用索引來查詢。
 
-當你建立一個新專案，打開它的 src/com/demo/android/com/R.java 檔，你可以看到如下的程式碼：
+當你建立一個 BMI 新專案，打開位於 「src/com/demo/android/bmi」 目錄下的 「R.java」檔，你可以看到如下的程式碼：
 
 {{{
     /* AUTO-GENERATED FILE.  DO NOT MODIFY.
@@ -54,7 +54,7 @@ android:id 屬性的內容長得比較特別：
     }
 }}}
 
-在照著前一章新增了 XML 描述後，再次打開 src/com/demo/android/com/R.java 檔 ，你可以看到如下的程式碼：
+在照著前一章新增了 XML 描述後，再次打開打開 「src/com/demo/android/bmi」 目錄下的 「R.java」 檔 ，你可以看到如下的程式碼：
 {{{
     /* AUTO-GENERATED FILE.  DO NOT MODIFY.
      *
@@ -136,15 +136,26 @@ android:id 屬性的內容長得比較特別：
 </resources>
 }}}
 
-在 strings.xml 檔案中，我們在原本的 app_name 字串外，自行定義了另外五個字串。
+在 strings.xml 檔案中，我們在原本的 app_name 字串外，自行定義了另外五個字串。如果我們再次開啟 「R.java」 檔，我們會發現檔案中的 string 類別中也自動索引了上面定義好的字串：
 
-接著，我們透過存取 string 類型的格式
+{{{
+    public static final class string {
+        public static final int app_name=0x7f040000;
+        public static final int app_version=0x7f040001;
+        public static final int bmi_btn=0x7f040004;
+        public static final int bmi_result=0x7f040005;
+        public static final int height=0x7f040002;
+        public static final int weight=0x7f040003;
+    }
+}}}
+
+接著，我們把這些字串應用到之前定義好的 XML 描述檔中。透過使用
 
 {{{
 @string/[識別符號]
 }}}
 
-來取代 main.xml 檔案中原本寫死的文字敘述。
+這樣存取 string 類型的格式，來取代 main.xml 檔案中原本寫死的文字敘述。
 
 完整的程式碼如下：
 
@@ -190,7 +201,7 @@ android:id 屬性的內容長得比較特別：
 </LinearLayout>
 }}}
 
-再次運行 Android 模擬器，我們看到與前一節完全相同的介面。但就介面而言，透過將描述字串統一集中在 string.xml 中，我們以後要修改介面時更有彈性了。
+再次運行 Android 模擬器，我們看到與前一節完全相同的介面。但就介面而言，透過將描述字串統一集中在 「string.xml」 中，我們以後要修改介面時更有彈性了。
 
 至此我們已經完成了 BMI 應用程式負責「顯示 (View)」的部份。
 
