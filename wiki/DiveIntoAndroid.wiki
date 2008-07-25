@@ -32,11 +32,11 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [PlayEmulator 操作模擬器]
   # [ReadSource 開始閱讀程式] (BMI0) 
   # [AndroidUI 描述使用者介面]
-  # [BmiUI 設計使用者介面] (BMI1)
+  # [BmiUI 設計使用者介面] (BMI01)
   # [XmlR 存取識別符號]
   # [AndroidLogic 解讀程式流程]
-  # [BmiLogic 完成 BMI 程式]
-  # [BmiRefactor 重構程式] (中階) (BMI2)
+  # [BmiLogic 完成 BMI 程式] (BMI02)
+  # [BmiRefactor 重構程式] (中階) (BMI03)
 
 範例:
 

@@ -136,7 +136,7 @@ android:id 屬性的內容長得比較特別：
 </resources>
 }}}
 
-在 strings.xml 檔案中，我們在原本的 app_name 字串外，自行定義了另外五個字串。如果我們再次開啟 「R.java」 檔，我們會發現檔案中的 string 類別中也自動索引了上面定義好的字串：
+在 strings.xml 檔案中，我們在原本的 app_name 字串外，自行定義了另外五個字串。如果我們再次開啟 「R.java」檔，我們會發現檔案中的 string 類別中也自動索引了上面定義好的字串：
 
 {{{
     public static final class string {
@@ -204,6 +204,24 @@ android:id 屬性的內容長得比較特別：
 再次運行 Android 模擬器，我們看到與前一節完全相同的介面。但就介面而言，透過將描述字串統一集中在 「string.xml」 中，我們以後要修改介面時更有彈性了。
 
 至此我們已經完成了 BMI 應用程式負責「顯示 (View)」的部份。
+
+== 新增 XML 檔案 ==
+
+我們在前面都只修改到開發工具幫我們產生的檔案，
+而事實上，我們所有在 「src」 目錄中所做的修改，開發工具都會自動搜尋，將之整理到「R.java」中。因此我們也可以在「src/values」中建立自己的文字描述檔案。
+
+我們這就在「src/values」目錄中建立一個 「advice.xml」檔，裡面將包含 BMI 程式算出 BMI 值後將給予的建議文字，完整的檔案如下：
+
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="advice_light">你該多吃點</string>
+    <string name="advice_average">體型很棒喔</string>
+    <string name="advice_heavy">你該節食了</string>
+</resources>
+}}}
+
+打開「R.java」檔，我們發現「advice_light」、「advice_average」、「advice_heavy」也已整理進「R.java」檔的索引中，以供程式調用。
 
 那麼接下來，我們就開始進入到了解 Android 程式流程的部分吧。
 
