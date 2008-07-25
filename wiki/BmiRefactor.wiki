@@ -24,25 +24,27 @@
 原來的程式片段是這樣的
 
 {{{
-        @Override
-        public void onCreate(Bundle icicle) {
-            super.onCreate(icicle);
-            setContentView(R.layout.main);
-           
-            //Listen for button clicks
-            Button button = (Button)findViewById(R.id.submit);
-            button.setOnClickListener(calcBMI);
+1        @Override
+2        public void onCreate(Bundle icicle) {
+3            super.onCreate(icicle);
+4            setContentView(R.layout.main);
+5           
+6            //Listen for button clicks
+7            Button button = (Button)findViewById(R.id.submit);
+8            button.setOnClickListener(calcBMI);
         }
 }}}
 
-整個程式架構在前面章節中已經講解過，現在我們從中取出我們感興趣的部分來說明:
+上面的程式片段中，包含了所有 Android 程式共用的標準內容，
+整個程式的大致架構在前面章節中已經講解過，現在我們從中取出我們感興趣的部分來討論：
 
 {{{
-    Button button = (Button)findViewById(R.id.submit);
-    button.setOnClickListener(calcBMI);
+7    Button button = (Button)findViewById(R.id.submit);
+8    button.setOnClickListener(calcBMI);
 }}}
 
-除了所有 Android 程式共用的標準內容外，我們看到一段程式碼來宣告按鈕物件，與針對該按鈕物件作動作的程式碼。後一段 button.setOnClickListener 程式碼的意義是指定一個函式，來負責處理"按下"這個"按鈕"後的動作。
+在第7行我們看到一段程式碼來宣告按鈕物件，與針對該按鈕物件作動作的程式碼。
+button.setOnClickListener 程式碼的意義是指定一個函式，來負責處理"按下"這個"按鈕"後的動作。
 
 我們可以想像，在同一個畫面中，多加入一些按鈕與欄位後，"onCreate" 這段程式將變得壅腫，我們來試著先對此稍作修改：
 
@@ -73,7 +75,9 @@
     }
 }}}
 
-同樣地，指定特定動作(按按鈕)的負責函式也獨立出來：
+順便將原本很沒個性的按鈕識別參數「button」改名成「calcbutton」，以後在程式中一看到「calcbutton」，就知道是一個按下後將開始處理計算工作的按鈕。
+
+同樣地，我們也將指定特定動作(按按鈕)的負責函式獨立出來：
 
 {{{
     //Listen for button clicks
@@ -86,30 +90,92 @@
 
 完整程式如下：
 {{{
+package com.demo.android.com;
+
+import java.text.DecimalFormat;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class bmi extends Activity {
+    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.main);
         findViews();
-        setListensers(); 
+        setListensers();
     }
 
     private Button calcbutton;
     private EditText fieldheight;
     private EditText fieldweight;
+    private TextView result;
+    private TextView fieldsuggest;
 
     private void findViews()
     {
     	calcbutton = (Button)this.findViewById(R.id.submit);
     	fieldheight = (EditText)this.findViewById(R.id.height);
-		fieldweight = (EditText)this.findViewById(R.id.weight);
+    	fieldweight = (EditText)this.findViewById(R.id.weight);
+    	result = (TextView)findViewById(R.id.result);
+    	fieldsuggest = (TextView)findViewById(R.id.suggest);
     }
-    
+
     //Listen for button clicks
     private void setListensers() {
     	calcbutton.setOnClickListener(calcBMI);
     }
+
+    private OnClickListener calcBMI = new OnClickListener()
+    {
+        public void onClick(View v)
+        {
+            DecimalFormat nf = new DecimalFormat("0.0");
+            double height = Double.parseDouble(fieldheight.getText().toString())/100;
+            double weight = Double.parseDouble(fieldweight.getText().toString());
+            double BMI = weight / (height * height);
+
+            //Present result
+            result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+
+            //Give health advice 
+            if(BMI>25){
+                fieldsuggest.setText(R.string.advice_heavy);
+            }else if(BMI<20){
+                fieldsuggest.setText(R.string.advice_light);
+            }else{
+                fieldsuggest.setText(R.string.advice_average);
+            }
+        }
+    };
+}
 }}}
+
+在完整程式中，我們偷偷將「OnClickListener」中會存取到的介面元件識別參數也補進 findViews 宣告中。
+
+同時，也將
+
+{{{
+    TextView result = (TextView)findViewById(R.id.result);
+    result.setText("Your BMI is "+nf.format(BMI));
+}}}
+
+改寫成
+
+{{{
+    //Present result
+    result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+}}}
+
+並將「TextView result」宣告改放到 findViews 中一次處理好。
+
+現在，整個程式流程是不是清爽了許多呢？
 
 = 結語 =
 

@@ -120,11 +120,11 @@ Button 介面元件同樣有 「android:layout_width」與「android:layout_heig
             android:layout_height="wrap_content"
             android:text=""
             />
-	 <TextView android:id="@+id/suggest" 
-	    android:layout_width="fill_parent" 
-	    android:layout_height="wrap_content" 
-	    android:text=""
-	    />
+	     <TextView android:id="@+id/suggest" 
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content" 
+	        android:text=""
+	       />
     </LinearLayout>
 }}}
 
