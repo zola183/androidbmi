@@ -38,7 +38,7 @@ http://code.google.com/android/reference/android/widget/EditText.html
 
 只是 Referenced Libraries 中不像文件一樣，並沒有提供詳細介面元件屬性可供參考。
 
-
+== 開始設計 ==
 
 我們從實例來開始，定義一個基本 BMI 程式所需的身高(Height)輸入欄位，就會用到 EditText，與 TextView 介面元件，其描述如下：
 {{{
@@ -139,7 +139,7 @@ Button 介面元件同樣有 「android:layout_width」與「android:layout_heig
 
 = 革命的路還長 =
 
-高興了沒多久，你發現按下"計算 BMI" 按鈕後，應用程式完全沒反應。
+高興了沒多久，你發現按下"計算 BMI 值" 按鈕後，應用程式完全沒反應。
 
 這是正常的，因為我們還沒處理從介面輸入取得身高體重、將數值導入 BMI 計算方式、將結果輸出到螢幕上...等等 BMI 應用程式的關鍵內容。
 不過在進入了解程式流程之前，我們還有一個「android:id」屬性尚未解釋哩。

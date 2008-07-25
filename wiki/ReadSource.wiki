@@ -84,7 +84,7 @@ res/ 中的程式:
 4. values/ 參數值(value)目錄
 「values」 目錄包含所有使用 XML 格式的參數值描述檔，可以在此添加一些額外的資源如字串(很常用)、顏色、風格等。使用時也是透過 「R」 類別來調用。
 
-==  Android 清單 ==
+==  Android 功能清單 ==
 
 5. AndroidManifest.xml
 
