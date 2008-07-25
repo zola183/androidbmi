@@ -16,10 +16,28 @@ public class bmi extends Activity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.main);
-        
-        //Listen for button clicks
-        Button button = (Button)findViewById(R.id.submit);
-        button.setOnClickListener(calcBMI);
+        findViews();
+        setListensers();
+    }
+
+    private Button calcbutton;
+    private EditText fieldheight;
+    private EditText fieldweight;
+    private TextView result;
+    private TextView fieldsuggest;
+
+    private void findViews()
+    {
+    	calcbutton = (Button)this.findViewById(R.id.submit);
+    	fieldheight = (EditText)this.findViewById(R.id.height);
+    	fieldweight = (EditText)this.findViewById(R.id.weight);
+    	result = (TextView)findViewById(R.id.result);
+    	fieldsuggest = (TextView)findViewById(R.id.suggest);
+    }
+
+    //Listen for button clicks
+    private void setListensers() {
+    	calcbutton.setOnClickListener(calcBMI);
     }
 
     private OnClickListener calcBMI = new OnClickListener()
@@ -27,17 +45,14 @@ public class bmi extends Activity {
         public void onClick(View v)
         {
             DecimalFormat nf = new DecimalFormat("0.0");
-            EditText fieldheight = (EditText)findViewById(R.id.height);
-            EditText fieldweight = (EditText)findViewById(R.id.weight);
             double height = Double.parseDouble(fieldheight.getText().toString())/100;
             double weight = Double.parseDouble(fieldweight.getText().toString());
             double BMI = weight / (height * height);
-
-            TextView result = (TextView)findViewById(R.id.result);
-            result.setText("Your BMI is "+nf.format(BMI));
-
-            //Give health advice
-            TextView fieldsuggest = (TextView)findViewById(R.id.suggest);
+            
+            //Present result 
+            result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+ 
+            //Give health advice 
             if(BMI>25){
                 fieldsuggest.setText(R.string.advice_heavy);
             }else if(BMI<20){
