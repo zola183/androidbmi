@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -62,10 +63,24 @@ public class bmi extends Activity {
             }else{
                 view_suggest.setText(R.string.advice_average);
             }
-            openOptionsDialog();
+            //openOptionsDialog();
         }
     };
-    
+	
+    protected static final int MENU_OPTIONS_ID = Menu.FIRST;
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+		menu.add(0, MENU_OPTIONS_ID, R.string.options_label,
+				new Runnable() {
+					public void run() {
+						openOptionsDialog();
+					}
+		});
+		return true;
+	}
+	
 	private void openOptionsDialog() {
 		View view = getViewInflate().inflate(R.layout.about, null, null);
 		new AlertDialog.Builder(this)
