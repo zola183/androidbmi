@@ -112,24 +112,24 @@ public class bmi extends Activity {
         setListensers();
     }
 
-    private Button calcbutton;
-    private EditText fieldheight;
-    private EditText fieldweight;
-    private TextView result;
-    private TextView fieldsuggest;
+    private Button button_calc;
+    private EditText field_height;
+    private EditText field_weight;
+    private TextView view_result;
+    private TextView view_suggest;
 
     private void findViews()
     {
-    	calcbutton = (Button)this.findViewById(R.id.submit);
-    	fieldheight = (EditText)this.findViewById(R.id.height);
-    	fieldweight = (EditText)this.findViewById(R.id.weight);
-    	result = (TextView)findViewById(R.id.result);
-    	fieldsuggest = (TextView)findViewById(R.id.suggest);
+    	button_calc = (Button)this.findViewById(R.id.submit);
+    	field_height = (EditText)this.findViewById(R.id.height);
+    	field_weight = (EditText)this.findViewById(R.id.weight);
+    	view_result = (TextView)findViewById(R.id.result);
+    	view_suggest = (TextView)findViewById(R.id.suggest);
     }
 
     //Listen for button clicks
     private void setListensers() {
-    	calcbutton.setOnClickListener(calcBMI);
+    	button_calc.setOnClickListener(calcBMI);
     }
 
     private OnClickListener calcBMI = new OnClickListener()
@@ -137,29 +137,43 @@ public class bmi extends Activity {
         public void onClick(View v)
         {
             DecimalFormat nf = new DecimalFormat("0.0");
-            double height = Double.parseDouble(fieldheight.getText().toString())/100;
-            double weight = Double.parseDouble(fieldweight.getText().toString());
+            double height = Double.parseDouble(field_height.getText().toString())/100;
+            double weight = Double.parseDouble(field_weight.getText().toString());
             double BMI = weight / (height * height);
-
-            //Present result
-            result.setText(getText(R.string.bmi_result) + nf.format(BMI));
-
+            
+            //Present result 
+            view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+ 
             //Give health advice 
             if(BMI>25){
-                fieldsuggest.setText(R.string.advice_heavy);
+                view_suggest.setText(R.string.advice_heavy);
             }else if(BMI<20){
-                fieldsuggest.setText(R.string.advice_light);
+                view_suggest.setText(R.string.advice_light);
             }else{
-                fieldsuggest.setText(R.string.advice_average);
+                view_suggest.setText(R.string.advice_average);
             }
         }
     };
 }
 }}}
 
-在完整程式中，我們偷偷將「OnClickListener」中會存取到的介面元件識別參數也補進 findViews 宣告中。
+在完整程式中，我們偷偷將「OnClickListener」中會存取到的其他介面元件識別參數也補進 findViews 宣告中。
 
-同時，也將
+同時，也把識別參數的命名做了統一：按鈕的識別參數前加上 「button_」前綴，可輸入欄位的識別參數前加上 「field_」前綴，用作顯示的識別參數前則加上「view_」前綴。將變數名稱的命名方法統一有什麼好處呢？
+好處在於以後不管是在命名新變數，或是閱讀程式碼時，都能以更快速度命名或理解變數的意義，讓程式變得更好讀。
+
+{{{
+    private void findViews()
+    {
+    	button_calc = (Button)this.findViewById(R.id.submit);
+    	field_height = (EditText)this.findViewById(R.id.height);
+    	field_weight = (EditText)this.findViewById(R.id.weight);
+    	view_result = (TextView)findViewById(R.id.result);
+    	view_suggest = (TextView)findViewById(R.id.suggest);
+    }
+}}}
+
+我們也把原本在程式中直接寫進的自串
 
 {{{
     TextView result = (TextView)findViewById(R.id.result);
@@ -170,10 +184,10 @@ public class bmi extends Activity {
 
 {{{
     //Present result
-    result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+    view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
 }}}
 
-並將「TextView result」宣告改放到 findViews 中一次處理好。
+並將「TextView view_result」宣告改放到 findViews 中一次處理好。
 
 現在，整個程式流程是不是清爽了許多呢？
 
