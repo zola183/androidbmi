@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Bmi extends Activity {
-	private static final String TAG = "bmi";
+	private static final String TAG = "Bmi";
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
