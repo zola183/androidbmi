@@ -1,4 +1,4 @@
-package com.demo.android;
+package com.demo.android.bmi;
 
 import java.text.DecimalFormat;
 
@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class bmi extends Activity {
+public class Bmi extends Activity {
 	private static final String TAG = "bmi";
     /** Called when the activity is first created. */
     @Override
