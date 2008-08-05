@@ -39,6 +39,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [BmiRefactor 重構程式] (中階) (BMI03)
   # [AndroidDialog 加入對話框] inflate (以下規劃中)
   # [AndroidMenu 加入選單] (BMI4)
+  # [AndroidWeb 跳轉到網頁]
   # [AndroidActivity 加入新活動] ManiFest (BMI5)
   # [AndroidIntent 了解意圖]
   # [SubActivity 活動間交換資料]
@@ -46,6 +47,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [LifeCycle 活動的生命週期] LifeCycle
   # [AndroidPreference 儲存資訊]
   # [ListActivity 列表活動] (TODO)
+  # [AdapterInflaction 插座]
   # [CustomField 自定欄位]
   # [StatusNotification 通知]
   # [ContentProvider 與其他程式共用資料]

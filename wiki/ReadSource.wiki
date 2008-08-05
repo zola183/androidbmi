@@ -42,16 +42,17 @@ BMI值是一個中立而可靠的指標。
 || 名稱  || 值 ||
 || Project Name || BMI ||
 || Package Name || com.demo.android.bmi ||
-|| Activity Name || bmi ||
+|| Activity Name || Bmi ||
 || Application Name || BMI ||
 
+「Activity Name」將用來產生預設 java 程式碼的文件名稱與文件中預設類別 (class) 的名稱(Activity)，依照 java 的命名習慣，「Activity Name」最好用開頭大寫形式。
 填好值後按下「Finish」 按鈕，就建立好新專案了。
-回到 Eclipse 主畫面，我們注意到在左側 Package Explorer 視窗中已順利新增加了一個 bmi 目錄。
+回到 Eclipse 主畫面，我們注意到在左側 Package Explorer 視窗中已順利新增加了一個 BMI 目錄。
 
 = 程式專案架構 =
 
 乍看之下，Android 插件已幫我們建立了不少檔案。
-檢視新建立的 bmi 檔案夾中的內容，我們可以將一個 Android 應用程式基本的檔案結構歸納成如下：
+檢視新建立的 BMI 檔案夾中的內容，我們可以將一個 Android 應用程式基本的檔案結構歸納成如下：
 
 我們來看看 Android 應用程式的基本檔案結構，以及各自所負責的內容。
 
@@ -61,7 +62,7 @@ src 目錄中包含了一個 Android 應用程式中所需的各個程式碼檔�
 
 src 目錄中比較關鍵的程式有:
 
-1. bmi.java
+1. Bmi.java
 這個檔案的檔名會隨著你在建立一個新的程式專案畫面中所填入的「Activity Name」的不同而改變。這是新程式專案中的主要程式區塊。我們開發 Android 程式的多數時間，都是在 src 目錄下和 Android 打交道。
 
 2. R.java

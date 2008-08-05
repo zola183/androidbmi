@@ -1,7 +1,7 @@
 #summary 程式流程
 #labels tw
 
-接著要觀察主要程式邏輯的內容囉。打開 「src/com/demo/android/bmi」 目錄下的 「bmi.java」檔案，Eclipse+Android 開發工具已經幫我們預先建立好了基本的程式邏輯。其預設的內容如下：
+接著要觀察主要程式邏輯的內容囉。打開 「src/com/demo/android/bmi」 目錄下的 「Bmi.java」檔案，Eclipse+Android 開發工具已經幫我們預先建立好了基本的程式邏輯。其預設的內容如下：
 
 {{{
     1  package com.demo.android.bmi;
@@ -9,7 +9,7 @@
     3  import android.app.Activity;
     4  import android.os.Bundle;
     5
-    6  public class bmi extends Activity {
+    6  public class Bmi extends Activity {
     7      /** Called when the activity is first created. */
     8      @Override
     9      public void onCreate(Bundle icicle) {
@@ -23,7 +23,7 @@
 
 比起什麼標籤都對稱的 XML 介面描述檔來說，這個以 Java 程式語言寫成的檔案雖然篇幅短，但反而要難讀得多。
 
-我們將程式直接拆開，分成幾個部份來講解這個「bmi.java」 檔案的內容：
+我們將程式直接拆開，分成幾個部份來講解這個「Bmi.java」 檔案的內容：
 
 第 1 行:
 {{{
@@ -45,20 +45,20 @@
 
 第 6,13  行:
 {{{
-    public class bmi extends Activity {
+    public class Bmi extends Activity {
     }
 }}}
 
 第6行開始了程式的主體。其組成是這樣的：
 {{{
-    public class bmi
+    public class Bmi
 }}}
 
-「bmi」是這個類別的名稱。「class」則是用作宣告類別關鍵字。「public」關鍵字是用來修飾「bmi」這個類別。表示「bmi」是個「公開」的類別，可以從 package 外部取用。
+「Bmi」是這個類別的名稱。「class」則是用作宣告類別關鍵字。「public」關鍵字是用來修飾「Bmi」這個類別。表示「Bmi」是個「公開」的類別，可以從 package 外部取用。
 
-「public class bmi」後面再加上「extends Activity」敘述，則表示 bmi 這個類別的功能、型別等全繼承自「Activity」類別。「extends」是繼承(Inherit)類別的關鍵字。「Activity」是來自於我們在第3行剛導入的Package。
+「public class Bmi」後面再加上「extends Activity」敘述，則表示 「Bmi」 這個類別的功能、型別等全繼承自「Activity」類別。「extends」是繼承(Inherit)類別的關鍵字。「Activity」是來自於我們在第3行剛導入的Package。
 
-因此整句話的含意即：「宣告一個公開的 bmi 類別。這個 bmi 類別繼承了程式開頭導入的 Activity 類別」。
+因此整句話的含意即：「宣告一個公開的 Bmi 類別。這個 Bmi 類別繼承了程式開頭導入的 Activity 類別」。
 
 「{}」大括號規範了一個程式區塊。大括號中的程式表達的這個程式區塊的主要內容。
 
@@ -124,11 +124,11 @@
 {{{
     super.onCreate(icicle);
 }}}
-「super」是關鍵字。代表著這個 「bmi」 類別的上層類別(Activity)。「super.onCreate(icicle);」的意思就是：「執行 Activity 類別中 onCreate 方法的內容」。這麼做的目的是什麼呢？
+「super」是關鍵字。代表著這個 「Bmi」 類別的上層類別(Activity)。「super.onCreate(icicle);」的意思就是：「執行 Activity 類別中 onCreate 方法的內容」。這麼做的目的是什麼呢？
 
 Google Android 將其應用程式的介面稱為視圖(View)，而負責控制各種動作行為的程式主體(Controller)，則稱為活動(Activity)。因此一個 Android 應用程式，必定會對應到一個以上的 Activity。 「onCreate」 方法則是每個 Activity 類別初始化時都會去呼叫的方法。我們想做的事，是保持原本「onCreate」 方法預設的動作，然後在其中加入我們想要的內容。
 
-而 Android 產生的程式預設卻覆寫了「bmi」 類別的「onCreate」 方法，原本繼承自 「Activity」類別的「onCreate」方法其原本內容都被覆蓋掉了。因此想將原本的「onCreate」方法內容保留，並在其中加入我們的內容的話，就要使用「super」語句。透過「super.onCreate(icicle);」語句，程式運行到我們覆寫的「onCreate」 方法時，會先將原本「Activity」類別中的「onCreate」方法執行一次，然後再執行我們覆寫的「onCreate」 方法裡面其他的程式內容。
+而 Android 產生的程式預設卻覆寫了「Bmi」 類別的「onCreate」 方法，原本繼承自 「Activity」類別的「onCreate」方法其原本內容都被覆蓋掉了。因此想將原本的「onCreate」方法內容保留，並在其中加入我們的內容的話，就要使用「super」語句。透過「super.onCreate(icicle);」語句，程式運行到我們覆寫的「onCreate」 方法時，會先將原本「Activity」類別中的「onCreate」方法執行一次，然後再執行我們覆寫的「onCreate」 方法裡面其他的程式內容。
 {{{
      setContentView(R.layout.main);
 }}}

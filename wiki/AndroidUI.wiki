@@ -5,11 +5,11 @@
 
 我們可以先用前幾章教的方法設定並執行模擬器，看看模擬器運作後的結果：
 
- 我們看到一個文字欄位，上面有一串文字 「Hello World, bmi」。這就是 Android 預設程式架構的範例囉。
+ 我們看到一個文字欄位，上面有一串文字 「Hello World, Bmi」。這就是 Android 預設程式架構的範例囉。
 
-由於才剛開始實際接觸到 Android 應用程式，我們先從簡單的開始：這一節中，我們的目標是將 「Hello World, bmi」 換成別的文字。
+由於才剛開始實際接觸到 Android 應用程式，我們先從簡單的開始：這一節中，我們的目標是將 「Hello World, Bmi」 換成別的文字。
 
-那麼，「Hello World, bmi」，這串字串藏在哪裡呢？
+那麼，「Hello World, Bmi」，這串字串藏在哪裡呢？
 
 先打開 「res/layout/main.xml」
 {{{
@@ -22,14 +22,14 @@
     7      <TextView 
     8          android:layout_width="fill_parent"
     9          android:layout_height="wrap_content"
-    10        android:text="Hello World, bmi"
+    10        android:text="Hello World, Bmi"
     11        />
     12 </LinearLayout>
 }}}
 
-原來 「Hello World, bmi」 字串就藏在 「res/layout/main.xml」 這個檔案的第 10 行中，我們只要簡單第將之修改成 「哈囉，BMI」，再執行一次模擬器，就可以得到一個相似的應用程式，只是內文變成了我們剛剛修改的內容。
+原來 「Hello World, Bmi」 字串就藏在 「res/layout/main.xml」 這個檔案的第 10 行中，我們只要簡單第將之修改成 「哈囉，BMI」，再執行一次模擬器，就可以得到一個相似的應用程式，只是內文變成了我們剛剛修改的內容。
 
-要開始學習 Android 應用程式確實很簡單吧？不過為了顯示「Hello World, bmi」，也用到了許多程式碼。到底這些程式碼有什麼含意呢？
+要開始學習 Android 應用程式確實很簡單吧？不過為了顯示「Hello World, Bmi」，也用到了許多程式碼。到底這些程式碼有什麼含意呢？
 
 我們馬上來學習 「main.xml」這個 XML 介面描述檔的內涵吧。
 
@@ -37,7 +37,7 @@ Android 平台裡，使用者介面都是透過 ViewGroup 或 View 類別來顯�
 
 = 講解 =
 
-我們看到的「Hello World, bmi」就包含在「main.xml」 這個檔案中。
+我們看到的「Hello World, Bmi」就包含在「main.xml」 這個檔案中。
 接著，我們就直接分部份來講解這個「main.xml」 檔案裡的內容：
 
 第 1 行
@@ -102,7 +102,7 @@ TextView (文字檢視)是我們看到的第一個熟悉的介面元件。其作
 
 綜合起來，我們就可以得知「main.xml」 想表達的介面。
 
-既然找到了「Hello World, bmi」字串，我們就試著將 android:text 屬性值從「Hello World, bmi」改成 「哈囉，BMI」，然後執行看看吧。
+既然找到了「Hello World, Bmi」字串，我們就試著將 android:text 屬性值從「Hello World, Bmi」改成 「哈囉，BMI」，然後執行看看吧。
 
 結果發現 Android 模擬器中文嘛也通，字型也相當漂亮。
 
