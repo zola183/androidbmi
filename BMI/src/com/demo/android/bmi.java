@@ -1,4 +1,4 @@
-package com.demo.android.com;
+package com.demo.android;
 
 import java.text.DecimalFormat;
 
@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class bmi extends Activity {
+	private static final String TAG = "bmi";
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
@@ -31,6 +33,7 @@ public class bmi extends Activity {
 
     private void findViews()
     {
+    	Log.d(TAG, "find Views");
     	button_calc = (Button)this.findViewById(R.id.submit);
     	field_height = (EditText)this.findViewById(R.id.height);
     	field_weight = (EditText)this.findViewById(R.id.weight);
@@ -40,6 +43,7 @@ public class bmi extends Activity {
 
     //Listen for button clicks
     private void setListensers() {
+    	Log.d(TAG, "set Listensers");
     	button_calc.setOnClickListener(calcBMI);
     }
 
@@ -47,6 +51,7 @@ public class bmi extends Activity {
     {
         public void onClick(View v)
         {
+        	Log.d(TAG, "start to calc");
             DecimalFormat nf = new DecimalFormat("0.0");
             double height = Double.parseDouble(field_height.getText().toString())/100;
             double weight = Double.parseDouble(field_weight.getText().toString());
@@ -72,6 +77,7 @@ public class bmi extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
+		Log.d(TAG, "open Menu");
 		menu.add(0, MENU_OPTIONS_ID, R.string.options_label,
 				new Runnable() {
 					public void run() {
@@ -82,6 +88,7 @@ public class bmi extends Activity {
 	}
 	
 	private void openOptionsDialog() {
+		Log.d(TAG, "open Dialog");
 		View view = getViewInflate().inflate(R.layout.about, null, null);
 		new AlertDialog.Builder(this)
 		.setTitle(R.string.about_title)
