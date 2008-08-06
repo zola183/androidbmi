@@ -5,11 +5,13 @@ import java.text.DecimalFormat;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.Menu.Item;
 import android.view.View;
+import android.view.Menu.Item;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
@@ -79,13 +81,7 @@ public class Bmi extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		Log.d(TAG, "open Menu");
-		/*menu.add(0, MENU_OPTIONS_ID, R.string.options_label,
-				new Runnable() {
-					public void run() {
-						openOptionsDialog();
-					}
-		});*/
-		menu.add(0, MENU_OPTIONS_ID, R.string.options_label);
+		menu.add(0, MENU_OPTIONS_ID, R.string.options_label, R.drawable.icon);
 		return true;
 	}
 	
@@ -93,6 +89,7 @@ public class Bmi extends Activity {
 	{
 		super.onOptionsItemSelected(item);
 		int id = item.getId();
+		Log.d(TAG, "select Menu Item");
 		switch(id){
 			case MENU_OPTIONS_ID:
 				openOptionsDialog();
@@ -118,6 +115,9 @@ public class Bmi extends Activity {
 					public void onClick(
 							DialogInterface dialoginterface, int i){
 						//go to url
+						Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+						Intent intent = new Intent(Intent.VIEW_ACTION, uri);
+						startActivity(intent);
 					}
 				})
 		.show();
