@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.Menu.Item;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -78,15 +79,28 @@ public class Bmi extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		Log.d(TAG, "open Menu");
-		menu.add(0, MENU_OPTIONS_ID, R.string.options_label,
+		/*menu.add(0, MENU_OPTIONS_ID, R.string.options_label,
 				new Runnable() {
 					public void run() {
 						openOptionsDialog();
 					}
-		});
+		});*/
+		menu.add(0, MENU_OPTIONS_ID, R.string.options_label);
 		return true;
 	}
 	
+	public boolean onOptionsItemSelected(Item item)
+	{
+		super.onOptionsItemSelected(item);
+		int id = item.getId();
+		switch(id){
+			case MENU_OPTIONS_ID:
+				openOptionsDialog();
+				break;
+		}
+		return true;
+	}
+
 	private void openOptionsDialog() {
 		Log.d(TAG, "open Dialog");
 		View view = getViewInflate().inflate(R.layout.about, null, null);
@@ -97,6 +111,13 @@ public class Bmi extends Activity {
 				new DialogInterface.OnClickListener(){
 					public void onClick(
 							DialogInterface dialoginterface, int i){
+					}
+				})
+		.setNegativeButton(R.string.homepage_label,
+				new DialogInterface.OnClickListener(){
+					public void onClick(
+							DialogInterface dialoginterface, int i){
+						//go to url
 					}
 				})
 		.show();

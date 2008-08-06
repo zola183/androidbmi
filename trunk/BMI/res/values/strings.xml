@@ -6,10 +6,11 @@
     <string name="weight">體重 (kg)</string>
     <string name="bmi_btn">計算 BMI 值</string>
     <string name="bmi_result">你的 BMI 值是 </string>
+    <string name="options_label">About...</string>
     <string name="about_title">About Android BMI</string>
     <string name="about_msg">Android BMI Calc 0.5\n
     		made by gasolin\n\n
     		gasolin+android [at] gmail.com</string>
-	<string name="options_label">About...</string>
 	<string name="ok_label">OK</string>
+	<string name="homepage_label">HomePage</string>
 </resources>
