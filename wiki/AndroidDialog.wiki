@@ -1,0 +1,142 @@
+#summary 加入對話框
+#labels tw
+
+{{{
+狀態：修改中
+}}}
+
+我們的程式主功能已經完成了，現在我們要試著讓它看起來更像一個完整的應用程式。
+
+接下來的幾章，我們要為「BMI」應用程式加上一個選單。選單裡面有一個「關於..」選項。按下「關於...」選項後，會彈出一個對話框，裡面會顯示「BMI」程式的版本訊息。
+
+本章中將先學習處理對話框。
+
+在本章中，我們要產生一個應用程式中常見的「關於」頁面。
+應用程式的「關於」頁面中，通常要包含版本訊息、作者、聯絡方式、首頁等資訊。
+我們的「關於」頁面將以彈出對話框的方式表現。
+我們將撰寫負責處理對話框的「openOptionsDialog」函式，並將之附加在原本程式「calcBMI」這個按鈕的「OnClickListener」方法上。當我們按下「計算 BMI 值」按鈕時，即彈出對話框。等我們學會了對話框的寫法，在接下來學習 Android 選單的章節中，我們會改將對話框函式放入選單中。
+
+對話框中所能顯示的內容千變萬化。對 Android 來說，對話框也是一種顯示內容(View)。與一般全頁面顯示的不同點，在於對話框會疊在原本的呼叫頁面前，而且在對話框的主要顯示內容下方，可能還會再附加上幾個按鈕，用以回到原頁面，或是用以執行其他動作。
+
+要在 Android 程式中呼叫一個對話框，有二個主要步驟：
+
+1. 定義呼叫點
+2. 實作對話框
+
+== 定義呼叫點 ==
+
+我們修改「Bmi.java」
+
+Bmi.java
+{{{
+    private OnClickListener calcBMI = new OnClickListener()
+    {
+        public void onClick(View v)
+        {
+            ....
+            }else{
+                view_suggest.setText(R.string.advice_average);
+            }
+            openOptionsDialog(); 
+}}}
+
+在「calcBMI」函式的尾端加入一行「openOptionsDialog();」，用以在每次計算完BMI值並顯示建議後，順便呼叫「關於」對話框。
+
+== 實作對話框 ==
+
+緊接著「calcBMI」這個「OnClickListener」函式之後，我們實際開始撰寫對話框。
+
+{{{
+    	private void openOptionsDialog() {
+		new AlertDialog.Builder(this)
+		.setTitle("關於 Android BMI")
+		.setMessage("Android BMI Calc")
+		.show();
+}}}
+
+我們來分析這個對話框程式。
+
+首先，顯示一個最基本的對話框所需的程式碼如下。
+
+{{{
+    new AlertDialog.Builder(this).show()
+}}}
+
+我們建立了一個 AlertDialog 對話框類別實體，AlertDialog 呼叫 Builder 方法來預備對應的介面元件。
+最後使用 show() 方法來將對話框顯示在螢幕上。
+
+透過
+{{{
+    .setTitle("關於 Android BMI")
+}}}
+我們設定了對話框的標題。
+
+透過
+{{{
+    .setMessage("Android BMI Calc")
+}}}
+我們設定了對話框的主要內容。
+
+== 重構 ==
+
+我們把其中用到的字串抽取出來，整理到「res/values/strings.xml」中。
+
+res/values/strings.xml
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    ....
+    <string name="about_title">關於 Android BMI</string>
+    <string name="about_msg">Android BMI Calc\n
+    		作者 gasolin\n\n
+    		gasolin+android [at] gmail.com</string>
+    ....
+</resources>
+}}}
+
+於是 openOptionsDialog 函式變成這樣：
+
+{{{
+    	private void openOptionsDialog() {
+		new AlertDialog.Builder(this)
+		.setTitle(R.string.about_title)
+		.setMessage(R.string.about_msg)
+		.show();
+}}}
+
+打開模擬器，在按下按鈕後，我們看到計算出 BMI 值的同時，螢幕上也彈出了一個有標題的對話框。
+
+== 加入按鈕 ==
+
+目前的對話框中，並沒有提供離開對話框的方法。所以我們得按下 「Undo」按鈕來離開對話框，有點不便，所以我們來為這個對話框加入一個「確認」按鈕。
+
+{{{
+		.setPositiveButton("確認",
+				new DialogInterface.OnClickListener(){
+					public void onClick(
+							DialogInterface dialoginterface, int i){
+					}
+				})
+}}}
+
+setPositiveButton、setNegativeButton 或  setNeutralButton 函式都可以用來定義一個按鈕，分別預設代表正面/中立/負面的結果。
+
+程式中定義的 setPositiveButton 裡包含了一個沒有作用的對話框介面(DialogInterface)。
+表示當我們按下按鈕時，不做任何事就直接退出對話框。
+
+
+更詳細的對話框使用可參考官方文件
+http://code.google.com/android/reference/android/app/AlertDialog.Builder.html		
+				
+				
+= 結語 =
+
+這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
+
+Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、SMS、Google Map、Web Cam、3D、遊戲、Webkit、XMPP 等等進階的主題。
+
+希望讀者能以此小書出發，開發出自己的 Android 程式。
+
+也歡迎留言反應讀後感言，或分享自己寫的程式。
+
+<  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidMenu 加入選單] >
