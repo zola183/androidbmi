@@ -60,6 +60,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidResolution 切換螢幕模式]
   # [AndroidInput 處理輸入]
   # Media
+  # [AndroidResource Android 相關資源]
 
 
 (3D) (MAP) (Browser) (XMPP) (Widget)
@@ -73,9 +74,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 == 備註 ==
 
+  * TODO: 相容於 Android SDK 0.9Beta
   * 2008/7/25 新增 [XmlR 存取識別符號] 一章
   * 2008/7/4 新增 [BmiRefactor 重構程式] 一章
-  * 本書已更新，相容於 2008/02/14 釋出的 Android SDK m5-r15
+  * 2008/4/19 相容於 2008/02/14 釋出的 Android SDK m5-r15
 
 
  
