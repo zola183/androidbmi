@@ -173,7 +173,7 @@ public class Bmi extends Activity {
     }
 }}}
 
-我們也把原本在程式中直接寫進的自串
+我們也把原本在程式中直接寫進的字串
 
 {{{
     TextView result = (TextView)findViewById(R.id.result);
