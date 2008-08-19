@@ -24,7 +24,7 @@ http://code.google.com/android/reference/android/widget/EditText.html
 你會看到一個詳細地驚人的網頁。
 
 這邊舉其中常用到的 EditText 介面元件為例。EditText 介面元件的作用就是提供一個文字輸入欄位。EditText 繼承自另一個叫 TextView 的介面元件，TextView 介面元件的作用是提供文字顯示，所以 EditText 介面元件也擁有所有 TextView 介面元件的特性。
-此外，文件中你也可以查找到 EditText 欄位的一些特殊屬性，如 「android:numeric="true"」(僅允許輸入數字)、「android:phoneNumber="true"」(僅允許輸入電話號碼)，或「android:autoLink="all"」(自動將文字轉成超連結)。
+此外，文件中你也可以查找到 EditText 欄位的一些特殊屬性，如 「android:numeric="integer"」(僅允許輸入整數數字)、「android:phoneNumber="true"」(僅允許輸入電話號碼)，或「android:autoLink="all"」(自動將文字轉成超連結)。
 例如要限制 EditText 中只允許輸入數字的話，我們可以在 XML 描述檔中，透過將 EditText 的參數「android:numeric」 指定為 「true」，以限制使用者只能在 EditText 文字欄位中輸入數字。
 
 = 離線文件 =
@@ -50,7 +50,7 @@ http://code.google.com/android/reference/android/widget/EditText.html
     <EditText android:id="@+id/height"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:numeric="true"
+        android:numeric="integer"
         android:text=""
         />
 }}}
@@ -59,10 +59,10 @@ http://code.google.com/android/reference/android/widget/EditText.html
 另外，指定的另外兩個屬性「android:numeric」、「android:text」則是 EditText 介面元件的特別屬性。「android:text」屬性是繼承自 TextView 介面元件的屬性。
 
 {{{
-    android:numeric="true"
+    android:numeric="integer"
     android:text=""
 }}}
-將 「android:numeric」 指定為 「true」，可以限制使用者只能在 EditText 文字欄位中輸入數字。「android:text」屬性則是指定 EditText 介面元件預設顯示的文字(數字)。
+將 「android:numeric」 指定為 「integer」，可以限制使用者只能在 EditText 文字欄位中輸入整數數字。「android:text」屬性則是指定 EditText 介面元件預設顯示的文字(數字)。
 
 我們再來看看 Button (按鈕)介面元件
 
@@ -96,7 +96,7 @@ Button 介面元件同樣有 「android:layout_width」與「android:layout_heig
         <EditText android:id="@+id/height"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:numeric="true"
+            android:numeric="integer"
             android:text=""
             />
         <TextView
@@ -107,7 +107,7 @@ Button 介面元件同樣有 「android:layout_width」與「android:layout_heig
          <EditText android:id="@+id/weight"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:numeric="true"
+            android:numeric="integer"
             android:text=""
             />
          <Button android:id="@+id/submit"
@@ -147,7 +147,9 @@ Button 介面元件同樣有 「android:layout_width」與「android:layout_heig
 
 = 視覺化的介面開發工具 =
 
-目前的 ADT 版本還沒提供方便地視覺化拖拉介面元件的介面開發方式。鑑於目前 ADT 版本還很低，以後也許會加入這樣的 GUI 拖拉設計工具。
+目前的 ADT 版本還沒提供方便地視覺化拖拉介面元件的介面開發方式。
+
+以後也許會加入這樣的 GUI 拖拉設計工具。
 不過也已經有人寫出來了對應 Android 的 GUI 拖拉設計工具。
 
 DroidDraw - Android GUI 拖拉設計工具

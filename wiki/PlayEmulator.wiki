@@ -25,7 +25,7 @@
 
 我們已經順利地啟動了模擬器，那麼，該怎麼移除安裝到模擬器上的程式哩?
 
-Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-sdk/tools 中)，我們可以用裡面的 shell 工具連上模擬器來移除應用程式。
+Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-sdk/tools 中)，我們可以用裡面的 shell 工具連上模擬器來移除應用程式。在某些平台上，這些動作可能需要擁有 root 權限才能執行。
 
 首先啟動 adb shell
 {{{
@@ -59,7 +59,7 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
 
 我們可以直接刪除，或在模擬器關閉的狀況下，以指令 
 {{{
-rm  /.android/userdata.img
+    $ rm  /.android/userdata.img
 }}}
 來刪除模擬器的映像檔。
 
