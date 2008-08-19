@@ -201,4 +201,4 @@ Android 是個完整的平台，還有諸多內容值得研究。例如儲存資
 
 也歡迎留言反應讀後感言，或分享自己寫的程式。
 
-< [BmiLogic 完成 BMI 程式] | [DiveIntoAndroid 回目錄] 
+< [BmiLogic 完成 BMI 程式] | [DiveIntoAndroid 回目錄] | [AndroidDialog 加入對話框] >
