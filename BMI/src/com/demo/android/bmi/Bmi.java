@@ -10,8 +10,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu.Item;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
@@ -85,10 +85,10 @@ public class Bmi extends Activity {
 		return true;
 	}
 	
-	public boolean onOptionsItemSelected(Item item)
+	public boolean onOptionsItemSelected(MenuItem item)
 	{
 		super.onOptionsItemSelected(item);
-		int id = item.getId();
+		int id = item.getItemId();
 		Log.d(TAG, "select Menu Item");
 		switch(id){
 			case MENU_OPTIONS_ID:
@@ -100,7 +100,7 @@ public class Bmi extends Activity {
 
 	private void openOptionsDialog() {
 		Log.d(TAG, "open Dialog");
-		View view = getViewInflate().inflate(R.layout.about, null, null);
+		View view = getLayoutInflater().inflate(R.layout.about, null);
 		new AlertDialog.Builder(this)
 		.setTitle(R.string.about_title)
 		.setView(view)
@@ -116,7 +116,7 @@ public class Bmi extends Activity {
 							DialogInterface dialoginterface, int i){
 						//go to url
 						Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
-						Intent intent = new Intent(Intent.VIEW_ACTION, uri);
+						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 						startActivity(intent);
 					}
 				})
