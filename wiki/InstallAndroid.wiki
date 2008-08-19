@@ -15,17 +15,17 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 
 我們需要安裝一些 Android 開發環境所需的程式工具，這些工具都是可以免費上網取得的：
 
-    * JDK 5 或 JDK 6
+    * **JDK 5 或 JDK 6**
       你需要安裝 Java 開發工具 (JDK 5 或 JDK 6)。
       只安裝 Java 運行環境(JRE) 是不夠的，你需要安裝 Java 開發環境 (JDK)。
-      你可以在命令行上輸入 "java -version" 來查看目前系統上已安裝的 java 版本(java 版本需 >1.5)。
+      你可以在命令行上輸入 「java -version」 來查看目前系統上已安裝的 java 版本(java 版本需 >1.5)。
       要注意的是 Android 與 Java Gnu 編譯器 (gcj) 還不相容。
-    * Eclipse IDE，一個多用途的開發工具平台。
+    * **Eclipse IDE**，一個多用途的開發工具平台。
       你可以下載安裝 Eclipse 3.3 (代號 Europa) 或 3.4 (代號 Ganymede) 版。
       請注意你選擇的版本需包含 Eclipse Java 開發工具擴充套件(Java Development Tool Plugin, JDT)。
-      大多數 Eclipse IDE 包中都已含有 JDT 擴充套件，不過建議您直接選擇 Europa Java 版本下載。
-    * ADT，基於 Eclipse 的 Android 開發工具擴充套件 (Android Development Tools plugin)。
-    * Android SDK，Android 程式開發套件，包含 Android 手機模擬器(Emulator)。
+      大多數 Eclipse IDE 包中都已含有 JDT 擴充套件。若對 Eclipse 平台不熟悉的話，建議直接選擇 「for Java Developers」版本來下載。
+    * **ADT**，基於 Eclipse 的 Android 開發工具擴充套件 (Android Development Tools plugin)。
+    * **Android SDK**，Android 程式開發套件，包含 Android 手機模擬器(Emulator)。
     * 其他開發環境工具
           o 非必要安裝：Linux 和 Mac 環境上需要自動編譯的話可以自行安裝 Apache Ant 1.6.5 或之後版本，Windows 環境上則需要 Apache Ant 1.7 或之後版本。
           o NetBeans、IDEA 等開發平台亦有推出自己的 Android 開發工具，但本書中還是以討論官方基於 Eclipse 平台的開發工具為準，其他平台不予涉及。
@@ -62,20 +62,35 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 
 我們將在 Eclipse 上 安裝 Android 開發工具 (ADT)。
 
-找到螢幕上方的選單列， 選擇 "Help->Software Updates->Find and Install" 選項，這選項會帶出一個新視窗。    
+Eclipse 3.4 版:
 
-選擇 "Search for new features to install" (搜尋新功能供安裝)選項，按下 "Next" (下一步)鍵。出現設定畫面。
+找到螢幕上方的選單列， 選擇 「Help->Software Updates」 選項，這選項會帶出一個新視窗。
+選擇「Available Software」標籤，選擇右方的 「Add Site...」 (新增網站)按鈕，會彈出一個輸入框。
 
-選擇右上角的 "New Remote Site" (新增遠端網站)選項，會彈出一個 "New Update Site" (新增更新網站)輸入框。
+在輸入框中的"Location"欄位中輸入網址(URL) 「https://dl-ssl.google.com/android/eclipse/」，
+按下 "OK" 按鈕離開。Eclipse 會花一點時間尋找合適的版本。
 
-在輸入框中輸入插件的名稱(Name) "ADT" 跟網址(URL) "https://dl-ssl.google.com/android/eclipse/"，
-按下 "OK" 按鈕離開。
+在視窗中全選「https://dl-ssl.google.com/android/eclipse/」的選項後，按下右方的「Install」按鈕。
 
-按下 "Finish" 按紐繼續下一步。Eclipse 會花一點時間尋找合適的版本。
+按下 「Next」 (下一步)鍵。照著步驟就安裝完成。安裝完會提示需重新啟動 Eclipse，按下 「Yes」 重新啟動。
+
+Eclipse 3.3 版:
+
+找到螢幕上方的選單列， 選擇 「Help->Software Updates->Find and Install」 選項，這選項會帶出一個新視窗。    
+
+選擇 「Search for new features to install」 (搜尋新功能供安裝)選項，按下 「Next」 (下一步)鍵。出現設定畫面。
+
+選擇右上角的 「New Remote Site」 (新增遠端網站)按鈕，會彈出一個 「New Update Site」 (新增更新網站)輸入框。
+
+在輸入框中輸入擴充套件的名稱(Name) 「ADT」 跟網址(URL) 「https://dl-ssl.google.com/android/eclipse/」，
+按下 「OK」 按鈕離開。
+
+按下 「Finish」 按紐繼續下一步。Eclipse 會花一點時間尋找合適的版本。
 
 接著我們要做的，就是等 Eclipse 顯示出選項時，勾選合適的版本安裝。
 
-安裝完會提示需重新啟動 Eclipse，按下 "OK" 重新啟動。
+安裝完會提示需重新啟動 Eclipse，按下 「OK」 重新啟動。
+
 
 參考資料 http://code.google.com/android/intro/installing.html#installingplugin
 
