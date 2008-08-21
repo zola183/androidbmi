@@ -138,4 +138,4 @@ Android 是個完整的平台，還有諸多內容值得研究。例如儲存資
 
 也歡迎留言反應讀後感言，或分享自己寫的程式。
 
-<  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidMenu 加入選單] >
+<  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidUrl 跳轉到網頁] >

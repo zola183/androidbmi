@@ -38,8 +38,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [BmiLogic 完成 BMI 程式] (BMI02)
   # [BmiRefactor 重構程式] (中階) (BMI03)
   # [AndroidDialog 加入對話框]
-  # [AndroidMenu 加入選單] (以下規劃中)
   # [AndroidUrl 跳轉到網頁] (BMI4)
+  # [AndroidMenu 加入選單] (以下規劃中)
   # [AndroidActivity 加入新活動] ManiFest (BMI5)
   # [AndroidIntent 了解意圖]
   # [SubActivity 活動間交換資料]
@@ -54,6 +54,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # tab (Avarta)
   # spinner
   # [ContentProvider 與其他程式共用資料]
+  # [DynamicLayout 動態產生UI]
+  # [CustomDialog 進階對話框]
   # [MultiLang 支援多語言] (進階) 
   # Draw (OX Game)
   # Pics
