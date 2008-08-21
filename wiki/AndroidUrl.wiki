@@ -49,8 +49,8 @@
     <string name="about_msg">Android BMI Calc 0.6\n
     		作者 gasolin\n
     		gasolin+android [at] gmail.com</string>
-	<string name="ok_label">確認</string>
-	<string name="homepage_label">首頁</string>
+    <string name="ok_label">確認</string>
+    <string name="homepage_label">首頁</string>
 </resources>
 }}}
 
@@ -71,7 +71,7 @@
 
 與上一章我們將 DialogInterface 中的內容空白不同的是，我們為這個按鈕添加了連線到特定網址(首頁)的「動作」，當使用者按下「首頁」按鈕後，程式會開啟瀏覽器，並連線到本專案的首頁「http://androidbmi.googlecode.com/」。
 
-要完成整個連線的「動作」只需要三行程式碼。
+要完成整個連線的「動作」只需要三行程式碼：
 
 {{{
 //go to url 這是註解
@@ -80,19 +80,19 @@ Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 startActivity(intent);
 }}}
 
-以下分行詳細講解：
+以下是分行詳細的講解：
 
 {{{
 Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
 }}}
-我們建立一個 Uri 實體，裡面包含我們要連到的網址「http://androidbmi.googlecode.com/」。
+建立一個 Uri 實體，裡面包含我們要連到的網址「http://androidbmi.googlecode.com/」。
 
 
 {{{
 startActivity(intent);
 }}}
 
-透過「startActivity」 函式，Android 系統即根據收到不同意圖 「意圖」(Intent) 的動作和內容，開啟對應的新頁面或新程式。
+透過「startActivity」 函式，Android 系統即根據收到不同 「意圖」(Intent) 的動作和內容，開啟對應的新頁面或新程式。
 
 在 Android 平台上，各個 Activity 之間的呼叫與交流都要透過「startActivity」 一類的函式來互動。「startActivity」 一類的函式中，最重要需傳入的內容就是「意圖」(Intent) 。因此我們在後面會進一步闡述「Intent」與「Activity」之間的關係。
 
@@ -102,7 +102,7 @@ Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 在這行中，我們建立一個「意圖」(Intent) 實體，並傳入這個意圖的「動作」與「內容」。
 我們所建立「意圖」(Intent) 中，所傳入的「動作」是「Intent.ACTION_VIEW」。「Intent.ACTION_VIEW」是 Android 內建的「動作」之一。在 Eclipse 編輯畫面中輸入「Intent.」時，Eclipse 編輯器會彈出可輸入的建議動作選單，我們可以透過這個選單，了解可使用的各種 Intent 內建動作。
 
-「Intent.ACTION_VIEW」這個動作的意義為：依所提供內容的不同，開啟對應的程式以檢視內容資料。我們可以把這個動作想成在一般桌面系統上，開啟一個已知的檔案類型檔案(比如說一張照片)，作業系統會用你預設的應用程式(比如說某看圖軟體)開啟這個檔案。本例中提供了「Uri」網址類型的內容給「Intent.ACTION_VIEW」這個動作，所得到的結果，就是開啟瀏覽器並前往「http://androidbmi.googlecode.com/」頁面。
+「Intent.ACTION_VIEW」這個動作的意義為：依所提供內容的不同，開啟對應的程式以檢視內容資料。我們可以把這個動作想成在一般桌面系統上，開啟一個已知的檔案類型檔案(比如說一張照片)，作業系統會用你預設的應用程式(比如說某看圖軟體)開啟這個檔案。本例中提供了「Uri」網址類型的內容給「Intent.ACTION_VIEW」這個動作，所得到的結果，就是開啟瀏覽器並前往「http://androidbmi.googlecode.com/」 頁面。
 
 
 = 結語 =
