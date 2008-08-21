@@ -55,7 +55,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # spinner
   # [ContentProvider 與其他程式共用資料] (進階) 
   # [DynamicLayout 動態產生UI]
-  # [CustomDialog 進階對話框]
+  # [CustomDialog 自訂對話框]
+  # [CustommMenu 自訂選單]
   # [MultiLang 支援多語言]
   # Draw (OX Game)
   # Pics
