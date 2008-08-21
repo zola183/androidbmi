@@ -128,4 +128,4 @@ res/values/strings.xml
 http://code.google.com/android/reference/android/app/AlertDialog.Builder.html		
 		
 
-<  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidUrl 跳轉到網頁] >
+<  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidUrl 初見意圖] >

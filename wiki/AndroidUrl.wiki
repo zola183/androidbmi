@@ -1,4 +1,4 @@
-#summary 跳轉到網頁
+#summary 初見意圖
 #labels tw
 
 = 開啟網頁 =
