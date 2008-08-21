@@ -75,7 +75,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 [IntroAndroid 從頭開始閱讀] >
 
 == 主要更新記錄 ==
-
+  * 2008/8/20 新增[AndroidUrl 跳轉到網頁]一章
   * 2008/8/19 相容於 Android SDK 0.9Beta, 新增[AndroidDialog 加入對話框]與[AndroidResource Android 相關資源]二章
   * 2008/7/25 新增[XmlR 存取識別符號]一章
   * 2008/7/4 新增[BmiRefactor 重構程式] 一章
