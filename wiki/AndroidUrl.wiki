@@ -1,0 +1,120 @@
+#summary 跳轉到網頁
+#labels tw
+
+= 開啟網頁 =
+
+我們已經對 Android 應用程式的寫法有了概觀的認識。可是我們還沒有觸及 Android 平台的特別之處：整合網路的應用。
+
+在上一章中，我們學到如何使用對話框，與如何在對話框下添加按鈕，以回到原畫面。在這一章裡，我們來為我們的應用程式添加一個簡單的網路功能：在對話框下新增一個「連線到首頁」的按鈕。
+
+完整「openOptionsDialog」函式的程式碼如下：
+{{{
+	private void openOptionsDialog() {
+		new AlertDialog.Builder(this)
+		.setTitle(R.string.about_title)
+		.setMessage(R.string.about_msg)
+		.setPositiveButton(R.string.ok_label,
+				new DialogInterface.OnClickListener(){
+					public void onClick(
+							DialogInterface dialoginterface, int i){
+					}
+				})
+		.setNegativeButton(R.string.homepage_label,
+				new DialogInterface.OnClickListener(){
+					public void onClick(
+							DialogInterface dialoginterface, int i){
+						//go to url
+						Uri uri = Uri.parse();
+						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+						startActivity(intent);
+					}
+				})
+		.show();
+        }
+}}}
+
+增加「openOptionsDialog」函式中使用到的字串到「res/values/string.xml」。
+因此完整的「res/values/string.xml」如下：
+
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="height">身高 (cm)</string>
+    <string name="weight">體重 (kg)</string>
+    <string name="bmi_btn">計算 BMI 值</string>
+    <string name="bmi_result">你的 BMI 值是 </string>
+    
+    <string name="options_label">關於...</string>
+    <string name="about_title">關於 Android BMI</string>
+    <string name="about_msg">Android BMI Calc 0.6\n
+    		作者 gasolin\n
+    		gasolin+android [at] gmail.com</string>
+	<string name="ok_label">確認</string>
+	<string name="homepage_label">首頁</string>
+</resources>
+}}}
+
+
+= 講解 =
+
+在上一章的基礎上，我們增加了一個「setNegativeButton」函式，以提供另一個按鈕。
+
+{{{
+		.setNegativeButton(R.string.homepage_label,
+				new DialogInterface.OnClickListener(){
+					public void onClick(
+					    DialogInterface dialoginterface, int i){
+						.....
+					}
+				})
+}}}
+
+與上一章我們將 DialogInterface 中的內容空白不同的是，我們為這個按鈕添加了連線到特定網址(首頁)的「動作」，當使用者按下「首頁」按鈕後，程式會開啟瀏覽器，並連線到本專案的首頁「http://androidbmi.googlecode.com/」。
+
+要完成整個連線的「動作」只需要三行程式碼。
+
+{{{
+//go to url 這是註解
+Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+startActivity(intent);
+}}}
+
+以下分行詳細講解：
+
+{{{
+Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+}}}
+我們建立一個 Uri 實體，裡面包含我們要連到的網址「http://androidbmi.googlecode.com/」。
+
+
+{{{
+startActivity(intent);
+}}}
+
+透過「startActivity」 函式，Android 系統即根據收到不同意圖 「意圖」(Intent) 的動作和內容，開啟對應的新頁面或新程式。
+
+在 Android 平台上，各個 Activity 之間的呼叫與交流都要透過「startActivity」 一類的函式來互動。「startActivity」 一類的函式中，最重要需傳入的內容就是「意圖」(Intent) 。因此我們在後面會進一步闡述「Intent」與「Activity」之間的關係。
+
+
+{{{
+Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+}}}
+在這行中，我們建立一個「意圖」(Intent) 實體，並傳入這個意圖的「動作」與「內容」。
+我們所建立「意圖」(Intent) 中，所傳入的「動作」是「Intent.ACTION_VIEW」。「Intent.ACTION_VIEW」是 Android 內建的「動作」之一。在 Eclipse 編輯畫面中輸入「Intent.」時，Eclipse 編輯器會彈出可輸入的建議動作選單，我們可以透過這個選單，了解可使用的各種 Intent 內建動作。
+
+「Intent.ACTION_VIEW」這個動作的意義為：依所提供的內容的不同，開啟對應的程式來檢視內容資料。例如本例中提供了「Uri」網址類型的內容給「Intent.ACTION_VIEW」這個動作，得到的結果就是開啟瀏覽器並前往「http://androidbmi.googlecode.com/」頁面。
+
+
+= 結語 =
+
+這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
+
+Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、SMS、Google Map、Web Cam、3D、遊戲、Webkit、XMPP 等等進階的主題。
+
+希望讀者能以此小書出發，開發出自己的 Android 程式。
+
+也歡迎留言反應讀後感言，或分享自己寫的程式。
+
+<  [AndroidDialog 加入對話框] | [DiveIntoAndroid 回目錄] | [AndroidMenu 加入選單]  >
