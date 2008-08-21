@@ -33,8 +33,7 @@
         }
 }}}
 
-增加「openOptionsDialog」函式中使用到的字串到「res/values/string.xml」。
-因此完整的「res/values/string.xml」如下：
+同時，我們把「openOptionsDialog」函式中使用到的字串增加到「res/values/string.xml」裡。因此完整的「res/values/string.xml」檔案如下：
 
 {{{
 <?xml version="1.0" encoding="utf-8"?>
