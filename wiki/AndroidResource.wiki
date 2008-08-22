@@ -1,7 +1,12 @@
 #summary Android 相關資源
 #labels tw
 
-* RoadMap，最新的 Android 平台開發進度 http://code.google.com/android/roadmap.html
-* Planet Android 部落格文章收集地 http://www.planetandroid.com/
-* Anddev 論壇，有許多教程 http://www.anddev.org/
-* Android 開發工具功用介紹 http://code.google.com/android/intro/tools.html
+* [http://code.google.com/android/roadmap.html RoadMap]，最新的 Android 平台開發進度 
+* [http://www.planetandroid.com/ Planet Android] 部落格文章收集地
+* [http://www.anddev.org/ Anddev 論壇]，有許多教程
+* [http://code.google.com/android/intro/tools.html Android 開發工具功用介紹]
+
+m5->0.9 porting
+# [http://code.google.com/android/migrating/m5-0.9/changes-overview.html Overview of Changes]
+# [http://code.google.com/android/migrating/m5-0.9/changes.html API Differences Report]
+# [http://groups.google.com/group/android-developers/web/m5-to-0-9-porting-and-migration-tips M5 to 0.9 Porting Tips]
