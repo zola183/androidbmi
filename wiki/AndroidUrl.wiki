@@ -5,35 +5,9 @@
 
 我們已經對 Android 應用程式的寫法有了概觀的認識。可是我們還沒有觸及 Android 平台的特別之處：整合網路的應用。
 
-在上一章中，我們學到如何使用對話框，與如何在對話框下添加按鈕，以回到原畫面。在這一章裡，我們來為我們的應用程式添加一個簡單的網路功能：在對話框下新增一個「連線到首頁」的按鈕。
+在上一章中，我們學到如何使用對話框，與如何在對話框下添加按鈕，以回到原畫面。在這一章裡，我們來為我們的應用程式添加一個簡單的網路功能：在上一章實做的「openOptionsDialog」對話框函式中，新添一個「連線到首頁」的按鈕。
 
-完整「openOptionsDialog」函式的程式碼如下：
-{{{
-	private void openOptionsDialog() {
-		new AlertDialog.Builder(this)
-		.setTitle(R.string.about_title)
-		.setMessage(R.string.about_msg)
-		.setPositiveButton(R.string.ok_label,
-				new DialogInterface.OnClickListener(){
-					public void onClick(
-							DialogInterface dialoginterface, int i){
-					}
-				})
-		.setNegativeButton(R.string.homepage_label,
-				new DialogInterface.OnClickListener(){
-					public void onClick(
-							DialogInterface dialoginterface, int i){
-						//go to url
-						Uri uri = Uri.parse();
-						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-						startActivity(intent);
-					}
-				})
-		.show();
-        }
-}}}
-
-同時，我們把「openOptionsDialog」函式中使用到的字串增加到「res/values/string.xml」裡。因此完整的「res/values/string.xml」檔案如下：
+我們先把「openOptionsDialog」函式中使用到的字串增加到「res/values/string.xml」裡。因此完整的「res/values/string.xml」檔案如下：
 
 {{{
 <?xml version="1.0" encoding="utf-8"?>
@@ -53,10 +27,38 @@
 </resources>
 }}}
 
+增加了「連線到首頁」按鈕，完整「openOptionsDialog」函式的新版程式碼如下：
+{{{
+	private void openOptionsDialog() {
+		new AlertDialog.Builder(this)
+		.setTitle(R.string.about_title)
+		.setMessage(R.string.about_msg)
+		.setPositiveButton(R.string.ok_label,
+				new DialogInterface.OnClickListener(){
+					public void onClick(
+							DialogInterface dialoginterface, int i){
+					}
+				})
+		.setNegativeButton(R.string.homepage_label,
+				new DialogInterface.OnClickListener(){
+					public void onClick(
+							DialogInterface dialoginterface, int i){
+						//go to url
+						Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+						startActivity(intent);
+					}
+				})
+		.show();
+        }
+}}}
+
+
+
 
 = 講解 =
 
-在上一章的基礎上，我們增加了一個「setNegativeButton」函式，以提供另一個按鈕。
+在上一章「openOptionsDialog」函式的基礎上，我們在函式中添加了一個「setNegativeButton」方法，以提供另一個「NegativeButton」按鈕。
 
 {{{
 		.setNegativeButton(R.string.homepage_label,
@@ -103,6 +105,41 @@ Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 
 「Intent.ACTION_VIEW」這個動作的意義為：依所提供內容的不同，開啟對應的程式以檢視內容資料。我們可以把這個動作想成在一般桌面系統上，開啟一個已知的檔案類型檔案(比如說一張照片)，作業系統會用你預設的應用程式(比如說某看圖軟體)開啟這個檔案。本例中提供了「Uri」網址類型的內容給「Intent.ACTION_VIEW」這個動作，所得到的結果，就是開啟瀏覽器並前往「http://androidbmi.googlecode.com/」 頁面。
 
+
+== 再做好一點 ==
+
+前面我們看到 Uri 實體的定義方法：
+
+{{{
+Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+}}}
+
+看到 Uri.parse() 中，有一個固定的網址，你應該也會想把它抽取出來，丟到 Resource 中統一管理。那麼我們把程式改寫，首先把網址抽取出來，放到「res/values/string.xml」檔案中。
+
+「res/values/string.xml」檔案更新如下：
+{{{
+...
+<string name="homepage_label">首頁</string>
+<string name="homepage_uri">http://androidbmi.googlecode.com/</string>
+}}}
+
+我們把 Uri.parse() 函式修改，傳入資源識別符號.
+{{{
+Uri uri = Uri.parse(R.string.homepage_uri);
+}}}
+
+糟了，Eclipse 上出現了紅線，表示我們的程式碼裡有地方弄錯了。
+我們重新輸入「Uri.」，看看 parse 函式到底長什麼樣子。
+
+原來，Uri.parse() 函式並不接受資源識別符號型態的輸入。
+那麼，我們得自行取得資源識別符號所代表的文字敘述內容。
+真正能執行的程式碼如下：
+
+{{{
+Uri uri = Uri.parse(getResources().getString(R.string.homepage_uri));
+}}}
+
+在程式中，我們可以使用 getResources() 中的 getString() 函式，來取得資源識別符號對應的文字。
 
 = 結語 =
 
