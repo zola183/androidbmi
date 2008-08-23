@@ -179,7 +179,7 @@ The important thing to notice for now is the inner class named "layout", and its
 	<EditText android:id="@+id/height" 
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
-	    android:numeric="true"
+	    android:numeric="integer"
 	    android:text=""
 	    />
 	<TextView 
@@ -190,7 +190,7 @@ The important thing to notice for now is the inner class named "layout", and its
 	<EditText android:id="@+id/weight" 
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content"
-	    android:numeric="true"
+	    android:numeric="integer"
 	    android:text=""
 	    />
 	<Button android:id="@+id/submit" 
@@ -215,7 +215,7 @@ The important thing to notice for now is the inner class named "layout", and its
 我們在前面都只修改到開發工具幫我們產生的檔案，
 而事實上，我們所有在 「src」 目錄中所做的修改，開發工具都會自動搜尋，將之整理到「R.java」中。因此我們也可以在「src/values」中建立自己的文字描述檔案。
 
-我們這就在「src/values」目錄中建立一個 「advice.xml」檔，裡面將包含 BMI 程式算出 BMI 值後將給予的建議文字，完整的檔案如下：
+我們這就在「res/values」目錄中建立一個 「advice.xml」檔，裡面將包含 BMI 程式算出 BMI 值後將給予的建議文字，完整的檔案如下：
 
 {{{
 <?xml version="1.0" encoding="utf-8"?>
