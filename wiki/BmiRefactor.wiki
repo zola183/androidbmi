@@ -39,8 +39,8 @@
 整個程式的大致架構在前面章節中已經講解過，現在我們從中取出我們感興趣的部分來討論：
 
 {{{
-7    Button button = (Button)findViewById(R.id.submit);
-8    button.setOnClickListener(calcBMI);
+   Button button = (Button)findViewById(R.id.submit);
+   button.setOnClickListener(calcBMI);
 }}}
 
 在第7行我們看到一段程式碼來宣告按鈕物件，與針對該按鈕物件作動作的程式碼。
