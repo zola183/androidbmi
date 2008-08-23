@@ -135,7 +135,6 @@ The important thing to notice for now is the inner class named "layout", and its
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BMI</string>
-    <string name="app_version">0.1</string>
     <string name="height">身高 (cm)</string>
     <string name="weight">體重 (kg)</string>
     <string name="bmi_btn">計算 BMI 值</string>
@@ -143,16 +142,15 @@ The important thing to notice for now is the inner class named "layout", and its
 </resources>
 }}}
 
-在 strings.xml 檔案中，我們在原本的 app_name 字串外，自行定義了另外五個字串。如果我們再次開啟 「R.java」檔，我們會發現檔案中的 string 類別中也自動索引了上面定義好的字串：
+在 strings.xml 檔案中，我們在原本的 app_name 字串外，自行定義了另外幾個字串。如果我們再次開啟 「R.java」檔，我們會發現檔案中的 string 類別中也自動索引了上面定義好的字串：
 
 {{{
     public static final class string {
         public static final int app_name=0x7f040000;
-        public static final int app_version=0x7f040001;
-        public static final int bmi_btn=0x7f040004;
-        public static final int bmi_result=0x7f040005;
-        public static final int height=0x7f040002;
-        public static final int weight=0x7f040003;
+        public static final int bmi_btn=0x7f040003;
+        public static final int bmi_result=0x7f040004;
+        public static final int height=0x7f040001;
+        public static final int weight=0x7f040002;
     }
 }}}
 
