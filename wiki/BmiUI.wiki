@@ -42,17 +42,17 @@ http://code.google.com/android/reference/android/widget/EditText.html
 
 我們從實例來開始，定義一個基本 BMI 程式所需的身高(Height)輸入欄位，就會用到 EditText，與 TextView 介面元件，其描述如下：
 {{{
-1     <TextView
-2         android:layout_width="fill_parent"
-3         android:layout_height="wrap_content"
-4         android:text="身高 (cm)"
-5         />
-6     <EditText android:id="@+id/height"
-7         android:layout_width="fill_parent"
-8         android:layout_height="wrap_content"
-9         android:numeric="integer"
-10        android:text=""
-11        />
+1  <TextView
+2     android:layout_width="fill_parent"
+3     android:layout_height="wrap_content"
+4     android:text="身高 (cm)"
+5     />
+6  <EditText android:id="@+id/height"
+7     android:layout_width="fill_parent"
+8     android:layout_height="wrap_content"
+9     android:numeric="integer"
+10    android:text=""
+11    />
 }}}
 
 可以看到 EditText 介面元件描述的基本的組成與 TextView 介面元件相似，都用到了「android:layout_width」與「android:layout_height」屬性。
