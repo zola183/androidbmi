@@ -108,7 +108,7 @@ Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 
 == 再做好一點 ==
 
-前面我們看到 Uri 實體的定義方法：
+我們再來檢視一下剛剛看到的 Uri 實體定義方式：
 
 {{{
 Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
@@ -123,7 +123,7 @@ Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
 <string name="homepage_uri">http://androidbmi.googlecode.com/</string>
 }}}
 
-我們把 Uri.parse() 函式修改，傳入資源識別符號.
+我們修改一下 Uri.parse() 函式，傳入資源識別符號.
 {{{
 Uri uri = Uri.parse(R.string.homepage_uri);
 }}}
@@ -132,9 +132,9 @@ Uri uri = Uri.parse(R.string.homepage_uri);
 我們重新輸入「Uri.」，看看 parse 函式到底長什麼樣子。
 
 原來，Uri.parse() 函式並不接受資源識別符號型態的輸入。
-那麼，我們得自行取得資源識別符號所代表的文字敘述內容。
-真正能執行的程式碼如下：
+既然如此，我們只得自行取得資源識別符號所代表的文字敘述內容。
 
+真正可執行的程式碼如下：
 {{{
 Uri uri = Uri.parse(getResources().getString(R.string.homepage_uri));
 }}}
