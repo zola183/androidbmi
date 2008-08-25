@@ -11,3 +11,6 @@ m5->0.9 porting
 # [http://code.google.com/android/migrating/m5-0.9/changes-overview.html Overview of Changes]
 # [http://code.google.com/android/migrating/m5-0.9/changes.html API Differences Report]
 # [http://groups.google.com/group/android-developers/web/m5-to-0-9-porting-and-migration-tips M5 to 0.9 Porting Tips]
+
+Gears
+* [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
