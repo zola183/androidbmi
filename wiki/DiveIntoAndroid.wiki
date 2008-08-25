@@ -38,10 +38,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [BmiLogic 完成 BMI 程式] (BMI02)
   # [BmiRefactor 重構程式] (中階) (BMI03)
   # [AndroidDialog 加入對話框]
-  # [AndroidUrl 初見意圖] (BMI4)
+  # [AndroidUrl 初見 Intent] (BMI4)
   # [AndroidMenu 加入選單] (以下規劃中)
-  # [AndroidActivity 加入新活動] ManiFest (BMI5)
-  # [AndroidIntent 了解意圖]
+  # [AndroidActivity 加入新 Activity] ManiFest (BMI5)
+  # [AndroidIntent 認識 Intent]
   # [SubActivity 活動間交換資料]
   # [AndroidDebug 記錄與偵錯] log
   # [LifeCycle 活動的生命週期] LifeCycle
@@ -63,6 +63,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidResolution 切換螢幕模式]
   # [AndroidInput 處理輸入]
   # Media
+  # [離線網頁程式 GoogleGears]
   # [AndroidResource Android 相關資源]
 
 
