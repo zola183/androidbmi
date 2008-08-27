@@ -1,5 +1,5 @@
 #summary 重構程式
-#labels tw
+#labels tw,refactor
 
 = 什麼是重構 =
 
