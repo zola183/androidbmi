@@ -1,5 +1,5 @@
 #summary 加入對話框
-#labels tw
+#labels tw,dialog,toast
 
 我們的程式主功能已經完成了，現在我們要試著讓它看起來更像一個完整的應用程式。
 
