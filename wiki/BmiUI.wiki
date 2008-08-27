@@ -1,5 +1,5 @@
 #summary 設計使用者介面
-#labels tw,widget,XML,UI,Resource
+#labels tw,widget,XML,UI
 
 = 視圖 =
 
