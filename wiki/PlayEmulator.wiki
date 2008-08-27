@@ -1,5 +1,5 @@
 #summary 操作 Android 模擬器
-#labels tw
+#labels tw,Emulator
 
 = 使用 Android 模擬器 =
 
