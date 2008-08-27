@@ -1,5 +1,5 @@
 #summary 設計使用者介面
-#labels tw
+#labels tw,widget,XML,UI,Resource
 
 = 視圖 =
 
@@ -147,10 +147,9 @@ Button 介面元件同樣有 「android:layout_width」與「android:layout_heig
 
 = 視覺化的介面開發工具 =
 
-目前的 ADT 版本還沒提供方便地視覺化拖拉介面元件的介面開發方式。
+目前的 ADT 版本提供了預覽介面的功能，但尚未提供方便地視覺化拖拉介面元件的開發工具。以後也許 ADT 會加入完整的 GUI 拖拉設計工具。
 
-以後也許會加入這樣的 GUI 拖拉設計工具。
-不過也已經有人寫出來了對應 Android 的 GUI 拖拉設計工具。
+但在 ADT 加入完整的 GUI 拖拉設計工具之前，已經有人寫出來了對應 Android 的 GUI 拖拉設計工具，可供使用。
 
 DroidDraw - Android GUI 拖拉設計工具
 http://code.google.com/p/droiddraw/
