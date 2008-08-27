@@ -144,6 +144,6 @@ Uri uri = Uri.parse(getString(R.string.homepage_uri));
 }}}
  
 在程式中，我們可以使用 「getResources」 中的 「getString」 函式(或是getText)，來取得資源識別符號對應的文字。
- 	
- 	
+
+
 <  [AndroidDialog 加入對話框] | [DiveIntoAndroid 回目錄] | [AndroidMenu 加入選單]  >
