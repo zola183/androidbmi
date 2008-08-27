@@ -1,7 +1,7 @@
 #summary 重構程式
 #labels tw
 
-= 簡介 =
+= 什麼是重構 =
 
 可以運作的程式跟可以維護的程式之間，還有一道難以言說的鴻溝。 
 
@@ -60,7 +60,7 @@ button.setOnClickListener 程式碼的意義是指定一個函式，來負責處
     }
 }}}
 
-接著我們將宣告介面元件的部份寫成一個獨立的函式：
+接著我們將宣告介面元件的部份寫成一個獨立的「findViews」函式：
 
 {{{
     private Button calcbutton;
@@ -157,10 +157,7 @@ public class Bmi extends Activity {
 }
 }}}
 
-在完整程式中，我們偷偷將「OnClickListener」中會存取到的其他介面元件識別參數也補進 findViews 宣告中。
-
-同時，也把識別參數的命名做了統一：按鈕的識別參數前加上 「button_」前綴，可輸入欄位的識別參數前加上 「field_」前綴，用作顯示的識別參數前則加上「view_」前綴。將變數名稱的命名方法統一有什麼好處呢？
-好處在於以後不管是在命名新變數，或是閱讀程式碼時，都能以更快速度命名或理解變數的意義，讓程式變得更好讀。
+在完整程式中，我們偷偷將「OnClickListener」中其他會存取到的介面元件識別參數，也補進 findViews 宣告中。
 
 {{{
     private void findViews()
@@ -172,6 +169,9 @@ public class Bmi extends Activity {
     	view_suggest = (TextView)findViewById(R.id.suggest);
     }
 }}}
+
+同時，我們也把識別參數的命名方法做了統一：按鈕的識別參數前加上 「button_」前綴，可輸入欄位的識別參數前加上 「field_」前綴，用作顯示的識別參數前則加上「view_」前綴。將變數名稱的命名方法統一有什麼好處呢？
+好處在於以後不管是在命名新變數，或是閱讀程式碼時，都能以更快速度命名或理解變數的意義，讓程式變得更好讀。
 
 我們也把原本在程式中直接寫進的字串
 

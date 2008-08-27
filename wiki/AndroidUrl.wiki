@@ -103,15 +103,43 @@ Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 
 「Intent.ACTION_VIEW」這個動作的意義為：依所提供內容的不同，開啟對應的程式以檢視內容資料。我們可以把這個動作想成在一般桌面系統上，開啟一個已知的檔案類型檔案(比如說一張照片)，作業系統會用你預設的應用程式(比如說某看圖軟體)開啟這個檔案。本例中提供了「Uri」網址類型的內容給「Intent.ACTION_VIEW」這個動作，所得到的結果，就是開啟瀏覽器並前往「http://androidbmi.googlecode.com/」 頁面。
 
+== 再做好一點 ==
 
-= 結語 =
+前面我們看到 Uri 實體的定義方法：
 
-這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
+{{{
+Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+}}}
 
-Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、SMS、Google Map、Web Cam、3D、遊戲、Webkit、XMPP 等等進階的主題。
+看到 Uri.parse() 中，有一個固定的網址，你應該也會想把它抽取出來，丟到 Resource 中統一管理。那麼我們把程式改寫，首先把網址抽取出來，放到「res/values/string.xml」檔案中。
+ 
+「res/values/string.xml」檔案更新如下：
 
-希望讀者能以此小書出發，開發出自己的 Android 程式。
+{{{
+...
+<string name="homepage_label">首頁</string>
+<string name="homepage_uri">http://androidbmi.googlecode.com/</string>
+}}}
+	
+我們把 Uri.parse() 函式修改，傳入資源識別符號.
 
-歡迎留言反應，如寫出自己的讀後感言、提出覺得不解的地方，或分享自己的經驗。
+{{{
+Uri uri = Uri.parse(R.string.homepage_uri);
+}}}
 
+糟了，Eclipse 上出現了紅線，表示在我們的程式碼裡，有什麼地方弄錯了。
+因為我們只修改了 Uri.parse 傳入的內容，我們可以很確定是我們傳入的內容錯了。
+我們重新輸入「Uri.」，利用 Eclipse 的自動提示功能，看看 parse 函式到底接受那些類別的參數。
+  
+原來，Uri.parse() 函式並不接受資源識別符號型態的輸入。
+這麼一來，我們就得自行根據資源識別符號，來取得資源識別符號所代表的文字敘述內容。
+ 
+真正能執行的程式碼如下：
+ 
+{{{
+Uri uri = Uri.parse(getString(R.string.homepage_uri));
+}}}
+ 
+在程式中，我們可以使用 「getResources」 中的 「getString」 函式(或是getText)，來取得資源識別符號對應的文字。
+ 	
 <  [AndroidDialog 加入對話框] | [DiveIntoAndroid 回目錄] | [AndroidMenu 加入選單]  >

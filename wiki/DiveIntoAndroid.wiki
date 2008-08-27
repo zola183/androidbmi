@@ -38,9 +38,9 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [BmiLogic 完成 BMI 程式] (BMI02)
   # [BmiRefactor 重構程式] (中階) (BMI03)
   # [AndroidDialog 加入對話框]
-  # [AndroidUrl 初見 Intent] (BMI4)
-  # [AndroidMenu 加入選單] (以下規劃中)
-  # [AndroidActivity 加入新 Activity] ManiFest (BMI5)
+  # [AndroidUrl 初見 Intent]
+  # [AndroidMenu 加入選單] (BMI4)
+  # [AndroidActivity 加入新 Activity]  (BMI5) (以下規劃中)
   # [AndroidIntent 認識 Intent]
   # [SubActivity 活動間交換資料]
   # [AndroidDebug 記錄與偵錯] log
@@ -77,6 +77,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 [IntroAndroid 從頭開始閱讀] >
 
 == 主要更新記錄 ==
+  * 2008/8/27 新增[AndroidMenu 加入選單]一章
   * 2008/8/20 新增[AndroidUrl 初見意圖]一章
   * 2008/8/19 相容於 Android SDK 0.9Beta, 新增[AndroidDialog 加入對話框]與[AndroidResource Android 相關資源]二章
   * 2008/7/25 新增[XmlR 存取識別符號]一章

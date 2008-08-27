@@ -1,0 +1,143 @@
+#summary 加入選單
+#labels tw
+
+在進一步學習 Intent 與 Activity 之前，我們先來完善我們的應用程式。
+在前幾章中，我們把  openOptionsDialog 這個用來彈出對話框的函式，放進「calcBMI」這個按鈕元件的「OnClickListener」方法中。現在，我們要把「openOptionsDialog」 移出「OnClickListener」方法，改成另外建立一個選單(Menu)。當我們點擊選單後，才彈出 「openOptionsDialog」 的對話框。
+
+完整的程式碼如下：
+
+{{{
+    protected static final int MENU_ABOUT = Menu.FIRST;
+	protected static final int MENU_Quit = Menu.FIRST+1;
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+		menu.add(0, MENU_ABOUT, 0, "關於...");
+		menu.add(0, MENU_Quit, 0, "結束");
+		return true;
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		super.onOptionsItemSelected(item);
+		switch(item.getItemId()){
+			case MENU_ABOUT:
+				openOptionsDialog();
+				break;
+		    case MENU_Quit:
+				finish();
+				break;
+		}
+		return true;
+	}
+}}}
+
+每個選單都包含兩個部分：
+
+1. 建立選單
+2. 處理選項動作
+
+「onCreateOptionsMenu」函式即選單的主體。「onOptionsItemSelected」函式則是負責處理選單中選項各自對應的動作。
+當我們在 Activity 中定義了 「onCreateOptionsMenu」 和 「onOptionsItemSelected」 之後，按下選單鍵時，就會彈出相對應的選單。
+在上面的程式裡，我們定義了「關於...」與「結束」兩個選單選項。
+
+我們分部分講解如下：
+
+== 建立選單 ==
+
+在 「onCreateOptionsMenu」函式中，我們定義了兩個選單內容。
+分行講解如下：
+
+{{{
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    return true;
+}
+}}}
+
+「onCreateOptionsMenu」函式是選單的主體，為一個「public」(公開)的函式。「onCreateOptionsMenu」函式接受一個「Menu」（選單）型別的「menu」參數。「boolean」則表示「onCreateOptionsMenu」函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供「onCreateOptionsMenu」函式一個返回值「true」。「@Override」表示我們要完全重寫掉已定義在「Activity」類別中的「onCreateOptionsMenu」函式。
+
+{{{
+    menu.add(0, MENU_ABOUT, 0, "關於...");
+    menu.add(0, MENU_Quit, 0, "結束");
+}}}
+   
+Android 每個頁面對應到一個 Activity，每個 Activity 都有一個獨立的選單。對傳入的「menu」參數作處理就能改變選單的內容。
+ 我們看到，增加一個選單的格式如下：
+ 
+{{{
+ menu.add(0, 識別符號(identifer), 0, 字串或資源識別符號);
+}}}
+ 
+ 最後一欄「字串或資源識別符號」就是顯示在螢幕上的敘述。
+ 而「識別符號」的目的則是作為這個選項的標籤，以供後續處理選項動作時，更容易辨認出所對應的選項。
+ 
+{{{
+    protected static final int MENU_ABOUT = Menu.FIRST;
+    protected static final int MENU_Quit = Menu.FIRST+1;
+}}}
+   
+我們看到  MENU_ABOUT 識別符號的定義，是一個固定的常數型別（static final int）。「Menu.FIRST」則代表識別選單開頭的數字，當然我們也可以把這「Menu.FIRST」代號直接用任意數字替換，看看程式會發生什麼事。
+
+
+== 處理選項動作 ==
+	
+在 「OptionsItemSelected」 函式中，我們分行講解如下：
+
+{{{
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		super.onOptionsItemSelected(item);
+		return true;
+	}
+}}}
+
+「onOptionsItemSelected」函式是處理選項的主體，和「onCreateOptionsMenu」相同，也是一個「public」(公開)的函式。「onOptionsItemSelected」函式接受一個「MenuItem」（選項）型別的「item」參數。「boolean」表示「onOptionsItemSelected」函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供「onOptionsItemSelected」函式一個返回值「true」。
+「super.onOptionsItemSelected(item);」表示我們要先執行已定義在「Activity」類別中的「onOptionsItemSelected」函式內容，後面再執行我們為這個函式定義的動作。
+
+{{{
+    switch(item.getItemId()){
+}}}
+
+我們可以用「(item.getItemId()」函式來取得在螢幕上選取的選項所對應的識別符號(identifer)。
+
+{{{
+    switch(item.getItemId()){
+        ....
+    }
+}}}
+
+在 swith 敘述中，我們根據從「(item.getItemId()」函式取得的識別符號判斷，
+根據選到的識別符號，作相應處理。
+
+{{{
+			case MENU_ABOUT:
+				openOptionsDialog();
+				break;
+		    case ....
+}}}
+
+在「onOptionsItemSelected」函式中收到 MENU_ABOUT 識別符號時，我們呼叫
+openOptionsDialog 函式來彈出對話框。
+
+{{{
+    		    case MENU_Quit:
+				finish();
+				break;
+}}}
+
+在「onOptionsItemSelected」函式中收到 MENU_ABOUT 識別符號時，我們呼叫
+Android 內建的 「finish」函式來關閉程式。
+
+= 結語 =
+
+這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
+
+Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、SMS、Google Map、Web Cam、3D、遊戲、Webkit、XMPP 等等進階的主題。
+
+希望讀者能以此小書出發，開發出自己的 Android 程式。
+
+歡迎留言反應，如寫出自己的讀後感言、提出覺得不解的地方，或分享自己的經驗。
+
+< [AndroidUrl 初見 Intent] | [DiveIntoAndroid 回目錄] | [AndroidActivity 加入新 Activity] >
