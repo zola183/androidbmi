@@ -1,5 +1,5 @@
 #summary 使用者介面
-#labels tw
+#labels tw,XML
 
 = 表達使用者介面 =
 
