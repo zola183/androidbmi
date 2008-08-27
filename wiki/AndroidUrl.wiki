@@ -1,5 +1,5 @@
 #summary 初見 Intent
-#labels tw
+#labels tw,intent,uri,getString
 
 = 開啟網頁 =
 
