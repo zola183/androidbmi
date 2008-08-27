@@ -1,4 +1,5 @@
 #summary 簡單安裝 Android
+#labels tw
 
 Android 提供免費而且跨平台的整合開發環境，只要電腦能連接上網路，我們隨時都能下載相關工具下來，並開始開發 Android 應用程式。
 有了輕鬆易用的開發工具，我們可以馬上將心力專注於創造應用程式上。
@@ -26,8 +27,8 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
       大多數 Eclipse IDE 包中都已含有 JDT 擴充套件。若對 Eclipse 平台不熟悉的話，建議直接選擇 「for Java Developers」版本來下載。
     * **ADT**，基於 Eclipse 的 Android 開發工具擴充套件 (Android Development Tools plugin)。
     * **Android SDK**，Android 程式開發套件，包含 Android 手機模擬器(Emulator)。
-    * 其他開發環境工具
-          o 非必要安裝：Linux 和 Mac 環境上需要自動編譯的話可以自行安裝 Apache Ant 1.6.5 或之後版本，Windows 環境上則需要 Apache Ant 1.7 或之後版本。
+    * 其他開發環境工具（非必要安裝）
+          o Linux 和 Mac 環境上需要自動編譯的話可以自行安裝 Apache Ant 1.6.5 或之後版本，Windows 環境上則需要 Apache Ant 1.7 或之後版本。
           o NetBeans、IDEA 等開發平台亦有推出自己的 Android 開發工具，但本書中還是以討論官方基於 Eclipse 平台的開發工具為準，其他平台不予涉及。
 
 = 安裝流程 =
@@ -36,7 +37,7 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 那麼 Android 的安裝流程可以分為以下五個步驟
  # 下載 Eclipse
  # 安裝 Eclipse
- # 安裝 ADT
+ # 安裝 ADT 擴充套件
  # 下載 Android SDK
  # 設定 Android SDK
 
@@ -58,7 +59,7 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 第一次啟動 Eclipse 時會彈出視窗讓你決定預設的工作目錄。一般使用 Eclipse 預設的工作目錄即可。
 進入到 Eclipse IDE 後，不必急著四處觀望。我們先來安裝 Android 開發工具擴充套件。
 
-== 3. 安裝 ADT ==
+== 3. 安裝 ADT 擴充套件 ==
 
 我們將在 Eclipse 上 安裝 Android 開發工具 (ADT)。
 
@@ -67,10 +68,10 @@ Eclipse 3.4 版:
 找到螢幕上方的選單列， 選擇 「Help->Software Updates」 選項，這選項會帶出一個新視窗。
 選擇「Available Software」標籤，選擇右方的 「Add Site...」 (新增網站)按鈕，會彈出一個輸入框。
 
-在輸入框中的"Location"欄位中輸入網址(URL) 「https://dl-ssl.google.com/android/eclipse/」，
+在輸入框中的"Location"欄位中輸入網址(URL) 「https://dl-ssl.google.com/android/eclipse/ 」，
 按下 "OK" 按鈕離開。Eclipse 會花一點時間尋找合適的版本。
 
-在視窗中全選「https://dl-ssl.google.com/android/eclipse/」的選項後，按下右方的「Install」按鈕。
+在視窗中全選「https://dl-ssl.google.com/android/eclipse/ 」的選項後，按下右方的「Install」按鈕。
 
 按下 「Next」 (下一步)鍵。照著步驟就安裝完成。安裝完會提示需重新啟動 Eclipse，按下 「Yes」 重新啟動。
 
@@ -82,8 +83,7 @@ Eclipse 3.3 版:
 
 選擇右上角的 「New Remote Site」 (新增遠端網站)按鈕，會彈出一個 「New Update Site」 (新增更新網站)輸入框。
 
-在輸入框中輸入擴充套件的名稱(Name) 「ADT」 跟網址(URL) 「https://dl-ssl.google.com/android/eclipse/」，
-按下 「OK」 按鈕離開。
+在輸入框中輸入擴充套件的名稱(Name) 「ADT」 跟網址(URL) 「https://dl-ssl.google.com/android/eclipse/ 」，按下 「OK」 按鈕離開。
 
 按下 「Finish」 按紐繼續下一步。Eclipse 會花一點時間尋找合適的版本。
 
@@ -96,7 +96,7 @@ Eclipse 3.3 版:
 
 == 4. 下載 Android SDK ==
 
-接著我們要從 [http://code.google.com/android/download.html Android 官方網站]下載 Android 軟體開發套件 (Software Development Kit, SDK)。
+接著我們要從 [http://code.google.com/android/download.html Android 官方網站]下載 「Android 軟體開發套件」 (Software Development Kit, SDK)。
 下載下來的 SDK 檔案需要先解壓縮。Windows 平台需要先另行安裝解壓縮程式，如免費的 [http://www.7-zip.org/zh-tw/ 7-zip] 解壓縮工具。
 解壓縮後會出現一個資料夾。為了之後描述方便，我們將解壓縮後的 Android SDK 檔案夾命名為「android_sdk」。
     
