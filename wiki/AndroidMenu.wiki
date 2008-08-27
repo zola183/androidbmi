@@ -35,8 +35,8 @@
 
 每個選單都包含兩個部分：
 
-1. 建立選單
-2. 處理選項動作
+  # 建立選單
+  # 處理選項動作
 
 「onCreateOptionsMenu」函式即選單的主體。「onOptionsItemSelected」函式則是負責處理選單中選項各自對應的動作。
 當我們在 Activity 中定義了 「onCreateOptionsMenu」 和 「onOptionsItemSelected」 之後，按下選單鍵時，就會彈出相對應的選單。
