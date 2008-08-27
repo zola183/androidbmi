@@ -100,22 +100,24 @@ Android 每個頁面對應到一個 Activity，每個 Activity 都有一個獨�
     switch(item.getItemId()){
 }}}
 
-我們可以用「(item.getItemId()」函式來取得在螢幕上選取的選項所對應的識別符號(identifer)。
+我們可以用「(item.getItemId()」函式來取得在螢幕上選取的選項所對應的識別符號代碼(identifer)。
 
 {{{
-    switch(item.getItemId()){
+    switch(識別符號代碼){
         ....
     }
 }}}
 
-在 swith 敘述中，我們根據從「(item.getItemId()」函式取得的識別符號判斷，
-根據選到的識別符號，作相應處理。
+在 swith 敘述中，我們根據從「(item.getItemId()」函式取得的識別符號代碼判斷，
+根據選到的識別符號代碼，作相應處理。
 
 {{{
 			case MENU_ABOUT:
 				openOptionsDialog();
 				break;
-		    case ....
+            case 
+                ....
+                break;
 }}}
 
 在「onOptionsItemSelected」函式中收到 MENU_ABOUT 識別符號時，我們呼叫
