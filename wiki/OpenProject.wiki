@@ -1,5 +1,5 @@
 #summary 開啟現有專案
-#labels tw
+#labels tw,open,import
 
 = 開啟專案 =
 
