@@ -24,15 +24,15 @@
 原來的程式片段是這樣的
 
 {{{
-1        @Override
-2        public void onCreate(Bundle icicle) {
-3            super.onCreate(icicle);
-4            setContentView(R.layout.main);
+1  @Override
+2  public void onCreate(Bundle icicle) {
+3      super.onCreate(icicle);
+4      setContentView(R.layout.main);
 5           
-6            //Listen for button clicks
-7            Button button = (Button)findViewById(R.id.submit);
-8            button.setOnClickListener(calcBMI);
-9        }
+6      //Listen for button clicks
+7      Button button = (Button)findViewById(R.id.submit);
+8      button.setOnClickListener(calcBMI);
+9  }
 }}}
 
 上面的程式片段中，包含了所有 Android 程式共用的標準內容，
