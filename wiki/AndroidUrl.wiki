@@ -10,51 +10,48 @@
 我們先把「openOptionsDialog」函式中使用到的字串增加到「res/values/string.xml」裡。因此完整的「res/values/string.xml」檔案如下：
 
 {{{
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">BMI</string>
-    <string name="height">身高 (cm)</string>
-    <string name="weight">體重 (kg)</string>
-    <string name="bmi_btn">計算 BMI 值</string>
-    <string name="bmi_result">你的 BMI 值是 </string>
-   
-    <string name="about_title">關於 Android BMI</string>
-    <string name="about_msg">Android BMI Calc 0.6\n
-    		作者 gasolin\n
-    		gasolin+android [at] gmail.com</string>
-    <string name="ok_label">確認</string>
-    <string name="homepage_label">首頁</string>
-</resources>
+1  <?xml version="1.0" encoding="utf-8"?>
+2  <resources>
+3      <string name="app_name">BMI</string>
+4      <string name="height">身高 (cm)</string>
+5      <string name="weight">體重 (kg)</string>
+6      <string name="bmi_btn">計算 BMI 值</string>
+7      <string name="bmi_result">你的 BMI 值是 </string>
+8   
+9      <string name="about_title">關於 Android BMI</string>
+10     <string name="about_msg">Android BMI Calc 0.6\n
+11         作者 gasolin\n
+12         gasolin+android [at] gmail.com</string>
+13     <string name="ok_label">確認</string>
+14     <string name="homepage_label">首頁</string>
+15 </resources>
 }}}
 
 增加了「連線到首頁」按鈕，完整「openOptionsDialog」函式的新版程式碼如下：
 {{{
-	private void openOptionsDialog() {
-		new AlertDialog.Builder(this)
-		.setTitle(R.string.about_title)
-		.setMessage(R.string.about_msg)
-		.setPositiveButton(R.string.ok_label,
-				new DialogInterface.OnClickListener(){
-					public void onClick(
-							DialogInterface dialoginterface, int i){
-					}
-				})
-		.setNegativeButton(R.string.homepage_label,
-				new DialogInterface.OnClickListener(){
-					public void onClick(
-							DialogInterface dialoginterface, int i){
-						//go to url
-						Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
-						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-						startActivity(intent);
-					}
-				})
-		.show();
-        }
-}}}
-
-
-
+1  private void openOptionsDialog() {
+2      new AlertDialog.Builder(this)
+3	    .setTitle(R.string.about_title)
+4	    .setMessage(R.string.about_msg)
+5	    .setPositiveButton(R.string.ok_label,
+6	        new DialogInterface.OnClickListener(){
+7		    public void onClick(
+8		         DialogInterface dialoginterface, int i){
+9		    }
+10		})
+11	    .setNegativeButton(R.string.homepage_label,
+12		new DialogInterface.OnClickListener(){
+13			public void onClick(
+14			    DialogInterface dialoginterface, int i){
+15			    //go to url
+16			    Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+17			    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+18			    startActivity(intent);
+19			}
+20		})
+21	    .show();
+22    }
+23 }}}
 
 
 = 講解 =
@@ -62,13 +59,13 @@
 在上一章「openOptionsDialog」函式的基礎上，我們在函式中添加了一個「setNegativeButton」方法，以提供另一個「NegativeButton」按鈕。
 
 {{{
-		.setNegativeButton(R.string.homepage_label,
-				new DialogInterface.OnClickListener(){
-					public void onClick(
-					    DialogInterface dialoginterface, int i){
-						.....
-					}
-				})
+.setNegativeButton(R.string.homepage_label,
+    new DialogInterface.OnClickListener(){
+         public void onClick(
+             DialogInterface dialoginterface, int i){
+                 .....
+             }
+})
 }}}
 
 與上一章我們將 DialogInterface 中的內容空白不同的是，我們為這個按鈕添加了連線到特定網址(首頁)的「動作」，當使用者按下「首頁」按鈕後，程式會開啟瀏覽器，並連線到本專案的首頁「http://androidbmi.googlecode.com/」。
