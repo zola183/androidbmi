@@ -4,19 +4,19 @@
 接著要觀察主要程式邏輯的內容囉。打開 「src/com/demo/android/bmi」 目錄下的 「Bmi.java」檔案，Eclipse+Android 開發工具已經幫我們預先建立好了基本的程式邏輯。其預設的內容如下：
 
 {{{
-    1  package com.demo.android.bmi;
-    2
-    3  import android.app.Activity;
-    4  import android.os.Bundle;
-    5
-    6  public class Bmi extends Activity {
-    7      /** Called when the activity is first created. */
-    8      @Override
-    9      public void onCreate(Bundle icicle) {
-    10         super.onCreate(icicle);
-    11         setContentView(R.layout.main);
-    12     }
-    13 }
+1  package com.demo.android.bmi;
+2
+3  import android.app.Activity;
+4  import android.os.Bundle;
+5
+6  public class Bmi extends Activity {
+7      /** Called when the activity is first created. */
+8      @Override
+9      public void onCreate(Bundle icicle) {
+10         super.onCreate(icicle);
+11         setContentView(R.layout.main);
+12     }
+13 }
 }}}
 
 = 講解 =
@@ -27,7 +27,7 @@
 
 第 1 行:
 {{{
-    package com.demo.android.bmi;
+package com.demo.android.bmi;
 }}}
 這一行的作用是指出這個檔案所在的名稱空間。「package」(套件)是其關鍵字。使用名稱空間的原因是程式一旦擴展到擴展到某個大小，程式中的變數名稱、方法名稱、類別名稱難免重複，
 這時就可以將定義的名稱區隔管理在 package 下，以避免相互衝突的情形發生。Java 的 package 設計成與檔案系統結構相對應，如我們的 package 設定是 「package com.demo.android.bmi」，則這個類別就該在指定目錄的「com/demo/android/bmi」路徑下可以找到。
@@ -36,8 +36,8 @@
 
 第 3,4  行:
 {{{
-    import android.app.Activity;
-    import android.os.Bundle;
+import android.app.Activity;
+import android.os.Bundle;
 }}}
 程式中預設導入了 「android.app.Activity」跟「android.os.Bundle」兩個 Package，在所有的 Android 應用程式中都會用到這兩個 Package。「import」(導入)是用作導入 Package 的關鍵字。在 Java 語言中，使用到任何 API 前都要事先導入相對應的 Package。我們馬上將學到這兩個 Package 的用途。
 
@@ -45,13 +45,13 @@
 
 第 6,13  行:
 {{{
-    public class Bmi extends Activity {
-    }
+public class Bmi extends Activity {
+}
 }}}
 
 第6行開始了程式的主體。其組成是這樣的：
 {{{
-    public class Bmi
+public class Bmi
 }}}
 
 「Bmi」是這個類別的名稱。「class」則是用作宣告類別關鍵字。「public」關鍵字是用來修飾「Bmi」這個類別。表示「Bmi」是個「公開」的類別，可以從 package 外部取用。
@@ -70,15 +70,15 @@
 
 第 8-9, 12 行:
 {{{
-    @Override
-    public void onCreate(Bundle icicle) {
-    }
+@Override
+public void onCreate(Bundle icicle) {
+}
 }}}
 
 第9行開始了這個方法(Method)的主體。其組成是這樣的：
 {{{
-    public void onCreate(Bundle icicle) {
-    }
+public void onCreate(Bundle icicle) {
+}
 }}}
 
 「onCreate」是這個方法的名稱。「void」則是宣告了這個方法的回傳值的型別(type)。「public」關鍵字是用來修飾「onCreate」這個方法。表示「onCreate」是個「公開」的方法，可以由 bmi 類別外部取用。
@@ -101,8 +101,8 @@
 
 「{}」大括號規範了一個程式區塊。大括號中的程式表達 onCreate 這個程式區塊的主要內容。
 {{{
-    @Override
-    public void onCreate(Bundle icicle)
+@Override
+public void onCreate(Bundle icicle)
 }}}
 
 從前面的講解中，我們學到了在任何一個 Android 專案目錄裡，只要打開「Referenced Libraries」 目錄的「android.app」 分類，都可以找到 「Activity.class」這個類別。現在我們再深入一些查看「Activity.class」 類別。你要做的，只是依照圖示，找到 Android 工具中的「Referenced Libraries」 目錄，從「android.app」 分類裡找到「Activity.class」類別，並按下「Activity.class」 類別左側的三角形圖示，如此即可展開這個類別的屬性/方法列表。
@@ -113,16 +113,16 @@
 
 事實上，「onCreate」 方法正是每個 Activity 類別初始化時都會去呼叫的方法。「@」開頭的語句表示裝飾子(decorator)語句，「@Override」語句的作用是告訴程式我們要覆寫這個「onCreate」方法。當我們打開程式時，程式不再使用從「bmi」 類別中繼承來的「onCreate」方法，而是使用我們在程式中自訂的行為。
 {{{
-    @Override
-    public void onCreate(Bundle icicle) {
-    }
+@Override
+public void onCreate(Bundle icicle) {
+}
 }}}
 我們講解了整段程式，其含意是「覆寫 bmi 類別中公開的 onCreate 方法。這個 「onCreate」 方法無回傳值型別，而且這個方法傳入了一個名為 icicle 的 Bundle 型別參數」。
 現在來看看「onCreate」方法中包含的程式內容。
 
 第 10, 11 行:
 {{{
-    super.onCreate(icicle);
+super.onCreate(icicle);
 }}}
 「super」是關鍵字。代表著這個 「Bmi」 類別的上層類別(Activity)。「super.onCreate(icicle);」的意思就是：「執行 Activity 類別中 onCreate 方法的內容」。這麼做的目的是什麼呢？
 
@@ -130,7 +130,7 @@ Google Android 將其應用程式的介面稱為視圖(View)，而負責控制�
 
 而 Android 產生的程式預設卻覆寫了「Bmi」 類別的「onCreate」 方法，原本繼承自 「Activity」類別的「onCreate」方法其原本內容都被覆蓋掉了。因此想將原本的「onCreate」方法內容保留，並在其中加入我們的內容的話，就要使用「super」語句。透過「super.onCreate(icicle);」語句，程式運行到我們覆寫的「onCreate」 方法時，會先將原本「Activity」類別中的「onCreate」方法執行一次，然後再執行我們覆寫的「onCreate」 方法裡面其他的程式內容。
 {{{
-     setContentView(R.layout.main);
+setContentView(R.layout.main);
 }}}
 透過螢幕顯示的各種元素是按照介面層次結構來描述的。要將一個顯示元素的層次結構轉換顯示到一個螢幕上，Activity 會呼叫它用來設定 View 的 「setContentView」 方法，並傳入想引用的 XML 描述文件。當 Activity 被啟動並需要顯示到螢幕上時，系統會通知 Activity，並根據引用的 XML 文件敘述來描繪出使用者介面。上一章中我們定義好的 res/layout/main.xml 描述檔，就是透過這個機制繪出到螢幕上。
 
