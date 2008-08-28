@@ -32,15 +32,15 @@
 6            //Listen for button clicks
 7            Button button = (Button)findViewById(R.id.submit);
 8            button.setOnClickListener(calcBMI);
-        }
+9        }
 }}}
 
 上面的程式片段中，包含了所有 Android 程式共用的標準內容，
 整個程式的大致架構在前面章節中已經講解過，現在我們從中取出我們感興趣的部分來討論：
 
 {{{
-   Button button = (Button)findViewById(R.id.submit);
-   button.setOnClickListener(calcBMI);
+Button button = (Button)findViewById(R.id.submit);
+button.setOnClickListener(calcBMI);
 }}}
 
 在第7行我們看到一段程式碼來宣告按鈕物件，與針對該按鈕物件作動作的程式碼。
@@ -51,28 +51,28 @@ button.setOnClickListener 程式碼的意義是指定一個函式，來負責處
 首先，我們可以套用 MVC 模式，將宣告介面元件(按鈕、數字欄位)、指定負責函式等動作抽取出來，將 onCreate 函式改寫如下
 
 {{{
-    @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-        setContentView(R.layout.main);
-        findViews();
-        setListensers(); 
-    }
+@Override
+public void onCreate(Bundle icicle) {
+    super.onCreate(icicle);
+    setContentView(R.layout.main);
+    findViews();
+    setListensers(); 
+}
 }}}
 
 接著我們將宣告介面元件的部份寫成一個獨立的「findViews」函式：
 
 {{{
-    private Button calcbutton;
-    private EditText fieldheight;
-    private EditText fieldweight;
+private Button calcbutton;
+private EditText fieldheight;
+private EditText fieldweight;
 
-    private void findViews()
-    {
-    	calcbutton = (Button)this.findViewById(R.id.submit);
-    	fieldheight = (EditText)this.findViewById(R.id.height);
-		fieldweight = (EditText)this.findViewById(R.id.weight);
-    }
+private void findViews()
+{
+    calcbutton = (Button)this.findViewById(R.id.submit);
+    fieldheight = (EditText)this.findViewById(R.id.height);
+    fieldweight = (EditText)this.findViewById(R.id.weight);
+}
 }}}
 
 順便將原本很沒個性的按鈕識別參數「button」改名成「calcbutton」，以後在程式中一看到「calcbutton」，就知道是一個按下後將開始處理計算工作的按鈕。
@@ -80,10 +80,10 @@ button.setOnClickListener 程式碼的意義是指定一個函式，來負責處
 同樣地，我們也將指定特定動作(按按鈕)的負責函式獨立出來：
 
 {{{
-    //Listen for button clicks
-    private void setListensers() {
-    	calcbutton.setOnClickListener(calcBMI);
-   }
+//Listen for button clicks
+private void setListensers() {
+    calcbutton.setOnClickListener(calcBMI);
+}
 }}}
 
 如此一來，我們就將程式邏輯與介面元件的宣告分離開來，達成我們重構的目的。
@@ -160,14 +160,14 @@ public class Bmi extends Activity {
 在完整程式中，我們偷偷將「OnClickListener」中其他會存取到的介面元件識別參數，也補進 findViews 宣告中。
 
 {{{
-    private void findViews()
-    {
-    	button_calc = (Button)this.findViewById(R.id.submit);
-    	field_height = (EditText)this.findViewById(R.id.height);
-    	field_weight = (EditText)this.findViewById(R.id.weight);
-    	view_result = (TextView)findViewById(R.id.result);
-    	view_suggest = (TextView)findViewById(R.id.suggest);
-    }
+private void findViews()
+{
+    button_calc = (Button)this.findViewById(R.id.submit);
+    field_height = (EditText)this.findViewById(R.id.height);
+    field_weight = (EditText)this.findViewById(R.id.weight);
+    view_result = (TextView)findViewById(R.id.result);
+    view_suggest = (TextView)findViewById(R.id.suggest);
+}
 }}}
 
 同時，我們也把識別參數的命名方法做了統一：按鈕的識別參數前加上 「button_」前綴，可輸入欄位的識別參數前加上 「field_」前綴，用作顯示的識別參數前則加上「view_」前綴。將變數名稱的命名方法統一有什麼好處呢？
@@ -176,15 +176,15 @@ public class Bmi extends Activity {
 我們也把原本在程式中直接寫進的字串
 
 {{{
-    TextView result = (TextView)findViewById(R.id.result);
-    result.setText("Your BMI is "+nf.format(BMI));
+TextView result = (TextView)findViewById(R.id.result);
+result.setText("Your BMI is "+nf.format(BMI));
 }}}
 
 改寫成
 
 {{{
-    //Present result
-    view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+//Present result
+view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
 }}}
 
 並將「TextView view_result」宣告改放到 findViews 中一次處理好。
