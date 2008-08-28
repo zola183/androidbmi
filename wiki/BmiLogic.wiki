@@ -8,56 +8,56 @@
 
 完整的程式如下：
 {{{
-    package com.demo.android.bmi;
-
-    import java.text.DecimalFormat;
-
-    import android.app.Activity;
-    import android.os.Bundle;
-    import android.view.View;
-    import android.view.View.OnClickListener;
-    import android.widget.Button;
-    import android.widget.EditText;
-    import android.widget.TextView;
-
-    public class Bmi extends Activity {
-        /** Called when the activity is first created. */
-        @Override
-        public void onCreate(Bundle icicle) {
-            super.onCreate(icicle);
-            setContentView(R.layout.main);
-           
-            //Listen for button clicks
-            Button button = (Button)findViewById(R.id.submit);
-            button.setOnClickListener(calcBMI);
-        }
-
-        private OnClickListener calcBMI = new OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                DecimalFormat nf = new DecimalFormat("0.0");
-                EditText fieldheight = (EditText)findViewById(R.id.height);
-                EditText fieldweight = (EditText)findViewById(R.id.weight);
-                double height = Double.parseDouble(fieldheight.getText().toString())/100;
-                double weight = Double.parseDouble(fieldweight.getText().toString());
-                double BMI = weight / (height * height);
-
-                TextView result = (TextView)findViewById(R.id.result);
-                result.setText("Your BMI is "+nf.format(BMI));
-
-                //Give health advice
-                TextView fieldsuggest = (TextView)findViewById(R.id.suggest);
-                if(BMI>25){
-                    fieldsuggest.setText(R.string.advice_heavy);
-                }else if(BMI<20){
-                    fieldsuggest.setText(R.string.advice_light);
-                }else{
-                    fieldsuggest.setText(R.string.advice_average);
-                }
-            }
-        };
-    }
+1  package com.demo.android.bmi;
+2
+3  import java.text.DecimalFormat;
+4
+5  import android.app.Activity;
+6  import android.os.Bundle;
+7  import android.view.View;
+8  import android.view.View.OnClickListener;
+9  import android.widget.Button;
+10 import android.widget.EditText;
+11 import android.widget.TextView;
+12
+13 public class Bmi extends Activity {
+14     /** Called when the activity is first created. */
+15     @Override
+16     public void onCreate(Bundle icicle) {
+17         super.onCreate(icicle);
+18         setContentView(R.layout.main);
+19
+20         //Listen for button clicks
+21         Button button = (Button)findViewById(R.id.submit);
+22         button.setOnClickListener(calcBMI);
+23     }
+24
+25     private OnClickListener calcBMI = new OnClickListener()
+26     {
+27         public void onClick(View v)
+28         {
+29             DecimalFormat nf = new DecimalFormat("0.0");
+30             EditText fieldheight = (EditText)findViewById(R.id.height);
+31             EditText fieldweight = (EditText)findViewById(R.id.weight);
+32             double height = Double.parseDouble(fieldheight.getText().toString())/100;
+33             double weight = Double.parseDouble(fieldweight.getText().toString());
+34             double BMI = weight / (height * height);
+35
+36             TextView result = (TextView)findViewById(R.id.result);
+37             result.setText("Your BMI is "+nf.format(BMI));
+38
+39             //Give health advice
+40             TextView fieldsuggest = (TextView)findViewById(R.id.suggest);
+41             if(BMI>25){
+42                 fieldsuggest.setText(R.string.advice_heavy);
+43             }else if(BMI<20){
+44                 fieldsuggest.setText(R.string.advice_light);
+45             }else{
+46                 fieldsuggest.setText(R.string.advice_average);
+47             }
+48         }
+49     };
+50 }
 }}}
 
 
@@ -69,21 +69,21 @@
 = 講解 =
 
 {{{
-    //Listen for button clicks
+//Listen for button clicks
 }}}
 
 兩個反斜線是 java 語言所支援的另一種註解方式。
 
 {{{
-    Button button = (Button)findViewById(R.id.submit);
+Button button = (Button)findViewById(R.id.submit);
 }}}
 
 宣告一個 button 實體，透過 findViewById 方法，從資源檔中取得對應的介面元件。
 
 R.id.submit 對應到 XML 描述檔的資源是
 {{{
-    <Button id="@+id/submit"
-    />
+<Button id="@+id/submit"
+/>
 }}}
 為了確保宣告的型別跟 XML 描述檔中描述的介面元件型別一致，好使程式運作正常，我們在 「indViewById」 方法前加上 「(Button)」修飾，強制將取得的資源型別設成 「button」型別。
 {{{
