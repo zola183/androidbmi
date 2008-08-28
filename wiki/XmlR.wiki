@@ -4,15 +4,15 @@
 在上一章談了 EditText 中的各種「android:」開頭的屬性後，還有個擺在各屬性最前頭的「android:id」屬性沒談。要使用一個介面元件的第一件事是定義出介面描述檔。程式會透過 android:id 屬性來調用特定介面元件，之後與這個介面有關的操作，都得根據 android:id 來在程式中調用這個介面元件。
 
 {{{
-    <EditText android:id="@+id/height"
-        />
+<EditText android:id="@+id/height"
+    />
 }}}
 
 前面章節提過，寫作時最好將 XML 描述檔屬性分行列出，以易於閱讀(增加可讀性)。而我們的範例卻將 android:id 屬性直接擺在 EditText 標籤後。其實這麼做同樣是基於易於閱讀的考量。當然你也可以將「android:id」屬性分行列出，或是將「android:id」屬性放在屬性列表的中間或最後頭，這些作法都是允許的，本書中一律採用將 android:id 屬性直接擺在介面元件標籤後的寫法。
 
 android:id 屬性的內容長得比較特別：
 {{{
-    @+id/height
+@+id/height
 }}}
 
 「height」是這個介面元件的 android:id。以後的程式中會使用「R.id.height」來取得這個介面元件。「＠+id」 的意思是我們可以通過這個識別符號來控制所對應的介面元件，「R」類別會自動配置一個位址給這個介面元件。
