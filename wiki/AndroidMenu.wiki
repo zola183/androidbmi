@@ -2,35 +2,35 @@
 #labels tw,menu
 
 在進一步學習 Intent 與 Activity 之前，我們先來完善我們的應用程式。
-在前幾章中，我們把  openOptionsDialog 這個用來彈出對話框的函式，放進「calcBMI」這個按鈕元件的「OnClickListener」方法中。現在，我們要把「openOptionsDialog」 移出「OnClickListener」方法，改成另外建立一個選單(Menu)。當我們點擊選單後，才彈出 「openOptionsDialog」 的對話框。
+在前幾章中，我們把  「openOptionsDialog」 這個用來彈出對話框的函式，放進「calcBMI」這個按鈕元件的「OnClickListener」方法中。現在，我們要把「openOptionsDialog」 移出「OnClickListener」方法，改成另外建立一個選單。當我們點擊選單後，才彈出 「openOptionsDialog」 的對話框。
 
 完整的程式碼如下：
 
 {{{
-    protected static final int MENU_ABOUT = Menu.FIRST;
-	protected static final int MENU_Quit = Menu.FIRST+1;
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		super.onCreateOptionsMenu(menu);
-		menu.add(0, MENU_ABOUT, 0, "關於...");
-		menu.add(0, MENU_Quit, 0, "結束");
-		return true;
-	}
-	
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
-		super.onOptionsItemSelected(item);
-		switch(item.getItemId()){
-			case MENU_ABOUT:
-				openOptionsDialog();
-				break;
-		    case MENU_Quit:
-				finish();
-				break;
-		}
-		return true;
-	}
+1  protected static final int MENU_ABOUT = Menu.FIRST;
+2  protected static final int MENU_Quit = Menu.FIRST+1;
+3
+4  @Override
+5  public boolean onCreateOptionsMenu(Menu menu) {
+6	    super.onCreateOptionsMenu(menu);
+7	    menu.add(0, MENU_ABOUT, 0, "關於...");
+8	    menu.add(0, MENU_Quit, 0, "結束");
+9	    return true;
+10 }
+11
+12 public boolean onOptionsItemSelected(MenuItem item)
+13 {
+14 super.onOptionsItemSelected(item);
+15 switch(item.getItemId()){
+16		case MENU_ABOUT:
+17			openOptionsDialog();
+18			break;
+19	    case MENU_Quit:
+20			finish();
+21			break;
+22	 }
+23	 return true;
+24 }
 }}}
 
 每個選單都包含兩個部分：
@@ -59,23 +59,23 @@ public boolean onCreateOptionsMenu(Menu menu) {
 「onCreateOptionsMenu」這個函式是選單的主體，它是一個「public」(公開)的函式。函式傳入一個「Menu」（選單）型別的「menu」參數。「boolean」則表示函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供函式一個返回值「true」。「@Override」表示我們要完全重寫掉已定義在「Activity」類別中的這個函式。
 
 {{{
-    menu.add(0, MENU_ABOUT, 0, "關於...");
-    menu.add(0, MENU_Quit, 0, "結束");
+menu.add(0, MENU_ABOUT, 0, "關於...");
+menu.add(0, MENU_Quit, 0, "結束");
 }}}
    
 Android 每個頁面對應到一個 Activity，每個 Activity 都有一個獨立的選單。對傳入的「menu」參數作處理就能改變選單的內容。
  我們看到，增加一個選單的格式如下：
  
 {{{
- menu.add(0, 識別符號(identifer), 0, 字串或資源識別符號);
+menu.add(0, 識別符號(identifer), 0, 字串或資源識別符號);
 }}}
  
- 最後一欄「字串或資源識別符號」就是顯示在螢幕上的敘述。
- 而「識別符號」的目的則是作為這個選項的標籤，以供後續處理選項動作時，更容易辨認出所對應的選項。
+最後一欄「字串或資源識別符號」就是顯示在螢幕上的敘述。
+而「識別符號」的目的則是作為這個選項的標籤，以供後續處理選項動作時，更容易辨認出所對應的選項。
  
 {{{
-    protected static final int MENU_ABOUT = Menu.FIRST;
-    protected static final int MENU_Quit = Menu.FIRST+1;
+protected static final int MENU_ABOUT = Menu.FIRST;
+protected static final int MENU_Quit = Menu.FIRST+1;
 }}}
    
 我們看到  MENU_ABOUT 識別符號的定義，是一個固定的常數型別（static final int）。「Menu.FIRST」則代表識別選單開頭的數字，當然我們也可以把這「Menu.FIRST」代號直接用任意數字替換，看看程式會發生什麼事。
@@ -83,14 +83,14 @@ Android 每個頁面對應到一個 Activity，每個 Activity 都有一個獨�
 
 == 處理選項動作 ==
 	
-在 「OptionsItemSelected」 函式中，我們分行講解如下：
+在「OptionsItemSelected」函式中，我們分行講解如下：
 
 {{{
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
-		super.onOptionsItemSelected(item);
-		return true;
-	}
+public boolean onOptionsItemSelected(MenuItem item)
+{
+	super.onOptionsItemSelected(item);
+	return true;
+}
 }}}
 
 「onOptionsItemSelected」這個函式是處理選項的主體，和「onCreateOptionsMenu」函式相同，也是一個「public」(公開)的函式。「onOptionsItemSelected」函式傳入了一個「MenuItem」（選項）型別的「item」參數。「boolean」表示函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供函式一個返回值「true」。
@@ -100,7 +100,7 @@ Android 每個頁面對應到一個 Activity，每個 Activity 都有一個獨�
     switch(item.getItemId()){
 }}}
 
-我們可以用「(item.getItemId()」函式來取得在螢幕上選取的選項所對應的識別符號代碼(identifer)。
+我們可以用「item.getItemId()」函式來取得在螢幕上選取的選項所對應的識別符號代碼(identifer)。
 
 {{{
     switch(識別符號代碼){
@@ -108,29 +108,27 @@ Android 每個頁面對應到一個 Activity，每個 Activity 都有一個獨�
     }
 }}}
 
-在 swith 敘述中，我們根據從「(item.getItemId()」函式取得的識別符號代碼判斷，
+在 swith 敘述中，我們根據從「item.getItemId()」函式取得的識別符號代碼判斷，
 根據選到的識別符號代碼，作相應處理。
 
 {{{
-			case MENU_ABOUT:
-				openOptionsDialog();
-				break;
-            case 
-                ....
-                break;
+	case MENU_ABOUT:
+		openOptionsDialog();
+		break;
+    case 
+        ....
+        break;
 }}}
 
-在「onOptionsItemSelected」函式中收到 MENU_ABOUT 識別符號時，我們呼叫
-openOptionsDialog 函式來彈出對話框。
+在「onOptionsItemSelected」函式中收到 「MENU_ABOUT」 識別符號時，我們呼叫 「openOptionsDialog」 函式來彈出對話框。
 
 {{{
-    		    case MENU_Quit:
-				finish();
-				break;
+    case MENU_Quit:
+		finish();
+		break;
 }}}
 
-在「onOptionsItemSelected」函式中收到 MENU_ABOUT 識別符號時，我們呼叫
-Android 內建的 「finish」函式來關閉程式。
+在「onOptionsItemSelected」函式中收到 「MENU_ABOUT」 識別符號時，我們呼叫 Android 內建的 「finish」函式來關閉程式。
 
 = 結語 =
 
