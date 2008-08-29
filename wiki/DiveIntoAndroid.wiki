@@ -40,6 +40,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidDialog 加入對話框]
   # [AndroidUrl 初見 Intent]
   # [AndroidMenu 加入選單] (BMI4)
+  # [AndroidManifest 定義 Activity 清單]
   # [AndroidActivity 加入新 Activity]  (BMI5) (以下規劃中)
   # [AndroidIntent 認識 Intent]
   # [SubActivity 活動間交換資料]
