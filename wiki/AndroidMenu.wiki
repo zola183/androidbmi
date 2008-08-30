@@ -140,4 +140,4 @@ Android 是個完整的平台，還有諸多內容值得研究。例如儲存資
 
 歡迎留言反應，如寫出自己的讀後感言、提出覺得不解的地方，或分享自己的經驗。
 
-< [AndroidUrl 初見 Intent] | [DiveIntoAndroid 回目錄] | [AndroidManifest 定義 Activity 清單] >
+< [AndroidUrl 初見 Intent] | [DiveIntoAndroid 回目錄] | [AndroidManifest 定義 Android 清單] >
