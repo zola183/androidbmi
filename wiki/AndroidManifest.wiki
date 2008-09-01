@@ -1,10 +1,10 @@
 #summary 定義 Android 清單
-#labels tw, AndroidManifest
+#labels tw,AndroidManifest
 
 在「初見 Intent」一章中，我們已嘗試過使用 「startActivity」函式，傳入適當的「Intent」，來呼叫瀏覽器的 Activity。
 
 到目前為止，我們可以由學習 Android 應用程式的經驗中歸納得出：所有 Android 程式的運作流程，都定義在 Activity 中。
-
+{{{
     備註:
     這麼說其實是不太精確的。Android 應用程式的運作流程，存在於四種載體中：
     
@@ -14,7 +14,7 @@
       # Content Provider
 
     各種載體的相關內容會在後續章節提到時作解說。
-    
+}}} 
 Android  系統與其他系統很不一樣的地方是，它的應用程式都是跑在一個名為「Dalvik」的虛擬機中。在執行「startActivity」 函式時，應用程式並不是直接呼叫另一個 Activity，而是將「Intent」(意圖)傳進 Dalvik 虛擬機中。 Dalvik 虛擬機會查看 「startActivity」 呼叫所傳入的動作與 Intent 內容是否在註冊表中，如果符合，就啟動對應的服務或 Activity。  
 
 Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事先在 Dalvik 虛擬機中註冊，登記這個應用程式所建立的 Activity、並事先註明會使用到的服務。當我們在 Android 上安裝我們撰寫的BMI應用程式時，BMI 應用程式就會向 Dalvik 虛擬機登記相關資訊：BMI 應用程式會用到 「Bmi」這個 Activity。
@@ -77,10 +77,11 @@ package 是「manifest」(清單)標籤的一個特別屬性，用來標明程�
 Activity 是 Android 應用程式與使用者互動的主要元素，當使用者開啟一個應用程式，第一個看到的畫面就是一個 Activity。若是一個應用程式中包含多個畫面時，會定義多個不同的 Activity，我們也必須在「application」標籤中，使用多個「activity」標籤，為不同的 Activity 添加描述。如果我們已經在程式碼中定義好了 Activity ，卻忘了在「AndroidManifest.xml」檔案中加入對應的「activity」標籤，那麼在執行中呼叫到這個 Activity 的時候，將無法開啟這個 Activity。
 
 「activity」標籤的「android:name」屬性，指出了這個 Activity 所對應的類別(class)。「android:label」則用來指定這個「activity」的代號。
-
-    註解
+{{{
+    備註
     除了「activity」標籤外，還有「service」、「receiver」、「provider」等主要元件。相關內容會在後續章節提到時作解說。
-    
+}}}
+ 
 {{{
 <intent-filter>
     <action android:name="android.intent.action.MAIN" />
