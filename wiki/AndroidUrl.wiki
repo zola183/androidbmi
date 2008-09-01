@@ -98,7 +98,15 @@ startActivity(intent);
 {{{
 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 }}}
+
 在這行中，我們建立一個「意圖」(Intent) 實體，並傳入這個意圖的「動作」與「內容」。
+
+Intent 的格式如下：
+
+{{{
+Intent intent = new Intent(動作, 內容);
+}}}
+
 我們所建立「意圖」(Intent) 中，所傳入的「動作」是「Intent.ACTION_VIEW」。「Intent.ACTION_VIEW」是 Android 內建的「動作」之一。在 Eclipse 編輯畫面中輸入「Intent.」時，Eclipse 編輯器會彈出可輸入的建議動作選單，我們可以透過這個選單，了解可使用的各種 Intent 內建動作。
 
 「Intent.ACTION_VIEW」這個動作的意義為：依所提供內容的不同，開啟對應的程式以檢視內容資料。我們可以把這個動作想成在一般桌面系統上，開啟一個已知的檔案類型檔案(比如說一張照片)，作業系統會用你預設的應用程式(比如說某看圖軟體)開啟這個檔案。本例中提供了「Uri」網址類型的內容給「Intent.ACTION_VIEW」這個動作，所得到的結果，就是開啟瀏覽器並前往「http://androidbmi.googlecode.com/」 頁面。

@@ -43,7 +43,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidManifest 定義 Android 清單]
   # [AndroidActivity 加入新 Activity]  (BMI5) (以下規劃中)
   # [AndroidIntent 認識 Intent]
-  # [SubActivity 活動間交換資料]
+  # [SubActivity 活動間交換資料](BMI6) 
   # [AndroidDebug 記錄與偵錯] log
   # [LifeCycle 活動的生命週期] LifeCycle
   # [AndroidPreference 儲存資訊]
