@@ -57,7 +57,7 @@ Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事�
 package="com.demo.android.bmi"
 }}}
 
-package 是「manifest」(清單)標籤的一個特別屬性，用來標明程式的進入點在「com.demo.android.bmi.bmi」。
+package 是「manifest」(清單)標籤的一個特別屬性，範例中的內容可用來標明，這個應用程式的進入點存在於「com.demo.android.bmi」這個名稱空間/路徑中。
 
 {{{
 <application android:icon="@drawable/icon">
@@ -65,17 +65,17 @@ package 是「manifest」(清單)標籤的一個特別屬性，用來標明程�
 </application>
 }}}
 
-「manifest」標籤中主要包含一個「application」標籤(*備註1)。「application」標籤裡面定義了所有這個應用程式用到的 Activity、服務等資訊。「application」標籤中的「android:icon」屬性定義了這個應用程式將顯示在 Android 主畫面中的應用程式圖示。「android:icon="@drawable/icon"」表示應用程式圖示的資源檔存在於 「res/drawable/icon」 中。圖示的大小必須超過 64x64 像素（Pixel）。
+「manifest」標籤中主要包含一個「application」標籤(備註1)。「application」標籤裡面，定義了所有這個應用程式用到的 Activity、服務等資訊。「application」標籤中的「android:icon」屬性，定義了這個應用程式將顯示在 Android 主畫面中的應用程式圖示。「android:icon="@drawable/icon"」表示應用程式圖示的資源檔存在於 「res/drawable/icon」 中。圖示的大小必須超過 64x64 像素（Pixel）。
 
 {{{
 <activity android:name=".Bmi" android:label="@string/app_name">
 ...
 </activity>
 }}}
-「application」標籤中所有用到的 Activity 都要包含在一個個「activity」標籤中(*備註2)。
+「application」標籤中所有用到的 Activity ，都要包含在一個個「activity」標籤中(備註2)。
 Activity 是 Android 應用程式與使用者互動的主要元素，當使用者開啟一個應用程式，第一個看到的畫面就是一個 Activity。若是一個應用程式中包含多個畫面時，會定義多個不同的 Activity，我們也必須在「application」標籤中，使用多個「activity」標籤，為不同的 Activity 添加描述。如果我們已經在程式碼中定義好了 Activity ，卻忘了在「AndroidManifest.xml」檔案中加入對應的「activity」標籤，那麼在執行中呼叫到這個 Activity 的時候，將無法開啟這個 Activity。
 
-「activity」標籤的「android:name」屬性，指出了這個 Activity 所對應的類別(class)。「android:label」則用來指定這個「activity」的代號。
+「activity」標籤的「android:name」屬性，指出了這個 Activity 所對應的類別(class)。「android:label」屬性，則用來指定這個「activity」的代號。
 
  
 {{{
@@ -87,7 +87,7 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
 
 「intent-filter」標籤定義了這個「activity」的性質。
 「intent-filter」中主要包含了兩個標籤：「action」跟「category」標籤。
-「action」標籤中的「android:name」屬性，「android.intent.action.MAIN」表示這個 Activity 是一般類型的 Activity，常見的還有「android.intent.action.EDIT」等標籤。 「category」標籤中的「android:name」屬性，「android.intent.category.LAUNCHER」表示開啟這個應用程式時，應先執行這個 Activity。
+「action」標籤中的「android:name」屬性，其內容「android.intent.action.MAIN」表示：這個 Activity 是一般類型的 Activity。常見的還有「android.intent.action.EDIT」等標籤，會在之後章節用上的時候講解。「category」標籤中的「android:name」屬性，其內容「android.intent.category.LAUNCHER」表示：開啟這個應用程式時，應先執行這個 Activity。
 
 
 我們把整個檔案合到一起看，可以總結出這個檔案所傳達的訊息：在「com.demo.android.bmi」路徑下的「Bmi.java」這個檔案中，已定義了一個主要的 Activity; 當我們打開 Android 的時候，顯示的是位於「res/drawable/icon」的圖示。一旦我們按下圖示來啟動這個應用程式，Dalvik 虛擬機會去尋找到定義了「android.intent.category.LAUNCHER」內容的 「.Bmi」activity，並呼叫執行。
