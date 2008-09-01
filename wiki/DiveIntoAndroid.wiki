@@ -78,6 +78,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 [IntroAndroid 從頭開始閱讀] >
 
 == 主要更新記錄 ==
+  * 2008/9/1 新增[AndroidManifest 定義 Android 清單]一章
   * 2008/8/27 新增[AndroidMenu 加入選單]一章
   * 2008/8/20 新增[AndroidUrl 初見意圖]一章
   * 2008/8/19 相容於 Android SDK 0.9Beta, 新增[AndroidDialog 加入對話框]與[AndroidResource Android 相關資源]二章
