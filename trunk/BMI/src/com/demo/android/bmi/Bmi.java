@@ -16,6 +16,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Bmi extends Activity {
 	private static final String TAG = "Bmi";
@@ -75,24 +76,28 @@ public class Bmi extends Activity {
         }
     };
 	
-    protected static final int MENU_OPTIONS_ID = Menu.FIRST;
-	
+    protected static final int MENU_ABOUT = Menu.FIRST;
+    protected static final int MENU_Quit = Menu.FIRST+1;
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		Log.d(TAG, "open Menu");
-		menu.add(0, MENU_OPTIONS_ID, R.string.options_label, R.drawable.icon);
+		menu.add(0, MENU_ABOUT, 0, R.string.about_label);
+		menu.add(0, MENU_Quit, 0, R.string.finish_label);
 		return true;
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
 		super.onOptionsItemSelected(item);
-		int id = item.getItemId();
 		Log.d(TAG, "select Menu Item");
-		switch(id){
-			case MENU_OPTIONS_ID:
+		switch(item.getItemId()){
+			case MENU_ABOUT:
 				openOptionsDialog();
+				break;
+			case MENU_Quit:
+				finish();
 				break;
 		}
 		return true;
@@ -100,10 +105,11 @@ public class Bmi extends Activity {
 
 	private void openOptionsDialog() {
 		Log.d(TAG, "open Dialog");
-		View view = getLayoutInflater().inflate(R.layout.about, null);
+		//Toast.makeText(this, "BMI ­pºâ¾¹", Toast.LENGTH_SHORT).show();
+		//View view = getLayoutInflater().inflate(R.layout.about, null, true);
 		new AlertDialog.Builder(this)
-		.setTitle(R.string.about_title)
-		.setView(view)
+		.setTitle(R.string.about_title)//.setView(view)
+		.setMessage(R.string.about_msg)
 		.setPositiveButton(R.string.ok_label,
 				new DialogInterface.OnClickListener(){
 					public void onClick(
@@ -115,7 +121,8 @@ public class Bmi extends Activity {
 					public void onClick(
 							DialogInterface dialoginterface, int i){
 						//go to url
-						Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+						//Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
+						Uri uri = Uri.parse(getString(R.string.homepage_uri));
 						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 						startActivity(intent);
 					}
