@@ -4,6 +4,15 @@
 在「初見 Intent」一章中，我們已嘗試過使用 「startActivity」函式，傳入適當的「Intent」，來呼叫瀏覽器的 Activity。
 
 到目前為止，我們可以由學習 Android 應用程式的經驗中歸納得出：所有 Android 程式的運作流程，都定義在 Activity 中。
+
+Android  系統與其他系統很不一樣的地方是，它的應用程式都是跑在一個名為「Dalvik」的虛擬機中。在執行「startActivity」 函式時，應用程式並不是直接呼叫另一個 Activity，而是將「Intent」(意圖)傳進 Dalvik 虛擬機中。 Dalvik 虛擬機會查看 「startActivity」 呼叫所傳入的動作與 Intent 內容是否在註冊表中，如果符合，就啟動對應的服務或 Activity。  
+
+Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事先在 Dalvik 虛擬機中註冊、登記這個應用程式所建立的 Activity，並事先註明會使用到的服務。譬如當我們在 Android 上安裝我們撰寫的BMI應用程式時，BMI 應用程式就會向 Dalvik 虛擬機登記相關資訊：BMI 應用程式將會用到 「Bmi」這個 Activity。
+
+這份訊息存在於每個 Android 應用程式專案根目錄下的「AndroidManifest.xml」檔案中。如果我們在程式中，要用到其他應用程式或服務所提供的功能，也需一併在此列出。
+
+在安裝應用程式的時候，Dalvik 虛擬機會根據應用程式提供的這份清單，將資訊註冊於Dalvik 虛擬機的註冊表中。
+
 {{{
     備註:
     這麼說其實是不太精確的。Android 應用程式的運作流程，存在於四種載體中：
@@ -15,14 +24,7 @@
 
     各種載體的相關內容會在後續章節提到時作解說。
 }}} 
-Android  系統與其他系統很不一樣的地方是，它的應用程式都是跑在一個名為「Dalvik」的虛擬機中。在執行「startActivity」 函式時，應用程式並不是直接呼叫另一個 Activity，而是將「Intent」(意圖)傳進 Dalvik 虛擬機中。 Dalvik 虛擬機會查看 「startActivity」 呼叫所傳入的動作與 Intent 內容是否在註冊表中，如果符合，就啟動對應的服務或 Activity。  
 
-Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事先在 Dalvik 虛擬機中註冊，登記這個應用程式所建立的 Activity、並事先註明會使用到的服務。當我們在 Android 上安裝我們撰寫的BMI應用程式時，BMI 應用程式就會向 Dalvik 虛擬機登記相關資訊：BMI 應用程式會用到 「Bmi」這個 Activity。
-
-這份訊息存在於每個 Android 應用程式專案根目錄下的「AndroidManifest.xml」檔案中。如果我們在程式中，要用到其他應用程式或服務所提供的功能，也需一併在此列出。
-
-在安裝應用程式的時候，Dalvik 虛擬機會根據應用程式提供的這份清單，將資訊註冊於Dalvik 虛擬機的註冊表中。
-    
 == 預設的 Activity 清單 ==
 
 我們使用 eclipse Android 開發工具打開「BMI/AndroidManifest.xml」檔案。切換到「AndroidManifest.xml」分頁標籤，查看預設的 「BMI/AndroidManifest.xml」檔案原始碼如下
@@ -63,24 +65,18 @@ package 是「manifest」(清單)標籤的一個特別屬性，用來標明程�
 </application>
 }}}
 
-「manifest」標籤中主要包含一個「application」標籤。「application」標籤裡面定義了所有這個應用程式用到的 Activity、服務等資訊。「application」標籤中的「android:icon」屬性定義了這個應用程式將顯示在 Android 主畫面中的應用程式圖示。「android:icon="@drawable/icon"」表示應用程式圖示的資源檔存在於 「res/drawable/icon」 中。圖示的大小必須超過 64x64 像素（Pixel）。
+「manifest」標籤中主要包含一個「application」標籤(*備註1)。「application」標籤裡面定義了所有這個應用程式用到的 Activity、服務等資訊。「application」標籤中的「android:icon」屬性定義了這個應用程式將顯示在 Android 主畫面中的應用程式圖示。「android:icon="@drawable/icon"」表示應用程式圖示的資源檔存在於 「res/drawable/icon」 中。圖示的大小必須超過 64x64 像素（Pixel）。
 
-    註解
-    除了「application」標籤外，還有「uses-permission」(例如允不允許存取SMS、能否存取聯絡簿、相機功能)、「permission」、「instrumentation」等主要標籤。相關的內容在後續章節用到時再一併解說。
-    
 {{{
 <activity android:name=".Bmi" android:label="@string/app_name">
 ...
 </activity>
 }}}
-「application」標籤中所有用到的 Activity 都要包含在一個個「activity」標籤中。
+「application」標籤中所有用到的 Activity 都要包含在一個個「activity」標籤中(*備註2)。
 Activity 是 Android 應用程式與使用者互動的主要元素，當使用者開啟一個應用程式，第一個看到的畫面就是一個 Activity。若是一個應用程式中包含多個畫面時，會定義多個不同的 Activity，我們也必須在「application」標籤中，使用多個「activity」標籤，為不同的 Activity 添加描述。如果我們已經在程式碼中定義好了 Activity ，卻忘了在「AndroidManifest.xml」檔案中加入對應的「activity」標籤，那麼在執行中呼叫到這個 Activity 的時候，將無法開啟這個 Activity。
 
 「activity」標籤的「android:name」屬性，指出了這個 Activity 所對應的類別(class)。「android:label」則用來指定這個「activity」的代號。
-{{{
-    備註
-    除了「activity」標籤外，還有「service」、「receiver」、「provider」等主要元件。相關內容會在後續章節提到時作解說。
-}}}
+
  
 {{{
 <intent-filter>
@@ -95,6 +91,15 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
 
 
 我們把整個檔案合到一起看，可以總結出這個檔案所傳達的訊息：在「com.demo.android.bmi」路徑下的「Bmi.java」這個檔案中，已定義了一個主要的 Activity; 當我們打開 Android 的時候，顯示的是位於「res/drawable/icon」的圖示。一旦我們按下圖示來啟動這個應用程式，Dalvik 虛擬機會去尋找到定義了「android.intent.category.LAUNCHER」內容的 「.Bmi」activity，並呼叫執行。
+
+{{{
+    備註1
+    除了「application」標籤外，還有「uses-permission」(例如允不允許存取SMS、能否存取聯絡簿、相機功能)、「permission」、「instrumentation」等主要標籤。相關的內容在後續章節用到時再一併解說。
+}}}  
+{{{
+    備註2
+    除了「activity」標籤外，還有「service」、「receiver」、「provider」等主要元件。相關內容會在後續章節提到時作解說。
+}}}
 
 = 結語 =
 
