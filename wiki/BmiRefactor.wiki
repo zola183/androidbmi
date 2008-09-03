@@ -30,7 +30,7 @@
 4      setContentView(R.layout.main);
 5           
 6      //Listen for button clicks
-7      Button button = (Button)findViewById(R.id.submit);
+7      Button button = (Button) findViewById(R.id.submit);
 8      button.setOnClickListener(calcBMI);
 9  }
 }}}
@@ -39,7 +39,7 @@
 整個程式的大致架構在前面章節中已經講解過，現在我們從中取出我們感興趣的部分來討論：
 
 {{{
-Button button = (Button)findViewById(R.id.submit);
+Button button = (Button) findViewById(R.id.submit);
 button.setOnClickListener(calcBMI);
 }}}
 
@@ -69,9 +69,9 @@ private EditText fieldweight;
 
 private void findViews()
 {
-    calcbutton = (Button)findViewById(R.id.submit);
-    fieldheight = (EditText)findViewById(R.id.height);
-    fieldweight = (EditText)findViewById(R.id.weight);
+    calcbutton = (Button) findViewById(R.id.submit);
+    fieldheight = (EditText) findViewById(R.id.height);
+    fieldweight = (EditText) findViewById(R.id.weight);
 }
 }}}
 
@@ -120,11 +120,11 @@ public class Bmi extends Activity {
 
     private void findViews()
     {
-    	button_calc = (Button)findViewById(R.id.submit);
-    	field_height = (EditText)findViewById(R.id.height);
-    	field_weight = (EditText)findViewById(R.id.weight);
-    	view_result = (TextView)findViewById(R.id.result);
-    	view_suggest = (TextView)findViewById(R.id.suggest);
+    	button_calc = (Button) findViewById(R.id.submit);
+    	field_height = (EditText) findViewById(R.id.height);
+    	field_weight = (EditText) findViewById(R.id.weight);
+    	view_result = (TextView) findViewById(R.id.result);
+    	view_suggest = (TextView) findViewById(R.id.suggest);
     }
 
     //Listen for button clicks
@@ -162,11 +162,11 @@ public class Bmi extends Activity {
 {{{
 private void findViews()
 {
-    button_calc = (Button)findViewById(R.id.submit);
-    field_height = (EditText)findViewById(R.id.height);
-    field_weight = (EditText)findViewById(R.id.weight);
-    view_result = (TextView)findViewById(R.id.result);
-    view_suggest = (TextView)findViewById(R.id.suggest);
+    button_calc = (Button) findViewById(R.id.submit);
+    field_height = (EditText) findViewById(R.id.height);
+    field_weight = (EditText) findViewById(R.id.weight);
+    view_result = (TextView) findViewById(R.id.result);
+    view_suggest = (TextView) findViewById(R.id.suggest);
 }
 }}}
 
@@ -176,7 +176,7 @@ private void findViews()
 我們也把原本在程式中直接寫進的字串
 
 {{{
-TextView result = (TextView)findViewById(R.id.result);
+TextView result = (TextView) findViewById(R.id.result);
 result.setText("Your BMI is "+nf.format(BMI));
 }}}
 
