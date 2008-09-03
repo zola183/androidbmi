@@ -101,6 +101,8 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
     除了「activity」標籤外，還有「service」、「receiver」、「provider」等主要元件。相關內容會在後續章節提到時作解說。
 }}}
 
+
+
 = 結語 =
 
 這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
