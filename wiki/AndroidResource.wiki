@@ -12,5 +12,9 @@ m5->0.9 porting
   * [http://code.google.com/android/migrating/m5-0.9/changes.html API Differences Report]
   * [http://groups.google.com/group/android-developers/web/m5-to-0-9-porting-and-migration-tips M5 to 0.9 Porting Tips]
 
+工具
+* [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
+* [http://code.google.com/p/android-positron/ positron] 自動測試工具
+
 Gears
   * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
