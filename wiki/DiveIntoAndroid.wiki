@@ -13,7 +13,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 本書採用創用CC：「姓名標示─非商業性─禁止改作」[http://creativecommons.org/licenses/by-nc-nd/2.5/tw/legalcode 授權條款]。
 
 本書的文字、圖片、程式碼皆不歡迎轉載，也不可使用於商業用途。
-但歡迎您將 http://code.google.com/p/androidbmi/wiki/IntroAndroid 網址分享到各書籤網站。
+但歡迎您將本書網址 http://code.google.com/p/androidbmi/wiki/IntroAndroid 分享到各網站。
 
 = 作者 =
 
@@ -28,7 +28,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 歡迎任何建設性的建議、批評、或者讚美。作者的電子郵件信箱是 gasolin+android -at- gmail.com。
 
-想在簡單易學和提供完整詳盡的資訊之間取得平衡，一直是技術書寫作者的永恆掙扎。 期望讀者您能提供一些反饋，讓作者能更好地掌握主題深入的程度。
+想在簡單易學和提供完整詳盡的資訊之間取得平衡，一直是種永恆的掙扎。 期望讀者您能提供一些反饋，讓作者能更好地掌握主題深入的程度。
 
 = 目錄 =
 
@@ -52,16 +52,16 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidDebug 記錄與偵錯] log
   # [LifeCycle 活動的生命週期] LifeCycle
   # [DesigningObvious 顯性設計]
-  # [AndroidPreference 儲存資訊]
-  # [AutoTest 自動測試]
+  # [AndroidMarket 發佈到市場]
   # [ListActivity 列表活動] (TODO)
   # [AdapterInflaction 插座]
   # [CustomField 自定欄位]
-  # [StatusNotification 通知]
+  # [StatusNotification 通知]  (進階) 
   # [ContentProvider 與其他程式共用資料]
   # tab (Avarta)
   # spinner
-  # [ContentProvider 與其他程式共用資料] (進階) 
+  # [AndroidPreference 儲存資訊]
+  # [AutoTest 自動測試]
   # [DynamicLayout 動態產生UI]
   # [CustomDialog 自訂對話框]
   # [CustommMenu 自訂選單]
