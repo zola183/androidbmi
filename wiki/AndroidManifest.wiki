@@ -1,7 +1,7 @@
 #summary 定義 Android 清單
 #labels tw,AndroidManifest
 
-在「初見 Intent」一章中，我們已嘗試過使用 「startActivity」函式，傳入適當的「Intent」，來呼叫瀏覽器的 Activity。
+在[IntroAndroid 初見 Intent]一章中，我們已嘗試過使用 「startActivity」函式，傳入適當的「Intent」，來呼叫瀏覽器的 Activity。
 
 到目前為止，我們可以由學習 Android 應用程式的經驗中歸納得出：所有 Android 程式的運作流程，都定義在 Activity 中。
 
