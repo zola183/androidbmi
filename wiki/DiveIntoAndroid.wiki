@@ -47,11 +47,12 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidUrl 初見 Intent]
   # [AndroidMenu 加入選單] (BMI4)
   # [AndroidManifest 定義 Android 清單]
-  # [AndroidActivity 加入新 Activity]  (BMI5) (以下規劃中)
-  # [SubActivity 活動間交換資料](BMI6) 
+  # [AndroidActivity 加入新 Activity]  (BMI5) 
+  # [SubActivity 活動間交換資料](BMI6) (以下規劃中)
+  # [DesigningObvious 顯性設計]
+  # [AndroidPreference 儲存資訊]
   # [AndroidDebug 記錄與偵錯] log
   # [LifeCycle 活動的生命週期] LifeCycle
-  # [DesigningObvious 顯性設計]
   # [AndroidMarket 發佈到市場]
   # [ListActivity 列表活動] (TODO)
   # [AdapterInflaction 插座]
@@ -60,7 +61,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [ContentProvider 與其他程式共用資料]
   # tab (Avarta)
   # spinner
-  # [AndroidPreference 儲存資訊]
   # [AutoTest 自動測試]
   # [DynamicLayout 動態產生UI]
   # [CustomDialog 自訂對話框]
@@ -85,11 +85,12 @@ http://creativecommons.org.tw/files/icon_nd.gif
 [IntroAndroid 從頭開始閱讀] >
 
 == 主要更新記錄 ==
+  * 2008/9/25 加入[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]與[AndroidActivity 加入新 Activity]一章
   * 2008/9/24 本教學相容於 Android SDK 1.0r1
   * 2008/9/1 新增[AndroidManifest 定義 Android 清單]一章
   * 2008/8/27 新增[AndroidMenu 加入選單]一章
   * 2008/8/20 新增[AndroidUrl 初見意圖]一章
-  * 2008/8/19 本教學相容於 Android SDK 0.9Beta, 新增[AndroidDialog 加入對話框]與[AndroidResource Android 相關資源]二章
+  * 2008/8/19 本教學相容於 Android SDK 0.9Beta，新增[AndroidDialog 加入對話框]與[AndroidResource Android 相關資源]二章
   * 2008/7/25 新增[XmlR 存取識別符號]一章
   * 2008/7/4 新增[BmiRefactor 重構程式] 一章
   * 2008/4/19 本教學相容於 2008/02/14 釋出的 Android SDK m5-r15
