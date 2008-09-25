@@ -121,7 +121,26 @@ private void openOptionsDialog() {
 上方程式碼中定義的「setPositiveButton」裡，包含了一個沒有作用的對話框介面(DialogInterface)。
 表示當我們按下按鈕時，不做任何事就直接退出對話框。
 
+完整對話框函式的程式碼如下
 
+{{{
+	private void openOptionsDialog() {
+		Log.d(TAG, "open Dialog");
+		//Toast.makeText(this, "BMI 計算器", Toast.LENGTH_SHORT).show();
+		//View view = getLayoutInflater().inflate(R.layout.about, null, true);
+		new AlertDialog.Builder(this)
+		.setTitle(R.string.about_title)//.setView(view)
+		.setMessage(R.string.about_msg)
+		.setPositiveButton(R.string.ok_label,
+				new DialogInterface.OnClickListener(){
+					public void onClick(
+							DialogInterface dialoginterface, int i){
+					}
+				})
+		.show();
+	}
+}
+}}}
 
 更詳細的對話框使用可參考官方文件
 http://code.google.com/android/reference/android/app/AlertDialog.Builder.html		

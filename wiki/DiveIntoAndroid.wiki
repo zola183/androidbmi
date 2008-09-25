@@ -40,8 +40,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidUI 描述使用者介面] (基礎) 
   # [BmiUI 設計使用者介面] (BMI01)
   # [XmlR 存取識別符號]
-  # [AndroidLogic 解讀程式流程]
-  # [BmiLogic 完成 BMI 程式] (BMI02)
+  # [AndroidLogic 解讀程式流程] (BMI02)
+  # [BmiLogic 完成 BMI 程式]
   # [BmiRefactor 重構程式] (中階) (BMI03)
   # [AndroidDialog 加入對話框]
   # [AndroidUrl 初見 Intent]
