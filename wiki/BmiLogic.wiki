@@ -36,7 +36,7 @@
 26     {
 27         public void onClick(View v)
 28         {
-29             DecimalFormat nf = new DecimalFormat("0.0");
+29             DecimalFormat nf = new DecimalFormat("0.00");
 30             EditText fieldheight = (EditText)findViewById(R.id.height);
 31             EditText fieldweight = (EditText)findViewById(R.id.weight);
 32             double height = Double.parseDouble(fieldheight.getText().toString())/100;
@@ -74,13 +74,14 @@
 
 兩個反斜線是 java 語言所支援的另一種註解方式。
 
+== 按鈕 ==
 {{{
 Button button = (Button)findViewById(R.id.submit);
 }}}
 
-宣告一個 button 實體，透過 findViewById 方法，從資源檔中取得對應的介面元件。
+宣告一個 button 實體，透過 findViewById 方法，從資源檔中取得對應的介面元件(按鈕)。這邊取出的是「R.id.submit」按鈕元件。
 
-R.id.submit 對應到 XML 描述檔的資源是
+「R.id.submit」對應到 XML 描述檔的資源是
 {{{
 <Button id="@+id/submit"
 />
@@ -94,5 +95,65 @@ button.setOnClickListener(new OnClickListener(){
 這句包含了「 button.setOnClickListener」與其中的 「OnClickListener」兩個類別。
 「setOnClickListener」是 button （按鈕）實體的方法。
 
+== 編輯欄位 ==
+
+{{{
+EditText fieldheight = (EditText)findViewById(R.id.height);
+EditText fieldweight = (EditText)findViewById(R.id.weight);
+}}}
+
+與上面 button 的宣告類似，只是改成宣告 EditText 實體，透過 findViewById 方法，從資源檔中取得對應的文字欄位元件。這邊取出的是「R.id.height」和「R.id.weight」文字欄位元件。
+
+== 運算 ==
+
+{{{
+double height = Double.parseDouble(fieldheight.getText().toString())/100;
+double weight = Double.parseDouble(fieldweight.getText().toString());
+double BMI = weight / (height * height);
+}}}
+
+BMI 值的算法是「體重除以身高的平方」。
+用計算式來表示，就是
+
+{{{
+體重(weight) / 身高(height)*身高(height)
+}}}
+
+這麼看來，上面的程式碼就很清晰了。我們先從身高欄位(fieldheight)、體重欄位(fieldweight)中取得使用者輸入的身高體重數字，再定義一個雙倍精度幅點數(double) 型態的變數 BMI 來儲存運算的結果，因此，BMI 變數中儲存了運算出來的實際 BMI 值。
+
+== 顯示結果 ==
+
+我們把 BMI 值運算出來了，接著要將結果顯示回螢幕上。
+
+{{{
+TextView result = (TextView)findViewById(R.id.result);
+}}}
+
+為了將結果顯示到螢幕上，在之前 XML 定義檔中我們已經預留了一個名為「result」的 TextView 欄位。在程式碼中，我們再宣告一個 TextView 實體，透過 findViewById 方法，從資源檔中取得對應的介面元件(文字顯示)。這邊取出的就是「R.id.result」介面元件。
+
+{{{
+DecimalFormat nf = new DecimalFormat("0.00");
+result.setText("Your BMI is "+nf.format(BMI));
+}}}
+
+透過 java 內建的 DecimalFormat 函式，我們可以將運算結果，以適當的格式顯示。
+
+透過「setText」方法，我們可以將指定的字串，顯示在螢幕上文字類型的介面元件中。
+
+== 顯示建議 ==
+
+「顯示建議」的方式與「顯示結果」完全相同，只有多加了幾個「if」判斷式：當BMI 值大於25顯示過重，小於20顯示過輕。程式碼留給讀者自習。
+
+{{{
+//Give health advice
+TextView fieldsuggest = (TextView)findViewById(R.id.suggest);
+if(BMI>25){
+    fieldsuggest.setText(R.string.advice_heavy);
+}else if(BMI<20){
+    fieldsuggest.setText(R.string.advice_light);
+}else{
+    fieldsuggest.setText(R.string.advice_average);
+}
+}}}
 
 < [AndroidLogic 解讀程式流程] | [DiveIntoAndroid 回目錄] | [BmiRefactor 重構程式] >

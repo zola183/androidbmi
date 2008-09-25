@@ -51,6 +51,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [SubActivity 活動間交換資料](BMI6) 
   # [AndroidDebug 記錄與偵錯] log
   # [LifeCycle 活動的生命週期] LifeCycle
+  # [DesigningObvious 顯性設計]
   # [AndroidPreference 儲存資訊]
   # [AutoTest 自動測試]
   # [ListActivity 列表活動] (TODO)
