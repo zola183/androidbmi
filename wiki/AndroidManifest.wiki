@@ -32,16 +32,18 @@ Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事�
 {{{
 1  <?xml version="1.0" encoding="utf-8"?>
 2  <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3      package="com.demo.android.bmi">
-4      <application android:icon="@drawable/icon">
-5          <activity android:name=".Bmi" android:label="@string/app_name">
-6              <intent-filter>
-7                  <action android:name="android.intent.action.MAIN" />
-8                  <category android:name="android.intent.category.LAUNCHER" />
-9              </intent-filter>
-10          </activity>
-11     </application>
-12 </manifest>
+3      package="com.demo.android.bmi"
+4      android:versionCode="1"
+5      android:versionName="1.0.0">
+6      <application android:icon="@drawable/icon">
+7          <activity android:name=".Bmi" android:label="@string/app_name">
+8              <intent-filter>
+9                  <action android:name="android.intent.action.MAIN" />
+10                 <category android:name="android.intent.category.LAUNCHER" />
+11            </intent-filter>
+12          </activity>
+13     </application>
+14 </manifest>
 }}}
 
 我們分行講解如下：
@@ -57,7 +59,16 @@ Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事�
 package="com.demo.android.bmi"
 }}}
 
-package 是「manifest」(清單)標籤的一個特別屬性，範例中的內容可用來標明，這個應用程式的進入點存在於「com.demo.android.bmi」這個名稱空間/路徑中。
+「package」 是「manifest」(清單)標籤的一個特別屬性，範例中的內容可用來標明，這個應用程式的進入點存在於「com.demo.android.bmi」這個名稱空間/路徑中。
+
+{{{
+android:versionCode="1"
+android:versionName="1.0.0"
+}}}
+
+「android:versionCode」和「android:versionName」是應用程式版本號。
+這兩個屬性是可選的(非必要)。
+「android:versionName」是給使用者看的版本號，如「1.0」、「2.0」。「android:versionCode」則是開發者用的內部版本號，一般使用流水號。
 
 {{{
 <application android:icon="@drawable/icon">
@@ -92,16 +103,14 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
 
 我們把整個檔案合到一起看，可以總結出這個檔案所傳達的訊息：在「com.demo.android.bmi」路徑下的「Bmi.java」這個檔案中，已定義了一個主要的 Activity; 當我們打開 Android 的時候，顯示的是位於「res/drawable/icon」的圖示。一旦我們按下圖示來啟動這個應用程式，Dalvik 虛擬機會去尋找到定義了「android.intent.category.LAUNCHER」內容的 「.Bmi」activity，並呼叫執行。
 
-{{{
-    備註1
+
+備註1
     除了「application」標籤外，還有「uses-permission」(例如允不允許存取SMS、能否存取聯絡簿、相機功能)、「permission」、「instrumentation」等主要標籤。相關的內容在後續章節用到時再一併解說。
-}}}  
-{{{
-    備註2
+
+備註2
     除了「activity」標籤外，還有「service」、「receiver」、「provider」等主要元件。相關內容會在後續章節提到時作解說。
-}}}
 
-
+參考資料 http://code.google.com/android/reference/android/R.styleable.html#AndroidManifest
 
 = 結語 =
 
