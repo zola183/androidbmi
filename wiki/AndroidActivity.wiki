@@ -8,14 +8,16 @@
 
 === 獨立的 Activity ===
 
-獨立的 Activity ，就是不用從其他地方取得資料的 Activity。在前幾章中，我們所編寫的 BMI 程式就屬於這一類。
-從一個獨立的 Activity 呼叫另一個獨立的 Activity 時，我們只要填好 Intent 的內容和動作，然後呼叫，即可喚起獨立的 Activity。例如前幾章中，用作開啟特定網頁的 Activity。
+獨立的 Activity 是不需要從其他地方取得資料的 Activity。在前幾章中我們編寫的 BMI 程式就屬於這一類。
+從一個獨立的 Activity 呼叫另一個獨立的 Activity 時，我們只要填好 Intent 的內容和動作，使用 startActivity 函式呼叫，即可喚起獨立的 Activity。例如前幾章中，用作開啟特定網頁的 Activity。
 
 === 相依的 Activity ===
 
-相依的 Activity 是需要與其他 Activity 間交換資料的 Activity。相對獨立的 Activity 而言，相依的 Activity 的變化更加精采。
-我們會在後面章節對相依的 Activity做進一步的說明。
+相依的 Activity 是需要與其他 Activity 交換資料的一種 Activity。與獨立的 Activity 比起來，相依的 Activity 變化更加精采。
 
+我們會在後面章節對相依的 Activity 做進一步的說明。
+
+= 獨立的 Activity =
 
 本章將繼續透過改進 BMI 應用程式來講解 Android 應用程式設計。
 在這個過程中，我們將使用到獨立的 Activity。
@@ -27,7 +29,7 @@
   # 定義 Activity 清單
   # 使用 Intent 類別
 
-== 建立新 Activity 類別 ==
+== 建立新的 Activity 類別 ==
 
 首先使用 Navigator 檔案瀏覽視窗，切換到「src/com/demo/android/bmi」資料夾。在「bmi」資料夾中，現存有 「Bmi.java」與「R.java」兩個檔案。在「bmi」資料夾圖示上按右鍵，選擇「New->Class」選項。 Eclipse 會跳出一個「New Java Class」對話框。
 
