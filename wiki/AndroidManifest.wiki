@@ -128,6 +128,6 @@ Android 是個完整的平台，還有諸多內容值得研究。例如儲存資
 
 == 讀後問卷 ==
 
-如果您花時間讀了本書，請幫忙填寫只有3題的[http://spreadsheets.google.com/embeddedform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
+如果您花時間讀了本書，請幫忙填寫只有3題的[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
 
 < [AndroidMenu 加入選單] | [DiveIntoAndroid 回目錄] | [AndroidActivity 加入新 Activity] >
