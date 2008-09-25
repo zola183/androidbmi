@@ -1,0 +1,210 @@
+#summary 加入新 Activity
+#labels tw, Activity
+
+直觀來看，每個 Activity 通常會負責處理一個螢幕的內容(包含介面、選單、彈出對話框、程式動作等)。當我們需要從一個螢幕畫面切換到另一個螢幕畫面的時候，就涉及到了 Activity 切換的動作。
+我們可以將 Activity 看成 MVC 模式中的 Control。Activity 負責管理 UI（詳細的UI細節可以由資源檔讀入），並接受事件觸發。
+
+以是否需要與其他 Activity 交換資料來區分，Activity 可以粗分為兩種類型。不同類型的 Activity，其動作也不盡相同：
+
+1. 獨立的 Activity
+獨立的 Activity ，就是不用從其他地方取得資料的 Activity。在前幾章中，我們所編寫的 BMI 程式就屬於這一類。
+從一個獨立的 Activity 呼叫另一個獨立的 Activity 時，我們只要填好 Intent 的內容和動作，然後呼叫，即可喚起獨立的 Activity。例如前幾章中，用作開啟特定網頁的 Activity。
+
+2. 相依的 Activity
+相依的 Activity 是需要與其他 Activity 間交換資料的 Activity。相對獨立的 Activity 而言，相依的 Activity 的變化更加精采。
+我們會在後面章節對相依的 Activity做進一步的說明。
+
+
+本章將繼續透過改進 BMI 應用程式來講解 Android 應用程式設計。
+在這個過程中，我們將使用到獨立的 Activity。
+
+
+要完成切換獨立的 Activity 的動作，你需要做幾件事：
+
+  # 建立新 Activity 類別
+  # 定義 Activity 清單
+  # 使用 Intent 類別
+
+== 建立新 Activity 類別 ==
+
+首先使用 Navigator 檔案瀏覽視窗，切換到「src/com/demo/android/bmi」資料夾。在「bmi」資料夾中，現存有 「Bmi.java」與「R.java」兩個檔案。在「bmi」資料夾圖示上按右鍵，選擇「New->Class」選項。 Eclipse 會跳出一個「New Java Class」對話框。
+
+在對話框中的「Name」一欄上填入「Report」。「Report」的字頭需大寫，這是 Java 程式語言的默認規則。在「Superclass」一欄右方，按下「Browse...」，Eclipse 會跳出「Superclass Selection」對話框。在對話框中的「Choose a type」欄位中輸入「activity」，輸入框下方的「Matching items」欄位裡會顯示出所有可能的類別。
+我們選擇「Activity - android.app - ...」這個選項，點擊「ok」回到上一個對話框。
+
+此時，「Superclass」欄位中將填入「android.app.Activity」訊息。按下對話框右下角的「Finish」鍵，Eclipse 會在「bmi」資料夾中，產生一個對應的「Report.java」檔案。
+
+一個尚未修改過的「Report.java」檔案如下：
+
+{{{
+package com.demo.android.bmi;
+
+import android.app.Activity;
+
+public class Report extends Activity {
+
+}
+}}}
+
+在[AndroidLogic 解讀程式流程]一章中，我們已講解過 Android 程式碼的基本架構，稍後我們再回來，填入這個 class 的內容。
+
+== 定義 Activity 清單 ==
+
+我們再打開「AndroidManifest.xml」檔案，並切換到「Application」分頁。在「Application」分頁的左下角，我們可以看到「Application Nodes」欄位中，列出目前已在「AndroidManifest.xml」檔案中定義的所有「Activity」。現在我們就來將 「Report」這個新的 Activity 加入到「AndroidManifest.xml」檔案中。
+
+點擊「Application Nodes」欄位右側的「Add...」按鈕，彈出一個小對話框。
+選擇「Activity」後，按下「ok」回到「Application」分頁。「Application Nodes」欄位中會增加一個「Activity」項目。選擇這個「Activity」項目後，在「Application Nodes」欄位右方會出現新的「Attributes for Activity」相關欄位。我們點選 「Name*」欄位右側的 「Browse...」按鈕，開啟另一個對話框。新的對話框中我們可以選擇在程式中現有定義的 Activity。我們選擇「Report - com.demo.android.bmi」後，按 「ok」 鍵回到「Application」分頁。此時「Name*」欄位的內容變成了「Report」，「Application Nodes」欄位中的名稱也更新成「Report(Activity)」了。
+
+=== 查看原始碼 ===
+
+我們從「Application」分頁切換到「AndroidManifest.xml」分頁，查看剛剛的動作實際上作了些什麼事。
+
+我們發現，在原本的 activity 敘述下方，新增了一行名為「Report」的 activity 標籤。
+
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demo.android.bmi">
+    <application android:icon="@drawable/icon">
+        <activity android:name=".bmi" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <activity android:name="Report"></activity>
+    </application>
+</manifest>
+}}}
+
+Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清單檔案，除了使用對話框選擇的方式之外，你也可以直接修改「AndroidManifest.xml」原始碼，來得到相同的效果。
+
+=== 加入標題描述 ===
+
+在「res/values/」目錄下，新建一個 report.xml 描述檔，存放 Report 活動頁面用到的自串。檔案內容如下：
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="report_title">BMI 報告</string>
+</resources>
+
+修改「AndroidManifest.xml」，改變 Report activity 標籤的內容如下：
+
+{{{
+<activity android:name="Report" android:label="@string/report_title"></activity>
+}}}
+
+
+== 相關工作 ==
+
+在「res/layout」中新增一個「report.xml」檔案，並把[AndroidUI 描述使用者介面] 一章中講解過的 xml 檔案複製一份過來：
+
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Hello World, Bmi"
+	/>
+</LinearLayout>
+}}}
+
+打開「src/com/demo/android/bmi/Report.java」，把[AndroidLogic 解讀程式流程]一章中講解過的預設的程式碼複製進來：
+
+{{{
+package com.demo.android.bmi;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class Report extends Activity {
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
+		setContentView(R.layout.report);
+	}
+}
+}}}
+
+上面的程式碼中，我們將
+
+{{{
+setContentView(R.layout.main);
+}}}
+
+換成了：
+
+{{{
+setContentView(R.layout.report);
+}}}
+
+== 使用 Intent 類別 ==
+
+我們把原本按下按鈕會計算並顯示 Bmi 值的按鈕動作，改成跳轉到 Report Activity。
+
+打開「src/com/demo/android/bmi/Bmi.java」檔案，修改「OnClickListener」函式的內容。從 Bmi Activity 切換到 Report Activity 的程式如下：
+
+{{{
+private OnClickListener calcBMI = new OnClickListener()
+{
+    public void onClick(View v)
+    {
+        //Switch to report page
+        Intent intent = new Intent();
+        intent.setClass(Bmi.this, Report.class);
+        startActivity(intent);
+     }
+};
+}}}
+
+修改好後，開啟 Android 模擬器。當我們按下「計算 BMi 值」按鈕後，螢幕會切換到「Hello World, Bmi」頁面(Report Activity)。在顯示這個頁面時，如果我們按下「Undo」鍵，螢幕會切換到原本輸入身高體重的頁面(Bmi Activity)。
+
+講解：
+
+{{{
+Intent intent = new Intent();
+}}}
+ 
+我們建立一個新的「意圖」(Intent) 實體。
+
+{{{
+intent.setClass(Bmi.this, Report.class);
+}}}
+
+為這個意圖指定來源的 Activity 所在 class，與要前往的 Activity 所在的 class。
+
+{{{
+startActivity(intent);
+}}}
+
+將定義好的 intent 傳入「startActivity」函式中。「startActivity」函式會將 intent 傳入 Dalvik 虛擬機，Dalvik 虛擬機會根據各應用程式在系統中註冊的資料，找出 Report 這個 Activity，並呼叫它。
+
+原來呼叫一個獨立的 Activity，所需要的功夫其實很單純呀。
+
+= 結語 =
+
+這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
+
+Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、SMS、Google Map、Web Cam、3D、遊戲、Webkit、XMPP 等等進階的主題。
+
+希望讀者能以此小書出發，開發出自己的 Android 程式。
+
+請別吝於留言反應，寫出自己的讀後感言、提出覺得不解的地方，分享自己的經驗，這些都可以協助你更好的學習 Android。
+
+== 版權宣告 ==
+
+誠摯地提醒您，本書仍在持續地完善中。本書的文字、圖片、程式碼皆不歡迎轉載，也不可使用於商業用途。
+但歡迎您將本書網址 http://code.google.com/p/androidbmi/wiki/IntroAndroid 分享到各網站。
+
+== 填寫讀後問卷 ==
+
+如果您花時間讀了本書，請幫忙填寫只有3題的[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
+
+
+< [AndroidManifest 定義 Android 清單] | [DiveIntoAndroid 回目錄] | [SubActivity 活動間交換資料] >
