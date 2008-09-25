@@ -13,8 +13,8 @@ Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事�
 
 在安裝應用程式的時候，Dalvik 虛擬機會根據應用程式提供的這份清單，將資訊註冊於Dalvik 虛擬機的註冊表中。
 
-{{{
-    備註:
+
+備註:
     這麼說其實是不太精確的。Android 應用程式的運作流程，存在於四種載體中：
     
       # Activity (活動)
@@ -23,11 +23,10 @@ Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事�
       # Content Provider
 
     各種載體的相關內容會在後續章節提到時作解說。
-}}} 
 
 == 預設的 Activity 清單 ==
 
-我們使用 eclipse Android 開發工具打開「BMI/AndroidManifest.xml」檔案。切換到「AndroidManifest.xml」分頁標籤，查看預設的 「BMI/AndroidManifest.xml」檔案原始碼如下
+我們使用 eclipse Android 開發工具打開「BMI/AndroidManifest.xml」檔案。切換到「AndroidManifest.xml」分頁標籤，查看預設的 「BMI/AndroidManifest.xml」檔案原始碼：
 
 {{{
 1  <?xml version="1.0" encoding="utf-8"?>
@@ -108,7 +107,7 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
     除了「application」標籤外，還有「uses-permission」(例如允不允許存取SMS、能否存取聯絡簿、相機功能)、「permission」、「instrumentation」等主要標籤。相關的內容在後續章節用到時再一併解說。
 
 備註2
-    除了「activity」標籤外，還有「service」、「receiver」、「provider」等主要元件。相關內容會在後續章節提到時作解說。
+    除了「activity」標籤外，對應於 Android 應用程式的運作流程，還有「service」、「receiver」、「provider」等主要元件。相關內容會在後續章節提到時作解說。
 
 參考資料 http://code.google.com/android/reference/android/R.styleable.html#AndroidManifest
 
