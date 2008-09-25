@@ -6,12 +6,12 @@
 
 以是否需要與其他 Activity 交換資料來區分，Activity 可以粗分為兩種類型。不同類型的 Activity，其動作也不盡相同：
 
- 1. 獨立的 Activity
+=== 獨立的 Activity ===
 
 獨立的 Activity ，就是不用從其他地方取得資料的 Activity。在前幾章中，我們所編寫的 BMI 程式就屬於這一類。
 從一個獨立的 Activity 呼叫另一個獨立的 Activity 時，我們只要填好 Intent 的內容和動作，然後呼叫，即可喚起獨立的 Activity。例如前幾章中，用作開啟特定網頁的 Activity。
 
- 2. 相依的 Activity
+=== 相依的 Activity ===
 
 相依的 Activity 是需要與其他 Activity 間交換資料的 Activity。相對獨立的 Activity 而言，相依的 Activity 的變化更加精采。
 我們會在後面章節對相依的 Activity做進一步的說明。
