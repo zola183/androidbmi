@@ -3,24 +3,28 @@
 
 = 使用 Android 模擬器 =
 
-我們已經開啟了 NotePad 專案。現在先不急著寫程式，我們花點時間來看看怎麼執行 Android 程式吧。
+我們已經開啟了 ApiDemos 專案。現在先不忙著開始寫程式，我們花點時間來看看怎麼執行一個 Android 程式吧。
 
-要執行 NotePad 程式前，我們得設定一些用來執行 NotePad 程式的參數。
+要執行 ApiDemos 程式前，我們得在開發環境中設定一些用來執行 ApiDemos 程式的環境參數。
 以後使用其他程式專案時，我們也能用同樣的方式，讓這些程式在我們的開發環境中運行。
 
-首先，我們透過「執行」選單，選擇「開啟執行參數設定」(Run-> Open Run Dialog...) 進入運行環境參數設定畫面。
+首先，我們透過「執行」選單，選擇「開啟執行參數設定」(Run-> Debug Configurations...) 進入運行環境參數設定畫面。
 
 進入設定畫面後，在視窗左側會有一整排 Eclipse 支援的運行設定，我們從中找到 "Android Application"(Android 應用程式)項目，按下滑鼠右鍵，點選 "New"(新增)選項。
 
 選擇 「New」 選項後，在「Android Application」項目下方會多出一筆執行項目。
 
-點選「Browse...」按鈕，開啟「專案選擇」（Project Selection）視窗，選擇「NotesList」專案並點選「OK」按鈕，以選擇要執行的專案。
+我們可以在 Name 欄位上輸入一個代表這個環境參數的名稱，在此我們輸入與專案名稱相同的「ApiDemos」。
 
-在 Activity 選單中，點選「com.google.android.notepad.NotesList」
+在「Project」欄位右方，點選「Browse...」按鈕，開啟「專案選擇」（Project Selection）視窗，選擇「ApiDemos」專案並點選「OK」按鈕，以選擇要執行的專案。
 
-至此我們就完成了執行參數的設定。 點選「Run」按鈕，Eclipse 就會啟動 Android 模擬器。
+在 「Launch Action」 選單中，確認預設選擇的是「Launch Default Activity」。
 
-    
+至此我們就完成了模擬器環境參數的設定。 點選右下角的「Debug」按鈕，Eclipse 就會啟動 Android 模擬器。
+
+小技巧: 
+    在選單中，也可以選擇設定「Run Configuration...」選項。這時我們得到的是一個幾乎完全相同的環境參數設定畫面，只是右下角的「Debug」按鈕變成了「Run」按鈕。「Debug」與「Run」模式的環境參數設定可以共用，差別在於「Debug」模式下可以使用在之後章節中會介紹的 logd，來顯示一些開發時所需的額外訊息。
+
 = 操作 Android 模擬器 =
 
 我們已經順利地啟動了模擬器，那麼，該怎麼移除安裝到模擬器上的程式哩?
@@ -38,15 +42,13 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
 使用 ls 命令(等同 windows 上命令行的 dir 命令)來檢視檔案列表
 {{{
     # ls
-    -rw-rw-rw- root     root        46279 2007-11-28 12:59 NotesList.apk
     -rw-r--r-- system   system    1325833 2007-11-11 20:59 ApiDemos.apk
 }}}
 
-接著使用 rm 命令來刪除 NotesList 應用程式
+接著使用 rm 命令來刪除 ApiDemos 應用程式
 {{{
-    # rm NotesList.apk
+    # rm ApiDemos.apk
     # ls
-    -rw-r--r-- system   system    1325833 2007-11-11 20:59 ApiDemos.apk
 }}}
 
 
