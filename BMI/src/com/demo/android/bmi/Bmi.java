@@ -16,7 +16,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+//import android.widget.Toast;
 
 public class Bmi extends Activity {
 	private static final String TAG = "Bmi";
@@ -38,11 +38,11 @@ public class Bmi extends Activity {
     private void findViews()
     {
     	Log.d(TAG, "find Views");
-    	button_calc = (Button)this.findViewById(R.id.submit);
-    	field_height = (EditText)this.findViewById(R.id.height);
-    	field_weight = (EditText)this.findViewById(R.id.weight);
-    	view_result = (TextView)findViewById(R.id.result);
-    	view_suggest = (TextView)findViewById(R.id.suggest);
+    	button_calc = (Button) findViewById(R.id.submit);
+    	field_height = (EditText) findViewById(R.id.height);
+    	field_weight = (EditText) findViewById(R.id.weight);
+    	view_result = (TextView) findViewById(R.id.result);
+    	view_suggest = (TextView) findViewById(R.id.suggest);
     }
 
     //Listen for button clicks
@@ -56,7 +56,7 @@ public class Bmi extends Activity {
         public void onClick(View v)
         {
         	Log.d(TAG, "start to calc");
-            DecimalFormat nf = new DecimalFormat("0.0");
+            /*DecimalFormat nf = new DecimalFormat("0.00");
             double height = Double.parseDouble(field_height.getText().toString())/100;
             double weight = Double.parseDouble(field_weight.getText().toString());
             double BMI = weight / (height * height);
@@ -71,8 +71,18 @@ public class Bmi extends Activity {
                 view_suggest.setText(R.string.advice_light);
             }else{
                 view_suggest.setText(R.string.advice_average);
-            }
+            }*/
             //openOptionsDialog();
+        	//Switch to report page
+        	//Intent intent = new Intent(bmi.this, Report.class);
+            Intent intent = new Intent();
+            intent.setClass(Bmi.this, Report.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("KEY_HEIGHT", field_height.getText().toString());
+            bundle.putString("KEY_WEIGHT", field_weight.getText().toString());
+            intent.putExtras(bundle);
+            startActivity(intent);
+            //finish();
         }
     };
 	
@@ -119,13 +129,13 @@ public class Bmi extends Activity {
 		.setNegativeButton(R.string.homepage_label,
 				new DialogInterface.OnClickListener(){
 					public void onClick(
-							DialogInterface dialoginterface, int i){
+						DialogInterface dialoginterface, int i){
 						//go to url
 						//Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
 						Uri uri = Uri.parse(getString(R.string.homepage_uri));
 						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 						startActivity(intent);
-					}
+						}
 				})
 		.show();
 	}
