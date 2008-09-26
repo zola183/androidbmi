@@ -149,9 +149,11 @@ Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清�
 
 來得到相同的效果。
 
-=== XML 描述檔中加入標題描述 ===
+=== 修改頁面標題文字 ===
 
-在「res/values/」目錄下，新建一個 report.xml 描述檔，存放 Report 活動頁面用到的字串。檔案內容如下：
+如果希望在打開 Report Activity 頁面時，標題欄上的文字將會是「BMI 報告」，而不是預設跟 Activity 名稱相同的「Report」，我們可以在清單裡的「report activity」標籤中，加入標籤（label）屬性的描述。步驟如下。
+
+1. 在「res/values/」目錄下，新建一個 report.xml 描述檔，存放 Report 活動頁面用到的字串。檔案內容如下：
 {{{
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -159,12 +161,11 @@ Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清�
 </resources>
 }}}
 
-有了描述檔，我們可以再修改「AndroidManifest.xml」清單，為 Report activity 添加標籤(label)屬性：
+2. 有了描述檔後，我們可以再修改「AndroidManifest.xml」清單，為 Report activity 添加標籤(label)屬性：
 
 {{{
 <activity android:name="Report" android:label="@string/report_title"></activity>
 }}}
-
 
 == 原 Activity 類別中加入 startActivity 函式 ==
 
