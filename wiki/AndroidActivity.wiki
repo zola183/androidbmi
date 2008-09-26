@@ -13,7 +13,7 @@
 
 === 相依的 Activity ===
 
-相依的 Activity 是需要與其他 Activity 交換資料的一種 Activity。與獨立的 Activity 比起來，相依的 Activity 變化更加精采。
+相依的 Activity 是需要與其他 Activity 交換資料的一種 Activity。相依的 Activity右可再分為單向與雙向。與獨立的 Activity 比起來，相依的 Activity 變化更加精采。
 
 我們會在後面章節對相依的 Activity 做進一步的說明。
 
@@ -25,11 +25,11 @@
 
 要完成切換獨立的 Activity 的動作，你需要做幾件事：
 
-  # 建立新 Activity 類別
-  # 定義 Activity 清單
-  # 使用 Intent 類別
+  # 程式碼中建立新 Activity 類別
+  # 清單中新增 Activity
+  # 原 Activity 類別中使用 startActivity 函式
 
-== 建立新的 Activity 類別 ==
+== 程式碼中建立新的 Activity 類別 ==
 
 首先使用 Navigator 檔案瀏覽視窗，切換到「src/com/demo/android/bmi」資料夾。在「bmi」資料夾中，現存有 「Bmi.java」與「R.java」兩個檔案。在「bmi」資料夾圖示上按右鍵，選擇「New->Class」選項。 Eclipse 會跳出一個「New Java Class」對話框。
 
@@ -50,56 +50,9 @@ public class Report extends Activity {
 }
 }}}
 
-在[AndroidLogic 解讀程式流程]一章中，我們已講解過 Android 程式碼的基本架構，稍後我們再回來，填入這個 class 的內容。
+在[AndroidLogic 解讀程式流程]一章中，我們已講解過 Android 程式碼的基本架構，稍後我們要處理一些建立新程式碼的相關工作，包含定義對應的 XML 描述檔，與填入這個 class 的內容。
 
-== 定義 Activity 清單 ==
-
-我們再打開「AndroidManifest.xml」檔案，並切換到「Application」分頁。在「Application」分頁的左下角，我們可以看到「Application Nodes」欄位中，列出目前已在「AndroidManifest.xml」檔案中定義的所有「Activity」。現在我們就來將 「Report」這個新的 Activity 加入到「AndroidManifest.xml」檔案中。
-
-點擊「Application Nodes」欄位右側的「Add...」按鈕，彈出一個小對話框。
-選擇「Activity」後，按下「ok」回到「Application」分頁。「Application Nodes」欄位中會增加一個「Activity」項目。選擇這個「Activity」項目後，在「Application Nodes」欄位右方會出現新的「Attributes for Activity」相關欄位。我們點選 「Name*」欄位右側的 「Browse...」按鈕，開啟另一個對話框。新的對話框中我們可以選擇在程式中現有定義的 Activity。我們選擇「Report - com.demo.android.bmi」後，按 「ok」 鍵回到「Application」分頁。此時「Name*」欄位的內容變成了「Report」，「Application Nodes」欄位中的名稱也更新成「Report(Activity)」了。
-
-=== 查看原始碼 ===
-
-我們從「Application」分頁切換到「AndroidManifest.xml」分頁，查看剛剛的動作實際上作了些什麼事。
-
-我們發現，在原本的 activity 敘述下方，新增了一行名為「Report」的 activity 標籤。
-
-{{{
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.demo.android.bmi">
-    <application android:icon="@drawable/icon">
-        <activity android:name=".bmi" android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    <activity android:name="Report"></activity>
-    </application>
-</manifest>
-}}}
-
-Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清單檔案，除了使用對話框選擇的方式之外，你也可以直接修改「AndroidManifest.xml」原始碼，來得到相同的效果。
-
-=== 加入標題描述 ===
-
-在「res/values/」目錄下，新建一個 report.xml 描述檔，存放 Report 活動頁面用到的自串。檔案內容如下：
-
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="report_title">BMI 報告</string>
-</resources>
-
-修改「AndroidManifest.xml」，改變 Report activity 標籤的內容如下：
-
-{{{
-<activity android:name="Report" android:label="@string/report_title"></activity>
-}}}
-
-
-== 相關工作 ==
+=== 相關工作 ===
 
 在「res/layout」中新增一個「report.xml」檔案，並把[AndroidUI 描述使用者介面] 一章中講解過的 xml 檔案複製一份過來：
 
@@ -148,7 +101,56 @@ setContentView(R.layout.main);
 setContentView(R.layout.report);
 }}}
 
-== 使用 Intent 類別 ==
+以對應我們新定義的 XML 描述檔產生的資源識別符號。
+
+== 清單中新增 Activity ==
+
+我們再打開「AndroidManifest.xml」檔案，並切換到「Application」分頁。在「Application」分頁的左下角，我們可以看到「Application Nodes」欄位中，列出目前已在「AndroidManifest.xml」檔案中定義的所有「Activity」。現在我們就來將 「Report」這個新的 Activity 加入到「AndroidManifest.xml」檔案中。
+
+點擊「Application Nodes」欄位右側的「Add...」按鈕，彈出一個小對話框。
+選擇「Activity」後，按下「ok」回到「Application」分頁。「Application Nodes」欄位中會增加一個「Activity」項目。選擇這個「Activity」項目後，在「Application Nodes」欄位右方會出現新的「Attributes for Activity」相關欄位。我們點選 「Name*」欄位右側的 「Browse...」按鈕，開啟另一個對話框。新的對話框中我們可以選擇在程式中現有定義的 Activity。我們選擇「Report - com.demo.android.bmi」後，按 「ok」 鍵回到「Application」分頁。此時「Name*」欄位的內容變成了「Report」，「Application Nodes」欄位中的名稱也更新成「Report(Activity)」了。
+
+=== 查看原始碼 ===
+
+我們從「Application」分頁切換到「AndroidManifest.xml」分頁，查看剛剛的動作實際上作了些什麼事。
+
+我們發現，在原本的 activity 敘述下方，新增了一行名為「Report」的 activity 標籤。
+
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demo.android.bmi">
+    <application android:icon="@drawable/icon">
+        <activity android:name=".bmi" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <activity android:name="Report"></activity>
+    </application>
+</manifest>
+}}}
+
+Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清單檔案，除了使用對話框選擇的方式之外，你也可以直接修改「AndroidManifest.xml」原始碼，來得到相同的效果。
+
+=== 加入標題描述 ===
+
+在「res/values/」目錄下，新建一個 report.xml 描述檔，存放 Report 活動頁面用到的自串。檔案內容如下：
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="report_title">BMI 報告</string>
+</resources>
+
+修改「AndroidManifest.xml」，改變 Report activity 標籤的內容如下：
+
+{{{
+<activity android:name="Report" android:label="@string/report_title"></activity>
+}}}
+
+
+== 原 Activity 類別中使用 startActivity 函式 ==
 
 我們把原本按下按鈕會計算並顯示 Bmi 值的按鈕動作，改成跳轉到 Report Activity。
 
