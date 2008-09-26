@@ -20,8 +20,10 @@
 
 = 獨立的 Activity =
 
-本章將繼續透過改進 BMI 應用程式來講解 Android 應用程式設計。
-在這個過程中，我們將使用到獨立的 Activity。
+本章將繼續透過改進 BMI 應用程式來講解 Android 應用程式設計。在這個過程中，我們將使用到獨立的 Activity。
+
+這章中所做的改動都是為了介紹獨立的 Activity，而不是為了讓 BMI 程式變得更完整。因此你不妨先將寫好的 BMI 程式先壓縮備份到其他目錄中，再隨著後面的教學繼續探索 Android。
+
 本章的目的是介紹獨立的 Activity，會用到兩個螢幕，因此除了原本的一個 XML 描述檔與一個程式碼檔案之外，我們還會額外再定義一個 XML 描述檔與一個程式碼檔案，以支援第二個螢幕的動作。
 
 要完成獨立的 Activity 的動作，我們要做幾件事：
@@ -116,11 +118,11 @@ setContentView(R.layout.report);
 
 我們點選 「Name*」欄位右側的 「Browse...」按鈕，開啟另一個對話框。新的對話框中我們可以選擇在程式中現有定義的 Activity。我們選擇「Report - com.demo.android.bmi」後，按 「ok」 鍵回到「Application」分頁。此時「Name*」欄位的內容變成了「Report」，「Application Nodes」欄位中的名稱也更新成「Report(Activity)」了。
 
-=== 增加 activity 標籤 ===
+=== activity 標籤的內容 ===
 
 我們從「Application」分頁切換到「AndroidManifest.xml」分頁，查看剛剛的動作實際上作了些什麼事。
 
-我們發現，在原本的 activity 敘述下方，新增了一行名為「Report」的 activity 標籤，內容如下：
+我們發現，在原本的 activity 敘述下方，新增了一行名為「Report」的 activity 標籤，完整的「AndroidManifest.xml」清單內容如下：
 
 {{{
 <?xml version="1.0" encoding="utf-8"?>
@@ -138,24 +140,26 @@ setContentView(R.layout.report);
 </manifest>
 }}}
 
-=== 手動增加 activity 標籤  ===
+=== 手動新增 activity 標籤  ===
 Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清單檔案，除了使用對話框選擇的方式之外，你也可以在原本的「AndroidManifest.xml」檔案中直接修改原始碼，加入如下敘述：
 
 {{{
 <activity android:name="Report"></activity>
 }}}
+
 來得到相同的效果。
 
 === XML 描述檔中加入標題描述 ===
 
-在「res/values/」目錄下，新建一個 report.xml 描述檔，存放 Report 活動頁面用到的自串。檔案內容如下：
-
+在「res/values/」目錄下，新建一個 report.xml 描述檔，存放 Report 活動頁面用到的字串。檔案內容如下：
+{{{
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="report_title">BMI 報告</string>
 </resources>
+}}}
 
-有了描述檔，我們可以修改「AndroidManifest.xml」，改變 Report activity 標籤的內容如下：
+有了描述檔，我們可以再修改「AndroidManifest.xml」清單，為 Report activity 添加標籤(label)屬性：
 
 {{{
 <activity android:name="Report" android:label="@string/report_title"></activity>
@@ -164,9 +168,11 @@ Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清�
 
 == 原 Activity 類別中加入 startActivity 函式 ==
 
-我們把原本按下按鈕會計算並顯示 Bmi 值的按鈕動作，改成跳轉到 Report Activity。
+在準備好相關資源、並在「AndroidManifest.xml」清單添加新 activity 描述後，我們來到實際控制整個程式流程的程式碼部份。
 
-打開「src/com/demo/android/bmi/Bmi.java」檔案，修改「OnClickListener」函式的內容。從 Bmi Activity 切換到 Report Activity 的程式如下：
+在程式碼中，我們要把原本按下按鈕即開始計算，並顯示 Bmi 值到同一螢幕的按鈕動作，改成按下按鈕後跳轉到 「Report」 這個 Activity。
+
+首先修改「BMI」這個 Activity。打開「src/com/demo/android/bmi/Bmi.java」檔案，修改「OnClickListener」函式(定義按下按鈕時做的動作)的內容。按下按鈕後從 Bmi Activity 切換（跳轉）到 Report Activity 的程式片段如下：
 
 {{{
 private OnClickListener calcBMI = new OnClickListener()
@@ -181,9 +187,9 @@ private OnClickListener calcBMI = new OnClickListener()
 };
 }}}
 
-修改好後，開啟 Android 模擬器。當我們按下「計算 BMi 值」按鈕後，螢幕會切換到「Hello World, Bmi」頁面(Report Activity)。在顯示這個頁面時，如果我們按下「Undo」鍵，螢幕會切換到原本輸入身高體重的頁面(Bmi Activity)。
+修改好後，開啟 Android 模擬器。當我們按下「計算 BMi 值」按鈕後，螢幕會切換到「Hello World, Bmi」頁面(已經進入了 Report Activity)。在這個頁面上，我們並沒有辦法可以直接回到前一個頁面，因為這兩個頁面都是獨立的 Activity。但我們還是可以透過按下硬體的「Undo」鍵，使螢幕切換回原本輸入身高體重的頁面 (即回到 Bmi Activity)。
 
-講解：
+=== 講解 ===
 
 {{{
 Intent intent = new Intent();
@@ -201,9 +207,9 @@ intent.setClass(Bmi.this, Report.class);
 startActivity(intent);
 }}}
 
-將定義好的 intent 傳入「startActivity」函式中。「startActivity」函式會將 intent 傳入 Dalvik 虛擬機，Dalvik 虛擬機會根據各應用程式在系統中註冊的資料，找出 Report 這個 Activity，並呼叫它。
+將定義好的 intent 傳入「startActivity」函式中。「startActivity」函式會將 intent 傳入 Dalvik 虛擬機，Dalvik 虛擬機會根據各應用程式在系統中註冊的資料(有沒有聯想到我們剛剛為 Report Activity 增加的 activity 清單描述?)，找出 Report 這個 Activity，並呼叫它。
 
-原來呼叫一個獨立的 Activity，所需要的功夫其實很單純呀。
+搞懂之後，原來呼叫一個獨立的 Activity，所需的功夫其實很單純呀。
 
 
 = 結語 =
