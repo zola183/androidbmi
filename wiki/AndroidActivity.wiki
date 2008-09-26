@@ -22,23 +22,27 @@
 
 本章將繼續透過改進 BMI 應用程式來講解 Android 應用程式設計。
 在這個過程中，我們將使用到獨立的 Activity。
+本章的目的是介紹獨立的 Activity，會用到兩個螢幕，因此除了原本的一個 XML 描述檔與一個程式碼檔案之外，我們還會額外再定義一個 XML 描述檔與一個程式碼檔案，以支援第二個螢幕的動作。
 
-要完成切換獨立的 Activity 的動作，你需要做幾件事：
+要完成獨立的 Activity 的動作，我們要做幾件事：
 
-  # 程式碼中建立新 Activity 類別
-  # 清單中新增 Activity
-  # 原 Activity 類別中使用 startActivity 函式
+  # 在程式碼中建立新 Activity 類別檔案
+  # 在清單中新增 Activity 描述
+  # 在原 Activity 類別中加入 startActivity 函式
 
-== 程式碼中建立新的 Activity 類別 ==
+== 程式碼中建立新的 Activity 類別檔案 ==
 
-首先使用 Navigator 檔案瀏覽視窗，切換到「src/com/demo/android/bmi」資料夾。在「bmi」資料夾中，現存有 「Bmi.java」與「R.java」兩個檔案。在「bmi」資料夾圖示上按右鍵，選擇「New->Class」選項。 Eclipse 會跳出一個「New Java Class」對話框。
+首先，使用 Navigator 檔案瀏覽視窗，切換到「src/com/demo/android/bmi」資料夾。在「bmi」資料夾中，現存有 「Bmi.java」與「R.java」兩個檔案。我們準備在此建立一個新的 Activity 類別檔案。
 
-在對話框中的「Name」一欄上填入「Report」。「Report」的字頭需大寫，這是 Java 程式語言的默認規則。在「Superclass」一欄右方，按下「Browse...」，Eclipse 會跳出「Superclass Selection」對話框。在對話框中的「Choose a type」欄位中輸入「activity」，輸入框下方的「Matching items」欄位裡會顯示出所有可能的類別。
-我們選擇「Activity - android.app - ...」這個選項，點擊「ok」回到上一個對話框。
+在「bmi」資料夾圖示上按右鍵，選擇「New->Class」選項。 Eclipse 會跳出一個「New Java Class」對話框。
+
+在對話框中的「Name」一欄上填入「Report」。「Report」的字頭需大寫，這是 Java 程式語言的默認規則。
+
+在「Superclass」一欄右方，按下「Browse...」，Eclipse 會跳出「Superclass Selection」對話框。在對話框中的「Choose a type」欄位中輸入「activity」，輸入框下方的「Matching items」欄位中，會顯示出所有可能的類別。我們選擇「Activity - android.app - ...」這個選項，點擊右下方的「ok」按鈕，回到上一個對話框。
 
 此時，「Superclass」欄位中將填入「android.app.Activity」訊息。按下對話框右下角的「Finish」鍵，Eclipse 會在「bmi」資料夾中，產生一個對應的「Report.java」檔案。
 
-一個尚未修改過的「Report.java」檔案如下：
+剛產生（尚未修改過的）的「Report.java」檔案如下：
 
 {{{
 package com.demo.android.bmi;
@@ -50,7 +54,7 @@ public class Report extends Activity {
 }
 }}}
 
-在[AndroidLogic 解讀程式流程]一章中，我們已講解過 Android 程式碼的基本架構，稍後我們要處理一些建立新程式碼的相關工作，包含定義對應的 XML 描述檔，與填入這個 class 的內容。
+在[AndroidLogic 解讀程式流程]一章中，我們已講解過 Android 程式碼的基本架構，即 XML 描述檔與程式碼兩個主要組成部分。稍後我們要處理建立新程式碼的相關工作，包含定義對應的 XML 描述檔，與在程式碼中，填入這個 class 的內涵。
 
 === 相關工作 ===
 
@@ -103,7 +107,7 @@ setContentView(R.layout.report);
 
 以對應我們新定義的 XML 描述檔產生的資源識別符號。
 
-== 清單中新增 Activity ==
+== 清單中新增 Activity 描述 ==
 
 我們再打開「AndroidManifest.xml」檔案，並切換到「Application」分頁。在「Application」分頁的左下角，我們可以看到「Application Nodes」欄位中，列出目前已在「AndroidManifest.xml」檔案中定義的所有「Activity」。現在我們就來將 「Report」這個新的 Activity 加入到「AndroidManifest.xml」檔案中。
 
@@ -150,7 +154,7 @@ Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清�
 }}}
 
 
-== 原 Activity 類別中使用 startActivity 函式 ==
+== 原 Activity 類別中加入 startActivity 函式 ==
 
 我們把原本按下按鈕會計算並顯示 Bmi 值的按鈕動作，改成跳轉到 Report Activity。
 
