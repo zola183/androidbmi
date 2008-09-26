@@ -112,13 +112,15 @@ setContentView(R.layout.report);
 我們再打開「AndroidManifest.xml」檔案，並切換到「Application」分頁。在「Application」分頁的左下角，我們可以看到「Application Nodes」欄位中，列出目前已在「AndroidManifest.xml」檔案中定義的所有「Activity」。現在我們就來將 「Report」這個新的 Activity 加入到「AndroidManifest.xml」檔案中。
 
 點擊「Application Nodes」欄位右側的「Add...」按鈕，彈出一個小對話框。
-選擇「Activity」後，按下「ok」回到「Application」分頁。「Application Nodes」欄位中會增加一個「Activity」項目。選擇這個「Activity」項目後，在「Application Nodes」欄位右方會出現新的「Attributes for Activity」相關欄位。我們點選 「Name*」欄位右側的 「Browse...」按鈕，開啟另一個對話框。新的對話框中我們可以選擇在程式中現有定義的 Activity。我們選擇「Report - com.demo.android.bmi」後，按 「ok」 鍵回到「Application」分頁。此時「Name*」欄位的內容變成了「Report」，「Application Nodes」欄位中的名稱也更新成「Report(Activity)」了。
+選擇「Activity」後，按下「ok」回到「Application」分頁。「Application Nodes」欄位中會增加一個「Activity」項目。選擇這個「Activity」項目後，在「Application Nodes」欄位右方會出現新的「Attributes for Activity」相關欄位。
 
-=== 查看原始碼 ===
+我們點選 「Name*」欄位右側的 「Browse...」按鈕，開啟另一個對話框。新的對話框中我們可以選擇在程式中現有定義的 Activity。我們選擇「Report - com.demo.android.bmi」後，按 「ok」 鍵回到「Application」分頁。此時「Name*」欄位的內容變成了「Report」，「Application Nodes」欄位中的名稱也更新成「Report(Activity)」了。
+
+=== 增加 activity 標籤 ===
 
 我們從「Application」分頁切換到「AndroidManifest.xml」分頁，查看剛剛的動作實際上作了些什麼事。
 
-我們發現，在原本的 activity 敘述下方，新增了一行名為「Report」的 activity 標籤。
+我們發現，在原本的 activity 敘述下方，新增了一行名為「Report」的 activity 標籤，內容如下：
 
 {{{
 <?xml version="1.0" encoding="utf-8"?>
@@ -136,9 +138,15 @@ setContentView(R.layout.report);
 </manifest>
 }}}
 
-Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清單檔案，除了使用對話框選擇的方式之外，你也可以直接修改「AndroidManifest.xml」原始碼，來得到相同的效果。
+=== 手動增加 activity 標籤  ===
+Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清單檔案，除了使用對話框選擇的方式之外，你也可以在原本的「AndroidManifest.xml」檔案中直接修改原始碼，加入如下敘述：
 
-=== 加入標題描述 ===
+{{{
+<activity android:name="Report"></activity>
+}}}
+來得到相同的效果。
+
+=== XML 描述檔中加入標題描述 ===
 
 在「res/values/」目錄下，新建一個 report.xml 描述檔，存放 Report 活動頁面用到的自串。檔案內容如下：
 
@@ -147,7 +155,7 @@ Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清�
     <string name="report_title">BMI 報告</string>
 </resources>
 
-修改「AndroidManifest.xml」，改變 Report activity 標籤的內容如下：
+有了描述檔，我們可以修改「AndroidManifest.xml」，改變 Report activity 標籤的內容如下：
 
 {{{
 <activity android:name="Report" android:label="@string/report_title"></activity>
@@ -196,6 +204,7 @@ startActivity(intent);
 將定義好的 intent 傳入「startActivity」函式中。「startActivity」函式會將 intent 傳入 Dalvik 虛擬機，Dalvik 虛擬機會根據各應用程式在系統中註冊的資料，找出 Report 這個 Activity，並呼叫它。
 
 原來呼叫一個獨立的 Activity，所需要的功夫其實很單純呀。
+
 
 = 結語 =
 
