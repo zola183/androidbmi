@@ -1,11 +1,10 @@
 package com.demo.android.bmi;
 
-import java.text.DecimalFormat;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,12 +19,15 @@ import android.widget.TextView;
 
 public class Bmi extends Activity {
 	private static final String TAG = "Bmi";
+	public static final String PREF_HEIGHT = "BMI_Height";
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.main);
         findViews();
+        restorePrefs();
         setListensers();
     }
 
@@ -45,6 +47,18 @@ public class Bmi extends Activity {
     	view_suggest = (TextView) findViewById(R.id.suggest);
     }
 
+    // Restore preferences
+    private void restorePrefs()
+    {
+    	SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
+    	String pref_height = settings.getString(PREF_HEIGHT, "");
+    	if(pref_height!="")
+    	{
+    		field_height.setText(pref_height);
+    		//field_height.focusSearch(field_height.FOCUS_DOWN);
+    	}
+    }
+    
     //Listen for button clicks
     private void setListensers() {
     	Log.d(TAG, "set Listensers");
@@ -138,5 +152,17 @@ public class Bmi extends Activity {
 						}
 				})
 		.show();
+	}
+	
+	@Override
+	protected void onStop(){
+		super.onStop();
+		// Save user preferences. We need an Editor object to
+		// make changes. All objects are from android.context.Context
+		SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
+		SharedPreferences.Editor editor = settings.edit();
+		editor.putString(PREF_HEIGHT, field_height.getText().toString());
+		//commit edits
+		editor.commit();
 	}
 }
