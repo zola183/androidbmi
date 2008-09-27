@@ -46,15 +46,15 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidDialog 加入對話框]
   # [AndroidUrl 初見 Intent]
   # [AndroidMenu 加入選單] (BMI4)
-  # [AndroidPreference 儲存資訊]
   # [AndroidManifest 定義 Android 清單]
   # [AndroidActivity 加入新 Activity]  (BMI5) 
   # [AndroidIntent 傳送資料到新 Activity](BMI6) (以下規劃中)
   # [SubActivity Activity 間傳送資料]
-  # [DesigningObvious 顯性設計] (進階)
-  # [AndroidMarket 發佈到市場]
   # [AndroidDebug 記錄與偵錯] log
   # [LifeCycle 活動的生命週期] LifeCycle
+  # [AndroidPreference 儲存資訊]
+  # [DesigningObvious 顯性設計] (進階)
+  # [AndroidMarket 發佈到市場]
   # [ListActivity 列表活動] (TODO)
   # [AdapterInflaction 插座]
   # [CustomField 自定欄位]
