@@ -16,7 +16,7 @@
 相依的 Activity 是需要與其他 Activity 交換資料的一種 Activity。相依的 Activity 又可再分為單向與雙向。從一個螢幕跳到下個螢幕時，攜帶資料供下一個螢幕（Activity）使用，就是單向相依的 Activity; 要在兩個螢幕之間切換，螢幕上的資料會因另一個螢幕的操作而改變的，就是雙向相依的 Activity。
 與獨立的 Activity 比起來，相依的 Activity 變化更加精采。
 
-我們會在下個章節對相依的 Activity 做進一步的說明。
+我們會在後續章節中，對相依的 Activity 做進一步的說明。
 
 = 獨立的 Activity =
 
@@ -230,7 +230,7 @@ Android 是個完整的平台，還有諸多內容值得研究。例如儲存資
 
 == 填寫讀後問卷 ==
 
-如果您花時間讀了本書，請幫忙填寫只有3題的[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
+如果您花時間讀了本書，請幫忙填寫只有4題的[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
 
 
 < [AndroidManifest 定義 Android 清單] | [DiveIntoAndroid 回目錄] | [AndroidIntent 傳送資料到新 Activity] >

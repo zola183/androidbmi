@@ -55,6 +55,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidPreference 儲存資訊]
   # [DesigningObvious 顯性設計] (進階)
   # [AndroidMarket 發佈到市場]
+  # [AccessfFiles 存取檔案] (BuddaRadio)
+  # [PlayMedia 多媒體播放]
   # [ListActivity 列表活動] (TODO)
   # [AdapterInflaction 插座]
   # [CustomField 自定欄位]
@@ -81,7 +83,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
 範例:
 
  # BMI
- # TODO LIST(以下規劃中)
+ # BuddaRadio (以下規劃中)
+ # TODO LIST
  
 [IntroAndroid 從頭開始閱讀] >
 

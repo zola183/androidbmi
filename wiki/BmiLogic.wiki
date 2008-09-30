@@ -86,7 +86,7 @@ Button button = (Button)findViewById(R.id.submit);
 <Button id="@+id/submit"
 />
 }}}
-為了確保宣告的型別跟 XML 描述檔中描述的介面元件型別一致，好使程式運作正常，我們在 「indViewById」 方法前加上 「(Button)」修飾，強制將取得的資源型別設成 「button」型別。
+為了確保宣告的型別跟 XML 描述檔中描述的介面元件型別一致，好使程式運作正常，我們在 「findViewById」 方法前加上 「(Button)」修飾，強制將取得的資源型別設成 「button」型別。
 {{{
 button.setOnClickListener(new OnClickListener(){
 });
