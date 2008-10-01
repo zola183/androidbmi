@@ -5,6 +5,7 @@
   * [http://www.planetandroid.com/ Planet Android] 部落格文章收集地
   * [http://www.anddev.org/ Anddev 論壇]，有許多教程
   * [http://code.google.com/android/intro/tools.html Android 開發工具功用介紹]
+  * [http://code.google.com/android/reference/index.html Android 參考文件列表]
   * [http://code.google.com/android/reference/view-gallery.html Android 介面元件列表]
 
 m5->0.9 porting
