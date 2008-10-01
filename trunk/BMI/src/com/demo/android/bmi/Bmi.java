@@ -1,11 +1,11 @@
 package com.demo.android.bmi;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -15,7 +15,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-//import android.widget.Toast;
 
 public class Bmi extends Activity {
 	private static final String TAG = "Bmi";
@@ -70,7 +69,7 @@ public class Bmi extends Activity {
         public void onClick(View v)
         {
         	Log.d(TAG, "start to calc");
-            /*DecimalFormat nf = new DecimalFormat("0.00");
+            DecimalFormat nf = new DecimalFormat("0.00");
             double height = Double.parseDouble(field_height.getText().toString())/100;
             double weight = Double.parseDouble(field_weight.getText().toString());
             double BMI = weight / (height * height);
@@ -85,8 +84,8 @@ public class Bmi extends Activity {
                 view_suggest.setText(R.string.advice_light);
             }else{
                 view_suggest.setText(R.string.advice_average);
-            }*/
-            //openOptionsDialog();
+            }
+            /*openOptionsDialog();
         	//Switch to report page
         	//Intent intent = new Intent(bmi.this, Report.class);
             Intent intent = new Intent();
@@ -96,7 +95,7 @@ public class Bmi extends Activity {
             bundle.putString("KEY_WEIGHT", field_weight.getText().toString());
             intent.putExtras(bundle);
             startActivity(intent);
-            //finish();
+            //finish();*/
         }
     };
 	
@@ -139,17 +138,6 @@ public class Bmi extends Activity {
 					public void onClick(
 							DialogInterface dialoginterface, int i){
 					}
-				})
-		.setNegativeButton(R.string.homepage_label,
-				new DialogInterface.OnClickListener(){
-					public void onClick(
-						DialogInterface dialoginterface, int i){
-						//go to url
-						//Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
-						Uri uri = Uri.parse(getString(R.string.homepage_uri));
-						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-						startActivity(intent);
-						}
 				})
 		.show();
 	}
