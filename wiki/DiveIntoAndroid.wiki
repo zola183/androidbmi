@@ -68,6 +68,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [StatusNotification 通知]
   # [AndroidInput 處理輸入]
   # [MotionDetect 手勢控制]
+  # [NotePad 檢視 NotePad 程式] (NotePad)
   # tab (Avarta)
   # spinner
   # [AutoTest 自動測試]
@@ -85,9 +86,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 範例:
 
- # BMI
- # BuddaRadio (以下規劃中)
- # TODO LIST
+ # BMI：輸入身高體重，計算出BMI值
+ # BuddaRadio (以下規劃中)：音樂播放程式
+ # TODO LIST：待辦事項程式
+ # NotePad：筆記本程式
  
 [IntroAndroid 從頭開始閱讀] >
 
