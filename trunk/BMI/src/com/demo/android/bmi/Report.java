@@ -9,8 +9,17 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Report extends Activity {
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
+		setContentView(R.layout.report);
+		findViews();
+		showResults();
+		setListensers();
+	}
 
-    private Button button_back;
+	private Button button_back;
     private TextView view_result;
     private TextView view_suggest;
 
@@ -56,14 +65,4 @@ public class Report extends Activity {
         }
 
     }
-    
-	/** Called when the activity is first created. */
-	@Override
-	public void onCreate(Bundle icicle) {
-		super.onCreate(icicle);
-		setContentView(R.layout.report);
-		findViews();
-		showResults();
-		setListensers();
-	}
 }
