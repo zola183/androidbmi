@@ -51,8 +51,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidIntent 傳送資料到新 Activity](BMI6) (以下規劃中)
   # [AndroidDebug 記錄與偵錯] log
   # [LifeCycle 活動的生命週期] LifeCycle
-  # [AndroidPreference 儲存資訊]
-  # [DesigningObvious 顯性設計] (進階)
+  # [AndroidPreference 儲存資訊](BMI7)
+  # [DesigningObvious 顯性設計](BMI8)(進階)
+  # [SpinnerUI 下拉選單]
+  # [ArrayAdapter 陣列插座]
   # [AndroidMarket 發佈到市場]
   # [ListActivity 列表活動] (BuddaRadio)
   # [AccessfFiles 存取檔案]
@@ -70,7 +72,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [MotionDetect 手勢控制]
   # [NotePad 檢視 NotePad 程式] (NotePad)
   # tab (Avarta)
-  # spinner
   # [AutoTest 自動測試]
   # [CustomDialog 自訂對話框]
   # [CustommMenu 自訂選單]
