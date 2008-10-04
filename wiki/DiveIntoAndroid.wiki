@@ -83,7 +83,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidResource Android 相關資源]
 
 
-(3D) (MAP) (Browser) (XMPP) (Widget)
+(3D) (MAP) (Camera) (Browser) (Widget)
 
 範例:
 

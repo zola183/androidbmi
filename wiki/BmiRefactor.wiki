@@ -99,7 +99,6 @@ import java.text.DecimalFormat;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -134,7 +133,7 @@ public class Bmi extends Activity {
     	button_calc.setOnClickListener(calcBMI);
     }
 
-    private OnClickListener calcBMI = new OnClickListener()
+    private Button.OnClickListener calcBMI = new Button.OnClickListener()
     {
         public void onClick(View v)
         {
@@ -159,8 +158,16 @@ public class Bmi extends Activity {
 }
 }}}
 
-在完整程式中，我們偷偷將「OnClickListener」中其他會存取到的介面元件識別參數，也補進 findViews 宣告中。
+同樣是「calcBMI」 函式，在完整程式中，改將「calcBMI」 函式從原本的「OnClickListener」宣告成 「Button.OnClickListener」。這個改變有什麼差別呢？
 
+閱讀原本的程式碼，在匯入(import)的部分可以看到，「OnClickListener」是來自於「android.view.View.OnClickListener」函式：
+{{{
+    import android.view.View.OnClickListener;
+}}}
+
+改成 「Button.OnClickListener」後，「Button.OnClickListener」就變成來自於「android.widget.Button」中的「OnClickListener」函式，在查閱程式時，整個「Button」與「OnClickListener」之間的關係變得更清晰。
+
+另外，我們偷偷將「OnClickListener」中其他會存取到的介面元件識別參數，也補進 findViews 宣告中：
 {{{
 private void findViews()
 {

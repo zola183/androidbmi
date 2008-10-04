@@ -176,7 +176,7 @@ Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清�
 首先修改「BMI」這個 Activity。打開「src/com/demo/android/bmi/Bmi.java」檔案，修改「OnClickListener」函式(定義按下按鈕時做的動作)的內容。按下按鈕後從 Bmi Activity 切換（跳轉）到 Report Activity 的程式片段如下：
 
 {{{
-private OnClickListener calcBMI = new OnClickListener()
+private Button.OnClickListener calcBMI = new Button.OnClickListener()
 {
     public void onClick(View v)
     {
