@@ -5,13 +5,13 @@ import java.text.DecimalFormat;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -63,8 +63,8 @@ public class Bmi extends Activity {
     	Log.d(TAG, "set Listensers");
     	button_calc.setOnClickListener(calcBMI);
     }
-
-    private OnClickListener calcBMI = new OnClickListener()
+    
+    private Button.OnClickListener calcBMI = new Button.OnClickListener()
     {
         public void onClick(View v)
         {
@@ -87,7 +87,7 @@ public class Bmi extends Activity {
             }
             /*openOptionsDialog();
         	//Switch to report page
-        	//Intent intent = new Intent(bmi.this, Report.class);
+        	//Intent intent = new Intent(Bmi.this, Report.class);
             Intent intent = new Intent();
             intent.setClass(Bmi.this, Report.class);
             Bundle bundle = new Bundle();
@@ -100,14 +100,15 @@ public class Bmi extends Activity {
     };
 	
     protected static final int MENU_ABOUT = Menu.FIRST;
-    protected static final int MENU_Quit = Menu.FIRST+1;
+    //protected static final int MENU_Quit = Menu.FIRST+1;
+    protected static final int MENU_US = Menu.FIRST+1;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		Log.d(TAG, "open Menu");
 		menu.add(0, MENU_ABOUT, 0, R.string.about_label);
-		menu.add(0, MENU_Quit, 0, R.string.finish_label);
+		menu.add(0, MENU_US, 0, R.string.us_label);
 		return true;
 	}
 	
@@ -119,8 +120,11 @@ public class Bmi extends Activity {
 			case MENU_ABOUT:
 				openOptionsDialog();
 				break;
-			case MENU_Quit:
-				finish();
+			case MENU_US:
+				Intent intent = new Intent();
+				intent.setClass(Bmi.this, Us.class);
+				startActivity(intent);
+				//finish();
 				break;
 		}
 		return true;
