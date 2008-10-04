@@ -54,7 +54,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidPreference 儲存資訊](BMI7)
   # [DesigningObvious 顯性設計](BMI8)(進階)
   # [SpinnerUI 下拉選單]
-  # [ArrayAdapter 陣列插座]
+  # [ArrayAdapter 陣列插座](BMI9)
   # [AndroidMarket 發佈到市場]
   # [ListActivity 列表活動] (BuddaRadio)
   # [AccessfFiles 存取檔案]
@@ -95,6 +95,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 [IntroAndroid 從頭開始閱讀] >
 
 == 主要更新記錄 ==
+  * 2008/10/5 加入[AndroidIntent 傳送資料到新 Activity]一章
   * 2008/9/25 加入[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]與[AndroidActivity 加入新 Activity]一章
   * 2008/9/24 本教學相容於 Android SDK 1.0r1
   * 2008/9/1 新增[AndroidManifest 定義 Android 清單]一章
