@@ -1,7 +1,7 @@
 #summary 傳送資料到新 Activity
 #labels tw, Intent
 
-前一章中，我們已學過獨立的 Activity。Android 使用 Intent 來完成在螢幕間切換的動作。Intent 包含切換所需的動作、分類、傳送資料等訊息，就像是 Activity 之間的宅急便一樣。
+前一章中，我們已學過獨立的 Activity。Android 使用 Intent 來完成在螢幕間切換的動作。Intent 包含 Activity 間切換所需的動作、分類、傳送資料等訊息，就像是 Activity 之間的宅急便一樣。
 
 因此當我們得在 Activity 之間交換資料時，需要先了解 Intent 的用法。
 
