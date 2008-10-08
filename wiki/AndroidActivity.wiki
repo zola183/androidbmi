@@ -176,16 +176,16 @@ Android 提供了多種方式來協助我們定義「AndroidManifest.xml」清�
 首先修改「BMI」這個 Activity。打開「src/com/demo/android/bmi/Bmi.java」檔案，修改「OnClickListener」函式(定義按下按鈕時做的動作)的內容。按下按鈕後從 Bmi Activity 切換（跳轉）到 Report Activity 的程式片段如下：
 
 {{{
-private Button.OnClickListener calcBMI = new Button.OnClickListener()
-{
-    public void onClick(View v)
-    {
-        //Switch to report page
-        Intent intent = new Intent();
-        intent.setClass(Bmi.this, Report.class);
-        startActivity(intent);
-     }
-};
+1   private Button.OnClickListener calcBMI = new Button.OnClickListener()
+2   {
+3      public void onClick(View v)
+4      {
+5          //Switch to report page
+6          Intent intent = new Intent();
+7          intent.setClass(Bmi.this, Report.class);
+8          startActivity(intent);
+9       }
+10 };
 }}}
 
 修改好後，開啟 Android 模擬器。當我們按下「計算 BMi 值」按鈕後，螢幕會切換到「Hello World, Bmi」頁面(已經進入了 Report Activity)。在這個頁面上，我們並沒有辦法可以直接回到前一個頁面，因為這兩個頁面都是獨立的 Activity。但我們還是可以透過按下硬體的「Undo」鍵，使螢幕切換回原本輸入身高體重的頁面 (即回到 Bmi Activity)。
