@@ -128,7 +128,7 @@ public boolean onOptionsItemSelected(MenuItem item)
         break;
 }}}
 
-在「onOptionsItemSelected」函式中收到 「MENU_ABOUT」 識別符號時，我們呼叫 Android 內建的 「finish」函式來關閉程式。
+在「onOptionsItemSelected」函式中收到 「MENU_ABOUT」 識別符號時，我們呼叫 Android 內建的 「finish」函式來關閉這個 Activity。因為我們的「BMI」應用程式只由一個「Bmi」Activity 組成，所以呼叫「finish」函式等於關閉了這個「BMI」應用程式。
 
 
 < [AndroidUrl 初見 Intent] | [DiveIntoAndroid 回目錄] | [AndroidManifest 定義 Android 清單] >
