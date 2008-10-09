@@ -48,8 +48,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidMenu 加入選單(Menu)] (BMI4)
   # [AndroidManifest 定義 Android 清單]
   # [AndroidActivity 加入新 Activity]  (BMI5) 
-  # [AndroidIntent 傳送資料到新 Activity](BMI6) (以下規劃中)
-  # [AndroidDebug 記錄與偵錯] log
+  # [AndroidIntent 傳送資料到新 Activity](BMI6)
+  # [AndroidDebug 記錄與偵錯] log (以下規劃中)
   # [LifeCycle 活動的生命週期] LifeCycle
   # [AndroidPreference 儲存資訊(Preference)](BMI7)
   # [DesigningObvious 顯性設計](BMI8)(進階)
@@ -97,6 +97,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 [IntroAndroid 從頭開始閱讀] >
 
 == 主要更新記錄 ==
+  * [AndroidDebug 記錄與偵錯]一章預計11月釋出
   * 2008/10/5 加入[AndroidIntent 傳送資料到新 Activity]一章
   * 2008/9/25 加入[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]與[AndroidActivity 加入新 Activity]一章
   * 2008/9/24 本教學相容於 Android SDK 1.0r1
