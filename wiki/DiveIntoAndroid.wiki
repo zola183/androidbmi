@@ -55,27 +55,29 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [DesigningObvious 顯性設計](BMI8)(進階)
   # [SpinnerUI 下拉選單(Spinner)]
   # [ArrayAdapter 陣列插座](BMI9)
+  # [MultiLang 支援多語言]
   # [AndroidMarket 發佈到市場]
-  # [ListActivity 列表活動] (BuddaRadio)
+  # [CodingUI 透過程式產生介面] (BuddaRadio)
   # [AccessfFiles 存取檔案]
-  # [ShowPics 顯示圖片]
   # [PlayMedia 多媒體播放]
+  # [ShowPics 顯示圖片]
   # [ServiceProvider 提供服務]
+  # [PreferenceList 偏好設定列表]
   # [AdapterInflaction 插座] (TODO)
+  # [ListActivity 列表活動]
   # [CustomField 自定欄位]
   # [DynamicLayout 動態產生UI]
   # [DataBase 儲存資料]
   # [SubActivity Activity 間傳送資料]
   # [ContentProvider 與其他程式共用資料]
   # [StatusNotification 通知]
-  # [AndroidInput 處理輸入]
+  # [AndroidKeyHandling 處理輸入]
   # [MotionDetect 手勢控制]
   # [NotePad 檢視 NotePad 程式] (NotePad)
   # tab (Avarta)
   # [AutoTest 自動測試]
   # [CustomDialog 自訂對話框]
   # [CustommMenu 自訂選單]
-  # [MultiLang 支援多語言]
   # Draw (OX Game)
   # [AndroidResolution 切換螢幕模式]
   # Media
