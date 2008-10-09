@@ -32,21 +32,21 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 目錄 =
 
-=== 入門級 ===
+=== 入門 ===
   # [IntroAndroid 初探 Android] 
   # [InstallAndroid 簡單安裝 Android 開發工具]
   # [OpenProject 開啟現有專案]
   # [PlayEmulator 操作模擬器(Emulator)]
   # [ReadSource 開始閱讀程式] (BMI0) 
 
-=== 基礎級 ===
+=== 基礎 ===
   # [AndroidUI 描述使用者介面] 
   # [BmiUI 設計使用者介面] (BMI01)
   # [XmlR 存取識別符號]
   # [AndroidLogic 解讀程式流程] (BMI02)
   # [BmiLogic 完成 BMI 程式]
 
-=== 中級 ===
+=== 中階 ===
   # [BmiRefactor 重構程式] (BMI03)
   # [AndroidDialog 加入對話框(Dialog)]
   # [AndroidUrl 初見 Intent]
@@ -58,7 +58,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [LifeCycle 活動的生命週期] LifeCycle
   # [AndroidPreference 儲存資訊(Preference)](BMI7)
 
-=== 進階級 ===
+=== 進階 ===
   # [DesigningObvious 顯性設計](BMI8)
   # [SpinnerUI 下拉選單(Spinner)]
   # [ArrayAdapter 陣列插座](BMI9)
@@ -66,7 +66,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidMarket 發佈到市場]
 
 === 食譜 ===
-  # [CodingUI 透過程式產生介面] (BuddaRadio)
+  # [CodingUI 透過程式產生介面] (MantraChant)
   # [AccessfFiles 存取檔案]
   # [PlayMedia 多媒體播放]
   # [ShowPics 顯示圖片]
@@ -104,10 +104,13 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
  # BMI：輸入身高體重，計算出BMI值
  # MantraChant (以下規劃中)：音樂播放程式
- # TODO LIST：待辦事項程式
  # NotePad：筆記本程式
- 
+ # TODO LIST：待辦事項程式
+
+=== 開始導覽 ===
 [IntroAndroid 從頭開始閱讀] >
+
+----
 
 == 主要更新記錄 ==
   * [AndroidDebug 記錄與偵錯]一章預計11月釋出
