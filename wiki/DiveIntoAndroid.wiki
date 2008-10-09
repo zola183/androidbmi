@@ -37,11 +37,13 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [OpenProject 開啟現有專案]
   # [PlayEmulator 操作模擬器(Emulator)]
   # [ReadSource 開始閱讀程式] (BMI0) 
+
   # [AndroidUI 描述使用者介面] (基礎) 
   # [BmiUI 設計使用者介面] (BMI01)
   # [XmlR 存取識別符號]
   # [AndroidLogic 解讀程式流程] (BMI02)
   # [BmiLogic 完成 BMI 程式]
+
   # [BmiRefactor 重構程式] (中階) (BMI03)
   # [AndroidDialog 加入對話框(Dialog)]
   # [AndroidUrl 初見 Intent]
@@ -52,6 +54,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidDebug 記錄與偵錯] log (以下規劃中)
   # [LifeCycle 活動的生命週期] LifeCycle
   # [AndroidPreference 儲存資訊(Preference)](BMI7)
+
   # [DesigningObvious 顯性設計](BMI8)(進階)
   # [SpinnerUI 下拉選單(Spinner)]
   # [ArrayAdapter 陣列插座](BMI9)
