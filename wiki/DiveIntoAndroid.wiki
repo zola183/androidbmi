@@ -34,10 +34,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 === 入門 ===
   # [IntroAndroid 初探 Android] 
-  # [InstallAndroid 簡單安裝 Android 開發工具]
+  # [InstallAndroid 安裝 Android 開發工具]
   # [OpenProject 開啟現有專案]
   # [PlayEmulator 操作模擬器(Emulator)]
-  # [ReadSource 開始閱讀程式] (BMI0) 
+  # [ReadSource 建立一個 Android 程式] (BMI0) 
 
 === 基礎 ===
   # [AndroidUI 描述使用者介面] 

@@ -1,4 +1,4 @@
-#summary 簡單安裝 Android
+#summary 安裝 Android 開發工具
 #labels tw,install
 
 Android 提供免費而且跨平台的整合開發環境，只要電腦能連接上網路，我們隨時都能下載相關工具下來，並開始開發 Android 應用程式。

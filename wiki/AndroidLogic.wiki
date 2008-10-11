@@ -1,4 +1,4 @@
-#summary 程式流程
+#summary 解讀程式流程
 #labels tw,basis
 
 接著要觀察主要程式邏輯的內容囉。打開 「src/com/demo/android/bmi」 目錄下的 「Bmi.java」檔案，Eclipse+Android 開發工具已經幫我們預先建立好了基本的程式邏輯。其預設的內容如下：

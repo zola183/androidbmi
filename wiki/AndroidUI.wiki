@@ -1,4 +1,4 @@
-#summary 使用者介面
+#summary 描述使用者介面
 #labels tw,XML
 
 = 表達使用者介面 =
@@ -106,4 +106,4 @@ TextView (文字檢視)是我們看到的第一個熟悉的介面元件。其作
 
 結果發現 Android 模擬器中文嘛也通，字型也相當漂亮。
 
-< [ReadSource 開始閱讀程式] | [DiveIntoAndroid 回目錄] | [BmiUI 設計使用者介面] >
+< [ReadSource 建立新程式] | [DiveIntoAndroid 回目錄] | [BmiUI 設計使用者介面] >
