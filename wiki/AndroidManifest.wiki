@@ -50,6 +50,8 @@ Dalvik 虛擬機中的每一個應用程式，在安裝的過程中，都得事�
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     ....>
+    ....
+</manifest>
 }}}
 
 「AndroidManifest.xml」這個檔案也是以 XML 格式描述，每個 Android 應用程式都需要一個「AndroidManifest.xml」檔案，每份「AndroidManifest.xml」檔案的開頭都會出現這段敘述。而整個「AndroidManifest.xml」檔案的敘述，都包含在「manifest」(清單)這個主要標籤中。
