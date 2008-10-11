@@ -89,6 +89,7 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
 
 「activity」標籤的「android:name」屬性，指出了這個 Activity 所對應的類別(class)。「android:label」屬性，則用來指定這個「activity」的代號。
 
+因為在上一層「Manifest」標籤屬性中已經定義了「package="com.demo.android.bmi"」，因此在「activity」標籤的 「android:name」屬性中，「.Bmi」代表著「com.demo.android.bmi.Bmi」的簡寫。也可以寫成「Bmi」，一樣是代表「com.demo.android.bmi.Bmi」這個類別。
  
 {{{
 <intent-filter>
