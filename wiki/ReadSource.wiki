@@ -1,4 +1,4 @@
-#summary 建立新程式
+#summary 建立一個 Android 程式
 #labels tw,project,structure,new,creaete
 
 在前幾章我們已經學到怎麼開啟現有的專案，也導覽過了整個模擬器的設定流程。

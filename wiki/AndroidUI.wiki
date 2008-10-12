@@ -61,7 +61,7 @@ XML (Extensible Markup Language) 是一種標記描述語言，不管是語法�
 xmlns 開頭的這串敘述，是用來宣告這個 XML 描述檔案的的名稱空間(NameSpace)，後面接的URL(網址)，表示這個描述檔案會參照到 Android 名稱空間提供的定義。
 所有 Android 版面配置檔案的最外層標籤中，都必須包含這個屬性。
 
-注意標籤需要兩兩對稱。一個標籤(<LinearLayout>)在一串敘述的前頭，另一個標籤(</LinearLayout>)在敘述的末尾。
+注意標籤需要兩兩對稱。一個標籤「<LinearLayout>」在一串敘述的前頭，另一個標籤「</LinearLayout>」在敘述的末尾。
 如果你修改過的標籤沒有閉合(忘了加 <、/、> 等符號)，Eclipse 畫面上也會出現小小的警示符號來提醒你。
 
 第 3-5 行
@@ -70,7 +70,7 @@ xmlns 開頭的這串敘述，是用來宣告這個 XML 描述檔案的的名稱
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
 }}}
-這些包含在 <LinearLayout> 標籤中的敘述被稱為「LinearLayout」標籤的「屬性」。Android 應用程式在 layout 目錄中的標籤，大多數的屬性前都有一個「android:」前綴。同一個介面元件的屬性之間，是以空白做區隔，因此事實上你也能將多個屬性寫在同一行。當然，將屬性排成多行更易於閱讀。我們應該保持這個好習慣。
+這些包含在「<LinearLayout>」標籤中的敘述被稱為「LinearLayout」標籤的「屬性」。Android 應用程式在 layout 目錄中的標籤，大多數的屬性前都有一個「android:」前綴。同一個介面元件的屬性之間，是以空白做區隔，因此事實上你也能將多個屬性寫在同一行。當然，將屬性排成多行更易於閱讀。我們應該保持這個好習慣。
 
 介面元件都有許多共同的屬性，例如介面元件的長，寬度設定屬性。Android 介面元件的寬度、長度設定屬性分別叫做「android:layout_width」、「android:layout_height」。兩個都設定為 「fill_parent」參數值。「fill_parent」 如其名，所表達的的意思就是"填滿整個上層元件"。預設 LinearLayout 介面元件就會佔滿整個螢幕空間。
 

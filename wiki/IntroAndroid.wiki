@@ -80,4 +80,4 @@ Android 在 Linux 核心的基礎上提供了各種合用的函式庫和一個�
 將一份創意落實到可執行的應用程式，背後需要的是從閱讀與寫作程式碼中累積的經驗，並有堅持理念、直到完成的耐心。
 }}}
 
-[DiveIntoAndroid 回目錄] | [InstallAndroid 簡單安裝 Android 開發工具]
+[DiveIntoAndroid 回目錄] | [InstallAndroid 安裝 Android 開發工具]
