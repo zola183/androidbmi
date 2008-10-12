@@ -90,12 +90,12 @@ public void onCreate(Bundle savedInstanceState) {
 
 同時，這個方法傳入了一個名為「savedInstanceState」的「Bundle」型別參數，「Bundle」型別正是來自我們前面所導入的 Package 之一。我們並不需要知道太多「Bundle」型別或「savedInstanceState」實體的細節，只要知道「Bundle」的內容與手機平台的記憶體管理有關。
 
-當 Android 應用程式啟動、換到背景等待、關閉時，都會用到 「savedInstanceState」 這個實體來處理記憶體相關的事宜。當然，你也可以用其他名稱來代替它。還好「onCreate」這個方法永遠都是傳入「Bundle icicle」這個參數，寫應用程式時只要正確照規定傳入即可，你可以不用太去在意它。
+當 Android 應用程式啟動、換到背景等待、關閉時，都會用到 「savedInstanceState」 這個實體來處理記憶體相關的事宜。當然，你也可以用其他名稱來代替它。還好「onCreate」這個方法永遠都是傳入「Bundle savedInstanceState」這個參數，寫應用程式時只要正確照規定傳入即可，你可以不用太去在意它。
 
     給對 Bundle 是什麼有興趣的讀者：
     
     「Bundle」可以保存程式上一次關閉（凍結）時的狀態。你可以透過覆寫 onFreeze 方法(與 onCreate 方法的作用類似) 來保存凍結前的狀態。
-    當程式啟動（Activity 重新初始化）時，會再次呼叫 onCreate 方法，你就能從 icicle 中得到前一次凍結的狀態。我們也可以透過「Bundle」來將這個 Activity 的內容傳到下一個 Activity 中。
+    當程式啟動（Activity 重新初始化）時，會再次呼叫 onCreate 方法，你就能從 savedInstanceState 中得到前一次凍結的狀態。我們也可以透過「Bundle」來將這個 Activity 的內容傳到下一個 Activity 中。
     之後講 Activity 時，也會講解 onCreate/onFreeze 等方法的關係。
 
 
@@ -124,13 +124,13 @@ public void onCreate(Bundle savedInstanceState) {
 {{{
 super.onCreate(savedInstanceState);
 }}}
-「super」是關鍵字。代表著這個 「Bmi」 類別的上層類別(Activity)。「super.onCreate(icicle);」的意思就是：「執行 Activity 類別中 onCreate 方法的內容」。這麼做的目的是什麼呢？
+「super」是關鍵字。代表著這個 「Bmi」 類別的上層類別(Activity)。「super.onCreate(savedInstanceState);」的意思就是：「執行 Activity 類別中 onCreate 方法的內容」。這麼做的目的是什麼呢？
 
 Google Android 將其應用程式的介面稱為視圖(View)，而負責控制各種動作行為的程式主體(Controller)，則稱為活動(Activity)。因此一個 Android 應用程式，必定會對應到一個以上的 Activity。 「onCreate」 方法則是每個 Activity 類別初始化時都會去呼叫的方法。我們想做的事，是保持原本「onCreate」 方法預設的動作，然後在其中加入我們想要的內容。
 
 而 Android 產生的程式預設卻覆寫(@Overwirte)了「Bmi」 類別的「onCreate」 方法。原本繼承自 「Activity」類別的「onCreate」方法，其原本內容都被覆蓋掉了。因此想將原本的「onCreate」方法內容保留，並在其中加入我們的內容的話，就要使用「super」語句。當程式運行到我們覆寫的「onCreate」 方法時，透過「super.onCreate(savedInstanceState);」語句，會先將原本「Activity」類別中的「onCreate」方法執行一次，然後再執行我們覆寫的「onCreate」方法裡面其他的程式內容。
 
-我們要執行原本的「onCreate」 方法時，仍然需要提供原本「onCreate」方法所需的傳入參數。因此「super.onCreate(icicle);」語句中，我們將「savedInstanceState」這個參數傳入原本的「onCreate」函式中。「savedInstanceState」是我們在「public void onCreate(Bundle savedInstanceState)」語句中所宣告的傳入參數。
+我們要執行原本的「onCreate」 方法時，仍然需要提供原本「onCreate」方法所需的傳入參數。因此「super.onCreate(savedInstanceState);」語句中，我們將「savedInstanceState」這個參數傳入原本的「onCreate」函式中。「savedInstanceState」是我們在「public void onCreate(Bundle savedInstanceState)」語句中所宣告的傳入參數。
 
 {{{
 setContentView(R.layout.main);
