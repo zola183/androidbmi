@@ -41,7 +41,10 @@ import android.os.Bundle;
 }}}
 程式中預設導入了 「android.app.Activity」跟「android.os.Bundle」兩個 Package，在所有的 Android 應用程式中都會用到這兩個 Package。「import」(導入)是用作導入 Package 的關鍵字。在 Java 語言中，使用到任何 API 前都要事先導入相對應的 Package。我們馬上將學到這兩個 Package 的用途。
 
-在寫 Android 應用程式時，你會需要時常參考可用的 API 列表。使用 Android 開發工具時，也可從專案中的「Referenced Libraries」目錄裡查到這些可用的 API。
+Android 支援的 Package 與標準的 Java(j2se) 不盡相同。在寫 Android 應用程式時，你偶而可能需要參考可用的 API 列表，以確認使用到的 Package 是否有內建支援。後續章節中也將講解如何透過新增「jar」檔來呼叫額外的 Package。
+
+完整的 API 可查閱官方的 package 列表：
+http://code.google.com/android/reference/packages.html
 
 第 6,13  行:
 {{{

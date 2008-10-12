@@ -33,7 +33,7 @@ BMI值是一個中立而可靠的指標。
 
 || 名稱  || 描述 ||
 || Project Name || 包含這個項目的資料夾的名稱 ||
-|| Package Name || 套件(Package)名稱，JAVA 的習慣是用套件名稱來區分不同的類別(class)。依照專案的不同，我們會起不同的路徑名稱。注意 Package Name 的設定，必須至少由兩個部分所構成，例如：com.android ||
+|| Package Name || 套件(Package)名稱，JAVA 的習慣是用套件名稱來區分不同的類別(class)。依照專案的不同，我們會起不同的路徑名稱。 ||
 || Activity Name || 這是項目的主要類別的名稱，這個類別是一個 Android 的 Activity 類別的子類別。一個 Activity 類別是一個簡單的啟動程式和控制程式的類別。它可以根據需要建立界面 ||
 || Application Name || 顯示在應用程式上的標題 ||
 
@@ -45,8 +45,10 @@ BMI值是一個中立而可靠的指標。
 || Activity Name || Bmi ||
 || Application Name || BMI ||
 
-「Activity Name」將用來產生預設 java 程式碼的文件名稱與文件中預設類別 (class) 的名稱(Activity)，依照 java 的命名習慣，「Activity Name」最好用開頭大寫形式。
 填好值後按下「Finish」 按鈕，就建立好新專案了。
+
+注意 Package Name 的設定，必須至少由兩個部分所構成，例如：com.android。「Activity Name」是指定用來產生預設 java 程式碼的文件名稱，與文件中預設 Activity 類別 (class) 的名稱。依照 java 語言的命名習慣，「Activity Name」最好採用開頭大寫的形式。
+
 回到 Eclipse 主畫面，我們注意到在左側 Package Explorer 視窗中已順利新增加了一個 BMI 目錄。
 
 = 程式專案架構 =
