@@ -24,7 +24,7 @@
 14     /** Called when the activity is first created. */
 15     @Override
 16     public void onCreate(Bundle savedInstanceState) {
-17         super.onCreate(icicle);
+17         super.onCreate(savedInstanceState);
 18         setContentView(R.layout.main);
 19
 20         //Listen for button clicks
