@@ -76,7 +76,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # (MAP)
   # (Browser)
   # (Camera)
-  # [AdapterInflaction 插座] (TODO)
+  # [CheckBox] (TODO)
+  # [AdapterInflaction 插座]
   # [ListActivity 列表活動]
   # [CustomField 自定欄位]
   # [DynamicLayout 動態產生UI]
@@ -92,7 +93,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [CustommMenu 自訂選單]
   # Draw (OX Game)
   # [AndroidResolution 切換螢幕模式]
-  # [離線網頁程式 GoogleGears]
+  # [GoogleGears 離線網頁程式]
   # (3D)
   # (Widget)
 
@@ -114,7 +115,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
 ----
 
 == 主要更新記錄 ==
-  * [AndroidDebug 記錄與偵錯]一章預計11月釋出
   * 2008/10/5 加入[AndroidIntent 傳送資料到新 Activity]一章
   * 2008/9/25 加入[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]與[AndroidActivity 加入新 Activity]一章
   * 2008/9/24 本教學相容於 Android SDK 1.0r1
