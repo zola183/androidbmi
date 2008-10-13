@@ -1,7 +1,7 @@
 #summary 存取識別符號
 #labels tw,XML,Resource
     
-在上一章談了 EditText 中的各種「android:」開頭的屬性後，還有個擺在各屬性最前頭的「android:id」屬性沒談。要使用一個介面元件的第一件事是定義出介面描述檔。程式會透過 android:id 屬性來調用特定介面元件，之後與這個介面有關的操作，都得根據 android:id 來在程式中調用這個介面元件。
+在上一章談了 XML描述檔中介面元件的各種「android:」開頭的屬性。要使用一個介面元件，第一件事就是定義出介面描述檔。大部分的介面元件(如 LinearLayout、TextView)不需要在程式中作後續處理，因此可以直接描述。不過對於那些將在程式中被參考(reference)到的介面元件（如按鈕 Button、文字輸入欄位 EditText），我們需要透過在 XML描述檔中，定義該介面元件的「android:id」 識別符號屬性。之後在程式中所有與這個介面元件有關的操作，都能根據「android:id」識別符號來在調用這個介面元件。
 
 {{{
 <EditText android:id="@+id/height"
