@@ -171,7 +171,7 @@ Bundle bunde = this.getIntent().getExtras();
 在使用 Intent 接收資訊時，我們再使用「this.getIntent().getData()」方法就能取到參數了。「getData」方法取到的參數一般是字串型態的。
 若事先已經知道傳來參數的型別，還可以用比「getData」方法更精確的「getString」、「getInt」等方法來取得參數值。
 
-不過既然有好用的 Bundle 類別可用，為什麼要自己把事情變得複雜呢？
+不過既然有好用的 Bundle 類別可用，為什麼要自己把事情弄得複雜呢？
 
 
 = 結語 =
