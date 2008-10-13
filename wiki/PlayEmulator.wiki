@@ -27,6 +27,30 @@
 
 = 操作 Android 模擬器 =
 
+== 切換模擬器佈景 ==
+
+打開選單，選擇「Run-> Debug Configurations...」，進入運行環境參數設定畫面。在參數設定畫面中，選擇 Target 標籤，其中「Screen Size:」欄位中會列出所有支援的模擬器佈景。預設有「HVGA」與「QVGA」可選擇，「HVGA」與「QVGA」又可以再各自分為「-L」(landscape, 橫式) 與「-P」(portrait 橫式)。
+
+
+== 切換螢幕 ==
+
+在 Windows 作業系統上按下「F7」鍵，或是在 Mac OS X 作業系統上同時按下「fn」 和「7」鍵，螢幕就會從預設的直式顯示改成橫式顯示，再按一次則切換回原來的直式顯示。
+
+
+== 新增模擬器佈景 ==
+
+模擬器的用途，就是協助我們在電腦上也能模擬真實手機的動作。不禁會想，如果模擬器除了所模擬的動作之外，模擬器的外觀也能跟實機長的一樣，那不是整個更擬真，開發起來更有感覺嗎？
+
+是的，Android 的模擬器也允許使用者自行製作模擬器佈景！
+
+以世界第一台發售的 Android 手機「T-Mobile G1」為例，有人已經製作好了「T-Mobile G1」的模擬器佈景。可以前往 http://www.jsharkey.org/downloads/G1.zip 下載。
+
+要新增模擬器佈景時，只需把下載後的模擬器佈景解開成一個資料夾，再將資料夾放到「android_sdk/tools/lib/images/skins」目錄下。做完後打開 Eclipse 開發環境的選單，選擇「Run-> Debug Configurations...」，進入運行環境參數設定畫面。在參數設定畫面中，選擇 Target 標籤，其中「Screen Size:」欄位中所列出的模擬器佈景即新增加了「G1」一項(可自行命名)。
+
+要移除一個模擬器佈景，直接刪除在「android_sdk/tools/lib/images/skins」中的對應目錄即可。
+
+== 移除程式 ==
+
 我們已經順利地啟動了模擬器，那麼，該怎麼移除安裝到模擬器上的程式哩?
 
 Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-sdk/tools 中)，我們可以用裡面的 shell 工具連上模擬器來移除應用程式。在某些平台上，這些動作可能需要擁有 root 權限才能執行。
@@ -51,6 +75,7 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
     # ls
 }}}
 
+== 移除映像檔 ==
 
 模擬器的映像檔會保存住你之前安裝的程式與操作。所以當你想要回覆一個乾淨的模擬環境時，你得先移除模擬器的映像檔。
 
