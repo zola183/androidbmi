@@ -197,7 +197,7 @@ DecimalFormat nf = new DecimalFormat("0.00");
 	                view_suggest.setText(R.string.advice_average);
 	            }
             }
-            catch(Exception obj)
+            catch(Exception err)
             {
             	Toast.makeText(Bmi.this, "打錯了嗎？只能輸入數字喔", Toast.LENGTH_SHORT).show();
             }
@@ -210,7 +210,7 @@ try
 {
     主要程式流程
 }
-catch(Exception obj)
+catch(Exception err)
 {
     錯誤處理流程
 }
@@ -225,5 +225,20 @@ Toast.makeText(Bmi.this, "打錯了嗎？只能輸入數字喔", Toast.LENGTH_SH
 }}}
 
 需要在螢幕上顯示一串提示時，就是 Toast 元件派上用場的地方。除了所顯示的字串不同之外，整段程式與上一節相同。
+
+=== 重構 ===
+
+為了更好地重用，我們繼續把字串提取到「res/values/strings.xml」中
+
+{{{
+....
+<string name="input_error">打錯了嗎？只能輸入數字喔</string>
+</resources>
+}}}
+
+然後在程式中使用「getString」函式來取得字串
+{{{
+Toast.makeText(Bmi.this, getString(R.string.input_error), Toast.LENGTH_SHORT).show();
+}}}
 
 <  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidUrl 初見 Intent] >
