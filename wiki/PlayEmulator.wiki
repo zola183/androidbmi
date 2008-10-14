@@ -8,7 +8,7 @@
 要執行 ApiDemos 程式前，我們得在開發環境中設定一些用來執行 ApiDemos 程式的環境參數。
 以後使用其他程式專案時，我們也能用同樣的方式，讓這些程式在我們的開發環境中運行。
 
-首先，我們透過「執行」選單，選擇「開啟執行參數設定」(Run-> Debug Configurations...) 進入運行環境參數設定畫面。
+首先，我們透過選單列上的「Run」(執行)選單，選擇「開啟執行參數設定」(Run-> Debug Configurations...) 進入運行環境參數設定畫面。
 
 進入設定畫面後，在視窗左側會有一整排 Eclipse 支援的運行設定，我們從中找到 "Android Application"(Android 應用程式)項目，按下滑鼠右鍵，點選 "New"(新增)選項。
 
@@ -23,13 +23,13 @@
 至此我們就完成了模擬器環境參數的設定。 點選右下角的「Debug」按鈕，Eclipse 就會啟動 Android 模擬器。
 
 小技巧: 
-    在選單中，也可以選擇設定「Run Configuration...」選項。這時我們得到的是一個幾乎完全相同的環境參數設定畫面，只是右下角的「Debug」按鈕變成了「Run」按鈕。「Debug」與「Run」模式的環境參數設定可以共用，差別在於「Debug」模式下可以使用在之後章節中會介紹的 logd，來顯示一些開發時所需的額外訊息。
+    在選單列中，也可以選擇設定「Run Configuration...」選項。這時我們得到的是一個幾乎完全相同的環境參數設定畫面，只是右下角的「Debug」按鈕變成了「Run」按鈕。「Debug」與「Run」模式的環境參數設定可以共用，差別在於「Debug」模式下可以使用在之後章節中會介紹的 logd，來顯示一些開發時所需的額外訊息。
 
 = 操作 Android 模擬器 =
 
 == 切換模擬器佈景 ==
 
-打開選單，選擇「Run-> Debug Configurations...」，進入運行環境參數設定畫面。在參數設定畫面中，選擇 Target 標籤，其中「Screen Size:」欄位中會列出所有支援的模擬器佈景。預設有「HVGA」與「QVGA」可選擇，「HVGA」與「QVGA」又可以再各自分為「-L」(landscape, 橫式) 與「-P」(portrait 橫式)。
+在選單列上，選擇「Run-> Debug Configurations...」，進入運行環境參數設定畫面。在參數設定畫面中，選擇 Target 標籤，其中「Screen Size:」欄位中會列出所有支援的模擬器佈景。預設有「HVGA」與「QVGA」可選擇，「HVGA」與「QVGA」又可以再各自分為「-L」(landscape, 橫式) 與「-P」(portrait 橫式)。
 
 
 == 切換螢幕 ==
@@ -45,7 +45,7 @@
 
 以世界第一台發售的 Android 手機「T-Mobile G1」為例，有人已經製作好了「T-Mobile G1」的模擬器佈景。可以前往 http://www.jsharkey.org/downloads/G1.zip 下載。
 
-要新增模擬器佈景時，只需把下載後的模擬器佈景解開成一個資料夾，再將資料夾放到「android_sdk/tools/lib/images/skins」目錄下。做完後打開 Eclipse 開發環境的選單，選擇「Run-> Debug Configurations...」，進入運行環境參數設定畫面。在參數設定畫面中，選擇 Target 標籤，其中「Screen Size:」欄位中所列出的模擬器佈景即新增加了「G1」一項(可自行命名)。
+要新增模擬器佈景時，只需把下載後的模擬器佈景解開成一個資料夾，再將資料夾放到「android_sdk/tools/lib/images/skins」目錄下。做完後打開 Eclipse 開發環境的選單列，選擇「Run-> Debug Configurations...」，進入運行環境參數設定畫面。在參數設定畫面中，選擇 Target 標籤，其中「Screen Size:」欄位中所列出的模擬器佈景即新增加了「G1」一項(可自行命名)。
 
 要移除一個模擬器佈景，直接刪除在「android_sdk/tools/lib/images/skins」中的對應目錄即可。
 

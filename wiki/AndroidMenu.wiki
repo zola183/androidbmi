@@ -2,7 +2,7 @@
 #labels tw,menu
 
 在進一步學習 Intent 與 Activity 之前，我們先來完善我們的應用程式。
-在前幾章中，我們把  「openOptionsDialog」 這個用來彈出對話框的函式，放進「calcBMI」這個按鈕元件的「OnClickListener」方法中。現在，我們要把「openOptionsDialog」 移出「OnClickListener」方法，改成按下「Menu」鍵後，跳出一個選單(Menu)。當我們點擊選單後，才彈出 「openOptionsDialog」 的對話框。
+在前幾章中，我們把  「openOptionsDialog」 這個用來彈出對話框的函式，放進「calcBMI」這個按鈕元件的「OnClickListener」方法中。現在，我們要把「openOptionsDialog」 移出「OnClickListener」方法，改成按下「Menu」鍵後，跳出一個選單列(Menu Bar)。當我們點擊選單列中的選項後，才彈出 「openOptionsDialog」 的對話框。
 
 完整的程式碼如下：
 
@@ -38,15 +38,15 @@
   # 建立選單
   # 處理選項動作
 
-「onCreateOptionsMenu」函式即選單的主體。在 Android 機器或模擬器上按下硬體的「Menu」(選單)鍵，所彈出的選單即是靠「onCreateOptionsMenu」函式來定義。當我們在 Activity 中定義了 「onCreateOptionsMenu」 之後，按下「Menu」(選單)鍵時，就會彈出相對應的選單。
+「onCreateOptionsMenu」函式即選單列的主體。在 Android 機器或模擬器上按下硬體的「Menu」(選單)鍵，所彈出的選單列即是靠「onCreateOptionsMenu」函式來定義。當我們在 Activity 中定義了 「onCreateOptionsMenu」 之後，按下「Menu」(選單)鍵時，就會彈出相對應的選單列。
 
-當我們在選單上選擇了相應的選項後，則是依賴「onOptionsItemSelected」函式來負責處理選單中各選項所個別對應的動作。
+當我們在 Android 應用程式的選單列上選擇了相應的選項後，則是依賴「onOptionsItemSelected」函式，來負責處理選單列中各選項所個別對應的動作。
 
-在上面的程式裡，我們定義了「關於...」與「結束」兩個選單選項。我們分部分講解如下：
+在上面的程式裡，我們定義了「關於...」與「結束」兩個選單列中的選項。我們分部分講解如下：
 
 == 建立選單 ==
 
-在 「onCreateOptionsMenu」函式中，我們定義了兩個選單內容。
+在 「onCreateOptionsMenu」函式中，我們定義了兩個選單列中的選項。
 分行講解如下：
 
 {{{
@@ -56,15 +56,15 @@ public boolean onCreateOptionsMenu(Menu menu) {
 }
 }}}
 
-「onCreateOptionsMenu」這個函式是選單的主體，它是一個「public」(公開)的函式。函式傳入一個「Menu」（選單）型別的「menu」參數。「boolean」則表示函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供函式一個返回值「true」。「@Override」表示我們要完全重寫掉已定義在「Activity」類別中的這個函式。
+「onCreateOptionsMenu」這個函式是選單列的主體，它是一個「public」(公開)的函式。函式傳入一個「Menu」（選單）型別的「menu」參數。「boolean」則表示函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供函式一個返回值「true」。「@Override」表示我們要完全重寫掉已定義在「Activity」類別中的這個函式。
 
 {{{
 menu.add(0, MENU_ABOUT, 0, "關於...");
 menu.add(0, MENU_Quit, 0, "結束");
 }}}
    
-Android 每個頁面對應到一個 Activity，每個 Activity 都有一個獨立的選單。對傳入的「menu」參數作處理就能改變選單的內容。
- 我們看到，增加一個選單的格式如下：
+Android 每個頁面對應到一個 Activity，每個 Activity 都有一個獨立的選單列。對傳入的「menu」參數作處理就能改變選單列的內容。
+ 我們看到，增加一個選單列中選項的格式如下：
  
 {{{
 menu.add(0, 識別符號(identifer), 0, 字串或資源識別符號);
@@ -93,7 +93,7 @@ public boolean onOptionsItemSelected(MenuItem item)
 }
 }}}
 
-「onOptionsItemSelected」這個函式是處理選項的主體，和「onCreateOptionsMenu」函式相同，也是一個「public」(公開)的函式。「onOptionsItemSelected」函式傳入了一個「MenuItem」（選項）型別的「item」參數。「boolean」表示函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供函式一個返回值「true」。
+「onOptionsItemSelected」這個函式是處理所有選項的主體，和「onCreateOptionsMenu」函式相同，也是一個「public」(公開)的函式。「onOptionsItemSelected」函式傳入了一個「MenuItem」（選項）型別的「item」參數。「boolean」表示函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供函式一個返回值「true」。
 「super.onOptionsItemSelected(item);」表示我們要先執行已定義在「Activity」類別中原本的「onOptionsItemSelected」函式內容，後面再接著執行我們為此函式新定義的動作。
 
 {{{
