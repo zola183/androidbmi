@@ -1,4 +1,4 @@
-#summary 深入淺出 Android -- Google 手機應用程式設計
+#summary 深入淺出 Android -- Google 手持設備應用程式設計
 #labels tw
 
 = 授權 =
@@ -22,7 +22,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 簡介 =
 
-「深入淺出 Android 手機應用程式設計」將以開發實例講解 Android 程式開發，協助讀者了解 Android 手機應用程式設計。
+「深入淺出 Android 手持設備應用程式設計」將以開發實例，講解 Android 應用程式開發，協助讀者了解 Android 手持設備的應用程式設計。
 
 == 回響 ==
 
@@ -94,12 +94,14 @@ http://creativecommons.org.tw/files/icon_nd.gif
 === 地圖 ===
   # (MAP)
 
+=== 來電與簡訊 ===
+
 === 遊戲 ===
   # Draw (OX Game)
   # [AndroidResolution 切換螢幕模式]
   # (3D)
 
-=== 無雙 ===  
+=== 大亂鬥 ===  
   # [CheckBox] (TODO)
   # [ListActivity 列表活動]
   # [CustomField 自定欄位]
@@ -130,8 +132,11 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 ----
 
+== 當前版本 ==
+0.4
+
 == 主要更新記錄 ==
-當前版本: 0.4
+  * 2008/10/15 本書副標從「Google 手機應用程式設計」改為「Google 手持設備應用程式設計」
   * 2008/10/5 加入[AndroidIntent 傳送資料到新 Activity]一章
   * 2008/9/25 加入[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]與[AndroidActivity 加入新 Activity]一章
   * 2008/9/24 本教學相容於 Android SDK 1.0r1
