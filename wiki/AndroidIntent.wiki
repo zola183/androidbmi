@@ -58,8 +58,10 @@ bundle.putString("KEY_HEIGHT", field_height.getText().toString());
 bundle.putString("KEY_WEIGHT", field_weight.getText().toString());
 }}}
 
-這段是實際用來附加資料的程式碼。將身高、體重值儲存到 bundle 物件中。
-「KEY_HEIGHT」、「KEY_WEIGHT」是我們自己為儲存在 bundle 物件中的身高、體重值所指定的識別符號。在這邊我們直接把身高、體重值都儲存成字串。因為整個程式都是我們控制，到時候接收的 Activity 讀出值來以後再去做型別轉換就好了。這麼一來就省下了一次型別轉換的功夫。
+這段程式是實際用來附加資料的程式碼。將使用者輸入的身高、體重值，儲存到 bundle 物件中。
+Bundle 其實是一種特別定義的映射(map)型別。「KEY_HEIGHT」、「KEY_WEIGHT」是我們為儲存在 bundle 物件中的身高、體重值，所指定的「識別符號」。在這邊，我們直接把身高、體重值都儲存成字串。因為整個程式都是我們控制，到時候在接收的 Activity 一端，再透過「KEY_HEIGHT」、「KEY_WEIGHT」這兩個「識別符號」來取得實際的身高、體重值。讀出的值也是字串，等值讀出來以後，再去做型別轉換就好了。當然你也可以直接把身高、體重值存成數字。
+
+Bundle 型別額外提供了很多 API。在傳送 Intent 時，使用 Bundle 型別的物件來攜帶資料，相當方便。
 
 == 使用 Intent 接收資訊 ==
 

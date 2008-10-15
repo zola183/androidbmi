@@ -57,45 +57,59 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidDebug 記錄與偵錯] log (以下規劃中)
   # [LifeCycle 活動的生命週期] LifeCycle
   # [AndroidPreference 儲存資訊(Preference)](BMI7)
+  # [MultiLang 支援多種語言]
+  # [AndroidMarket 發佈到 Android 市場(Market)]
 
 === 進階 ===
   # [DesigningObvious 顯性設計](BMI8)
+  # [AndroidWidgets 介面元件]
+  # [AndroidWidgets 排版元件]
+  # [AndroidSelection 選擇元件]
+  # [AdapterInflaction 插座]
+
   # [SpinnerUI 下拉選單(Spinner)]
   # [ArrayAdapter 陣列插座](BMI9)
-  # [MultiLang 支援多語言]
-  # [AndroidMarket 發佈到市場]
 
-=== 食譜 ===
+=== 多媒體 ===
+  # [DynamicLayout 動態產生UI]
   # [CodingUI 透過程式產生介面] (MantraChant)
   # [AccessfFiles 存取檔案]
   # [PlayMedia 多媒體播放]
   # [ShowPics 顯示圖片]
   # [ServiceProvider 提供服務]
   # [PreferenceList 偏好設定列表]
-  # [NotePad 分析筆記本程式] (NotePad)
-  # (MAP)
-  # (Browser)
   # (Camera)
-  # [CheckBox] (TODO)
-  # [AdapterInflaction 插座]
-  # [ListActivity 列表活動]
-  # [CustomField 自定欄位]
-  # [DynamicLayout 動態產生UI]
+
+=== 資料庫 ===
   # [DataBase 儲存資料]
   # [SubActivity Activity 間傳送資料]
   # [ContentProvider 與其他程式共用資料]
   # [StatusNotification 通知]
+  # [NotePad 分析筆記本程式] (NotePad)
+
+=== 瀏覽器 ===
+  # (Browser)
+  # [GoogleGears 離線網頁程式]
+  # (Widget)
+
+=== 地圖 ===
+  # (MAP)
+
+=== 遊戲 ===
+  # Draw (OX Game)
+  # [AndroidResolution 切換螢幕模式]
+  # (3D)
+
+=== 無雙 ===  
+  # [CheckBox] (TODO)
+  # [ListActivity 列表活動]
+  # [CustomField 自定欄位]
   # [AndroidKeyHandling 處理輸入]
   # [MotionDetect 手勢控制]
   # tab (Avarta)
   # [AutoTest 自動測試]
   # [CustomDialog 自訂對話框]
   # [CustommMenu 自訂選單]
-  # Draw (OX Game)
-  # [AndroidResolution 切換螢幕模式]
-  # [GoogleGears 離線網頁程式]
-  # (3D)
-  # (Widget)
 
 === 資源 ===  
   # [AndroidResource Android 相關資源] (相關資源)
