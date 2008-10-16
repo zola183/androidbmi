@@ -8,15 +8,11 @@
   * [http://code.google.com/android/reference/index.html Android 參考文件列表]
   * [http://code.google.com/android/reference/view-gallery.html Android 介面元件列表]
 
-m5->0.9 porting
-  * [http://code.google.com/android/migrating/m5-0.9/changes-overview.html Overview of Changes]
-  * [http://code.google.com/android/migrating/m5-0.9/changes.html API Differences Report]
-  * [http://groups.google.com/group/android-developers/web/m5-to-0-9-porting-and-migration-tips M5 to 0.9 Porting Tips]
-
 工具
 * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
 * [http://code.google.com/p/android-positron/ positron] 自動測試工具
 * SD Card Image 使用方法 http://www.android123.com.cn/moniqi/48.html
+* Android 應用程式下載 http://andappstore.com/
 
 Gears
   * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]

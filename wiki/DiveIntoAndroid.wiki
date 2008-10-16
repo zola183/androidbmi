@@ -61,14 +61,19 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidMarket 發佈到 Android 市場(Market)]
 
 === 進階 ===
-  # [DesigningObvious 顯性設計](BMI8)
+  # [DesigningObvious 顯性設計](aBMI)
   # [AndroidWidgets 介面元件]
-  # [AndroidWidgets 排版元件]
+  # [AndroidLayout 排版元件]
   # [AndroidSelection 選擇元件]
-  # [AdapterInflaction 插座]
+  # [ArrayAdapter 陣列插座](aBMI2)
   # [SpinnerUI 下拉選單(Spinner)]
-  # [ArrayAdapter 陣列插座](BMI9)
-
+  # [ListActivity 列表活動]
+  # [AutoComplete 自動完成欄位]
+  # [CustomField 自定欄位]
+  # [AdapterInflaction 插座]
+  # [ViewWrapper 介面快取]
+  #[AndroidThreads 執行序]
+  
 === 多媒體 ===
   # [DynamicLayout 動態產生UI]
   # [CodingUI 透過程式產生介面] (MantraChant)
@@ -92,7 +97,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # (Widget)
 
 === 地圖 ===
-  # (MAP)
+  # (MAP) (gPlace)
 
 === 來電與簡訊 ===
 
@@ -103,8 +108,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 === 大亂鬥 ===  
   # [CheckBox] (TODO)
-  # [ListActivity 列表活動]
-  # [CustomField 自定欄位]
   # [AndroidKeyHandling 處理輸入]
   # [MotionDetect 手勢控制]
   # tab (Avarta)
@@ -119,11 +122,13 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 ==== 範例 ====
 
- # BMI：輸入身高體重，計算出BMI值
+ # gBMI：輸入身高體重(公制)，計算出BMI值
+ # aBMI：輸入身高體重(英制)，計算出BMI值
  # MantraChant (以下規劃中)：音樂播放程式
  # NotePad：筆記本程式
  # TODO LIST：待辦事項程式
-
+ # gPlace：地點記錄程式
+ 
 ----
 
 === 開始導覽 ===
