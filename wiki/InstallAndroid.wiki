@@ -102,8 +102,7 @@ Eclipse 3.3 版:
     
 == 5. 設定 Android SDK ==
 
-打開偏好設定頁面(Preference)，選擇 Android 標籤，在 SDK Location 欄位按下 " Browse..."鍵，
-選擇剛剛解壓縮完的「android_sdk」檔案夾所在地，然後按下視窗右下角的套用(Apply) 按鈕。
+打開偏好設定頁面(Preference)，選擇 Android 標籤(請確認您已安裝好 ADT 擴充套件，Android 標籤才會出現在偏好設定頁面中)，在 SDK Location 欄位按下 " Browse..."鍵，選擇剛剛解壓縮完的「android_sdk」檔案夾所在地，然後按下視窗右下角的套用(Apply) 按鈕。
 這樣一來，Android SDK 就算是設定好啦。
 
 = 下一步 =
