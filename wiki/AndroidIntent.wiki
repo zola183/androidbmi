@@ -178,7 +178,7 @@ Bundle bunde = this.getIntent().getExtras();
 
 = 結語 =
 
-這幾章講解了如何撰寫介面、與如何寫出一般的 Android 應用程式。
+這幾章講解了如何撰寫介面、如何撰寫程式碼、如何新增選單，與應用程式如何在多個 Activity 之間切換，了解了這些內容，已足夠我們寫出一般的 Android 應用程式。
 
 Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、SMS、Google Map、Web Cam、3D、遊戲、Webkit、XMPP 等等進階的主題。
 
