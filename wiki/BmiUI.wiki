@@ -3,9 +3,11 @@
 
 = 視圖(View) =
 
-軟體設計的過程中常常會需要頻繁改變使用者介面，改著改著就累積起了一些經驗，也歸納出了許多應對之道。如著名的 MVC 模式。Google Android 為我們考慮了介面修改問題。Android 所採用的解決介面修改問題方式，是採用目前比較流行的解決方案--即如前所見的，將介面描述部份的程式碼，抽取到程式外部的 XML 描述文件中。
+軟體設計的過程中，常常會遇到需要頻繁修改使用者介面的情境。改著改著程式設計師們就累積起了一些經驗，也歸納出了許多應對之道。如著名的 MVC（Model-View-Controller） 模式。Google Android 為我們考慮了介面修改問題。Android 為了單純化介面修改方式，採用了目前比較流行的解決方案--即將介面描述部份的程式碼，抽取到程式外部的 XML 描述文件中。
 
-我們在前面的過程裡，已經學到如何在 Android 應用程式中替換 TextView 介面元件顯示的純文字內容。那麼...這個經驗能不能直接用到 BMI 應用程式的設計上呢？我們先回過頭來想想 BMI 應用程式最少應該需要什麼些什麼元件。
+我們在前面的過程裡已經學到，如何在 Android 應用程式中替換 TextView 介面元件所顯示的純文字內容。那麼...這個經驗能不能直接用到 BMI 應用程式的設計上呢？
+
+我們先回過頭來想想， BMI 應用程式最少應該需要什麼些什麼元件。
 
 為了輸入 BMI 程式所需的身高體重值，大致上我們需要兩個 TextView 元件用來提示填入身高體重數字，另外也需要兩個文字輸入欄位用來填入身高體重數字。我們還需要一個按鈕來開始計算，而計算完也需要一個 TextView 元件來顯示計算結果。於是初版的 BMI 應用程式介面的樣子就浮現出來了。
 
@@ -31,12 +33,6 @@ http://code.google.com/android/reference/android/widget/EditText.html
 
 當你處於沒有網路連接的情況下時，也可以找到 Android 文件參考。
 在下載了 android-sdk 後，將之解壓縮，你可以在「android-sdk/docs」 目錄中 (android_sdk/docs/reference/view-gallery.html) ，找到一份與線上文件相同的文件參考。
-
-= 參考函式庫 =
-
-另一個比較方便查詢可用的介面元件的方法，則是在 Eclipse 的「Package Explorer」視窗中直接查閱 「Referenced Libraries」目錄。還記得 Referenced Libraries(參考函式庫)的作用嗎? Referenced Libraries 中列出 Android 平台所有可呼叫的類別與方法函式，也包含了 android.widget (android 介面元件)這分類。android.widget 目錄下就是所有目前可用的 Android 介面元件列表。
-
-只是 Referenced Libraries 中不像文件一樣，並沒有提供詳細介面元件屬性可供參考。
 
 == 開始設計 ==
 
@@ -80,7 +76,7 @@ Button 介面元件同樣有 「android:layout_width」與「android:layout_heig
 
 我們這就從文件中挑出我們需要的 TextView(文字檢視)、EditText(編輯文字)、Button(按鈕) 三種介面元件，照前面的設計擺進 LinearLayout (線性版面配置)元件中。
 
-完整的 main.xml 介面描述檔如下：
+完整的「main.xml」介面描述檔如下：
 {{{
     <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -128,7 +124,7 @@ Button 介面元件同樣有 「android:layout_width」與「android:layout_heig
     </LinearLayout>
 }}}
 
-我們可以啟動模擬器檢視執行結果。
+我們可以啟動模擬器檢視執行結果。或是在頁面標籤下選擇「Layout」標籤，來預覽頁面配置。
 
 模擬器畫面上出現了兩個輸入欄位，上方分別標示著「身高 (cm)」、「體重 (kg)」，在兩個輸入欄位下面是一個標示著「計算 BMI 值」的按鈕。
 當你在欄位中試著輸入文字或數字(你可以直接用電腦鍵盤輸入，或按著模擬器上的虛擬鍵盤輸入)時，你也會發現如 XML 描述檔的描述中對兩個 EditText 欄位所規定的，只能輸入數字。
