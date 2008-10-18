@@ -9,13 +9,13 @@
   * [http://code.google.com/android/reference/view-gallery.html Android 介面元件列表]
 
 工具
-* [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
-* [http://code.google.com/p/android-positron/ positron] 自動測試工具
-* SD Card Image 使用方法 http://www.android123.com.cn/moniqi/48.html
-* Android 應用程式下載 http://andappstore.com/
+  * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
+  * [http://code.google.com/p/android-positron/ positron] 自動測試工具
+  * SD Card Image 使用方法 http://www.android123.com.cn/moniqi/48.html
+  * Android 應用程式下載 http://andappstore.com/
 
 Gears
   * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
   
 免費圖示
-* [http://tango.freedesktop.org/Tango_Icon_Library Tango]
+  * [http://tango.freedesktop.org/Tango_Icon_Library Tango]
