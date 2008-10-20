@@ -33,19 +33,52 @@ Android 應用程式的生命週期是由 Android 系統平台 (準確的說是�
 
 == Activity 的狀態 ==
 
-Android 的虛擬機(VM)是使用 (stack based) 管理。在同一個時刻，只會有一個 Activity 處於活動(Active)或運行(Running)狀態。其他的 Activity 都處於未呼叫或是暫停(Pause)的狀態。
-
-Activity 主要有四種狀態：
+Android 的虛擬機(VM)是使用堆疊 (Stack based) 管理。主要有四種狀態：
 
   * Active (活動)
   * Paused (暫停)
   * Stopped (停止)
   * Dead (已回收或未啟動)
 
-{{{
-編寫中
-}}}
+=== Active (活動) ===
 
+「Active」狀態是使用者啟動應用程式或 Activity 後，Activity 運行中的狀態。
+
+在 Android 平台上，同一個時刻只會有一個 Activity 處於活動(Active)或運行(Running)狀態。其他的 Activity 都處於未啟動(Dead)、停止(Stopped)、或是暫停(Pause)的狀態。
+
+=== Paused (暫停) ===
+
+「Paused」狀態是當 Activity 暫時暗下來，退到背景畫面的狀態。
+
+當我們使用Toast、AlertDialog、或是電話來了時，都會讓原本運行的 Activity 退到背景畫面。新出現的Toast、AlertDialog等介面元件蓋住了原來的 Activity 畫面。Activity 處在「Paused」狀態時，使用者無法與原 Activity 互動。
+
+=== Stopped (停止) ===
+
+「Stopped」狀態是有其他 Activity 正在執行，而這個 Activity 已經離開螢幕，不再動作的狀態。
+
+透過長按「Home」鈕，可以叫出所有處於「Stopped」狀態的應用程式列表。
+
+在「Stopped」狀態的 Activity，還可以透過「Notification」來喚醒。「Notification」會在後面章節中解說。
+
+=== Dead (已回收或未啟動) ===
+
+「Dead」狀態是 Activity 尚未被啟動、已經被手動終止，或已經被系統回收的狀態。
+
+要手動終止 Activity，可以在程式中呼叫「finish」函式。我們在[AndroidMenu 加入選單]一章中已經提到過了。
+
+如果是被系統回收，可能是因為記憶體不足了，所以系統根據記憶體不足時的回收規則，將處於「Stopped」狀態的 Activity 所佔用的記憶體回收。
+
+== 記憶體不足時的行為 ==
+
+記憶體不足時，Dalvak 虛擬機會根據其記憶體回收規則來回收記憶體：
+
+  # 先清理沒有其他 Activity 或 Service/Intent Receiver 相關的空行程(empty process)。
+  # 處於「Stopped」狀態的背景(background) Activity。 根據 LRU 列表排序。被回收掉的 Activity 一旦又重新被呼叫時，會再次呼叫 Activity 的 onCreate 函式。
+  # service process
+  # 可見的 Activity/行程
+  # 前景(foreground) 的 Activity
+
+當系統缺記憶體缺到開始砍「4. 可見的 Activity/行程」時，大概我們換機子的時間也早該到啦！
 
 == Activity 運作流程 ==
 
