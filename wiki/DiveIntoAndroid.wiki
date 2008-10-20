@@ -55,8 +55,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidActivity 加入新 Activity]  (BMI5) 
   # [AndroidIntent 傳送資料到新 Activity](BMI6)
   # [AndroidDebug 記錄與偵錯 (Log)]
-  # [LifeCycle 活動的生命週期]  (以下規劃中)
-  # [AndroidPreference 儲存資訊(Preference)](BMI7)
+  # [LifeCycle 活動的生命週期]
+  # [AndroidPreference 儲存資訊(Preference)](BMI7) (以下規劃中)
   # [MultiLang 支援多國語言]
   # [AndroidMarket 發佈到 Android 市場(Market)]
 
@@ -141,7 +141,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 0.4
 
 == 主要更新記錄 ==
-  * 2008/10/20 加入 [AndroidDebug 記錄與偵錯 (Log)]一章
+  * 2008/10/20 加入 [AndroidDebug 記錄與偵錯 (Log)]與[LifeCycle 活動的生命週期]二章
   * 2008/10/15 本書副標從「Google 手機應用程式設計」改為「Google 手持設備應用程式設計」
   * 2008/10/5 加入[AndroidIntent 傳送資料到新 Activity]一章
   * 2008/9/25 加入[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]與[AndroidActivity 加入新 Activity]一章
