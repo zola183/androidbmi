@@ -1,0 +1,164 @@
+#summary 記錄與偵錯
+#labels tw, debug
+
+{{{
+相信你的眼睛，更要相信事實。
+}}}
+
+記錄與偵錯可以分成「在程式中加上除錯訊息」，與「在偵錯環境中查看除錯訊息」兩部分。
+
+
+= 在程式中加上除錯訊息 =
+
+要看程式哪邊可能出錯，如果是程式碼語法格式上的問題，我們可以在編譯前，就透過開發工具的預先編譯警示，得到提醒並改正。當我們改正了這些語法格式上的問題後，開發工具才允許我們開始編譯應用程式，接著將編譯好的應用程式上傳至模擬器供測試。
+
+但是有些隱藏在程式邏輯中的問題，就需要我們自行在程式碼中加入一個個「記錄點」。當程式流程每次運作到「記錄點」時，相應的「記錄點」就會在開發工具記錄中輸出一筆偵錯用的訊息。開發者透過這份記錄，來檢查程式執行的過程、使用到的參數，是否與我們期望的結果符合。
+
+Android 應用程式上，是透過「Log」函式來達到在程式中加入「記錄點」的功能。
+
+== 導入 android.util.Log 函式 ==
+
+打開「src/com/demo/android/bmi/Bmi.java」，在程式碼的「import」區域加上一行
+
+{{{
+import android.util.Log
+}}}
+
+之後，我們就可以在程式中加入除錯訊息了。
+
+一段含有記錄點(Log)的程式碼如下
+
+{{{
+public class Bmi extends Activity {
+    private static final String TAG = "Bmi";
+....
+Log.d(TAG, "find Views");
+Log.d(TAG, "set Listensers");
+}}}
+
+== 講解 ==
+
+就像我們學生時代在k書時，會在課本上使用不同顏色作記號，來代表不同的意義。
+「Log」函式的作用，就是協助我們在程式碼中「作記號」。
+
+Log 的使用格式如下
+
+{{{
+Log.代號(標籤, 訊息);
+}}}
+
+=== 代號 ===
+
+依據訊息的類型，我們有五種 Log 訊息形式可以用作記錄。
+
+  # Log.v (VERBOSE) 詳細訊息
+  # Log.d (DEBUG) 除錯訊息
+  # Log.i (INFO) 通知訊息
+  # Log.w (WARN) 警告訊息
+  # Log.e (ERROR) 錯誤訊息
+
+一般較常用的是 Log.d(除錯訊息) 、Log.w (警告訊息)，和 Log.e (錯誤訊息)。範例中多使用 Log.d(除錯訊息) 。
+
+=== 標籤 ===
+
+{{{    
+private static final String TAG = "Bmi";
+....
+Log.d(TAG, "find Views");
+}}}
+
+Log.(v,d,i,w,e) 的第一個參數，是一個自定的記錄標籤。在目前的 BMI 應用程式範例中，我們還看不太出來自定記錄標籤的意義。但是當程式的功能多的時候（例如 AppDemos 範例），我們可以為不同的功能，給予不同的紀錄標籤。
+
+=== 訊息 ===
+
+{{{
+Log.d(TAG, "find Views");
+}}}
+
+在 Log.(v,d,i,w,e) 的第二個參數中，加入我們欲記錄的資訊。
+
+== 實際應用 ==
+
+在 BMI 應用程式中，我們可以在用來顯示輸入有錯誤的「try...catch」語句中，加入「Log」訊息。
+
+{{{
+public class Bmi extends Activity {
+    private static final String TAG = "Bmi";
+....
+    catch(Exception err)
+    {
+        Log.e(TAG, "error: " + err.toString());
+        Toast.makeText(Bmi.this, getString(R.string.input_error), Toast.LENGTH_SHORT).show();
+    }
+}}}
+
+=== 講解 ===
+
+{{{
+catch(Exception err)
+    Log.e(TAG, "error: " + err.toString());
+    ....
+}
+}}}
+
+「Log.e..」敘述的意思是：根據「catch」到的例外型別的資訊(Exception err)，將資料印出到記錄中。
+在實作錯誤訊息提示前，我們其實可以使用 Log.e 函式，來先將錯誤訊息記錄起來，等到整個程式大致底定了，再來用 Toast 或 AlertDialog 元件，來實作輸入錯誤提示的功能。
+
+=== 其他的記錄標籤方式 ===
+
+我們也不是一定得為每個 TAG 事先定義好一個記錄標籤，我們可以用當前的 Activity 名稱來做為記錄標籤：
+
+{{{
+Log.e(this.toString(), "error: " + err.toString());
+}}}
+
+
+= 在偵錯環境中查看除錯訊息 =
+
+在程式中加上除錯訊息後，我們可以使用除錯模式 (Debug Mode) 運行模擬器，並透過開發工具來查看除錯訊息。
+
+{{{
+偵錯工具的正確名字叫 Dalvik Debug Monitor Service (DDMS)。
+}}}
+
+== 啟動模擬器 ==
+使用除錯模式 (Debug Mode) 運行模擬器（選單列->Run->Debug History->BMI）。
+
+== 切換到偵錯環境配置 ==
+
+點選開發環境右上角的 "Open Perspective"按鈕，選擇 "Other..."選項。選擇後會彈出一個「Open Perspective」（開啟環境配置）對話框。對話框中列出了所有可用的環境配置列表，選擇 "Debug"。此時，右上角的環境配置圖示列中，會多出一個「Debug」環境配置圖示。整個開發工具的介面配置也為之一變。在右上角的環境配置圖示列中，點選「Java」環境配置圖示，就會回到我們原來的介面配置。
+
+現在先切換到「Debug」環境配置，可以看到右下角的「LogCat」視窗。其上有五個醒目的 V、D、I、W、E 圖示，分別代表著五種 Log 形式(Verbose, Debug, Info, Warn, Error)，還有一個綠色的「+」號，與一個紅色的「-」號。
+
+模擬器運行時會產生很多的紀錄(Log)資訊，一不注意就看到眼花了。這時候，我們自訂的記錄標籤（範例中自訂的標籤是「Bmi」）就派上了用場，正好可以為 LogCat 加上一個過濾器(Log Filter)，只顯示與「Bmi」標籤相關的記錄訊息。
+
+=== 加入過濾器(Log Filter) ===
+
+在「LogCat」視窗右側，按下綠色的「+」號，會彈出一個「Log Filter」視窗。在「Log Filter」視窗的「by Log Tag」欄位中填入「Bmi」，並填入任意的「Filter Name」後，按下「ok」按鈕。「LogCat」視窗上會多出一個與我們填入的「Filter Name」相同的標籤，裡面的內容即所有標示為「Bmi」的自訂訊息記錄。
+
+= 參考資料 =
+
+  * ddms http://code.google.com/android/reference/ddms.html
+  * debug http://code.google.com/android/intro/tutorial-extra-credit.html
+  * trace view http://code.google.com/android/reference/traceview.html
+
+= 結語 =
+
+這幾章講解了如何撰寫介面、如何撰寫程式碼、如何新增選單，與應用程式如何在多個 Activity 之間切換。了解了這些內容，已足夠我們寫出一般的 Android 應用程式。
+
+Android 是個完整的平台，還有諸多內容值得研究。例如儲存資料、共享內容、網路、瀏覽器、地圖服務、相機、3D、遊戲、通話與簡訊等等進階的主題。
+
+希望讀者能以此小書出發，開發出自己的 Android 程式。
+
+請別吝於留言反應，寫出自己的讀後感言、提出覺得不解的地方、分享自己的經驗。這些都可以協助你更好的學習 Android。如果覺得有那些小地方漏講，也請您直接在該章後加上您的建議。協助其他人，就是協助當初的自己。
+
+== 版權宣告 ==
+
+誠摯地提醒您，本書仍在持續地完善中。本書的文字、圖片、程式碼皆不歡迎轉載，也不可使用於商業用途。
+但歡迎您將本書網址 http://code.google.com/p/androidbmi/wiki/IntroAndroid 分享到各網站。
+
+== 填寫讀後問卷 ==
+
+如果您花時間讀了本書，請幫忙填寫只有4題的[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
+
+< [AndroidIntent 傳送資料到新 Activity]  | [DiveIntoAndroid 回目錄] | [LifeCycle 活動的生命週期] >
