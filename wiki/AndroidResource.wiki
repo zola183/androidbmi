@@ -19,3 +19,4 @@ Gears
   
 免費圖示
   * [http://tango.freedesktop.org/Tango_Icon_Library Tango]
+  * http://openclipart.org/

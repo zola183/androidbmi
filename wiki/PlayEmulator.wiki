@@ -49,6 +49,8 @@
 
 要新增模擬器佈景時，只需把下載後的模擬器佈景解開成一個資料夾，再將資料夾放到「android_sdk/tools/lib/images/skins」目錄下。做完後打開 Eclipse 開發環境的選單列，選擇「Run-> Debug Configurations...」，進入運行環境參數設定畫面。在參數設定畫面中，選擇 Target 標籤，其中「Screen Size:」欄位中所列出的模擬器佈景即新增加了「G1」一項(可自行命名)。
 
+== 移除模擬器佈景 ==
+
 要移除一個模擬器佈景，直接刪除在「android_sdk/tools/lib/images/skins」中的對應目錄即可。
 
 == 移除程式 ==
@@ -93,7 +95,7 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
 來刪除模擬器的映像檔。
 
 
-線上閱讀參考
+閱讀參考
 
     * 模擬器操作細節 http://code.google.com/android/reference/emulator.html
 

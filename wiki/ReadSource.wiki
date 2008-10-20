@@ -95,8 +95,7 @@ res/ 中的程式:
 你可以在此指定你的應用程式會使用到的服務(諸如電話功能、網路功能、GPS功能等)。
 當你新增一個頁面行為類別 (Activity) 時，你也需要先在此註冊這個新增的 Activity 類別後，才能順利調用。
 
-    查看 Android 應用程式的檔案組織方式與用途
-    http://code.google.com/android/kb/commontasks.html#filelist
+= 參考文件 =Android 應用程式的檔案組織方式與用途 http://code.google.com/android/kb/commontasks.html#filelist 
     
 
 < [PlayEmulator 操作模擬器] | [DiveIntoAndroid 回目錄] | [AndroidUI 描述使用者介面] >

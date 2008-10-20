@@ -92,8 +92,6 @@ Eclipse 3.3 版:
 安裝完會提示需重新啟動 Eclipse，按下 「OK」 重新啟動。
 
 
-參考資料 http://code.google.com/android/intro/installing.html#installingplugin
-
 == 4. 下載 Android SDK ==
 
 接著我們要從 [http://code.google.com/android/download.html Android 官方網站]下載 「Android 軟體開發套件」 (Software Development Kit, SDK)。
@@ -109,5 +107,10 @@ Eclipse 3.3 版:
 
 設定好 Android SDK 後，我們就擁有了一個完整的 Android 開發環境。
 我們先來看看 Android SDK 中提供的一些範例，好了解 Android 到底能做些什麼。
+
+== 參考資料 ==
+安裝擴充套件
+http://code.google.com/android/intro/installing.html#installingplugin
+
 
 < [IntroAndroid 初探 Android] | [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案] >

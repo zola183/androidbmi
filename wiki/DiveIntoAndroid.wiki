@@ -57,7 +57,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidDebug 記錄與偵錯] log (以下規劃中)
   # [LifeCycle 活動的生命週期] LifeCycle
   # [AndroidPreference 儲存資訊(Preference)](BMI7)
-  # [MultiLang 支援多種語言]
+  # [MultiLang 支援多國語言]
   # [AndroidMarket 發佈到 Android 市場(Market)]
 
 === 進階 ===
