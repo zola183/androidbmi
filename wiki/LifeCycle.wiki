@@ -2,11 +2,7 @@
 #labels tw, lifecycle
 
 {{{
-編寫中
-}}}
-
-{{{
-維護一個 Activity 的生命週期非常重要，因為 Activity 隨時會被系統關掉。
+維護一個 Activity 的生命週期非常重要，因為 Activity 隨時會被系統回收掉。
 }}}
 
 == 生命週期 ==
@@ -36,6 +32,25 @@ Android 應用程式的生命週期是由 Android 系統平台 (準確的說是�
 要讓使用者有好的使用經驗，Activity 需要在各個週期點上負責保管狀態、恢復狀態、傳送資料等工作。
 
 == Activity 的狀態 ==
+
+Android 的虛擬機(VM)是使用 (stack based) 管理。在同一個時刻，只會有一個 Activity 處於活動(Active)或運行(Running)狀態。其他的 Activity 都處於未呼叫或是暫停(Pause)的狀態。
+
+Activity 主要有四種狀態：
+
+  * Active (活動)
+  * Paused (暫停)
+  * Stopped (停止)
+  * Dead (已回收或未啟動)
+
+{{{
+編寫中
+}}}
+
+== Activity 運作流程 ==
+
+{{{
+編寫中
+}}}
 
 = 參考資料 =
 
