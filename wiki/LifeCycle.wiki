@@ -73,7 +73,7 @@ Android 的虛擬機(VM)是使用堆疊 (Stack based) 管理。主要有四種�
 記憶體不足時，Dalvak 虛擬機會根據其記憶體回收規則來回收記憶體：
 
   # 先清理沒有其他 Activity 或 Service/Intent Receiver 相關的空行程(empty process)。
-  # 處於「Stopped」狀態的背景(background) Activity。 根據 LRU 列表排序。被回收掉的 Activity 一旦又重新被呼叫時，會再次呼叫 Activity 的 onCreate 函式。
+  # 處於「Stopped」狀態的背景(background) Activity。 
   # service process
   # 可見的 Activity/行程
   # 前景(foreground) 的 Activity
@@ -85,6 +85,8 @@ Android 的虛擬機(VM)是使用堆疊 (Stack based) 管理。主要有四種�
 {{{
 編寫中
 }}}
+
+
 
 = 參考資料 =
 
