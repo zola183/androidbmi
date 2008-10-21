@@ -183,7 +183,7 @@ onFreeze(1) -> onPause(1) -> onCreate(2) -> onStart(2) - onResume(2) -> onStop(1
 
 === 回原 Activity ===
 
-onPause(2) - onStart(1) - onRestart(1) - onResume(1) - onStop(2) - onDestroy(2)
+onPause(2) -> onStart(1) -> onRestart(1) -> onResume(1) -> onStop(2) -> onDestroy(2)
 
 點 Back 按鈕可以回到原本的 Activity。
 
@@ -193,7 +193,7 @@ onPause(2) - onStart(1) - onRestart(1) - onResume(1) - onStop(2) - onDestroy(2)
 
 === 退出結束 ===
 
-onPause - onStop - onDestroy
+onPause -> onStop -> onDestroy
 
 如果有呼叫 finish() 的話，會跳過先凍結的階段，直接暫停(Pause)，停止(Stop)，然後銷毀(Destroy)。
 
