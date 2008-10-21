@@ -3,7 +3,7 @@
 
 我們都知道，一般人身高的變化程度，比起體重的變化程度小的多。
 
-因此就設計一款 BMI 計算程式來說，如果能在使用者第一次輸入身高體重值後，就預先記住身高，那麼下次再次輸入時，便只需要輸入體重。能幫使用者多想一些，減少使用者重複輸入的麻煩，在使用上就更方便了。使用者應該會喜歡這個便利的功能。
+因此就設計一款 BMI 計算程式來說，如果能在使用者第一次輸入身高體重值後，程式能幫我們預先記住上次輸入過的身高，那麼等到下次啟動程式時，便只需要輸入體重。這麼一來，減少了使用者重複輸入的麻煩，在使用上就更方便了。使用者應該會喜歡這個便利的功能吧。
 
 = 使用偏好設定 =
 
@@ -68,19 +68,18 @@ public class Bmi extends Activity {
     }
 }}}
 
-我們在「onCreate」函式中，加入「restorePrefs()」一行 「restorePrefs」呼叫。
-並在其後定義一個「restorePrefs」函式如上。
+我們在「onCreate」函式中，加入一行 「restorePrefs」呼叫。並在「onCreate」函式外，再定義一個「restorePrefs」函式如上。
 
 {{{
 SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
 }}}
-我們宣告了一個偏好設定(SharedPreferences)型別「settings」，並使用「getSharedPreferences」函式來尋找系統中有無已定義的「PREF_HEIGHT」偏好設定參數。如果存在的話，就傳給「settings」。如果沒有的話，就傳 0 給「settings」。
+我們宣告了一個偏好設定(SharedPreferences)型別「settings」，並使用「getSharedPreferences」函式，來尋找系統中有無已定義過的「PREF_HEIGHT」偏好設定參數。如果「PREF_HEIGHT」偏好設定參數存在的話，就傳給「settings」。如果沒有的話，就傳 0 給「settings」。
 
 {{{
     String pref_height = settings.getString(PREF_HEIGHT, "");
 }}}
 
-我們可以透過「getXXX」函式來從偏好設定(SharedPreferences)讀取不同型別的內容。例如本例中使用「getString」來讀取文字類型的資訊。當「PREF_HEIGHT」偏好設定參數存在時，字串「pref_height」就會得到偏好設定參數的內容。如果不存在「PREF_HEIGHT」這個偏好設定參數時，字串「pref_height」則會得到一個空字串。
+我們可以透過「getXXX」函式，來從偏好設定(SharedPreferences)讀取不同型別的內容。例如本例中使用「getString」來讀取文字類型的資訊。當「PREF_HEIGHT」偏好設定參數存在時，字串「pref_height」就會得到偏好設定參數的內容。如果不存在「PREF_HEIGHT」這個偏好設定參數時，字串「pref_height」則會得到一個空字串。
 
 {{{
 if(pref_height!="")
@@ -96,9 +95,9 @@ if(pref_height!="")
 field_weight.requestFocus();
 }}}
 
-同時，因為身高欄位已經預先填好了，使用者只需要再填入體重值即可開始計算自己的 BMI 值。但是當成是一執行，預設的焦點欄位（游標）還是停在「身高」欄位上。因此我們在「field_weight」欄位識別符號上，使用「requestFocus」函式，來手動將焦點欄位改到「體重」欄位上。這樣當使用者要輸入時，就更方便了。
+同時，因為身高欄位已經預先填好了，使用者只需要再填入體重值即可開始計算自己的 BMI 值。但是當程式一執行，預設的焦點欄位（游標）還是停在「身高」欄位上。因此我們可以在「field_weight」欄位識別符號上，使用「requestFocus」函式，來手動將焦點欄位改到「體重」欄位上。這樣當使用者要輸入時，如果之前已經輸入過「身高」，那麼程式就會自動幫忙填好上次輸入的身高，並把焦點欄位設置到「體重」欄位上，使用者只需直接輸入體重數字就可以了。
 
-我們寫在「restorePrefs」函式中的程式碼，目前都還沒有發生作用。因為我們都還未儲存任何偏好設定哩。接著，我們將在程式中加入儲存偏好設定的程式碼，好能在開啟 Activity 時讀到偏好設定。
+如果只加入了「取得偏好設定」這段的程式碼，就運行模擬器來看看結果，會發現我們寫在「restorePrefs」函式中的程式碼，目前都還沒有發生作用。這是因為我們尚未在程式中儲存任何偏好設定。接著，我們將在程式中加入儲存偏好設定的程式碼，好能在開啟 Activity 時讀到偏好設定。
 
 
 === 儲存偏好設定 ===
@@ -115,7 +114,7 @@ field_weight.requestFocus();
 	}
 }}}
 
-當我們使用「Home」、「Back」按鈕或其他方式離開當前的 Activity 時，我們才把身高的值儲存到偏好設定中。根據上一章[LifeCycle 活動的生命週期]，我們知道離開當前螢幕的最後一個狀態是「Stop」狀態，因此我們覆寫(Overwrite)了「onStop」函式，在其中加入儲存身高偏好設定的程式碼。「super.onStop」的作用是先將原本的「onStop」函式執行一遍。
+當我們使用「Home」、「Back」按鈕或其他方式離開當前的 Activity 時，我們才把身高的值儲存到偏好設定中。根據上一章[LifeCycle 活動的生命週期]，我們知道離開當前螢幕的最後一個狀態是「Stop」狀態。因此我們覆寫(Overwrite)了「onStop」函式，在其中加入儲存身高偏好設定的程式碼。「super.onStop」的作用是先將原本的「onStop」函式執行一遍。
 
 {{{
 SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
@@ -130,7 +129,7 @@ SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
 }}}
 
 在此我們串接了三個 settings 擁有的函式：「edit」、「putString」，和「commit」。
-要改變偏好設定(SharedPreferences)型別的內容，需要透過「edit」函式來編輯，編輯結束後，要透過「commit」函式來將改變寫到系統中。我們可以透過「putXXX」函式來為偏好設定(SharedPreferences)填入不同型別的內容。例如本例中使用「putString」來寫入文字類型的資訊（讀者也可以試試用 putInt 或 putFloat 函式來直接將身高值儲存成整數或浮點數）。
+要改變偏好設定(SharedPreferences)型別的內容，需要透過「edit」函式來編輯。編輯結束後，要透過「commit」函式來將改變寫到系統中。我們可以透過「putXXX」函式來為偏好設定(SharedPreferences)填入不同型別的內容。例如本例中使用「putString」來寫入文字類型的資訊（讀者也可以試試用 putInt 或 putFloat 函式來直接將身高值儲存成整數或浮點數）。
 
 本例中「putString」函式所執行的動作，是透過「field_height」介面元件識別符號來取得身高的字串後，將字串儲存到「PREF_HEIGHT」所代表的偏好設定參數中。
 
