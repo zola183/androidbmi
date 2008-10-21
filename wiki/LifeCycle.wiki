@@ -80,15 +80,128 @@ Android 的虛擬機(VM)是使用堆疊 (Stack based) 管理。主要有四種�
 
 當系統缺記憶體缺到開始「4. 關掉可見的 Activity/行程」時，大概我們換機子的時機也早該到啦！
 
-== Activity 運作流程 ==
+== 觀察 Activity 運作流程 ==
+
+講了這麼多虛的，我們可以寫一些程式來直觀查看 Activity 的運作流程嗎？
+
+當然可以。在上一章[AndroidDebug 記錄與偵錯 (Log)]中，我們學到的「Log」工具，正好可以在查看 Activity 的運作流程時派上用場。
+
+打開「src/com/demo/android/bmi/Bmi.java」，在程式中加入一些「Log」記錄點：
 
 {{{
-編寫中
+public class Bmi extends Activity {
+	private static final String TAG = "Bmi";
+
+    public void onStart()
+    {
+        super.onCreate(...);
+        Log.v(TAG,"onCreate");
+    }
+    
+    public void onStart()
+    {
+        super.onStart();
+        Log.v(TAG,"onStart");
+    }
+    
+    public void onResume()
+    {
+        super.onResume();
+        Log.v(TAG,"onResume");
+    }
+    
+    public void onFreeze(Bundle outState)
+    {
+        super.onFreeze(outState);
+        Log.v(TAG,"onFreeze");
+    }
+    
+    public void onPause()
+    {
+        super.onPause();
+        Log.v(TAG,"onPause");
+    }
+    
+    public void onStop()
+    {
+        super.onStop();
+        Log.v(TAG,"onStop");
+    }    
+    
+    public void onRestart()
+    {
+        super.onRestart();
+        Log.v(TAG,"onReStart");
+    }
+
+    public void onDestroy()
+    {
+        super.onDestroy();
+        Log.v(TAG,"onDestroy");
+    }
+    
+}
 }}}
+
+=== 講解 ===
+
+我們為 Activity 的各個狀態加入了「Log」記錄訊息。當模擬器運行時，我們可以透過 「LogCat」工具來查看 Activity 所處在的狀態。
+
+上面的八個狀態又可以兩兩一數，歸納成四對：
+
+1. 資源分配 (Create/Destroy)
+
+完整的 Activity 生命週期由「Create」狀態開始，由「Destroy」狀態結束。
+建立(Create)時分配資源，銷毀(Destroy)時釋放資源。
+
+2. 可見與不可見(Start/Stop)
+
+當 Activity 運行到「Start」狀態時，就可以在螢幕上看到這個 Activity。相反地，當Activity 運行到「Stop」狀態時，這個 Activity 就會從螢幕上消失。
+
+3. 使用者能否直接存取螢幕（Resume/Pause）
+
+當有個 Toast、AlertDialog、簡訊、電話等訊息亂入時，原來的 Activity 會進入「Pause」狀態，暫時放棄直接存取螢幕的能力，被中斷到背景去，將前景交給優先級高的事件。當這些優先級高的事件處理完後，Activity 就改進入「Resume」狀態，此時又直接存取螢幕。
+
+4. 相依狀態 ReStart/Freeze
+
+當 Activity 呼叫另一個 Activity，預備交出直接存取螢幕的能力（Pause 狀態）前，會先進入「Freeze」狀態。
+
+== Activity 運作流程 ==
+
+由實際運行的記錄來看，我們可以歸納出所有 Android 應用程式都遵循的動作流程：
+
+=== 一般啟動 ===
+
+onCreate -> onStart - onResume
+
+
+=== 呼叫另一個 Activity ===
+onFreeze(1) -> onPause(1) -> onCreate(2) -> onStart(2) - onResume(2) -> onStop(1)
+
+這是個先凍結原本的 Activity，再交出直接存取螢幕能力（Pause 狀態）的過程。
+直到 Activity 2 完成一般啟動流程後，Activity 1 才會被停止。
+
+=== 回原 Activity ===
+
+onPause(2) - onStart(1) - onRestart(1) - onResume(1) - onStop(2) - onDestroy(2)
+
+點 Back 按鈕可以回到原本的 Activity。
+
+=== 回收後再啟動 ===
+
+被回收掉的 Activity 一旦又重新被呼叫時，會像一般啟動一樣再次呼叫 Activity 的 onCreate 函式。
+
+=== 退出結束 ===
+
+onPause - onStop - onDestroy
+
+如果有呼叫 finish() 的話，會跳過先凍結的階段，直接暫停(Pause)，停止(Stop)，然後銷毀(Destroy)。
+
 
 = 參考資料 =
 
   * Activity Cycle http://www.anddev.org/images/android/activity_lifecycle.png
+  * Activity 的生命週期 http://blog.csdn.net/sharetop/archive/2007/12/16/1941935.aspx
 
 = 結語 =
 
