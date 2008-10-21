@@ -195,7 +195,7 @@ onPause(2) -> onStart(1) -> onRestart(1) -> onResume(1) -> onStop(2) -> onDestro
 
 onPause -> onStop -> onDestroy
 
-如果有呼叫 finish() 的話，會跳過先凍結的階段，直接暫停(Pause)，停止(Stop)，然後銷毀(Destroy)。
+如果程式中有直接呼叫「finish」函式來關閉 Activity的話，會跳過先凍結(Freeze)的階段，直接暫停(Pause)，停止(Stop)，然後銷毀(Destroy)。
 
 
 = 參考資料 =
