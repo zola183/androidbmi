@@ -26,7 +26,7 @@ Eclipse 是通用的編輯環境，可根據你所安裝的不同擴充套件而
 (Android Tools->Fix Project Properties)
 
 
-== 閱讀參考 ==
+== 參考資料 ==
 
  * 如何開啟 Hello World 程式 http://code.google.com/android/intro/hello-android.html 
  

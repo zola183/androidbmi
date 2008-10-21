@@ -13,7 +13,7 @@
 
 現在使用者使用智慧型手機，大多已習慣使用多工(Multi-Task)的作業系統(如 Windows Mobile)，可以在用手機聽音樂的同時，也執行其他多個程式。同時執行多個程式有它的明顯好處，但是也有它的嚴重的缺點。每多執行一個應用程式，就會多耗費一些系統記憶體。而手機裡的記憶體是相當有限的。當同時執行的程式過多，或是關閉的程式沒有正確釋放掉記憶體，執行系統時就會覺得越來越慢，甚至不穩定。
 
-為了解決這個問題， Android 引入了一個新的機制 -- 生命週期 (Life Cycle)
+為了解決這個問題， Android 引入了一個新的機制 -- 生命週期 (Life Cycle)。
 
 === 行程 ===
 
@@ -72,21 +72,19 @@ Android 的虛擬機(VM)是使用堆疊 (Stack based) 管理。主要有四種�
 
 記憶體不足時，Dalvak 虛擬機會根據其記憶體回收規則來回收記憶體：
 
-  # 先清理沒有其他 Activity 或 Service/Intent Receiver 相關的空行程(empty process)。
-  # 處於「Stopped」狀態的背景(background) Activity。 
-  # service process
-  # 可見的 Activity/行程
-  # 前景(foreground) 的 Activity
+  # 先回收與其他 Activity 或 Service/Intent Receiver 無關的行程(即優先回收獨立的Activity)
+  # 再回收處於「Stopped」狀態的其他類型 Activity（在背景等待的Activity）。最久沒有使用的 Activity 優先回收（比較官方的說法是 "根據 LRU 演算法..."）
+  # 還不夠？回收 Service 行程
+  # 快不行啦，關掉可見的 Activity/行程
+  # 關閉當前的 Activity
 
-當系統缺記憶體缺到開始砍「4. 可見的 Activity/行程」時，大概我們換機子的時間也早該到啦！
+當系統缺記憶體缺到開始砍「4. 關掉可見的 Activity/行程」時，大概我們換機子的時機也早該到啦！
 
 == Activity 運作流程 ==
 
 {{{
 編寫中
 }}}
-
-
 
 = 參考資料 =
 

@@ -50,15 +50,6 @@ Android 在 Linux 核心的基礎上，提供了各種合用的函式庫，和�
 一個與世界各地的程式開發者，站在相同起跑點上的公平競爭機會。
 }}}
 
-== 參考連結 ==
-
- * 開放手持裝置聯盟(Open Handset Alliance) http://www.openhandsetalliance.com/
- * Google Android 開發者部落格 http://android-developers.blogspot.com/
- * Android 開發者大賽網站 http://code.google.com/android/adc.html
- * Android 文件 http://code.google.com/android/documentation.html
- * http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html
- * CNet專訪：Google手機平台背後的原創者 http://www.zdnet.com.tw/news/comm/0,2000085675,20125898,00.htm
-
 = 從創意開始 =
 
 {{{
@@ -76,6 +67,15 @@ Android 在 Linux 核心的基礎上，提供了各種合用的函式庫，和�
 與詳細的 Android 應用程式實例解說。
 
 要開發 Android 應用程式，你甚至不需要擁有實機。 Google 已經為我們提供了各個主要平台(Windows、Mac、Linux) 上可用的開發工具包。開發工具包中，也包含了 Android 手機模擬器，好讓我們在電腦上就能完成所有的手機應用程式開發工作。接著，我們就先來安裝 Android 開發工具吧。
+
+== 參考資料 ==
+
+ * 開放手持裝置聯盟(Open Handset Alliance) http://www.openhandsetalliance.com/
+ * Google Android 開發者部落格 http://android-developers.blogspot.com/
+ * Android 開發者大賽網站 http://code.google.com/android/adc.html
+ * Android 文件 http://code.google.com/android/documentation.html
+ * http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html
+ * CNet專訪：Google手機平台背後的原創者 http://www.zdnet.com.tw/news/comm/0,2000085675,20125898,00.htm
 
 
 [DiveIntoAndroid 回目錄] | [InstallAndroid 安裝 Android 開發工具]
