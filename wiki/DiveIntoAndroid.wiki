@@ -94,6 +94,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
   * 2008/7/25 新增[XmlR 存取識別符號]一章
   * 2008/7/4 新增[BmiRefactor 重構程式] 一章
   * 2008/4/19 本教學相容於 2008/02/14 釋出的 Android SDK m5-r15
-
+  * 2007/12/27 本書發佈到 Google Code 上
 
  

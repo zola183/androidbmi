@@ -3,7 +3,7 @@
 
 = Android 市場(Market) =
 
-Android 市場(Market) 是 Android 設備中所內建的一個應用程式。這個應用程式的作用是連線到網路上的 Android 應用軟體集中地。透過 Market，使用者可以直接在 Android 手機瀏覽各種可供使用的應用程式，下載安裝，或是為此軟體打分、交換對此軟體的意見。
+「Android 市場(Market) 」是 Android 設備中所內建的一個應用程式。 透過 Market，使用者可以連線到網路上的 Android 應用軟體集中地，直接在 Android 手機上瀏覽各種可供使用的應用程式，看到喜歡的程式也能直接下載安裝。使用者也可以透過「Android 市場(Market) 」為此軟體打分、或是交換對此軟體的意見。
 
 目前 Android 市場(Market) 還未公開給一般開發者加入。一旦公開時
 本書將完成中階教程的最後一章。
