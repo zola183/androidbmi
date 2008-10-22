@@ -141,4 +141,4 @@ Log.e(this.toString(), "error: " + err.toString());
   * debug http://code.google.com/android/intro/tutorial-extra-credit.html
   * trace view http://code.google.com/android/reference/traceview.html
 
-< [LifeCycle 活動的生命週期]  | [DiveIntoAndroid 回目錄] | [LifeCycle 活動的生命週期] >
+< [AndroidIntent 傳送資料到新 Activity] | [DiveIntoAndroid 回目錄] | [LifeCycle 活動的生命週期] >
