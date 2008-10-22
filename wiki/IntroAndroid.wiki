@@ -23,6 +23,7 @@ Google 的創辦人之一 Sergey Brin 也在在 Android 軟體開發工具(SDK)�
 
 2008年9月24日，T-Mobile 首度公佈第一台 Android 手機(G1)的細節，同日 Google 也釋出了 Andorid SDK 1.0 rc1。對應用程式開發者而言，1.0 代表了開發者可以放心地使用 API，而不必再擔心 API 有太大的變動。
 G1 在同年10月20正式發售。在發售前僅針對原 T-Mobile 用戶的預購活動中，已經被預購了150萬台。
+在 10/21日，Open Handset Alliance 公開了全部 Android 的原始碼。從此，開發者擁有了一個完全開放的手機平台。
 
 = Android 是什麼 =
 
@@ -76,6 +77,7 @@ Android 在 Linux 核心的基礎上，提供了各種合用的函式庫，和�
  * Android 文件 http://code.google.com/android/documentation.html
  * http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html
  * CNet專訪：Google手機平台背後的原創者 http://www.zdnet.com.tw/news/comm/0,2000085675,20125898,00.htm
+ * Android 原始碼網站 http://source.android.com
 
 
 [DiveIntoAndroid 回目錄] | [InstallAndroid 安裝 Android 開發工具]

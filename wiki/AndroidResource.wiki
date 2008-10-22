@@ -1,12 +1,16 @@
 #summary Android 相關資源
 #labels tw,links
 
+  * [http://code.google.com/android/documentation.html Android 線上文件]
   * [http://code.google.com/android/roadmap.html RoadMap]，最新的 Android 平台開發進度 
   * [http://www.planetandroid.com/ Planet Android] 部落格文章收集地
+  * [http://android-developers.blogspot.com/ Google Android 開發者部落格]
   * [http://www.anddev.org/ Anddev 論壇]，有許多教程
   * [http://code.google.com/android/intro/tools.html Android 開發工具功用介紹]
   * [http://code.google.com/android/reference/index.html Android 參考文件列表]
   * [http://code.google.com/android/reference/view-gallery.html Android 介面元件列表]
+  * [http://code.google.com/p/android/downloads/list Android 系統與工具相關原始碼]
+  * [http://source.android.com/ Android 原始碼網站]
 
 工具
   * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
