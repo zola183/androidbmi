@@ -71,6 +71,7 @@ Android 在 Linux 核心的基礎上，提供了各種合用的函式庫，和�
 
 == 參考資料 ==
 
+ * Android 官方網站 http://www.android.com/
  * 開放手持裝置聯盟(Open Handset Alliance) http://www.openhandsetalliance.com/
  * Google Android 開發者部落格 http://android-developers.blogspot.com/
  * Android 開發者大賽網站 http://code.google.com/android/adc.html

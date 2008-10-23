@@ -1,6 +1,8 @@
 #summary Android 相關資源
 #labels tw,links
 
+  * [http://www.android.com/ Android 官方網站
+  * [http://www.android.com/market/ Android Market]
   * [http://code.google.com/android/documentation.html Android 線上文件]
   * [http://code.google.com/android/roadmap.html RoadMap]，最新的 Android 平台開發進度 
   * [http://www.planetandroid.com/ Planet Android] 部落格文章收集地

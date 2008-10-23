@@ -3,13 +3,19 @@
 
 = Android Market =
 
-「Android Market (市場)」是 Android 設備中所內建的一個應用程式。 透過 Market，使用者可以連線到網路上的 Android 應用軟體集中地，直接在 Android 手機上瀏覽各種可供使用的應用程式，看到喜歡的程式也能直接下載安裝。使用者也可以透過「Android Market」為此軟體打分、或是交換對此軟體的意見。
+「Android Market (市場)」是 Android 設備中所內建的一個應用程式，同時也是一個軟體下載網站。透過設備上的 Android Market 程式，使用者可以直接連線到網路上的 Android Market 網站，直接在 Android 手機上瀏覽各種可供使用的應用程式。看到喜歡的程式也能直接下載安裝。使用者也可以透過「Android Market」為此軟體打分、或是交換彼此對此軟體的意見。
+
+= Android Market 的運作方式 =
+
+  * 開發者可以將自己寫好的軟體上傳到 Android Market 中。
+  * 開發者透過 Android Market 販賣軟體的 30% 收入，得分給電信商跟電子收費商(如手機月費帳單、Google Checkout，或是 PayPal)，所以開發者可以拿到應用程式定價的 70%。（其他應用程式集散地大都比照辦理）
+  * 註冊為 Android Market Developer 要收美金 25元的「入場費」，應該是種為了保證 Android Market 上的應用程式質量的策略。
+
 
 = 註冊 Android Market =
 
 {{{
-目前 Android Market 還未公開給一般開發者加入。一旦公開時
-本書將完成中階教程的最後一章。
+目前 Android Market 剛公開，10/27 後才接受一般開發者加入。作者將儘早更新。
 }}}
 
 = 上傳到 Android Market =
@@ -21,11 +27,14 @@
 
 = 參考資料 =
 
+  * Android Market http://www.android.com/market/
+  * http://android-developers.blogspot.com/2008/10/android-market-now-available-for-users.html
+
 其他的 Android 應用程式集散地
 
   * AndAppStore http://andappstore.com/
+  * MobiHand OnlyAndroid http://onlyandroid.mobihand.com/
   * SlideMe http://www.slideme.org/
-
 
 = 結語 =
 
