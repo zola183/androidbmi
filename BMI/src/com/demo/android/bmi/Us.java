@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Us extends Activity {
     /** Called when the activity is first created. */
@@ -93,20 +94,26 @@ public class Us extends Activity {
     	public void onClick(View v)
     	{
     		DecimalFormat nf = new DecimalFormat("0.00");
-    		double height = (feet*12+inch)*2.54/100;
-    		double weight = Double.parseDouble(field_weight.getText().toString());
-    		double BMI = weight / (height * height);
-            //Present result 
-            view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
- 
-            //Give health advice 
-            if(BMI>25){
-                view_suggest.setText(R.string.advice_heavy);
-            }else if(BMI<20){
-                view_suggest.setText(R.string.advice_light);
-            }else{
-                view_suggest.setText(R.string.advice_average);
-            }
+    		try{
+	    		double height = (feet*12+inch)*2.54/100;
+	    		double weight = Double.parseDouble(field_weight.getText().toString())*0.45359;
+	    		double BMI = weight / (height * height);
+	            //Present result 
+	            view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+	 
+	            //Give health advice 
+	            if(BMI>25){
+	                view_suggest.setText(R.string.advice_heavy);
+	            }else if(BMI<20){
+	                view_suggest.setText(R.string.advice_light);
+	            }else{
+	                view_suggest.setText(R.string.advice_average);
+	            }
+    		}
+    		catch(Exception obj)
+    		{
+    			Toast.makeText(Us.this, "打錯了嗎？只能輸入數字喔", Toast.LENGTH_SHORT).show();
+    		}
     	}
     };
     
