@@ -1,5 +1,5 @@
 #summary 儲存資訊
-#labels tw, preference
+#labels tw,preference
 
 我們都知道，一般人身高的變化程度，比起體重的變化程度小的多。
 
@@ -114,7 +114,7 @@ field_weight.requestFocus();
 	}
 }}}
 
-當我們使用「Home」、「Back」按鈕或其他方式離開當前的 Activity 時，我們才把身高的值儲存到偏好設定中。根據上一章[LifeCycle 活動的生命週期]，我們知道離開當前螢幕的最後一個狀態是「Stop」狀態。因此我們覆寫(Overwrite)了「onStop」函式，在其中加入儲存身高偏好設定的程式碼。「super.onStop」的作用是先將原本的「onStop」函式執行一遍。
+當我們使用「Home」、「Back」按鈕或其他方式離開當前的 Activity 時，我們才把身高的值儲存到偏好設定中。根據上一章[LifeCycle 活動的生命週期]，我們知道離開當前螢幕的最後一個狀態是「Stop」狀態。因此我們覆載(Override)了「onStop」函式，在其中加入儲存身高偏好設定的程式碼。「super.onStop」的作用是先將原本的「onStop」函式執行一遍。
 
 {{{
 SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
