@@ -59,7 +59,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
 「onCreateOptionsMenu」這個函式是選單列的主體，它是一個「public」(公開)的函式。函式傳入一個「Menu」（選單）型別的「menu」參數。「boolean」則表示函式的返回值必須為「boolean」型別的值。因此在函式最後，我們提供函式一個返回值「true」。「@Override」表示我們要完全重寫掉已定義在「Activity」類別中的這個函式。
 
-基於與 onCreate 函式一樣的原因，因為我們把選單列原本的動作覆寫 (Overwrite) 掉了，因此在撰寫我們自己的內容前，加上一句「super.onCreateOptionsMenu(menu)」敘述，用來呼叫「onCreateOptionsMenu」函式執行預設的動作。
+基於與 onCreate 函式一樣的原因，因為我們把選單列原本的動作覆載 (Override) 掉了，因此在撰寫我們自己的內容前，加上一句「super.onCreateOptionsMenu(menu)」敘述，用來呼叫「onCreateOptionsMenu」函式執行預設的動作。
 
 {{{
 menu.add(0, MENU_ABOUT, 0, "關於...");
