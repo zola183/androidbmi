@@ -14,6 +14,9 @@
   * [http://code.google.com/p/android/downloads/list Android 系統與工具相關原始碼]
   * [http://source.android.com/ Android 原始碼網站]
 
+書籍
+  * [http://androidcore.com/index.php?option=com_content&view=category&layout=blog&id=53&Itemid=100&limitstart=5 Android 書籍列表]
+  
 工具
   * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
   * [http://code.google.com/p/android-positron/ positron] 自動測試工具
