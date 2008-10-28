@@ -13,7 +13,8 @@
   * [http://code.google.com/android/reference/view-gallery.html Android 介面元件列表]
   * [http://code.google.com/p/android/downloads/list Android 系統與工具相關原始碼]
   * [http://source.android.com/ Android 原始碼網站]
-
+  * [http://code.google.com/p/apps-for-android/ 官方範例]
+ 
 書籍
   * [http://androidcore.com/index.php?option=com_content&view=category&layout=blog&id=53&Itemid=100&limitstart=5 Android 書籍列表]
   

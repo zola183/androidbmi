@@ -81,6 +81,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 0.4
 
 == 主要更新記錄 ==
+  * 2008/10/28 釋出 gBMI、aBMI應用程式到 [http://www.android.com/market/ Android Market]。
   * 2008/10/23 加入[NeverEnd 開發不息]一章。
   * 2008/10/22 加入[AndroidMarket 發佈到 Android 市場(Market)] 一章草稿
   * 2008/10/21 加入[AndroidPreference 儲存資訊(Preference)]一章
