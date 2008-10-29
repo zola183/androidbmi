@@ -3,22 +3,45 @@
 
 = Android Market =
 
-「Android Market (市場)」是 Android 設備中所內建的一個應用程式，同時也是一個軟體下載網站。透過設備上的 Android Market 程式，使用者可以直接連線到網路上的 Android Market 網站，直接在 Android 手機上瀏覽各種可供使用的應用程式。看到喜歡的程式也能直接下載安裝。使用者也可以透過「Android Market」為此軟體打分、或是交換彼此對此軟體的意見。
+要釋出程式讓所有使用者使用有三種方式：
+
+  # 發佈到 Android Market
+  # 自己提供程式線上下載
+  # 發佈到第三方 Android 應用程式下載網站
+
+「Android Market (市場)」是一個「Android」官方(Google)提供的「Android」應用程式下載網站，同時也內建於所有的「Android」手機中。透過手機上的「Market」程式，使用者可以直接在「Android」手機上瀏覽「Android Market」網站，查看各種可供使用的應用程式。看到喜歡的程式可以直接下載安裝。也可以透過「Android Market」為這些軟體打分、或是交換對這些軟體的意見。
+
+我們也可以將寫好的應用程式放在自己的網站上提供下載，或是透過其他的「Android」應用程式下載網站發佈。但是，還有哪個地方會比官方的「Android Market」更容易吸引使用者造訪呢？所以我們將主要介紹如何將應用程式發佈到官方「Android Market」上。
 
 = Android Market 的運作方式 =
 
+「Android Market」的運作方式如下
+
   * 開發者可以將自己寫好的軟體上傳到 Android Market 中。
-  * 開發者透過 Android Market 販賣軟體的 30% 收入，得分給電信商跟電子收費商(如手機月費帳單、Google Checkout，或是 PayPal)，所以開發者可以拿到應用程式定價的 70%。（其他應用程式集散地大都比照辦理）
-  * 註冊為 Android Market Developer 要收美金 25元的「入場費」，應該是種為了保證 Android Market 上的應用程式質量的策略。
+  * 開發者透過 Android Market 販賣軟體的 30% 收入，得分給電信商跟電子收費商(如手機月費帳單或 Google Checkout 等)，所以開發者可以拿到應用程式定價的 70%。
+  * 註冊為「Android Market Developer」要收美金 25元的「入場費」，推測可能是種為了保證「Android Market」上應用程式質量，也為了讓開發者寫一點收費軟體，好讓電信商有得分成的策略。 
 
 
 = 註冊 Android Market =
 
-{{{
-目前 Android Market 剛公開，10/27 後才接受一般開發者加入。作者將儘早更新。
-}}}
+前往 http://www.android.com/market/ ，畫面右上角有一段「Interested in having your application in Android Market?」敘述，按下其下方的「learn more」按鈕，即可開始註冊成為「Android」開發者。
 
-= 上傳到 Android Market =
+開發者用的網址是 http://market.android.com/publish
+
+開發者可以透過「Android Market」發佈「Android」應用程式。首先，開發者得註冊一個 Google 帳號。然後使用(Google Checkout)以信用卡付出 $25 美元的註冊費用。
+最後得同意「Android Market」的使用授權協議。
+
+註冊一個 Google 帳號不難，相信大部分讀者都已經擁有一個 Google 帳號。
+
+在申請「Android Market」時要填入加上國碼的手機號碼。台灣加上國碼的手機號碼為「+8869xxxxxxxx」。「886」是國碼，加上一個「0」之後，「09xxxxxxxx」是你的手機號碼。「+」則是「加上國碼的手機號碼」表示方式。
+  
+接著按下「Google Checkout」圖示，如果沒有「Google Checkout」的話，也需作先設定。一切完成後在「Google Checkout」中勾選「I agree and I am willing to associate my credit card and account registration above with the Android Market Developer Distribution Agreement.」。畫面會出現「等待信用卡認證的訊息」，並有 「Google Checkout」的確認函寄到我們設定的電子信箱中。接著想要繼續登錄開發者網頁時，會發現這個網頁似乎壞掉了。其實是等待信用卡認證完成，需要一點時間（一兩個鐘頭），等認證好，完成付款程序後，網頁就能再次開啟。
+
+開啟後會出現「Your Registration to the Android Market is approved!You can now upload and publish software to the Android Market.」(已經註冊完成)訊息。
+
+在主畫面暱稱旁邊，可以選擇「Edit profile » 」（編輯個人資料）來編輯之前填入的「Android Market Developer」資訊。
+
+= 上傳應用程式到 Android Market =
 
 {{{
 撰寫中
@@ -28,7 +51,10 @@
 = 參考資料 =
 
   * Android Market http://www.android.com/market/
-  * http://android-developers.blogspot.com/2008/10/android-market-now-available-for-users.html
+  * Signing and Publishing Your Applications http://code.google.com/android/devel/sign-publish.html
+  * http://docs.sun.com/app/docs/doc/820-4607/ablqz?l=zh_TW&a=view
+  * http://www.anddev.org/viewtopic.php?p=12252
+  * http://keytool.sourceforge.net/
 
 其他的 Android 應用程式集散地
 
