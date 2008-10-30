@@ -22,7 +22,7 @@
   * 註冊為「Android Market Developer」要收美金 25元的「入場費」。推測可能是種為了保證「Android Market」上應用程式的質量，也為了促使開發者寫一點收費軟體，好讓電信商有得分成的策略。 
 
 
-= 註冊 Android Market =
+== 註冊 Android Market ==
 
 前往 http://www.android.com/market/ ，畫面右上角有一段「Interested in having your application in Android Market?」敘述，按下其下方的「learn more」按鈕，即可開始註冊成為「Android」開發者。
 
@@ -41,7 +41,7 @@
 
 在開發者面板畫面的左上角是開發者的暱稱。暱稱旁邊可以選擇「Edit profile » 」（編輯個人資料）來編輯之前填入的「Android Market Developer」資訊。
 
-= 上傳應用程式到 Android Market =
+== 上傳應用程式到 Android Market ==
 
 選擇右下角的「Upload Application」（上傳應用程式）按鈕，出現應用程式上傳畫面。各個欄位的作用都寫的很明白，也可以為應用程式自行定價。
 
