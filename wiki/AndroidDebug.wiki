@@ -123,9 +123,9 @@ Log.e(this.toString(), "error: " + err.toString());
 
 現在先切換到「Debug」環境配置，可以看到右下角的「LogCat」視窗。其上有五個醒目的 V、D、I、W、E 圖示，分別代表著五種 Log 形式(Verbose, Debug, Info, Warn, Error)，還有一個綠色的「+」號，與一個紅色的「-」號。
 
-模擬器運行時會產生很多的紀錄(Log)資訊，一不注意就看到眼花了。這時候，我們自訂的記錄標籤（範例中自訂的標籤是「Bmi」）就派上了用場，正好可以為 LogCat 加上一個過濾器(Log Filter)，只顯示與「Bmi」標籤相關的記錄訊息。
+模擬器運行時會產生很多的訊息記錄(Log)，一不注意就看到眼花了。這時候，我們自訂的記錄標籤（範例中自訂的標籤是「Bmi」）就派上了用場，正好可以為 LogCat 加上一個過濾器(Log Filter)，只顯示與「Bmi」標籤相關的訊息記錄。
 
-=== 加入過濾器(Log Filter) ===
+=== 加入訊息記錄過濾器(Log Filter) ===
 
 在「LogCat」視窗右側，按下綠色的「+」號，會彈出一個「Log Filter」視窗。在「Log Filter」視窗的「by Log Tag」欄位中填入「Bmi」，並填入任意的「Filter Name」後，按下「ok」按鈕。「LogCat」視窗上會多出一個與我們填入的「Filter Name」相同的標籤。裡面的內容，即所有標示為「Bmi」的自訂訊息記錄。
 
