@@ -1,5 +1,5 @@
 #summary 活動的生命週期
-#labels tw, lifecycle
+#labels tw,lifecycle
 
 {{{
 維護一個 Activity 的生命週期非常重要，因為 Activity 隨時會被系統回收掉。
@@ -205,3 +205,7 @@ onPause -> onStop -> onDestroy
   * Activity 的生命週期 http://blog.csdn.net/sharetop/archive/2007/12/16/1941935.aspx
 
 < [AndroidDebug 記錄與偵錯 (Log)]  | [DiveIntoAndroid 回目錄] | [AndroidPreference 儲存資訊] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
