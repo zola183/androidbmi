@@ -206,3 +206,7 @@ view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
 
 
 < [BmiLogic 完成 BMI 程式] | [DiveIntoAndroid 回目錄] | [AndroidDialog 加入對話框] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
