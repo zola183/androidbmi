@@ -64,11 +64,13 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 ==== 資源 ====
   # [AndroidResource Android 相關資源] (相關資源)
+  # [AfterWard 後續章節]
 
 ==== 範例 ====
 
  # gBMI：輸入身高體重(公制)，計算出BMI值
- 
+
+
 ----
 
 === 開始導覽 ===
