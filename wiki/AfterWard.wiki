@@ -33,7 +33,7 @@
   # 取得所在位置（GPS/基地台三角定位）
   # 申請 Google 地圖服務（API Key）
   # 使用地圖（MapView）
-  # 加上地標（OverLay）
+  # 加上圖層（OverLay）
   # 處理路徑規劃
 
 === 資料庫應用 ===
