@@ -246,3 +246,7 @@ Toast.makeText(Bmi.this, getString(R.string.input_error), Toast.LENGTH_SHORT).sh
 }}}
 
 <  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidUrl 初見 Intent] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
