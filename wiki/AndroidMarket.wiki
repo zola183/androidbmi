@@ -121,3 +121,7 @@
   * SlideMe http://www.slideme.org/
 
 <  [AndroidPreference 儲存資訊(Preference)] | [DiveIntoAndroid 回目錄] | [NeverEnd 開發不息] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
