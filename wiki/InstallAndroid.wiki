@@ -114,3 +114,7 @@ http://code.google.com/android/intro/installing.html#installingplugin
 
 
 < [IntroAndroid 初探 Android] | [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
