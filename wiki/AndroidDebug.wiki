@@ -136,3 +136,7 @@ Log.e(this.toString(), "error: " + err.toString());
   * trace view http://code.google.com/android/reference/traceview.html
 
 < [AndroidIntent 傳送資料到新 Activity] | [DiveIntoAndroid 回目錄] | [LifeCycle 活動的生命週期] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
