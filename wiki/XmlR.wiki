@@ -231,3 +231,7 @@ The important thing to notice for now is the inner class named "layout", and its
 那麼接下來，我們就開始進入到了解 Android 程式流程的部分吧。
 
 < [BmiUI 設計使用者介面] | [DiveIntoAndroid 回目錄] | [AndroidLogic 解讀程式流程] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
