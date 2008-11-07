@@ -152,3 +152,7 @@ Uri uri = Uri.parse(getString(R.string.homepage_uri));
 
 
 <  [AndroidDialog 加入對話框] | [DiveIntoAndroid 回目錄] | [AndroidMenu 加入選單]  >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
