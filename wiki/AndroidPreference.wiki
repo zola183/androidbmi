@@ -139,3 +139,7 @@ SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
 http://code.google.com/android/devel/data/preferences.html
 
 < [AndroidIntent 傳送資料到新 Activity]  | [DiveIntoAndroid 回目錄] | [AndroidMarket 發佈到 Android 市場(Market)] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
