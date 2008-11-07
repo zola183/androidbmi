@@ -1,5 +1,5 @@
 #summary 傳送資料到新 Activity
-#labels tw, Intent
+#labels tw,Intent
 
 前一章中，我們已學過獨立的 Activity。Android 使用 Intent 來完成在螢幕間切換的動作。Intent 包含 Activity 間切換所需的動作、分類、傳送資料等訊息，就像是 Activity 之間的宅急便一樣。
 
@@ -177,3 +177,7 @@ Bundle bunde = this.getIntent().getExtras();
 
 
 < [AndroidActivity 加入新 Activity]  | [DiveIntoAndroid 回目錄] | [AndroidDebug 記錄與偵錯] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
