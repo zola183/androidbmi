@@ -31,3 +31,7 @@ Eclipse 是通用的編輯環境，可根據你所安裝的不同擴充套件而
  * 如何開啟 Hello World 程式 http://code.google.com/android/intro/hello-android.html 
  
 < [InstallAndroid 簡單安裝 Android 開發工具] | [DiveIntoAndroid 回目錄] | [PlayEmulator 操作模擬器] >
+
+----
+
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
