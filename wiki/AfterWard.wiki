@@ -1,0 +1,29 @@
+#summary 後續章節
+#labels Featured,Phase-Design
+
+= 後續章節目錄 =
+
+目前規劃了這些內容。對於一本入門書，您還期望知道什麼樣的內容呢？請在下方提出建議！
+
+=== 補完 ===
+  # 顯性設計
+  # 支援多國語言
+  # 使用接口 (Adapter)
+  # 加入下拉選單元件 (Spinner)
+  # 釋出應用程式
+  # 發佈到 Android 市場 (Market)
+
+=== 地圖應用 ===
+
+  # 取得所在位置（GPS/基地台三角定位）
+  # 申請 Google 地圖服務
+  # 使用地圖（MapView）
+  # 加上地標（OverLay）
+  # 處理路徑規劃
+
+=== 資料庫應用 ===
+
+  # 加入列表活動 (ListActivity)
+  # 使用 SQLite 資料庫
+  # 存取資料表 (SQLiteOpenHelper)
+  # 加入內容提供者 (ContentProvider)
