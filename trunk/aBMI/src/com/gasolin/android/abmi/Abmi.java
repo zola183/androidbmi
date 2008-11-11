@@ -92,7 +92,7 @@ public class Abmi extends Activity {
     	Integer pref_inch = settings2.getInt(PREF_INCH, 0);
     	//if(pref_inch)
     	{
-    		field_inch.setSelection(pref_inch);
+    		field_inch.setSelection(pref_inch-1);
     		field_weight.requestFocus();
     	}
     }
