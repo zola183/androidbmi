@@ -83,7 +83,7 @@
     AddType application/vnd.android.package-archive apk
 }}}
 
-一行，如此一來當使用者用下載「.apk」檔時，能自動辨識該檔案為「Android」應用程式類型。
+一行，如此一來使用者在瀏覽器中點選到「.apk」檔的連結時，瀏覽器能自動辨識該檔案為「Android」應用程式類型。
 
 
 = 發佈到第三方 Android 應用程式下載網站 =
