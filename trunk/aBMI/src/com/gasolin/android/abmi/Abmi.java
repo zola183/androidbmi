@@ -141,10 +141,7 @@ public class Abmi extends Activity {
 	                view_suggest.setText(R.string.advice_light);
 	            }else{
 	                view_suggest.setText(R.string.advice_average);
-	            }
-	            Uri uri = Uri.parse("geo:25.047581, 121.517286");
-	            final Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-	            startActivity(intent);
+	            }   
     		}
     		catch(Exception obj)
     		{
