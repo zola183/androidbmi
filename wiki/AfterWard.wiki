@@ -24,7 +24,6 @@
   # 支援多國語言
   # 使用接口 (Adapter)
   # 加入下拉選單元件 (Spinner)
-  # 參考 API 範例
   # 釋出應用程式
   # 發佈到 Android 市場 (Market)
 
@@ -40,8 +39,10 @@
 === 資料庫應用 ===
 自訂 Android 資料庫應用程式
 
+  # 參考 API 範例
   # 加入列表活動 (ListActivity)
   # 使用內容提供者（ContentProvider）
+  # 找到 NotePad 進入點（NoteList）
   # 使用 SQLite 資料庫
   # 存取資料表 (SQLiteOpenHelper)
   # 加入內容提供者 (ContentProvider)
