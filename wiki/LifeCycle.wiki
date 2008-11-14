@@ -175,7 +175,7 @@ public class Bmi extends Activity {
 onCreate -> onStart -> onResume
 }}}
 
-分配資源給這個 Activity（Create 狀態），將 Activity 內容顯示到螢幕上（Start 狀態），取得螢幕的控制權（Resume 狀態）。
+啟動一個 Activity 的基本流程是：分配資源給這個 Activity（Create 狀態），然後將 Activity 內容顯示到螢幕上（Start 狀態）。在一切就緒後，取得螢幕的控制權（Resume 狀態）。
 
 === 呼叫另一個 Activity ===
 {{{
