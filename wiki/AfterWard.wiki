@@ -25,7 +25,7 @@
   # 使用接口 (Adapter)
   # 加入下拉選單元件 (Spinner)
   # 釋出應用程式 (keytools)
-  # 發佈到 Android 市場 (Market)
+  # 發佈到 Android 市場 (Market) (已發佈)
 
 === 資料庫應用 ===
 自訂 Android 資料庫應用程式(未完)
