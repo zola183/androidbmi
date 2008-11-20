@@ -33,7 +33,6 @@
   # 加入列表活動 (ListActivity)
   # 使用資料庫 (SQLite)
   # 存取資料表 (SQLiteOpenHelper)
-  # 加入相依的活動 (ActivityForResult)
   # 加入增刪改查操作(CRUD)
   # 加入相依的活動 (ActivityForResult)
   # 使用內容提供者 (ContentProvider)
