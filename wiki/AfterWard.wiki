@@ -35,6 +35,7 @@
   # 存取資料表 (SQLiteOpenHelper)
   # 加入相依的活動 (ActivityForResult)
   # 加入增刪改查操作(CRUD)
+  # 加入相依的活動 (ActivityForResult)
   # 使用內容提供者 (ContentProvider)
   # 加入內容提供者 (ContentProvider)
 
