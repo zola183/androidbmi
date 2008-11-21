@@ -28,7 +28,7 @@
   # 發佈到 Android 市場 (Market) (已發佈)
 
 === 資料庫應用 ===
-自訂 Android 資料庫應用程式(未完)
+自訂 Android 資料庫應用程式(草稿)
 
   # 加入列表活動 (ListActivity)
   # 使用資料庫 (SQLite)
