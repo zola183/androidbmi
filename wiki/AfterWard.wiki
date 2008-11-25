@@ -35,7 +35,6 @@
   # 存取資料表 (SQLiteOpenHelper)
   # 加入增刪改查操作(CRUD)
   # 加入相依的活動 (ActivityForResult)
-  # 加入自訂列表（ListView）
 
 === 地圖應用 ===
 自訂 Android 地圖應用程式
