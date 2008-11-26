@@ -39,8 +39,12 @@
 === 地圖應用 ===
 自訂 Android 地圖應用程式
 
-  # 取得現在位置（GPS/基地台三角定位）
   # 申請 Google 地圖服務（API Key）
   # 使用地圖（MapView）
   # 加入按鍵控制 (KeyEvent)
+  # 取得現在位置（GPS/基地台三角定位）
   # 加上層疊（OverLay）
+
+= 當前版本 =
+
+0.6 Beta2
