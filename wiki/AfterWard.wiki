@@ -43,7 +43,8 @@
   # 使用地圖（MapView）
   # 加入按鍵控制 (KeyEvent)
   # 取得現在位置（GPS/基地台三角定位）
-  # 加入層疊地標（OverLay）
+  # 地圖定位（MyLocationOverlay）
+  # 為地圖標上地標（ItemizedOverlay）
 
 = 當前版本 =
 
