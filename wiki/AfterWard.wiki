@@ -43,8 +43,8 @@
   # 使用地圖（MapView）
   # 加入按鍵控制 (KeyEvent)
   # 取得現在位置（GPS/基地台三角定位）
-  # 加上層疊（OverLay）
-  # 2D 繪圖(Canvas)
+  # 加入層疊地標（OverLay）
+  # 繪製地圖(Canvas)
 
 = 當前版本 =
 
