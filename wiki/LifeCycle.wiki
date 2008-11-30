@@ -92,7 +92,7 @@ Android 的虛擬機(VM)是使用堆疊 (Stack based) 管理。主要有四種�
 public class Bmi extends Activity {
 	private static final String TAG = "Bmi";
 
-    public void onStart()
+    public void onCreate()
     {
         super.onCreate(...);
         Log.v(TAG,"onCreate");
