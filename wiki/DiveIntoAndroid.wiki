@@ -68,6 +68,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 ==== 資源 ====
   # [AndroidResource Android 相關資源] (相關資源)
   # [AfterWard 後續章節]
+  # [GetSource 取得原始碼]
 
 ==== 範例 ====
 
