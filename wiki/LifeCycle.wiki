@@ -218,7 +218,7 @@ onPause -> onStop -> onDestroy
 
 = 參考資料 =
 
-  * Activity Cycle http://www.anddev.org/images/android/activity_lifecycle.png
+  * Activity Cycle http://code.google.com/android/images/activity_lifecycle.png
   * Activity 的生命週期 http://blog.csdn.net/sharetop/archive/2007/12/16/1941935.aspx
 
 < [AndroidDebug 記錄與偵錯 (Log)]  | [DiveIntoAndroid 回目錄] | [AndroidPreference 儲存資訊] >
