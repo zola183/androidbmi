@@ -88,6 +88,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 == 主要更新記錄 ==
   * [http://code.google.com/p/androidbmi/source/list 不定期維護記錄]
+  * 2008/12/5 已與出版社簽約，將以「Android 應用程式設計入門」為名出版。進一步的消息請參考[AfterWard 後續章節]。本書線上版的章節保證不會消失，因此仍不歡迎轉載。我也會在出書之後繼續在此發佈更深入的內容。
   * 2008/10/30 完成[AndroidMarket 發佈到 Android 市場(Market)]一章，本書電子版已完成！
   * 2008/10/28 釋出 gBMI、aBMI應用程式到 [http://www.android.com/market/ Android Market]。
   * 2008/10/23 加入[NeverEnd 開發不息]一章。
