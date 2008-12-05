@@ -15,20 +15,59 @@
 
 = 目錄 =
 
-目前額外規劃了這些章節內容。
+本書將以「Android 應用程式設計入門」為名出版
+
+目錄如下
+
+
+
+=== 入門 ===
+安裝並熟悉「Android」開發環境，學會如何新建/開啟「Android」專案並操作「Android」模擬器。使用範例：AppDemos。
+
+  # [IntroAndroid 初探 Android] 
+  # [InstallAndroid 安裝 Android 開發工具]
+  # [OpenProject 開啟現有專案]
+  # [PlayEmulator 操作 Android 模擬器(Emulator)]
+  # [ReadSource 建立一個 Android 程式]
+
+=== 基礎 ===
+熟悉「Android」應用程式專案的基本架構。能讀懂「Android」程式碼與 XML 介面描述檔，並學會使用基本介面元件來撰寫「Android」應用程式。使用範例：BMI。
+
+  # [AndroidUI 描述使用者介面] 
+  # [BmiUI 設計使用者介面]
+  # [XmlR 存取識別符號]
+  # [AndroidLogic 解讀程式流程]
+  # [BmiLogic 完成 BMI 程式]
+
+=== 中階 ===
+進一步熟悉「Android」應用程式設計的主要技術內容。使用範例：BMI。
+
+  # [BmiRefactor 重構程式]
+  # [AndroidDialog 加入對話框(Dialog)]
+  # [AndroidUrl 查看線上內容 (Uri)]
+  # [AndroidMenu 加入選單(Menu)]
+  # [AndroidManifest 定義 Android 清單]
+  # [AndroidActivity 加入新 Activity]
+  # [AndroidIntent 傳送資料到新 Activity]
+  # [AndroidDebug 記錄與偵錯 (Log)]
+  # [LifeCycle 活動的生命週期]
+  # [AndroidPreference 儲存資訊(Preference)]
+  # [NeverEnd 開發不息]
+
+額外規劃了以下這些章節內容。
 
 === 融會貫通 ===
-應用前面章節中使用到的觀念與技術，加深印象的同時也學習一些實用的新技巧。
+應用前面章節中使用到的觀念與技術，加深印象的同時也學習一些實用的新技巧。使用範例：aBMI。
 
   # 顯性設計
   # 支援多國語言
   # 使用接口 (Adapter)
   # 加入下拉選單元件 (Spinner)
   # 簽發應用程式金鑰 (keytools)
-  # 發佈到 Android 市場 (Market) (已發佈)
+  # [AndroidMarket 發佈到 Android 市場(Market)] 
 
 === 資料庫應用 ===
-學習 SQLite 語句，並能使用 Android 上的資料庫完成增刪改查操作
+學習 SQLite 資料庫與「Android」平台相關實用技能，並能使用 Android 上的資料庫完成增刪改查操作。使用範例：DummyNote。
 
   # 加入列表活動 (ListActivity)
   # 使用資料庫 (SQLite)
@@ -37,7 +76,7 @@
   # 加入相依的活動 (ActivityForResult)
 
 === 地圖與定位應用 ===
-使用 Android 極富特色的地圖與定位功能，撰寫地圖與定位應用程式
+使用 Android 極富特色的地圖與定位功能，學習控制地圖元件、地圖定位、在地圖中設置地標等等與地圖/定位應用程式設計相關的技術。使用範例：twTrainStation、MyLocation。
 
   # 申請 Google 地圖服務（API Key）
   # 使用地圖（MapView）
@@ -46,6 +85,12 @@
   # 結合地圖與定位功能（MyLocationOverlay）
   # 為地圖標上地標（ItemizedOverlay）
 
+=== 附錄 ===
+
+==== 資源 ====
+  # [AndroidResource Android 相關資源] (相關資源)
+  # [GetSource 取得原始碼]
+
 = 當前版本 =
 
-0.6（全部章節文稿完成）
+0.7 alpha2（加入圖例、排版）
