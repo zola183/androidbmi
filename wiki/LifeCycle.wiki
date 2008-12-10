@@ -2,6 +2,10 @@
 #labels tw,lifecycle
 
 {{{
+本章敘述僅符合 SDK 0.9, SDK 1.0 將 OnFreeze Stat 拿掉了
+}}}
+
+{{{
 維護一個 Activity 的生命週期非常重要，因為 Activity 隨時會被系統回收掉。
 }}}
 
