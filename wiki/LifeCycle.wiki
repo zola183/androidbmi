@@ -2,10 +2,6 @@
 #labels tw,lifecycle
 
 {{{
-本章敘述僅符合 SDK 0.9, SDK 1.0 將 OnFreeze Stat 拿掉了
-}}}
-
-{{{
 維護一個 Activity 的生命週期非常重要，因為 Activity 隨時會被系統回收掉。
 }}}
 
@@ -31,7 +27,7 @@ Android 應用程式的生命週期是由 Android 系統平台 (準確的說是�
 
 通常，每一個應用程式（入口一般會是一個 Activity 的 onCreate 方法），都會佔據一個行程(Process)。當系統記憶體即將不足的時候，會依照優先級自動進行行程(process)的回收。不管是使用者或開發者，都無法確定的應用程式何時會被回收。
 
-一個 Activity 類別除了 OnCreate 函式之外，還預先定義了 OnFreeze (凍結行程時的行為)、OnPause(暫停行程時的行為)、OnResume(繼續行程時的行為)等等的基本行為，當從一個 Activity 切換到另一個 Activity 的時候，原本的 Activity 將經過一連串的狀態改變。開發者可以在程式中添加一些各狀態相對應的流程，每次 Activity 改變狀態時，就會執行相對應的流程。
+一個 Activity 類別除了 OnCreate 函式之外，還預先定義了 OnPause(暫停行程時的行為)、OnResume(繼續行程時的行為)等等的基本行為，當從一個 Activity 切換到另一個 Activity 的時候，原本的 Activity 將經過一連串的狀態改變。開發者可以在程式中添加一些各狀態相對應的流程，每次 Activity 改變狀態時，就會執行相對應的流程。
 
 要讓使用者有好的使用經驗，Activity 需要在各個週期點上負責保管狀態、恢復狀態、傳送資料等工作。
 
@@ -114,12 +110,6 @@ public class Bmi extends Activity {
         Log.v(TAG,"onResume");
     }
     
-    public void onFreeze(Bundle outState)
-    {
-        super.onFreeze(outState);
-        Log.v(TAG,"onFreeze");
-    }
-    
     public void onPause()
     {
         super.onPause();
@@ -151,24 +141,22 @@ public class Bmi extends Activity {
 
 我們為 Activity 的各個狀態加入了「Log」記錄訊息。當模擬器運行時，我們可以透過 「LogCat」工具來查看 Activity 所處在的狀態。
 
-上面的八個狀態又可以兩兩一數，歸納成四對：
+上面的七個狀態又可以歸納成三組：
 
 1. 資源分配 (Create/Destroy)
 
 完整的 Activity 生命週期由「Create」狀態開始，由「Destroy」狀態結束。
 建立(Create)時分配資源，銷毀(Destroy)時釋放資源。
 
-2. 可見與不可見(Start/Stop)
+2. 可見與不可見(Start/ReStart/Stop)
 
 當 Activity 運行到「Start」狀態時，就可以在螢幕上看到這個 Activity。相反地，當Activity 運行到「Stop」狀態時，這個 Activity 就會從螢幕上消失。
+
+當使用者按下 Back 按鈕回到上一個 Activity 時，會先到 Restart 狀態，再到一般的 Start 狀態。
 
 3. 使用者能否直接存取螢幕（Resume/Pause）
 
 當有個 Toast、AlertDialog、簡訊、電話等訊息亂入時，原來的 Activity 會進入「Pause」狀態，暫時放棄直接存取螢幕的能力，被中斷到背景去，將前景交給優先級高的事件。當這些優先級高的事件處理完後，Activity 就改進入「Resume」狀態，此時又直接存取螢幕。
-
-4. 相依狀態 ReStart/Freeze
-
-當 Activity 呼叫另一個 Activity，預備交出直接存取螢幕的能力（Pause 狀態）前，會先進入「Freeze」狀態。
 
 == Activity 運作流程 ==
 
@@ -190,7 +178,7 @@ onFreeze(1) -> onPause(1) -> onCreate(2) -> onStart(2) - onResume(2) -> onStop(1
 
 === 回原 Activity ===
 {{{
-onPause(2) -> onStart(1) -> onRestart(1) -> onResume(1) -> onStop(2) -> onDestroy(2)
+onPause(2) -> onRestart(1) -> onStart(1) -> onResume(1) -> onStop(2) -> onDestroy(2)
 }}}
 
 點 Back 按鈕可以回到原本的 Activity。
