@@ -68,10 +68,10 @@ Eclipse 3.4 版:
 找到螢幕上方的選單列， 選擇 「Help->Software Updates」 選項，這選項會帶出一個新視窗。
 選擇「Available Software」標籤，選擇右方的 「Add Site...」 (新增網站)按鈕，會彈出一個輸入框。
 
-在輸入框中的"Location"欄位中輸入網址(URL) 「https://dl-ssl.google.com/android/eclipse/ 」，
+在輸入框中的"Location"欄位中輸入網址(URL) 「https://dl-ssl.google.com/android/eclipse」，
 按下 "OK" 按鈕離開。Eclipse 會花一點時間尋找合適的版本。
 
-在視窗中全選「https://dl-ssl.google.com/android/eclipse/ 」的選項後，按下右方的「Install」按鈕。
+在視窗中全選「https://dl-ssl.google.com/android/eclipse」的選項後，按下右方的「Install」按鈕。
 
 按下 「Next」 (下一步)鍵。照著步驟就安裝完成。安裝完會提示需重新啟動 Eclipse，按下 「Yes」 重新啟動。
 
@@ -83,7 +83,7 @@ Eclipse 3.3 版:
 
 選擇右上角的 「New Remote Site」 (新增遠端網站)按鈕，會彈出一個 「New Update Site」 (新增更新網站)輸入框。
 
-在輸入框中輸入擴充套件的名稱(Name) 「ADT」 跟網址(URL) 「https://dl-ssl.google.com/android/eclipse/ 」，按下 「OK」 按鈕離開。
+在輸入框中輸入擴充套件的名稱(Name) 「ADT」 跟網址(URL) 「https://dl-ssl.google.com/android/eclipse」，按下 「OK」 按鈕離開。
 
 按下 「Finish」 按紐繼續下一步。Eclipse 會花一點時間尋找合適的版本。
 
