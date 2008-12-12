@@ -60,7 +60,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
   # [AndroidDebug 記錄與偵錯 (Log)]
   # [LifeCycle 活動的生命週期]
   # [AndroidPreference 儲存資訊(Preference)](BMI7)
-  # [AndroidMarket 發佈到 Android 市場(Market)] 
+  # [AndroidMarket 發佈到 Android 市集(Market)] 
   # [NeverEnd 開發不息]
 
 === 附錄 ===
