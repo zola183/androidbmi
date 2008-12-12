@@ -1,4 +1,4 @@
-#summary 發佈到市場(Market)
+#summary 發佈到市集(Market)
 #labels tw,market
 
 = Android Market =
@@ -9,7 +9,7 @@
   # 自己提供程式線上下載
   # 發佈到第三方 Android 應用程式下載網站
 
-「Android Market (市場)」是一個「Android」官方(Google)提供的「Android」應用程式下載網站，同時也內建於所有的「Android」手機中。透過手機上的「Market」程式，使用者可以直接在「Android」手機上瀏覽「Android Market」網站，查看各種可供使用的應用程式。看到喜歡的程式可以直接下載安裝。也可以透過「Android Market」為這些軟體打分、或是交換對這些軟體的意見。
+「Android Market (市集)」是一個「Android」官方(Google)提供的「Android」應用程式下載網站，同時也內建於所有的「Android」手機中。透過手機上的「Market」程式，使用者可以直接在「Android」手機上瀏覽「Android Market」網站，查看各種可供使用的應用程式。看到喜歡的程式可以直接下載安裝。也可以透過「Android Market」為這些軟體打分、或是交換對這些軟體的意見。
 
 我們也可以將寫好的應用程式放在自己的網站上提供下載，或是透過其他的「Android」應用程式下載網站發佈。但是，還有哪個地方會比官方的「Android Market」更容易吸引使用者造訪呢？所以我們將主要介紹如何將應用程式發佈到官方「Android Market」上。
 
