@@ -2,7 +2,7 @@
 #labels tw,Intent
 
 {{{
-Intent 是一個動作與內容的集合。Intent 就是傳送到系統，意圖靠其他 Activity 來處理的動作跟內容。
+Intent 是一個動作與內容的集合。Intent 像是一串網址，傳送到系統並意圖靠其他 Activity 來處理網址中所指定的動作跟內容。
 }}}
 
 前一章中，我們已學過獨立的 Activity。Android 使用 Intent 來完成在螢幕間切換的動作。Intent 包含 Activity 間切換所需的動作、分類、傳送資料等訊息，就像是 Activity 之間的宅急便一樣。
