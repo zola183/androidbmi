@@ -31,10 +31,26 @@ BMI 身高體重指數計算(公制)
 
 svn checkout http://androidbmi.googlecode.com/svn/trunk/gBMI gBMI
 
-DummyNote：筆記本程式
+=== DummyNote ===
 
 「資料庫應用」主題所使用的範例
 
-twTrainStation：台灣車站巡禮
+筆記本程式
+
+svn checkout http://androidbmi.googlecode.com/svn/trunk/DummyNote DummyNote
+
+=== twTrainStation ===
 
 「地圖與定位」主題所使用的範例
+
+svn checkout http://androidbmi.googlecode.com/svn/trunk/twTrainStation twTrainStation
+
+台灣車站周邊地圖
+
+=== MyLocation ===
+
+「地圖與定位」主題所使用的範例
+
+自動定位範例
+
+svn checkout http://androidbmi.googlecode.com/svn/trunk/MyLocation MyLocation
