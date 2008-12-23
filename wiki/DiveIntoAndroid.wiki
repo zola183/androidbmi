@@ -17,7 +17,9 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 作者 =
 
-  * gasolin，項目發起人，也是本書的主筆。你可以寫信至 gasolin+android -at- gmail.com 聯絡作者。最近的作品有 [http://bbs.cool3c.com/article/1795 aTrackDog]，在 Market 上架三天，下載數破2萬。
+  * gasolin，項目發起人，也是本書的主筆。你可以寫信至 gasolin+android -at- gmail.com 聯絡作者。
+
+作者最近的作品有 [http://bbs.cool3c.com/article/1795 aTrackDog]，在 Android Market 上架三天，下載數破2萬。
 
 = 致謝 =
 
