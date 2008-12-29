@@ -28,6 +28,8 @@
 
 函式庫
   * ZXing - Barcode reader http://code.google.com/p/zxing/
+  * Eyes Free - TTS http://code.google.com/p/eyes-free/
+  * Android XML-RPC - http://code.google.com/p/android-xmlrpc/
 
 Gears
   * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
