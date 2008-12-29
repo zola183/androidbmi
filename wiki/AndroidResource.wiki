@@ -17,6 +17,7 @@
  
 書籍
   * [http://androidcore.com/index.php?option=com_content&view=category&layout=blog&id=53&Itemid=100&limitstart=5 Android 書籍列表]
+  * [http://java.sun.com/docs/books/tutorial/ java 語言教學] (原文)
   
 工具
   * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
