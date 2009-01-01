@@ -86,6 +86,7 @@ Uri uri = Uri.parse("http://androidbmi.googlecode.com/");
 }}}
 建立一個 Uri 實體，裡面包含我們要連到的網址「http://androidbmi.googlecode.com/」。
 
+在我們第一次在程式碼中加入「Uri」時敘述時，「Uri」下方會出現紅色的線，表示「Uri」可能是個需要由外部導入（import）的函式或類別。在「Eclispe」開發環境中，我們可以使用「ctrl-shift-O」（Windows）或「cmd-shift-O」（Mac）來自動在程式開頭的地方導入「android.net.Uri」函式庫。
 
 {{{
 startActivity(intent);
