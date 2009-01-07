@@ -171,9 +171,9 @@ onCreate -> onStart -> onResume
 
 === 呼叫另一個 Activity ===
 {{{
-onFreeze(1) -> onPause(1) -> onCreate(2) -> onStart(2) - onResume(2) -> onStop(1)
+onPause(1) -> onCreate(2) -> onStart(2) - onResume(2) -> onStop(1)
 }}}
-這是個先凍結原本的 Activity，再交出直接存取螢幕能力（Pause 狀態）的過程。
+這是個先暫停原本的 Activity，交出直接存取螢幕能力（Pause 狀態）的過程。
 直到 Activity 2 完成一般啟動流程後，Activity 1 才會被停止。
 
 === 回原 Activity ===
