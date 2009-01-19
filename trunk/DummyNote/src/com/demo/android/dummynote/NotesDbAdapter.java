@@ -82,7 +82,7 @@ public class NotesDbAdapter {
 	//retrieve
 	public Cursor getall() {
 		try {
-			return db.rawQuery("SELECT * from notes", null);
+			return db.rawQuery("SELECT * FROM notes", null);
 			/*return db.query(DATABASE_TABLE,
 				new String[] {KEY_ROWID, KEY_NOTE, KEY_CREATED},
 				null, null, null, null, null);*/
