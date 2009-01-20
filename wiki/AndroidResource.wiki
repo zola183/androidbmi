@@ -41,6 +41,7 @@ Gears
   * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
   
 免費圖示
+  * [http://www.screaming-penguin.com/info/android_drawables/android_drawables.html Android 內建圖示清單]
   * [http://tango.freedesktop.org/Tango_Icon_Library Tango]
   * [http://www.icon-king.com/projects/nuvola/ Nuvola]
   * http://openclipart.org/
