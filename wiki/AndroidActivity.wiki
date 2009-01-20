@@ -88,8 +88,8 @@
 6   public class Report extends Activity {
 7	 /** Called when the activity is first created. */
 8	 @Override
-9	 public void onCreate(Bundle icicle) {
-10		 super.onCreate(icicle);
+9	 public void onCreate(Bundle savedInstanceState) {
+10		 super.onCreate(savedInstanceState);
 11		 setContentView(R.layout.report);
 12	 }
 13 }
