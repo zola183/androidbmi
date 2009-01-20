@@ -84,8 +84,8 @@ Bundle 型別額外提供了很多 API。在傳送 Intent 時，使用 Bundle �
 10 public class Report extends Activity {
 11	 /** Called when the activity is first created. */
 12 @Override
-13	 public void onCreate(Bundle icicle) {
-14		 super.onCreate(icicle);
+13	 public void onCreate(Bundle savedInstanceState) {
+14		 super.onCreate(savedInstanceState);
 15		 setContentView(R.layout.report);
 16		 findViews();
 17		 showResults();
