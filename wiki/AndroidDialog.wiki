@@ -125,9 +125,6 @@ private void openOptionsDialog() {
 
 {{{
 	private void openOptionsDialog() {
-		Log.d(TAG, "open Dialog");
-		//Toast.makeText(this, "BMI 計算器", Toast.LENGTH_SHORT).show();
-		//View view = getLayoutInflater().inflate(R.layout.about, null, true);
 		new AlertDialog.Builder(this)
 		.setTitle(R.string.about_title)//.setView(view)
 		.setMessage(R.string.about_msg)
