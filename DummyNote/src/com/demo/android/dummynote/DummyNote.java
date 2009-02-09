@@ -15,7 +15,10 @@ public class DummyNote extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.main);
+        setContentView(R.layout.main);
+        //Tell the list view which view to display when the list is empty
+        getListView().setEmptyView(findViewById(R.id.empty));
+
         setAdapter();    
     }
     
