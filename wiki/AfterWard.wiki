@@ -86,9 +86,8 @@
 
 === 附錄 ===
 
-  A. 後記
-
-  B. [GetSource 取得原始碼]
+  # 後記
+  # [GetSource 取得原始碼]
 
 ==== 資源 ====
   # [AndroidResource Android 相關資源] (相關資源)
