@@ -6,7 +6,6 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 public class MyLocation extends Activity implements LocationListener{
@@ -29,9 +28,9 @@ public class MyLocation extends Activity implements LocationListener{
     	//if(location.toString()!=null){
     	StringBuffer msg = new StringBuffer();
     	msg.append("Latitude: ");
-    	msg.append(location.getLatitude());
+    	msg.append(Double.toString(location.getLatitude()));
     	msg.append(", Longitude: ");
-    	msg.append(location.getLongitude());
+    	msg.append(Double.toString(location.getLongitude()));
     	Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     	//}
     }
