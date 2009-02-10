@@ -126,7 +126,7 @@ private void openOptionsDialog() {
 {{{
 	private void openOptionsDialog() {
 		new AlertDialog.Builder(this)
-		.setTitle(R.string.about_title)//.setView(view)
+		.setTitle(R.string.about_title)
 		.setMessage(R.string.about_msg)
 		.setPositiveButton(R.string.ok_label,
 				new DialogInterface.OnClickListener(){
