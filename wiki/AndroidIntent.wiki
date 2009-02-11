@@ -121,8 +121,8 @@ Bundle 型別額外提供了很多 API。在傳送 Intent 時，使用 Bundle �
 47     DecimalFormat nf = new DecimalFormat("0.00");
 48
 49     Bundle bunde = this.getIntent().getExtras();
-50    	 double height = Double.parseDouble(bunde.getString("KEY_HEIGHT"))/100;
-51    	 double weight = Double.parseDouble(bunde.getString("KEY_WEIGHT"));
+50    	double height = Double.parseDouble(bunde.getString("KEY_HEIGHT"))/100;
+51    	double weight = Double.parseDouble(bunde.getString("KEY_WEIGHT"));
 52     double BMI = weight / (height * height);
 53     view_result.setText(getString(R.string.bmi_result) +nf.format(BMI));
 54        
