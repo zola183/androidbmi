@@ -158,6 +158,7 @@ public class Bmi extends Activity {
 	@Override
 	protected void onStop(){
 		super.onStop();
+		Log.v(TAG,"onStop");
 		Log.d(TAG, "save Pref");
 		// Save user preferences. We need an Editor object to
 		// make changes. All objects are from android.context.Context
@@ -170,4 +171,26 @@ public class Bmi extends Activity {
 			.putString(PREF_HEIGHT, field_height.getText().toString())
 			.commit();
 	}
+    public void onStart()
+    {
+        super.onStart();
+        Log.v(TAG,"onStart");
+    }
+    public void onResume()
+    {
+        super.onResume();
+        Log.v(TAG,"onResume");
+    }
+
+    public void onPause()
+    {
+        super.onPause();
+        Log.v(TAG,"onPause");
+    }
+    
+    public void onRestart()
+    {
+        super.onRestart();
+        Log.v(TAG,"onReStart");
+    }
 }
