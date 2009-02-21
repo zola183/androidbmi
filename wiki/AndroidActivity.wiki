@@ -208,7 +208,7 @@ intent.setClass(Bmi.this, Report.class);
 startActivity(intent);
 }}}
 
-將定義好的 intent 傳入「startActivity」函式中。「startActivity」函式會將 intent 傳入 Dalvik 虛擬機，Dalvik 虛擬機會根據各應用程式在系統中註冊的資料(有沒有聯想到我們剛剛為 Report Activity 增加的 activity 清單描述?)，找出 Report 這個 Activity，並呼叫它。
+將定義好的 intent 傳入「startActivity」函式中。「startActivity」函式會將 intent 傳入 Android 框架，Android 框架會根據各應用程式在系統中註冊的資料(有沒有聯想到我們剛剛為 Report Activity 增加的 activity 清單描述?)，找出 Report 這個 Activity，並呼叫它。
 
 搞懂之後，原來呼叫一個獨立的 Activity，所需的功夫其實很單純呀。
 
