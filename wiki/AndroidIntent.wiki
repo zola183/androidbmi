@@ -45,7 +45,7 @@ intent.setClass(Bmi.this, Report.class);
 startActivity(intent);
 }}}
 
-是的，如果你真的有學懂上一章的內容，那麼你可能會發現：我們準備講解的這段程式碼主體，與上一章中所提到的程式碼其實一模一樣。這段程式碼的作用是透過 Intent 通知系統(Dalvik 虛擬機)：我們將要從 Bmi Activity 這個頁面（輸入頁面）前往 Report Activity 頁面（結果頁面）。如果把我們多加的用來附加資料的程式碼拿掉，這段程式碼即原來獨立的 Activity 的程式碼。
+是的，如果你真的有學懂上一章的內容，那麼你可能會發現：我們準備講解的這段程式碼主體，與上一章中所提到的程式碼其實一模一樣。這段程式碼的作用是透過 Intent 通知系統(Android 框架)：我們將要從 Bmi Activity 這個頁面（輸入頁面）前往 Report Activity 頁面（結果頁面）。如果把我們多加的用來附加資料的程式碼拿掉，這段程式碼即原來獨立的 Activity 的程式碼。
 
 {{{
 Bundle bundle = new Bundle();
@@ -63,7 +63,7 @@ bundle.putString("KEY_WEIGHT", field_weight.getText().toString());
 }}}
 
 這段程式是實際用來附加資料的程式碼。將使用者輸入的身高、體重值，儲存到 bundle 物件中。
-Bundle 其實是一種特別定義的映射(map)型別。「KEY_HEIGHT」、「KEY_WEIGHT」是我們為儲存在 bundle 物件中的身高、體重值，所指定的「識別符號」。在這邊，我們直接把身高、體重值都儲存成字串。因為整個程式都是我們控制，到時候在接收的 Activity 一端，再透過「KEY_HEIGHT」、「KEY_WEIGHT」這兩個「識別符號」來取得實際的身高、體重值。讀出的值也是字串，等值讀出來以後，再去做型別轉換就好了。當然你也可以直接把身高、體重值存成數字。
+Bundle 其實是一種特別定義的映射（map）型別。「KEY_HEIGHT」、「KEY_WEIGHT」是我們為儲存在 bundle 物件中的身高、體重值，所指定的「識別符號」。在這邊，我們直接把身高、體重值都儲存成字串。因為整個程式都是我們控制，到時候在接收的 Activity 一端，再透過「KEY_HEIGHT」、「KEY_WEIGHT」這兩個「識別符號」來取得實際的身高、體重值。讀出的值也是字串，等值讀出來以後，再去做型別轉換就好了。當然你也可以直接把身高、體重值存成數字。
 
 Bundle 型別額外提供了很多 API。在傳送 Intent 時，使用 Bundle 型別的物件來攜帶資料，相當方便。
 
