@@ -14,6 +14,7 @@
 	    android:layout_height="wrap_content" 
 	    android:numeric="integer"
 	    android:text=""
+	    android:singleLine="true"
 	    />
 	<TextView 
 	    android:layout_width="fill_parent" 

@@ -1,12 +1,16 @@
 package com.gasolin.android.gbmi;
 
 import java.text.DecimalFormat;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +26,12 @@ public class Gbmi extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = Locale.TRADITIONAL_CHINESE;
+        res.updateConfiguration(conf, dm);*/
+        
         setContentView(R.layout.main);
         findViews();
         setListensers();
