@@ -7,9 +7,9 @@
 
 隨著本書電子書的入門、基礎、中階部分寫作告一段落，花了將近一年時間。可以說已經完成我對本書預期達到的目標。當然我自己也會以本書的觀念為基礎，繼續學習 Android 平台的各種應用。
 
-本書的擴展版本以「Google! Android 應用程式設計入門」為名出版，作者為蓋索林（gasolin）。
+本書的擴展版本以「*Google! Android 應用程式設計入門*」為名出版，作者為蓋索林（gasolin）。
 
-可至 [http://www.books.com.tw/exep/prod/booksfile.php?item=0010429598 博客來] 線上預購.
+*可至 [http://www.books.com.tw/exep/prod/booksfile.php?item=0010429598 博客來] 線上預購*
 
 除了更精鍊原有的內容之外，也為各章附上圖片說明、基本概念（如 MVC 模式）介紹、並加入資料庫應用、地圖應用等後續章節內容。協助讀者以最快捷的方式入門 Android 平台，並應用其中最常見的功能。
 
@@ -99,7 +99,7 @@
 
 = 歷程記錄 =
 
-  * 2009/3/10 可至 [http://www.books.com.tw/exep/prod/booksfile.php?item=0010429598 博客來] 線上預購 
+  * 2009/3/19 出版，可至 [http://www.books.com.tw/exep/prod/booksfile.php?item=0010429598 博客來] 線上預購 
   * 2009/3/4 封面設計完成 
   * 2009/2/26 送輸出
   * 2009/2/20 取得推薦序
