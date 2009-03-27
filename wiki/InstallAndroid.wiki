@@ -110,7 +110,7 @@ Eclipse 3.3 版:
 
 == 參考資料 ==
 安裝擴充套件
-http://developer.android.com/sdk/1.1_r1/installing.html
+http://developer.android.com/guide/developing/tools/adt.html
 
 
 < [IntroAndroid 初探 Android] | [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案] >
