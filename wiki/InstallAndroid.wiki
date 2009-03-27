@@ -94,7 +94,7 @@ Eclipse 3.3 版:
 
 == 4. 下載 Android SDK ==
 
-接著我們要從 [http://code.google.com/android/download.html Android 官方網站]下載 「Android 軟體開發套件」 (Software Development Kit, SDK)。
+接著我們要從 [ http://developer.android.com/ Android 官方網站]下載 「Android 軟體開發套件」 (Software Development Kit, SDK)。
 下載下來的 SDK 檔案需要先解壓縮。Windows 平台需要先另行安裝解壓縮程式，如免費的 [http://www.7-zip.org/zh-tw/ 7-zip] 解壓縮工具。
 解壓縮後會出現一個資料夾。為了之後描述方便，我們將解壓縮後的 Android SDK 檔案夾命名為「android_sdk」。
     
@@ -110,7 +110,7 @@ Eclipse 3.3 版:
 
 == 參考資料 ==
 安裝擴充套件
-http://code.google.com/android/intro/installing.html#installingplugin
+http://developer.android.com/sdk/1.1_r1/installing.html
 
 
 < [IntroAndroid 初探 Android] | [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案] >
