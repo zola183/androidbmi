@@ -75,7 +75,7 @@ public class Bmi extends Activity {
 SharedPreferences settings = getSharedPreferences(PREF, 0);
 }}}
 
-我們宣告了一個偏好設定（SharedPreferences）型別「settings」，並使用「getSharedPreferences」函式，來尋找系統中有無已定義過並使用「BMI_PREF」字串（PREF）作為識別代號的偏好設定物件。如果有符合條件的偏好設定物件存在的話，就將這個偏好設定指定使用「settings」作為代號來操作。如果沒有的話，「getSharedPreferences」函式會回傳 0 給「settings」。
+我們宣告了一個偏好設定（SharedPreferences）型別「settings」，並使用「getSharedPreferences」函式，來尋找系統中有無已定義過，並使用「BMI_PREF」字串（PREF 參數）作為識別代號的偏好設定物件。如果有符合條件的偏好設定物件存在的話，就將這個偏好設定指定使用「settings」作為代號來操作。如果沒有的話，「getSharedPreferences」函式會回傳 0 給「settings」。
 
 {{{
     String pref_height = settings.getString(PREF_HEIGHT, "");
@@ -122,7 +122,7 @@ field_weight.requestFocus();
 SharedPreferences settings = getSharedPreferences(PREF, 0);
 }}}
 
-我們宣告了一個偏好設定(SharedPreferences)型別「settings」，並使用「getSharedPreferences」函式來尋找系統中有無已定義的「PREF」偏好設定參數。如果存在的話，就傳給「settings」。如果沒有的話，就傳 0 給「settings」。
+我們宣告了一個偏好設定（SharedPreferences）型別「settings」，並使用「getSharedPreferences」函式，來尋找系統中有無已定義過，並使用「BMI_PREF」字串（PREF 參數）作為識別代號的偏好設定物件。如果有符合條件的偏好設定物件存在的話，就將這個偏好設定指定使用「settings」作為代號來操作。如果沒有的話，「getSharedPreferences」函式會回傳 0 給「settings」。
 
 {{{
     settings.edit()
