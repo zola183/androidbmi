@@ -204,7 +204,7 @@ onPause -> onStop -> onDestroy
 
 如果應該開啟的 Activity 已經被回收了，那麼這個 Activity 會再次被建立（Create）出來。再次被建立出來的 Activity，當然會跟原本我們開啟過的 Activity 不一樣啦。
 
-所以如果要讓再次被建立出來的 Activity 看起來跟原本開啟過的一樣，那麼在 Activity 之間切換時，我們就要留意保留資料：最好在每次 Activity 運行到「onStop」狀態時先保存資料，然後在「onCreate」時將資料讀出來。
+所以如果要讓再次被建立出來的 Activity 看起來跟原本開啟過的一樣，那麼在 Activity 之間切換時，我們就要留意保留資料：最好在每次 Activity 運行到「onPause」或「onStop」狀態時先保存資料，然後在「onCreate」時將資料讀出來。
 
 我們可以使用下章介紹到的「Preference」（偏好設定）等方法來記錄之前運作時的資料或設定。 
 
