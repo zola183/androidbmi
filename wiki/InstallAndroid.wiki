@@ -28,8 +28,8 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
     * **ADT**，基於 Eclipse 的 Android 開發工具擴充套件 (Android Development Tools plugin)。
     * **Android SDK**，Android 程式開發套件，包含 Android 手機模擬器(Emulator)。
     * 其他開發環境工具（非必要安裝）
-          o Linux 和 Mac 環境上需要自動編譯的話可以自行安裝 Apache Ant 1.6.5 或之後版本，Windows 環境上則需要 Apache Ant 1.7 或之後版本。
-          o NetBeans、IDEA 等開發平台亦有推出自己的 Android 開發工具，但本書中還是以討論官方基於 Eclipse 平台的開發工具為準，其他平台不予涉及。
+         o Linux 和 Mac 環境上需要自動編譯的話可以自行安裝 Apache Ant 1.6.5 或之後版本，Windows 環境上則需要 Apache Ant 1.7 或之後版本。
+         o NetBeans、IDEA 等開發平台亦有推出自己的 Android 開發工具，但本書中還是以討論官方基於 Eclipse 平台的開發工具為準，其他平台不予涉及。
 
 = 安裝流程 =
 
@@ -109,8 +109,9 @@ Eclipse 3.3 版:
 我們先來看看 Android SDK 中提供的一些範例，好了解 Android 到底能做些什麼。
 
 == 參考資料 ==
-安裝擴充套件
-http://developer.android.com/guide/developing/tools/adt.html
+
+* Eclipse 網站 http://www.eclipse.org/downloads/ 
+* 安裝擴充套件 http://developer.android.com/guide/developing/tools/adt.html
 
 
 < [IntroAndroid 初探 Android] | [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案] >
