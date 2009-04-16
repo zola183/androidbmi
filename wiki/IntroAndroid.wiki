@@ -74,7 +74,7 @@ Android 在 Linux 核心的基礎上，提供了各種合用的函式庫，和�
  * 開放手持裝置聯盟(Open Handset Alliance) http://www.openhandsetalliance.com/
  * Google Android 開發者部落格 http://android-developers.blogspot.com/
  * Android 開發者大賽網站 http://code.google.com/android/adc.html
- * Android 文件 http://code.google.com/android/documentation.html
+ * Android 文件 http://developer.android.com/
  * http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html
  * CNet專訪：Google手機平台背後的原創者 http://www.zdnet.com.tw/news/comm/0,2000085675,20125898,00.htm
  * Android 原始碼網站 http://source.android.com
