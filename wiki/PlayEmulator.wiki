@@ -3,7 +3,60 @@
 
 = 使用 Android 模擬器 =
 
-我們已經開啟了 ApiDemos 專案。現在先不忙著開始寫程式，我們花點時間，來看看怎麼執行一個 Android 程式吧。
+我們已經透過「Eclipse」開發環境，開啟了「ApiDemos」專案。本章將講解如何設定和操作 Android 模擬器。
+
+== 設定 Android 模擬器 ==
+
+現在我們還不忙著開始寫程式，先花點時間，來看看怎麼在開發環境中，透過「Android 模擬器」來執行應用程式吧。
+
+「Android 軟體開發套件」（SDK） 1.5 以上的版本提供了支援不同版本模擬器的功能，在使用模擬器之前，必須先建立一個模擬器後才可在 Eclipse 開發環境中使用。
+
+SDK 中提供了一個「android」命令行工具（在 android-sdk/tools 中），可以用來建立新專案或是管理模擬器。我們來使用「android」命令行工具來新建立一個模擬器。
+
+在新的 Android 文件中，一律把 Android 模擬器稱作「Android 虛擬機器」（Android Virtual Device），簡寫為「AVD」以作區別。
+
+=== 列出模擬器類型 ===
+
+首先，把「android-sdk/tools 」目錄加入系統路徑，我們以後就可以在任何地方使用「android-sdk/tools 」目錄下的各種命令。
+
+或是直接打開命令行，進入「android-sdk/tools 」目錄，輸入以下命令：
+
+{{{
+$ android list targets
+}}}
+
+螢幕上會列出所有支援的模擬器類型
+
+{{{
+$ android list targets
+Available Android targets:
+id: 1
+     Name: Android 1.1
+     Type: Platform
+     API level: 2
+     Skins: HVGA (default), HVGA-L, HVGA-P, QVGA-L, QVGA-P
+id: 2
+     Name: Android 1.5
+     Type: Platform
+     API level: 3
+     Skins: HVGA (default), HVGA-L, HVGA-P, QVGA-L, QVGA-P
+id: 3
+     Name: Google APIs
+     Type: Add-On
+     Vendor: Google Inc.
+     Description: Android + Google APIs
+     Based on Android 1.5 (API level 3)
+     Libraries:
+      * com.google.android.maps (maps.jar)
+          API for Google Maps
+     Skins: HVGA (default), HVGA-L, QVGA-P, HVGA-P, QVGA-L
+}}}
+
+在這邊列出了三種模擬器類型。分別是編號(id)為 1、2 的 Android 1.1、1.5 模擬器，與編號(id)為 3 的「Google APIs」，Google 把自己提供的應用程式（如 Google Map）放在「Google APIs」這個模擬器類型中，因此要開發 Google Map 等 Google 專屬應用程式時，就必須先建立編號 3 這類型的模擬器，稍後才能在適當的模擬器上作驗證。
+
+=== 建立模擬器  ===
+
+== 設定環境參數 ==
 
 要執行 ApiDemos 程式前，我們得在開發環境中，事先設定好一些用來執行 ApiDemos 程式的環境參數。
 以後使用其他程式專案時，我們也能用同樣的方式，讓這些程式在我們的開發環境中運行。
@@ -61,7 +114,7 @@
 
 Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-sdk/tools 中)，我們可以用裡面的 shell 工具連上模擬器來移除應用程式。在某些平台上，這些動作可能需要擁有 root 權限才能執行。
 
-首先啟動 adb shell
+首先打開命令列，啟動 adb shell
 {{{
     $ adb shell
 }}}
