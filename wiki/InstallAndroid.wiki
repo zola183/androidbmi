@@ -103,7 +103,7 @@ Eclipse 3.3 版:
 打開偏好設定頁面(Preference)，選擇 Android 標籤(請確認您已安裝好 ADT 擴充套件，Android 標籤才會出現在偏好設定頁面中)，在 SDK Location 欄位按下 " Browse..."鍵，選擇剛剛解壓縮完的「android_sdk」檔案夾所在地，然後按下視窗右下角的套用(Apply) 按鈕。
 這樣一來，Android SDK 就算是設定好啦。
 
-註解：若您安裝過 SDK 1.5 版之前的版本，請先移除後再重新安裝一次 ADT 擴充套件，才能順利設定新版的 Android SDK。 方法是在螢幕上方的選單列，選擇「Help > Software Updates」選項，在彈出的視窗上方點選「Installed Software」頁籤，選擇「Android」開頭的選項，點選右側的「Uninstall..」按鈕移除這些相關的插件。
+    註解：若您安裝過 SDK 1.5 版之前的版本，請先移除後再重新安裝一次 ADT 擴充套件，才能順利設定新版的 Android SDK。 方法是在螢幕上方的選單列，選擇「Help > Software Updates」選項，在彈出的視窗上方點選「Installed Software」頁籤，選擇「Android」開頭的選項，點選右側的「Uninstall..」按鈕移除這些相關的插件。
 
 = 下一步 =
 
