@@ -116,8 +116,8 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
 
 參考資料
 
-* Android manifest http://developer.android.com/reference/android/R.styleable.html#AndroidManifest
-* Intent Action http://developer.android.com/reference/android/content/Intent.html
+  * Android manifest http://developer.android.com/reference/android/R.styleable.html#AndroidManifest
+  * Intent Action http://developer.android.com/reference/android/content/Intent.html
 
 < [AndroidMenu 加入選單] | [DiveIntoAndroid 回目錄] | [AndroidActivity 加入新 Activity] >
 
