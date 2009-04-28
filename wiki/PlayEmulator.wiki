@@ -56,6 +56,45 @@ id: 3
 
 === 建立模擬器  ===
 
+我們現在來建立一個基本的 Android SDK 1.5 模擬器。
+
+在命令行中輸入以下命令：
+
+{{{
+$ android create avd --target 2 --name cupcake
+}}}
+
+這段命令的意思是：使用「android create avd」命令來建立一個新的模擬器，「 --target 2」參數的意思是這個模擬器使用 id 為 2 的模擬器類型（Android 1.5），「--name cupcake」參數的意思是將這個建立的模擬器命名為「cupcake」。
+
+產生的結果如下
+
+{{{
+$ android create avd --target 2 --name cupcake
+Android 1.5 is a basic Android platform.
+Do you wish to create a custom hardware profile [no]
+Created AVD 'cupcake' based on Android 1.5
+}}}
+
+=== 列出已建立的模擬器  ===
+
+我們可以使用 「Android」命令行工具提供的「list avd」命令，來列出所有我們已經建立的模擬器。
+
+在命令行中輸入以下命令：
+{{{
+$ android list avd
+}}}
+產生的結果如下：
+{{{
+$ android list avd
+Available Android Virtual Devices:
+    Name: cupcake
+    Path: /Users/mac/.android/avd/cupcake.avd
+    Target: Android 1.5 (API level 3)
+    Skin: HVGA
+}}}
+
+使用「 android list avd」命令看到有輸出，即表示已成功建立模擬器，可以回到 Eclipse 環境來，設定執行應用程式專案所需的環境參數了。
+
 == 設定環境參數 ==
 
 要執行 ApiDemos 程式前，我們得在開發環境中，事先設定好一些用來執行 ApiDemos 程式的環境參數。
