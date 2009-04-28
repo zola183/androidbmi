@@ -102,7 +102,7 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
 
 「intent-filter」標籤定義了這個「activity」的性質。
 「intent-filter」中主要包含了兩個標籤：「action」跟「category」標籤。
-「action」標籤中的「android:name」屬性，其內容「android.intent.action.MAIN」表示：這個 Activity 是一般類型的 Activity。常見的還有「android.intent.action.EDIT」等標籤，會在之後章節用上的時候講解。「category」標籤中的「android:name」屬性，其內容「android.intent.category.LAUNCHER」表示：開啟這個應用程式時，應先執行這個 Activity。
+「action」標籤中的「android:name」屬性，其內容「android.intent.action.MAIN」表示：這個 Activity 是此應用程式的進入點（就像程式中常見的 main 主程式）。常見的還有「android.intent.action.EDIT」等標籤，會在之後章節用上的時候講解。「category」標籤中的「android:name」屬性，其內容「android.intent.category.LAUNCHER」表示：開啟這個應用程式時，應先執行這個 Activity。
 
 
 我們把整個檔案合到一起看，可以總結出這個檔案所傳達的訊息：在「com.demo.android.bmi」路徑下的「Bmi.java」這個檔案中，已定義了一個主要的 Activity; 當我們打開 Android 的時候，顯示的是位於「res/drawable/icon」的圖示。一旦我們按下圖示來啟動這個應用程式，Dalvik 虛擬機會去尋找到定義了「android.intent.category.LAUNCHER」內容的 「.Bmi」activity，並呼叫執行。
