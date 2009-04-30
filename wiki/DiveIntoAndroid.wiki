@@ -19,7 +19,9 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
   * gasolin，項目發起人，也是本書的主筆。你可以寫信至 gasolin+android -at- gmail.com 聯絡作者。
 
-作者最近的作品有 [http://bbs.cool3c.com/article/1795 aTrackDog] 軟體更新通知程式。在 Android Market 上架三天，下載數即破2萬。
+作者的作品有 [http://bbs.cool3c.com/article/1795 aTrackDog] 軟體更新通知程式。在 Android Market 上架三天，下載數即破2萬。
+
+近期寫的 Anobiit 程式，讓我也成為 [http://code.google.com/p/zxing/source/browse/trunk/AUTHORS zxing(Barcode scanner)] 專案的 Contributor。
 
 = 致謝 =
 
