@@ -33,17 +33,20 @@ BMI值是一個中立而可靠的指標。
 
 || 名稱  || 描述 ||
 || Project Name || 包含這個項目的資料夾的名稱 ||
-|| Package Name || 套件(Package)名稱，JAVA 的習慣是用套件名稱來區分不同的類別(class)。依照專案的不同，我們會起不同的路徑名稱。 ||
-|| Activity Name || 這是項目的主要類別的名稱，這個類別是一個 Android 的 Activity 類別的子類別。一個 Activity 類別是一個簡單的啟動程式和控制程式的類別。它可以根據需要建立界面 ||
 || Application Name || 顯示在應用程式上的標題 ||
+|| Package Name || 套件(Package)名稱，JAVA 的習慣是用套件名稱來區分不同的類別(class)。依照專案的不同，我們會起不同的路徑名稱。 ||
+|| Create Activity || 使否建立這個是項目的主要類別，勾選後可以指定這個類別的名稱。這個類別是一個 Activity 類別的子類別。我們可以在「Activity」中啟動程式和控制程式流程，或是根據需要控制螢幕、界面。 ||
+|| Build Target ||	選擇用來編譯專案的 SDK 版本。 根據選擇的不同，會在 Min SDK Version 欄位中自動填入對應的值||
+|| Min SDK Version || 本應用程式所支援的最低 SDK 版本代號。 ||
 
 我們在欄位中分別填入以下的值：
 
 || 名稱  || 值 ||
 || Project Name || BMI ||
-|| Package Name || com.demo.android.bmi ||
-|| Activity Name || Bmi ||
 || Application Name || BMI ||
+|| Package Name || com.demo.android.bmi ||
+|| Create  Activity || Bmi ||
+|| Min SDK Version || 3（自動填入）||
 
 填好值後按下「Finish」 按鈕，就建立好新專案了。
 
