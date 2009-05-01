@@ -71,7 +71,7 @@ Eclipse 3.4 版:
 在輸入框中的"Location"欄位中輸入網址(URL) 「http://dl-ssl.google.com/android/eclipse/site.xml 」，
 按下 "OK" 按鈕離開。Eclipse 會花一點時間尋找合適的版本。
 
-在視窗中全選「 https://dl-ssl.google.com/android/eclipse/site.xml 」的選項後，按下右方的「Install」按鈕。
+在視窗中全選「 https://dl-ssl.google.com/android/eclipse/site.xml 」項目「Developer Tools」中的的選項後，按下右方的「Install」按鈕。
 
 按下 「Next」 (下一步)鍵。照著步驟就安裝完成。安裝完會提示需重新啟動 Eclipse，按下 「Yes」 重新啟動。
 
