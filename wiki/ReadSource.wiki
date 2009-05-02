@@ -36,7 +36,7 @@ BMI值是一個中立而可靠的指標。
 || Application Name || 顯示在應用程式上的標題 ||
 || Package Name || 套件(Package)名稱，JAVA 的習慣是用套件名稱來區分不同的類別(class)。依照專案的不同，我們會起不同的路徑名稱。 ||
 || Create Activity || 使否建立這個是項目的主要類別，勾選後可以指定這個類別的名稱。這個類別是一個 Activity 類別的子類別。我們可以在「Activity」中啟動程式和控制程式流程，或是根據需要控制螢幕、界面。 ||
-|| Build Target ||	選擇用來編譯專案的 SDK 版本。 根據選擇的不同，會在 Min SDK Version 欄位中自動填入對應的值||
+|| Build Target ||	選擇用來編譯專案的 SDK 版本。 當選定了 Build Target 後，開發工具會在 Min SDK Version 欄位中自動填入對應的值||
 || Min SDK Version || 本應用程式所支援的最低 SDK 版本代號。 ||
 
 我們在欄位中分別填入以下的值：
