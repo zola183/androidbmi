@@ -9,11 +9,11 @@
 
 我們可以先用前幾章教的方法設定並執行模擬器，看看模擬器運作後的結果：
 
- 我們看到一個文字欄位，上面有一串文字 「Hello World, Bmi」。這就是 Android 預設程式架構的範例囉。
+ 我們看到一個文字欄位，上面有一串文字 「Hello World, Bmi!」。這就是 Android 預設程式架構的範例囉。
 
-由於才剛開始實際接觸到 Android 應用程式，我們先從簡單的開始：這一節中，我們的目標是將 「Hello World, Bmi」 換成別的文字。
+由於才剛開始實際接觸到 Android 應用程式，我們先從簡單的開始：這一節中，我們的目標是將 「Hello World, Bmi!」 換成別的文字。
 
-那麼，「Hello World, Bmi」，這串字串藏在哪裡呢？
+那麼，「Hello World, Bmi!」，這串字串藏在哪裡呢？
 
 先打開 「res/layout/main.xml」
 {{{
@@ -31,7 +31,18 @@
     12 </LinearLayout>
 }}}
 
-原來 「Hello World, Bmi」 字串就藏在 「res/layout/main.xml」 這個檔案的第 10 行中，我們只要簡單第將之修改成 「哈囉，BMI」，再執行一次模擬器，就可以得到一個相似的應用程式，只是內文變成了我們剛剛修改的內容。
+原來「Hello World, Bmi!」字串就藏在「res/layout/main.xml」這個檔案的第 10 行中。我們只要簡單地將第 10 行修改成如下
+{{{
+android:text="Hello World, Bmi!”
+}}}
+
+再執行一次模擬器，就可以得到一個相似的應用程式，只是內文變成了我們剛剛修改的內容。
+
+既然找到了「Hello World, Bmi!」字串，我們就試著將「android:text」屬性值從「Hello World, Bmi!」改成「哈囉，BMI」，然後執行看看吧。
+{{{
+android:text="哈囉，BMI"
+}}}
+結果發現 Android 模擬器中文嘛也通，字型也相當漂亮。
 
 要開始學習 Android 應用程式確實很簡單吧？不過為了顯示「Hello World, Bmi」，也用到了許多程式碼。到底這些程式碼有什麼含意呢？
 
@@ -102,13 +113,9 @@ TextView (文字檢視)是我們看到的第一個熟悉的介面元件。其作
 }}}
 我們來看看 TextView 介面元件中包含了哪些屬性。
 
-「android: layout_width」和「android:layout_height」我們剛剛已經學過了，分別代表寬度跟長度。「android: layout_width」 的 「fill_parent」 參數值表示寬度填滿整個上層介面元件(即 LinearLayout 介面元件)。「android:layout_height」則是用上一個新的參數值「wrap_content」(包住內容)，亦即隨著文字欄位行數的不同而改變這個介面元件的高度。最後的 「android:text」 屬性則是 TextView 介面元件的主要屬性，亦即文字欄位中顯示的文字內容。
+「android: layout_width」和「android:layout_height」我們剛剛已經學過了，分別代表寬度跟長度。「android: layout_width」 的 「fill_parent」 參數值表示寬度填滿整個上層介面元件(即 LinearLayout 介面元件)。「android:layout_height」則是用上一個新的參數值「wrap_content」(包住內容)，亦即隨著文字欄位行數的不同而改變這個介面元件的高度。最後的 「android:text」 屬性則是 TextView 介面元件的主要屬性，亦即文字欄位中顯示的文字內容。至於「@string/hello 」這段字串所代表的意義，馬上會接著在後面章節說明。我們現在已知道是：只要將「android:text」屬性內容替換成我們想要文字，在預覽畫面或在模擬器中就會顯示對應的文字。
 
-綜合起來，我們就可以得知「main.xml」 想表達的介面。
-
-既然找到了「Hello World, Bmi」字串，我們就試著將 android:text 屬性值從「Hello World, Bmi」改成 「哈囉，BMI」，然後執行看看吧。
-
-結果發現 Android 模擬器中文嘛也通，字型也相當漂亮。
+將以上的 XML 描述綜合起來，我們就可以得知「main.xml」 想表達的介面。
 
 < [ReadSource 建立新程式] | [DiveIntoAndroid 回目錄] | [BmiUI 設計使用者介面] >
 
