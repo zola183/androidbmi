@@ -93,7 +93,7 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 
 === 離線安裝 ===
 
-有些網路環境的關係無法順利地線上安裝 Android 開發工具。這時可以前往 http://developer.android.com/sdk/adt_download.html 直接下載最新的開發工具版本。
+有些有些讀者因為網路環境的關係無法順利地直接線上安裝 Android 開發工具。這時可以先前往 http://developer.android.com/sdk/adt_download.html 手動下載最新的開發工具版本來離線安裝。
 
 下載完後打開 Eclipse 開發環境，找到螢幕上方的選單列， 選擇 「Help->Software Updates」 選項，這選項會帶出一個新視窗。選擇「Available Software」標籤，選擇右方的 「Add Site...」 (新增網站)按鈕，會彈出一個輸入框。
 
