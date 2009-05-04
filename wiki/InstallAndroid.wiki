@@ -63,7 +63,7 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 
 我們將在 Eclipse 上 安裝 Android 開發工具 (ADT)。
 
-Eclipse 3.4 版:
+=== Eclipse 3.4 版 ===
 
 找到螢幕上方的選單列， 選擇 「Help->Software Updates」 選項，這選項會帶出一個新視窗。
 選擇「Available Software」標籤，選擇右方的 「Add Site...」 (新增網站)按鈕，會彈出一個輸入框。
@@ -75,7 +75,7 @@ Eclipse 3.4 版:
 
 按下 「Next」 (下一步)鍵。照著步驟就安裝完成。安裝完會提示需重新啟動 Eclipse，按下 「Yes」 重新啟動。
 
-Eclipse 3.3 版:
+=== Eclipse 3.3 版 ===
 
 找到螢幕上方的選單列， 選擇 「Help->Software Updates->Find and Install」 選項，這選項會帶出一個新視窗。    
 
@@ -91,6 +91,14 @@ Eclipse 3.3 版:
 
 安裝完會提示需重新啟動 Eclipse，按下 「OK」 重新啟動。
 
+=== 離線安裝 ===
+
+有些網路環境的關係無法順利地線上安裝 Android 開發工具。這時可以前往 http://developer.android.com/sdk/adt_download.html 直接下載最新的開發工具版本。
+
+下載完後打開 Eclipse 開發環境，找到螢幕上方的選單列， 選擇 「Help->Software Updates」 選項，這選項會帶出一個新視窗。選擇「Available Software」標籤，選擇右方的 「Add Site...」 (新增網站)按鈕，會彈出一個輸入框。
+
+選擇右上角的「Local...」按鈕，並選取剛下載的 Android 最新開發工具檔案，選到之後按下 "OK" 按鈕離開。
+在視窗中全選新出現項目的選項後，按下右方的「Install」按鈕。Eclipse 會花一點時間開始安裝 ADT 擴充套件。
 
 == 4. 下載 Android SDK ==
 
