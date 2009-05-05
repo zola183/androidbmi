@@ -223,6 +223,7 @@ Available Android Virtual Devices:
 閱讀參考
 
     * 模擬器操作細節 http://developer.android.com/guide/developing/tools/emulator.html
+    * 模擬器外觀下載 http://www.android.encke.net/
 
 < [OpenProject 開啟現有專案] | [DiveIntoAndroid 回目錄] | [ReadSource 建立一個 Android 程式] >
 
