@@ -11,7 +11,7 @@
 
 「Android 軟體開發套件」（SDK） 1.5 以上的版本提供了支援不同版本模擬器的功能，在使用模擬器之前，必須先建立一個模擬器後才可在 Eclipse 開發環境中使用。
 
-SDK 中提供了一個「android」命令行工具（在 android-sdk/tools 中），可以用來建立新專案或是管理模擬器。我們來使用「android」命令行工具來新建立一個模擬器。
+SDK 中提供了一個「android」命令行工具（在 android-sdk/tools 中），可以用來建立新專案或是管理模擬器。在此我們使用「android」命令行工具來新建立一個模擬器。
 
 在新的 Android 文件中，一律把 Android 模擬器稱作「Android 虛擬機器」（Android Virtual Device），簡寫為「AVD」以作區別。
 
