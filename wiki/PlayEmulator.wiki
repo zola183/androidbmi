@@ -163,6 +163,14 @@ id: 2
      Skins: G1, HVGA (default), HVGA-L, HVGA-P, QVGA-L, QVGA-P
 }}}
 
+要建立使用新模擬器外觀的模擬器，可以在之前命令後加入「--skin」選項。命令如下：
+{{{
+$ android create avd --target 2 --name devphone –skin G1
+}}}
+我們也可以偷懶不用參數的全名，將參數用簡寫表示。即用「-t」表示「--target」，用「-n」表示「--name」，用「-s」表示「--skin」。改輸入如下：
+{{{
+$ android create avd -t 2 -n devphone –s G1
+}}}
 == 移除模擬器佈景 ==
 
 要移除一個模擬器佈景，直接刪除在「android_sdk/platforms/android-1.5/skins」中的對應目錄即可。
