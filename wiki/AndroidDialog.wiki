@@ -46,7 +46,7 @@ Bmi.java
 
 {{{
 private void openOptionsDialog() {
-    new AlertDialog.Builder(this)
+    new AlertDialog.Builder(Bmi.this)
     .setTitle("關於 Android BMI")
     .setMessage("Android BMI Calc")
     .show();
@@ -57,7 +57,7 @@ private void openOptionsDialog() {
 首先，顯示一個最基本的對話框所需的程式碼如下。
 
 {{{
-new AlertDialog.Builder(this).show()
+new AlertDialog.Builder(Bmi.this).show()
 }}}
 
 我們建立了一個 AlertDialog 對話框類別實體，AlertDialog 呼叫 Builder 方法來預備對應的介面元件。最後使用 show() 方法來將對話框顯示在螢幕上。
@@ -95,7 +95,7 @@ res/values/strings.xml
 
 {{{
 private void openOptionsDialog() {
-    new AlertDialog.Builder(this)
+    new AlertDialog.Builder(Bmi.this)
         .setTitle(R.string.about_title)
         .setMessage(R.string.about_msg)
         .show();
@@ -125,7 +125,7 @@ private void openOptionsDialog() {
 
 {{{
 	private void openOptionsDialog() {
-		new AlertDialog.Builder(this)
+		new AlertDialog.Builder(Bmi.this)
 		.setTitle(R.string.about_title)
 		.setMessage(R.string.about_msg)
 		.setPositiveButton(R.string.ok_label,
@@ -151,7 +151,7 @@ http://code.google.com/android/reference/android/app/AlertDialog.Builder.html
 import android.widget.Toast;
 ...
 private void openOptionsDialog() {
-    Toast.makeText(this, "BMI 計算器", Toast.LENGTH_SHORT).show();
+    Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
     /*new AlertDialog.Builder(this) //註解掉原本的對話框
    ...
    */
@@ -162,7 +162,7 @@ private void openOptionsDialog() {
 
 整段程式值得注意的一行是
 {{{
-Toast.makeText(this, "BMI 計算器", Toast.LENGTH_SHORT).show();
+Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
 }}}
 
 我們對 Toast 元件指定了欲顯示文字，與Toast 元件的顯示時間長短(LENGTH_SHORT，即短訊息)，最後與處理對話框一樣，呼叫 「show() 」方法來將 Toast 元件顯示在螢幕上。
