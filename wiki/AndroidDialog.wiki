@@ -237,9 +237,9 @@ Toast.makeText(Bmi.this, "打錯了嗎？只能輸入數字喔", Toast.LENGTH_SH
 </resources>
 }}}
 
-然後在程式中使用「getString」函式來取得字串
+然後在程式中使用「R.string.input_error」來取得字串
 {{{
-Toast.makeText(Bmi.this, getString(R.string.input_error), Toast.LENGTH_SHORT).show();
+Toast.makeText(Bmi.this, R.string.input_error, Toast.LENGTH_SHORT).show();
 }}}
 
 <  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidUrl 初見 Intent] >
