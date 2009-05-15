@@ -69,6 +69,49 @@ Bundle 型別額外提供了很多 API。在傳送 Intent 時，使用 Bundle �
 
 == 使用 Intent 接收資訊 ==
 
+在使用 Intent 接收資訊前，我們先來加上「Report」這個 Activity 的介面。
+
+=== 相關工作 ===
+
+打開「res/values/report.xml」檔案，修改如下：
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="report_title">BMI 報告</string>
+    <string name="report_back">前一頁</string>
+</resources>
+}}}
+
+打開「res/layout/report.xml」檔案，修改如下：
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	>
+	 <TextView android:id="@+id/result" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text=""
+	    />
+	 <TextView android:id="@+id/suggest" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text=""
+	    />
+	<Button android:id="@+id/report_back" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/report_back"
+            />
+</LinearLayout>
+}}}
+
+這時打開 Eclipse 開發環境的 layout 檢視，或是執行模擬器，我們可以看到一個「前一頁」按鈕，按鈕前其實還有兩個沒有內容的 TextView 介面元件，下一節中我們將在「Report」這個 Activity 中取得從「Bmi」Activity 傳過來的身高體重資料，根據這些資料產生報告資訊。
+
+=== 在 Activity 中解開資訊 ===
+
 用作接收 Intent，透過 Intent 攜帶的資訊來計算出 BMI 值的「src/com/demo/android/bmi/Report.java」完整程式碼如下：
 
 {{{
