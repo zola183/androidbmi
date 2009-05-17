@@ -40,6 +40,8 @@
   # [AndroidManifest 定義 Android 清單]
   # [AndroidActivity 加入新 Activity]
   # [AndroidIntent 傳送資料到新 Activity]
+  # 訊息提醒 (Notification)
+  # 分享訊息 (Intent.Send)
   # [AndroidDebug 記錄與偵錯 (Log)]
   # [LifeCycle 活動的生命週期]
   # [AndroidPreference 儲存資訊(Preference)]
@@ -52,7 +54,6 @@
   # 支援多國語言
   # 使用接口 (Adapter)
   # 加入下拉選單元件 (Spinner)
-  # 加入提示訊息 (Notification)
   # 加入動畫效果 (Animation)
   # 匯出資料到 SD 卡 (File)
   # 簽發應用程式金鑰 (keytools)
