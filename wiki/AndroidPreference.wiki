@@ -30,7 +30,7 @@ public class Bmi extends Activity {
     {
     	SharedPreferences settings = getSharedPreferences(PREF, 0);
     	String pref_height = settings.getString(PREF_HEIGHT, "");
-    	if(!pref_height.equals(""))
+    	if(! "".equals(pref_hieght))
     	{
     		field_height.setText(pref_height);
     		field_weight.requestFocus();
@@ -61,7 +61,7 @@ public class Bmi extends Activity {
     {
     	SharedPreferences settings = getSharedPreferences(PREF, 0);
     	String pref_height = settings.getString(PREF_HEIGHT, "");
-    	if(!pref_height.equals(""))
+    	if(! "".equals(pref_hieght))
     	{
     		field_height.setText(pref_height);
     		field_weight.requestFocus();
@@ -84,7 +84,7 @@ SharedPreferences settings = getSharedPreferences(PREF, 0);
 我們可以透過「getXXX」函式，來從偏好設定(SharedPreferences)讀取不同型別的內容。例如本例中使用「getString」來讀取文字類型的資訊。當「PREF_HEIGHT」偏好設定參數存在時，字串「pref_height」就會得到偏好設定參數的內容。如果不存在「PREF_HEIGHT」這個偏好設定參數時，字串「pref_height」則會得到一個空字串。
 
 {{{
-if(!pref_height.equals(""))
+if(! "".equals(pref_hieght))
     	{
     		field_height.setText(pref_height);
             ...
