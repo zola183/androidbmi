@@ -158,7 +158,7 @@ public class Bmi extends Activity {
     private void restorePrefs() {
         SharedPreferences settings = getSharedPreferences(PREF, 0);
         String pref_height = settings.getString(PREF_HEIGHT, "");
-        if(pref_height!="") {
+        if(! "".equals(pref_height)) {
             field_height.setText(pref_height);
             field_weight.requestFocus();
         }
