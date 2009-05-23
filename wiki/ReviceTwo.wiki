@@ -52,6 +52,7 @@
 
   # 顯性設計
   # 支援多國語言
+  # 針對特性配置 (Orientation)
   # 使用接口 (Adapter)
   # 加入下拉選單元件 (Spinner)
   # 加入動畫效果 (Animation)
