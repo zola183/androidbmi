@@ -63,7 +63,7 @@ public class Abmi extends Activity {
         /*
         ArrayAdapter<String> adapter_feet = new ArrayAdapter<String>(
         		this,
-        	    android.R.layout.simple_list_item_1,
+        	    android.R.layout.simple_spinner_item,
         	    feets);
         adapter_feet.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         */
