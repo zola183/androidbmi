@@ -1,16 +1,13 @@
 package com.demo.android.abmi;
 
 import java.text.DecimalFormat;
-import java.util.Locale;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -67,9 +64,26 @@ public class Abmi extends Activity {
         	    feets);
         adapter_feet.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         */
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
+/*
+    @Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onRestoreInstanceState(savedInstanceState);
+		field_weight.setText(savedInstanceState.getString("WEIGHT")+"1");   
+	}
 
-    // Restore preferences
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		// TODO Auto-generated method stub
+		super.onSaveInstanceState(outState);
+		outState.putString("WEIGHT", field_weight.getText().toString());
+	}
+*/
+
+	// Restore preferences
     private void restorePrefs() {
         SharedPreferences settings = getSharedPreferences(PREF, 0);
         //set field
