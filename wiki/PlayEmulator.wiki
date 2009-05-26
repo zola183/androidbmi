@@ -19,10 +19,20 @@ SDK 中提供了一個「android」命令行工具（在 android-sdk/tools 中�
 
 首先，把「android-sdk/tools 」目錄加入系統路徑，我們以後就可以在任何地方使用「android-sdk/tools 」目錄下的各種命令。
 
-或是直接打開命令行，進入「android-sdk/tools 」目錄，輸入以下命令：
+在 Windows 2000， XP， 2003 這些作業系統裡，點選「控制台 > 系統 > 進階 > 環境變數」。在「系統變數(S)」欄中，選取「PATH」變數名稱後，再點選「編輯(I)」按鈕。
 
+再此假設您安裝 Android SDK 的路徑是「C:\android-sdk\tools」，接著在彈出的視窗中將「;C:\android-sdk\tools」（注意要以分號隔開）這字串添在原本的字串之後，按下確定後重新啟動作業系統。
+
+重開系統後選擇「開始 > 執行」，在彈出的輸入框中輸入「cmd」，即可開啟命令行工具並繼續以下的動作。
+
+或是您也可以直接打開命令行，進入「android-sdk/tools 」目錄，輸入以下命令：
 {{{
 $ android list targets
+}}}
+
+在沒有將 Android SDK 加入路徑的情況下，在 Linux 或 Mac 環境中要輸入
+{{{
+$ ./android list targets
 }}}
 
 螢幕上會列出所有支援的模擬器類型
