@@ -41,7 +41,7 @@ Gears
   * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
   
 圖示
-  * [http://developer.android.com/guide/practices/ui_guidelines/icon_design.html icon 設計規範]
+  * [http://developer.android.com/guide/practices/ui_guidelines/icon_design.html Android 圖示設計規範]
   * [http://www.screaming-penguin.com/info/android_drawables/android_drawables.html Android 內建圖示清單]
   * [http://tango.freedesktop.org/Tango_Icon_Library Tango]
   * [http://www.icon-king.com/projects/nuvola/ Nuvola]
