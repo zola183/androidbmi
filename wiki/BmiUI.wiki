@@ -21,7 +21,7 @@ Android 文件網站上找到各種可用介面元件列表。
 
 
 例如我們想查看 EditText 的內容，我們可以點進 EditText 連結查看其內容。
-http://code.google.com/android/reference/android/widget/EditText.html
+http://developer.android.com/reference/android/widget/EditText.html
 
 你會看到一個詳細地驚人的網頁。
 
