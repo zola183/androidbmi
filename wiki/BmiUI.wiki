@@ -17,7 +17,7 @@
 
 Android 文件網站上找到各種可用介面元件列表。
 
-    http://code.google.com/android/reference/view-gallery.html
+    http://developer.android.com/guide/tutorials/views/index.html
 
 
 例如我們想查看 EditText 的內容，我們可以點進 EditText 連結查看其內容。
