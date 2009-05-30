@@ -91,6 +91,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 1.5_1
 
 == 主要更新記錄 ==
+  * 2009/5/30 直接使用 1.5 版的範例已上線，請前往[GetSource 如何取得範例原始碼]照著說明下載
   * 2009/4/28 本教學相容於 Android SDK 1.5r1
   * 2009/3/22 實體書已出版，實體書相關資訊請前往[http://sites.google.com/site/gasodroid/androidentry 書籍網站]
   * 2009/2/10 本教學相容於 Android SDK 1.1r1
