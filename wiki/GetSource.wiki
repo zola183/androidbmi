@@ -15,7 +15,7 @@
 
 BMI 身高體重指數計算(公制)
 
-svn checkout http://androidbmi.googlecode.com/svn/trunk/BMI BMI
+svn checkout http://androidbmi.googlecode.com/svn/trunk/2nd/BMI BMI
 
 === aBMI ===
 
@@ -23,13 +23,7 @@ svn checkout http://androidbmi.googlecode.com/svn/trunk/BMI BMI
 
 BMI 身高體重指數計算(英制)
 
-svn checkout http://androidbmi.googlecode.com/svn/trunk/aBMI aBMI
-
-=== gBMI ===
-
-BMI 身高體重指數計算(公制)
-
-svn checkout http://androidbmi.googlecode.com/svn/trunk/gBMI gBMI
+svn checkout http://androidbmi.googlecode.com/svn/trunk/2nd/aBMI aBMI
 
 === DummyNote ===
 
@@ -37,13 +31,13 @@ svn checkout http://androidbmi.googlecode.com/svn/trunk/gBMI gBMI
 
 筆記本程式
 
-svn checkout http://androidbmi.googlecode.com/svn/trunk/DummyNote DummyNote
+svn checkout http://androidbmi.googlecode.com/svn/trunk/2nd/DummyNote DummyNote
 
 === twTrainStation ===
 
 「地圖與定位」主題所使用的範例
 
-svn checkout http://androidbmi.googlecode.com/svn/trunk/twTrainStation twTrainStation
+svn checkout http://androidbmi.googlecode.com/svn/trunk/2nd/twTrainStation twTrainStation
 
 台灣車站周邊地圖
 
@@ -53,4 +47,4 @@ svn checkout http://androidbmi.googlecode.com/svn/trunk/twTrainStation twTrainSt
 
 自動定位範例
 
-svn checkout http://androidbmi.googlecode.com/svn/trunk/MyLocation MyLocation
+svn checkout http://androidbmi.googlecode.com/svn/trunk/2nd/MyLocation MyLocation
