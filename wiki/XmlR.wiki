@@ -198,7 +198,12 @@ The important thing to notice for now is the inner class named "layout", and its
 	    android:layout_height="wrap_content" 
 	    android:text="@string/bmi_btn"
 	    />
-	 <TextView android:id="@+id/suggest" 
+        <TextView android:id="@+id/result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+             />
+	<TextView android:id="@+id/suggest" 
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
 	    android:text=""
