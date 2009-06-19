@@ -1,4 +1,4 @@
-#summary 深入淺出 Android -- Google 手持設備應用程式設計
+#summary 深入淺出 Android -- Google 手持設備應用程式設計入門
 #labels tw
 
 = 授權 =
