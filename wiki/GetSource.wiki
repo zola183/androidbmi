@@ -1,5 +1,5 @@
 #summary 取得範例原始碼
-#labels tw,source
+#labels tw,source,Featured
 
 = 如何取得範例原始碼 =
 
