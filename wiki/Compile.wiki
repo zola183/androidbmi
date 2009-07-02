@@ -23,3 +23,5 @@ $ adb shell reboot recovery
 * http://www.htc.com/www/support/android/adp.html
 
 * Android ROM Build Database http://www.simonwalkerphotos.com/android/android_build_information.asp
+
+* SPL http://code.google.com/p/android-roms/wiki/SPL
