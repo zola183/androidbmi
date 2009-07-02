@@ -11,9 +11,10 @@
 
 $ adb shell reboot recovery
 
-在 recovery 畫面按 alt+s 來開始 update
+（早期）在 recovery 畫面按 alt+s 來開始 update，按 Home + Back 鍵重啟系統。
 
-按 Home + Back 鍵重啟系統。
+（現在）畫面上選擇 reboot system
+
 
 * http://blog.csdn.net/dong_miao/archive/2009/04/13/4068701.aspx
 * http://haykuro.theiphoneproject.org/?page_id=35
