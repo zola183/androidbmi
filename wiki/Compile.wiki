@@ -3,6 +3,18 @@
 
 = Introduction =
 
+長按 斷話鍵（紅） 關閉機器。
+
+同時按 斷話鍵/Home 鍵 啟動 Recovery 
+
+或下命令
+
+$ adb shell reboot recovery
+
+在 recovery 畫面按 alt+s 來開始 update
+
+按 Home + Back 鍵重啟系統。
+
 * http://blog.csdn.net/dong_miao/archive/2009/04/13/4068701.aspx
 * http://haykuro.theiphoneproject.org/?page_id=35
 * Recovery 更新系統 http://android.cool3c.com/article/2482
