@@ -20,7 +20,7 @@ $ adb shell reboot recovery
 * http://haykuro.theiphoneproject.org/?page_id=35
 * Recovery 更新系統 http://android.cool3c.com/article/2482
 
-* http://www.htc.com/www/support/android/adp.html
+* adp & fastboot http://www.htc.com/www/support/android/adp.html
 
 * Android ROM Build Database http://www.simonwalkerphotos.com/android/android_build_information.asp
 
