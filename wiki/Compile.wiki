@@ -25,3 +25,7 @@ $ adb shell reboot recovery
 * Android ROM Build Database http://www.simonwalkerphotos.com/android/android_build_information.asp
 
 * SPL http://code.google.com/p/android-roms/wiki/SPL
+
+* Partition SD Card http://geeks.pirillo.com/profiles/blogs/how-to-partition-an-sd-card
+
+* http://forum.xda-developers.com/showthread.php?t=522076
