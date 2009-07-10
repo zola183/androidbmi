@@ -22,7 +22,7 @@ Eclipse 是通用的編輯環境，可根據你所安裝的不同擴充套件而
 完成新增程式專案到 Eclipse 後，我們可以在左側的「Package Explorer」中找到我們新增的專案。
 
 如果發現開啟後的資料夾圖示上有個小小的黃色驚嘆號，表示這個專案匯入後還有些問題，我們可以使用ADT內建的功能來試著修復專案屬性。
-在「Package Explorer」的 「NotesList」 專案檔案夾圖示上點選右鍵，從「Android Tools」選單中選擇「修復專案屬性」(Fix Project Properties)。
+在「Package Explorer」的 「ApiDemos」 專案檔案夾圖示上點選右鍵，從「Android Tools」選單中選擇「修復專案屬性」(Fix Project Properties)。
 (Android Tools->Fix Project Properties)
 
 
