@@ -1,7 +1,8 @@
 #summary ROM 更新與編譯
 #labels draft
 
-= Introduction =
+* Android 自製 ROM 列表 http://www.simonwalkerphotos.com/android/android_build_information.asp
+
 
 長按 斷話鍵（紅） 關閉機器。
 
@@ -21,8 +22,6 @@ $ adb shell reboot recovery
 * Recovery 更新系統 http://android.cool3c.com/article/2482
 
 * adp & fastboot http://www.htc.com/www/support/android/adp.html
-
-* Android ROM Build Database http://www.simonwalkerphotos.com/android/android_build_information.asp
 
 * SPL http://code.google.com/p/android-roms/wiki/SPL
 
