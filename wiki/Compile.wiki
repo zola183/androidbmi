@@ -1,7 +1,7 @@
 #summary ROM 更新與編譯
 #labels draft
 
-* Android 自製 ROM 列表 http://www.simonwalkerphotos.com/android/android_build_information.asp
+* Android 自製 ROM 列表 http://www.androidspin.com/android_build_information.asp
 
 
 長按 斷話鍵（紅） 關閉機器。
