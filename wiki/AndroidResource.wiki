@@ -39,6 +39,9 @@
 
 Gears
   * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
+
+遊戲
+  * http://sites.google.com/site/drpaulthomasandroidstuff/Home/voxel-fun/how-it-works
   
 圖示
   * [http://developer.android.com/guide/practices/ui_guidelines/icon_design.html Android 圖示設計規範]
