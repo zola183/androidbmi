@@ -23,6 +23,7 @@ sudo apt-get install git-core gnupg sun-java5-jdk flex bison gperf libsdl-dev li
 == 下載 Android 原始碼版本管理工具 ==
 {{{
 mkdir bin
+curl http://android.git.kernel.org/repo >~/bin/repo
 chmod a+x ~/bin/repo
 }}}
 
