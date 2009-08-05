@@ -8,9 +8,14 @@
 
 == 系統需求 ==
 
+ * 至少 10G 的硬碟空間
+ * RAM 必須超過 1.5G 
  * 一套 Unix 相容作業系統，如 Ubuntu、Mac OS X（檔案格式要選擇日誌式/區分大小寫）
 
 本教學以 Ubuntu 9.04 為例。
+
+因為編譯作業系統是極度耗系統資源的工作。不要浪費時間試著在 Windows 上裝 Cygwin 環境，然後在上面嘗試編譯 Android。留下點硬碟空間裝個 Ubuntu 比在 Windows 下裝 Cygwin 更簡單。
+
 
  * 可透過網路更新編譯 Android 必需的套件
 
@@ -41,10 +46,12 @@ cd mydroid
 ~/bin/repo sync
 }}}
 
-== 編譯 ==
+== 編譯(預設值) ==
 {{{
 make
 }}}
+
+編好的 ROM 適合模擬器使用。
 
 == 啟動模擬器 ==
 
