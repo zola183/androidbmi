@@ -2,6 +2,7 @@
 #labels draft
 
 * Android 自製 ROM 列表 http://www.androidspin.com/android_build_information.asp
+* 編譯android原始碼到模擬器上執行 http://www.dotblogs.com.tw/neil/archive/2009/04/03/7838.aspx
 
 
 長按 斷話鍵（紅） 關閉機器。
