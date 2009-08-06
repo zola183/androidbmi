@@ -1,9 +1,6 @@
 #summary ROM 編譯與更新
 #labels draft
 
- * Android 自製 ROM 列表 http://www.androidspin.com/android_build_information.asp
- * 編譯android原始碼到模擬器上執行 http://www.dotblogs.com.tw/neil/archive/2009/04/03/7838.aspx
-
 = 從頭建立編譯環境 =
 
 == 系統需求 ==
@@ -79,6 +76,14 @@ cd ~/mydroid/out/target/product/generic
 
 
 待續...
+
+== 參考資料 ==
+
+ * Android 自製 ROM 列表 http://www.androidspin.com/android_build_information.asp
+ * 編譯android原始碼到模擬器上執行 http://www.dotblogs.com.tw/neil/archive/2009/04/03/7838.aspx
+ * 編譯到機器上執行 http://source.android.com/documentation/building-for-dream
+
+----
 
 = 更新 =
 
