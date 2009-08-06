@@ -19,7 +19,7 @@ Android 原始碼相關資源可在 http://source.android.com/ 官方網站找�
 
 本教學以 Ubuntu 9.04 為例。
 
-因為編譯作業系統是極度耗系統資源的工作。請讀者不要浪費時間嘗試在 Windows 上編譯 Android 的方法。 在電腦上留下 10 多 G 硬碟空間裝個 Ubuntu Linux 環境，比在 Windows 下裝 Cygwin 更簡單。
+因為編譯整個 Android 系統是極度耗系統資源的工作。請讀者不要浪費時間嘗試在 Windows 上編譯 Android 的方法。 在電腦上留下 10 多 G 硬碟空間裝個 Ubuntu Linux 環境然後照著官方教學走，比在 Windows 下裝 Cygwin 並自行摸索簡單多了。
 
 
  * 可透過網路更新編譯 Android 必需的套件
