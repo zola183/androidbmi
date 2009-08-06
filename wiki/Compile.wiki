@@ -1,20 +1,25 @@
-#summary ROM 更新與編譯
+#summary ROM 編譯與更新
 #labels draft
 
  * Android 自製 ROM 列表 http://www.androidspin.com/android_build_information.asp
  * 編譯android原始碼到模擬器上執行 http://www.dotblogs.com.tw/neil/archive/2009/04/03/7838.aspx
 
-= 從頭建立開發環境 =
+= 從頭建立編譯環境 =
 
 == 系統需求 ==
 
  * 至少 10G 的硬碟空間
  * RAM 必須超過 1.5G 
  * 一套 Unix 相容作業系統，如 Ubuntu、Mac OS X（檔案格式要選擇日誌式/區分大小寫）
+ * 可連上網路
+
+== 編譯前需知 ==
+
+Android 原始碼相關資源可在 http://source.android.com/ 官方網站找到。
 
 本教學以 Ubuntu 9.04 為例。
 
-因為編譯作業系統是極度耗系統資源的工作。不要浪費時間試著在 Windows 上裝 Cygwin 環境，然後在上面嘗試編譯 Android。留下點硬碟空間裝個 Ubuntu 比在 Windows 下裝 Cygwin 更簡單。
+因為編譯作業系統是極度耗系統資源的工作。請讀者不要浪費時間嘗試在 Windows 上編譯 Android 的方法。 在電腦上留下 10 多 G 硬碟空間裝個 Ubuntu Linux 環境，比在 Windows 下裝 Cygwin 更簡單。
 
 
  * 可透過網路更新編譯 Android 必需的套件
@@ -40,6 +45,16 @@ cd mydroid
 ~/bin/repo init -u git://android.git.kernel.org/platform/manifest.git
 }}}
 
+
+== 抓不同版本 ==
+
+同樣命令後面加上分支版本(branch)代號，如要抓
+
+{{{
+~/bin/repo init -u git://android.git.kernel.org/platform/manifest.git -b 
+}}}
+
+
 == 下載原始碼 ==
 
 {{{
@@ -64,6 +79,8 @@ cd ~/mydroid/out/target/product/generic
 
 
 待續...
+
+= 更新 =
 
 = 待整理資料 =
 
