@@ -83,6 +83,8 @@ cd ~/mydroid/out/target/product/generic
  * 編譯android原始碼到模擬器上執行 http://www.dotblogs.com.tw/neil/archive/2009/04/03/7838.aspx
  * 編譯到機器上執行 http://source.android.com/documentation/building-for-dream
  * Recovery http://forum.xda-developers.com/showthread.php?t=523558
+ * Using repo http://source.android.com/download/using-repo
+ * JF build environment http://jf.andblogs.net/2009/05/24/jfv151-images-are-out/#more-88
 
 ----
 
@@ -106,6 +108,7 @@ $ adb shell reboot recovery
 * http://blog.csdn.net/dong_miao/archive/2009/04/13/4068701.aspx
 * http://haykuro.theiphoneproject.org/?page_id=35
 * Recovery 更新系統 http://android.cool3c.com/article/2482
+
 
 * adp & fastboot http://www.htc.com/www/support/android/adp.html
 
