@@ -13,7 +13,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 本書採用創用CC：「姓名標示─非商業性─禁止改作」[http://creativecommons.org/licenses/by-nc-nd/2.5/tw/ 授權條款]。
 
 本書的文字、圖片皆不歡迎轉載，也不可使用於商業用途。
-但歡迎您將本書網址 http://code.google.com/p/androidbmi/wiki/IntroAndroid 分享到各網站。
+但歡迎您將本書網址 http://code.google.com/p/androidbmi/wiki/StepIntoAndroid 分享到各網站。
 
 = 作者 =
 
