@@ -1,0 +1,46 @@
+#summary 深入淺出 Android 2 -- Google 手持設備應用程式設計
+#labels draft
+
+= 授權 =
+
+http://creativecommons.org.tw/files/icon_by.gif
+http://creativecommons.org.tw/files/icon_nc.gif
+http://creativecommons.org.tw/files/icon_nd.gif
+
+歡迎到 http://code.google.com/p/androidbmi/wiki/IntroAndroid 閱讀本書。
+也歡迎使用留言功能提供建議。
+
+本書採用創用CC：「姓名標示─非商業性─禁止改作」[http://creativecommons.org/licenses/by-nc-nd/2.5/tw/ 授權條款]。
+
+本書的文字、圖片皆不歡迎轉載，也不可使用於商業用途。
+但歡迎您將本書網址 http://code.google.com/p/androidbmi/wiki/IntroAndroid 分享到各網站。
+
+= 作者 =
+
+  * gasolin，項目發起人，也是本書的主筆。你可以寫信至 gasolin+android -at- gmail.com 聯絡作者。
+
+
+= 簡介 =
+
+「Google 手持設備應用程式設計」（暫名）將接續「Google 手持設備應用程式設計入門」的內容，以開發實例講解 Android 應用程式開發，協助讀者了解 Android 手持設備的應用程式設計。
+
+== 回響 ==
+
+歡迎任何建設性的建議、批評、或者讚美。作者的電子郵件信箱是 gasolin+android -at- gmail.com。
+
+想在簡單易學和提供完整詳盡的資訊之間取得平衡，一直是種永恆的掙扎。 期望讀者您能提供一些反饋，讓作者能更好地掌握主題深入的程度。
+
+= 目錄 =
+
+ * 使用者介面
+ * 使用者介面模式
+ * flat
+ * 自訂介面元件
+ * 自訂列表欄位
+ * Service
+ * ContentProvider
+ * BroadcastReseiver
+ * WebView
+ * Share
+
+待續...
