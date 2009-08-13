@@ -42,5 +42,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
  * BroadcastReseiver
  * WebView
  * Share
+ * Intent Filter
 
 待續...
