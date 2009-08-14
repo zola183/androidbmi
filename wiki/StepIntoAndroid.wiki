@@ -43,5 +43,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
  * WebView
  * Share
  * Intent Filter
+ * PhoneGap http://phonegap.pbworks.com/Getting+Started+with+PhoneGap+%28Android%29
 
 待續...
