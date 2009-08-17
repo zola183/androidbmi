@@ -29,11 +29,12 @@
   * Eclipse 開發環境中文化 http://download.eclipse.org/technology/babel/update-site/ganymede
 
 函式庫
-  * ZXing - Barcode reader http://code.google.com/p/zxing/
-  * Eyes Free - TTS http://code.google.com/p/eyes-free/
-  * Radar http://code.google.com/p/apps-for-android/
-  * Android XML-RPC - http://code.google.com/p/android-xmlrpc/
+  * 掃條碼 ZXing - Barcode reader http://code.google.com/p/zxing/
+  * 文字轉語音 Eyes Free - TTS http://code.google.com/p/eyes-free/
+  * 雷達圖顯示 Radar http://code.google.com/p/apps-for-android/
+  * XML-RPC - http://code.google.com/p/android-xmlrpc/
   * PhoneGap http://phonegap.com/
+  * 擴增實境 AR http://www.noritsuna.com/archives/2008/11/nyartoolkitandroid.html
 
 其他開發
   * Native C development http://blog.sina.com.cn/s/articlelist_1242184131_6_1.html
