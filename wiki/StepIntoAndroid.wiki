@@ -44,5 +44,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
  * Share
  * Intent Filter
  * PhoneGap http://phonegap.pbworks.com/Getting+Started+with+PhoneGap+%28Android%29
+ * Trace
+ * SurfaceView
 
 待續...
