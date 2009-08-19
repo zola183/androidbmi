@@ -47,5 +47,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
  * PhoneGap http://phonegap.pbworks.com/Getting+Started+with+PhoneGap+%28Android%29
  * Trace
  * SurfaceView
+ * sdcard
 
 待續...
