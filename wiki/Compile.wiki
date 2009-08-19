@@ -90,7 +90,7 @@ cd ~/mydroid/out/target/product/generic
 
 == 參考資料 ==
 
- * Android 自製 ROM 列表 http://www.androidspin.com/android_build_information.asp
+ * Android 自製 ROM 列表 http://db.androidspin.com/android_build_summary.asp
  * 編譯android原始碼到模擬器上執行 http://www.dotblogs.com.tw/neil/archive/2009/04/03/7838.aspx
  * 編譯到機器上執行 http://source.android.com/documentation/building-for-dream
  * Recovery http://forum.xda-developers.com/showthread.php?t=523558
