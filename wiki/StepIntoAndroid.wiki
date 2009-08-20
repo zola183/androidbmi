@@ -48,5 +48,6 @@ http://creativecommons.org.tw/files/icon_nd.gif
  * Trace
  * SurfaceView
  * sdcard
+ * system stat (GPS, Wifi, 3G on/off...)
 
 待續...
