@@ -17,10 +17,11 @@
   * [http://source.android.com/ Android 原始碼網站]
   * [http://code.google.com/p/apps-for-android/ 官方範例]
  
-書籍
+書籍或文章
   * [http://androidcore.com/index.php?option=com_content&view=category&layout=blog&id=53&Itemid=100 Android 書籍列表]
   * [http://java.sun.com/docs/books/tutorial/ java 語言教學] (原文)
   * [http://www.ibm.com/developerworks/cn/opensource/theme/android/?open&cm_mmc=5740-_-n-_-vrm_newsletter-_-10104_124692&cmibm_em=dm:0:10623486 IBM Android 教學](簡體)
+ * [http://www.1keydata.com/tw/sql/sql.html SQL 語法]
 
 工具
   * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
