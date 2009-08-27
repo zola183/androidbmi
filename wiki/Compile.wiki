@@ -129,3 +129,5 @@ $ adb shell reboot recovery
 * Partition SD Card http://geeks.pirillo.com/profiles/blogs/how-to-partition-an-sd-card
 
 * http://forum.xda-developers.com/showthread.php?t=522076
+
+* android-x86 http://www.android-x86.org/
