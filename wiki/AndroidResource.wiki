@@ -38,6 +38,7 @@
   * PhoneGap http://phonegap.com/
   * 擴增實境 AR http://www.noritsuna.com/archives/2008/11/nyartoolkitandroid.html
   * 動態語言環境 http://code.google.com/p/android-scripting/ 
+  * OCR http://www.bitquill.net/trac/wiki/Android/OCR
 
 其他開發
   * Native C development http://blog.sina.com.cn/s/articlelist_1242184131_6_1.html
