@@ -74,6 +74,10 @@
 
 目前只有透過「Android」手機，才能查看關於應用程式的評論。
 
+線上查看評論可以透過 [http://www.cyrket.com cyket]查看。
+
+程式熱門程度排名可以透過 [http://atrackdog.a0soft.com/ aTrackDog] 和 [http://www.androidstats.com AndroidStats ] 等網站查看。
+
 
 = 自行提供程式線上下載 =
 
