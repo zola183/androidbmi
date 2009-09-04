@@ -1,16 +1,18 @@
 package com.gasolin.android.gbmi;
 
 import java.text.DecimalFormat;
-import java.util.Locale;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Gbmi extends Activity {
+	public static final String PREF = "BMI_PREF";
 	public static final String PREF_HEIGHT = "BMI_Height";
 	
     /** Called when the activity is first created. */
@@ -35,7 +38,8 @@ public class Gbmi extends Activity {
         setContentView(R.layout.main);
         findViews();
         setListensers();
-        restorePrefs();
+
+        restorePrefs(savedInstanceState);
     }
     
     private Button button_calc;
@@ -54,14 +58,17 @@ public class Gbmi extends Activity {
     }
 
     // Restore preferences
-    private void restorePrefs()
+    private void restorePrefs(Bundle savedInstanceState)
     {
-    	SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
-    	String pref_height = settings.getString(PREF_HEIGHT, "");
-    	if(pref_height!="")
-    	{
-    		field_height.setText(pref_height);
-    		field_weight.requestFocus();
+    	//SharedPreferences settings = getSharedPreferences(PREF, 0);
+    	//String pref_height = settings.getString(PREF_HEIGHT, "");
+    	if (savedInstanceState != null){
+	    	String pref_height = savedInstanceState.getString(PREF_HEIGHT);
+	    	if(pref_height!="")
+	    	{
+	    		field_height.setText(pref_height);
+	    		field_weight.requestFocus();
+	    	}
     	}
     }
     
@@ -83,8 +90,27 @@ public class Gbmi extends Activity {
 	            view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
 	 
 	            //Give health advice 
-	            if(BMI>27){
+	            if(BMI>27){	            	
+	                NotificationManager barManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+	                
+	                Notification barmsg = new Notification(android.R.drawable.ic_notification_overlay, 
+	                		"fat ass",
+	                		System.currentTimeMillis()
+	                		);
+	                //barmsg.tickerText = "fat ass";
+	                /*
+	                barmsg.defaults = Notification.DEFAULT_ALL;
+	                */
+//	                Uri uri = Uri.parse("http://123.45");
+//					Intent intents = new Intent(Intent.ACTION_VIEW, uri);
+//					PendingIntent fatintent = PendingIntent.getActivity(Gbmi.this, 0, intents, 0);
+//					
+//	                barmsg.setLatestEventInfo(Gbmi.this, "¦º­D¤l", "¸Ó´îªÎ°Õ", fatintent);
+//	                
+//	                barManager.notify(0, barmsg);
+	                
 	            	view_suggest.setText(R.string.advice_fat);
+
 	            }else if(BMI>25){
 	                view_suggest.setText(R.string.advice_heavy);
 	            }else if(BMI<20){
@@ -100,12 +126,14 @@ public class Gbmi extends Activity {
         }
     };
     
-    protected static final int MENU_ABOUT = Menu.FIRST;
-
+    protected static final int MENU_ABOUT = Menu.FIRST+1;
+    protected static final int MENU_SWITCH = Menu.FIRST;
+    
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, MENU_ABOUT, 0, R.string.about_label);
+		menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_help);;
+		menu.add(0, MENU_SWITCH, 0, R.string.switch_label).setIcon(android.R.drawable.ic_menu_set_as);
 		return true;
 	}
 	
@@ -116,6 +144,9 @@ public class Gbmi extends Activity {
 			case MENU_ABOUT:
 				openOptionsDialog();
 				break;
+			case MENU_SWITCH:
+                openBMI();
+                break;
 		}
 		return true;
 	}
@@ -133,14 +164,48 @@ public class Gbmi extends Activity {
 		.show();
 	}
 	
-	@Override
-	protected void onStop(){
-		super.onStop();
+	@Override 
+	protected void onSaveInstanceState(Bundle savedInstanceState){
+		//super.onStop();
 		// Save user preferences. We need an Editor object to
 		// make changes. All objects are from android.context.Context
-		SharedPreferences settings = getSharedPreferences(PREF_HEIGHT, 0);
+		/*SharedPreferences settings = getSharedPreferences(PREF, 0);
 		settings.edit()
 			.putString(PREF_HEIGHT, field_height.getText().toString())
-			.commit();
+			.commit();*/
+		savedInstanceState.putString(field_height.getText().toString(), "");
+		super.onSaveInstanceState(savedInstanceState);
 	}
+	
+	private void openBMI() {
+//        Log.d(TAG, "open Dialog"); 
+        Intent intent_bmi = new Intent();
+        intent_bmi.setClassName("com.gasolin.android.abmi", "com.gasolin.android.abmi.Abmi");
+        intent_bmi.setAction(Intent.ACTION_MAIN);
+        intent_bmi.addCategory(Intent.CATEGORY_LAUNCHER);
+        try{
+    		startActivityForResult(intent_bmi,0);
+    	}catch(ActivityNotFoundException e)
+    	{
+	        new AlertDialog.Builder(this)
+	            .setTitle("Haven't install inch/lb calculator.")
+	            .setMessage("Want to install BMI Calculator for British system(aBMI) from Android Market?")
+	            .setPositiveButton(R.string.yes_label,
+	                new DialogInterface.OnClickListener(){
+		            	public void onClick(
+								DialogInterface dialoginterface, int i){
+			        	    Uri uri = Uri.parse("market://search?q=pname:com.gasolin.android.abmi");
+			        	    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+			        	    startActivity(intent);
+						}
+	             })
+	             .setNegativeButton(R.string.no_label, 
+                    				new DialogInterface.OnClickListener(){
+            							public void onClick(
+            							DialogInterface dialoginterface, int i){
+            					}
+	             })
+	             .show();
+    	}
+    }
 }
