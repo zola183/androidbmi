@@ -96,7 +96,7 @@ cd ~/mydroid/out/target/product/generic
  * Recovery http://forum.xda-developers.com/showthread.php?t=523558
  * Using repo http://source.android.com/download/using-repo
  * JF build environment http://jf.andblogs.net/2009/05/24/jfv151-images-are-out/#more-88
-
+ * http://www.johandekoning.nl/index.php/2009/06/07/building-android-15-build-environment/
 
 ----
 
