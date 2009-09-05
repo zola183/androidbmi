@@ -1,5 +1,6 @@
 #summary 設計使用者介面
 #labels tw,widget,XML,UI
+#sidebar SideToc
 
 = 視圖(View) =
 
