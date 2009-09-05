@@ -1,5 +1,6 @@
 #summary 傳送資料到新 Activity
 #labels tw,Intent
+#sidebar SideToc
 
 {{{
 Intent 是一個動作與內容的集合。Intent 像是一串網址，傳送到系統並意圖靠其他 Activity 來處理網址中所指定的動作跟內容。
