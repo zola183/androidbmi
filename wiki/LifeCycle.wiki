@@ -1,5 +1,6 @@
 #summary 活動的生命週期
 #labels tw,lifecycle
+#sidebar SideToc
 
 {{{
 維護一個 Activity 的生命週期非常重要，因為 Activity 隨時會被系統回收掉。
