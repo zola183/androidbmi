@@ -27,4 +27,4 @@
   * [AndroidResource Android 相關資源] (相關資源)
   * [AfterWard 後續章節]
   * [GetSource 取得原始碼]
-  * [http://sites.google.com/site/gasodroid/Home/androidentry2 實體書]
+  * [http://sites.google.com/site/gasodroid/Home/androidentry2 取得實體書]
