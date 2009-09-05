@@ -1,5 +1,6 @@
 #summary 操作 Android 模擬器
 #labels tw,Emulator
+#sidebar SideToc
 
 = 使用 Android 模擬器 =
 
