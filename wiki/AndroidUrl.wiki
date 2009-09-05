@@ -1,5 +1,6 @@
 #summary 初見 Intent
 #labels tw,intent,uri,getString
+#sidebar SideToc
 
 = 開啟網頁 =
 
