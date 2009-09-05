@@ -1,13 +1,16 @@
 #summary 後續章節
 #labels Featured,Phase-Design
+#sidebar SideToc
 
 = 後續章節 =
+
+[http://sites.google.com/site/gasodroid/Home/androidentry2 書籍網頁]
 
 我很喜歡讀書，但已經無法滿足於市面上出書的質量與速度，所以乾脆自己寫。
 
 隨著本書電子書的入門、基礎、中階部分寫作告一段落，花了將近一年時間。可以說已經完成我對本書預期達到的目標。當然我自己也會以本書的觀念為基礎，繼續學習 Android 平台的各種應用。
 
-本書的擴展版本以「*Google! Android 應用程式設計入門*」為名出版，作者為蓋索林（gasolin），*可至 [http://www.books.com.tw/exep/prod/booksfile.php?item=0010429598 博客來] 、 [http://www.eslite.com/product.aspx?pgid=1001115181849589 誠品] 或 [http://www.kingstone.com.tw/book/book_page.asp?LID=se008&kmcode=2013120092143 金石堂] 線上購買，或至各大書局選購*。
+本書的擴展版本以「*Google! Android 應用程式設計入門*」為名出版，作者為蓋索林（gasolin），*可至博客來、誠品或金石堂線上購買，或至各大書局選購*。
 
 除了更精鍊原有的內容之外，也為各章附上圖片說明、基本概念（如 MVC 模式）介紹、並加入資料庫應用、地圖應用等後續章節內容。協助讀者以最快捷的方式入門 Android 平台，並應用其中最常見的功能。
 
@@ -17,7 +20,7 @@
 
 = 目錄 =
 
-本書的目錄如下
+本書（第一版）的目錄如下
 
 === 入門 ===
 安裝並熟悉「Android」開發環境，學會如何新建/開啟「Android」專案並操作「Android」模擬器。使用範例：AppDemos。
@@ -93,10 +96,12 @@
 
 = 當前版本 =
 
- * 1.0
+ * 2.0
 
 = 歷程記錄 =
-
+  * 2009/9/5 第二版一刷 [http://sites.google.com/site/gasodroid/Home/androidentry2 書籍網頁]
+  * 2009/7 月第三刷
+  * 2009/5 月第二刷
   * 2009/3/20 正式出版，可至 [http://www.books.com.tw/exep/prod/booksfile.php?item=0010429598 博客來] 、[http://www.eslite.com/product.aspx?pgid=1001115181849589 誠品]、或 [http://www.kingstone.com.tw/book/book_page.asp?LID=se008&kmcode=2013120092143 金石堂] 線上購買或直接至各大書局選購 
   * 2009/3/4 封面設計完成 
   * 2009/2/26 送輸出
