@@ -1,5 +1,6 @@
 #summary 定義 Android 清單
 #labels tw,AndroidManifest
+#sidebar SideToc
 
 在[IntroAndroid 初見 Intent]一章中，我們已嘗試過使用 「startActivity」函式，傳入適當的「Intent」，來呼叫瀏覽器的 Activity。
 
