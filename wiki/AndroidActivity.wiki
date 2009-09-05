@@ -1,5 +1,6 @@
 #summary 加入新 Activity
 #labels tw,Activity
+#sidebar SideToc
 
 直觀來看，每個 Activity 通常會負責處理一個螢幕的內容(包含介面、選單、彈出對話框、程式動作等)。當我們需要從一個螢幕畫面切換到另一個螢幕畫面的時候，就涉及到了 Activity 切換的動作。
 我們可以將 Activity 看成 MVC 模式中的 Control。Activity 負責管理 UI（詳細的UI細節可以由資源檔讀入），並接受事件觸發。
