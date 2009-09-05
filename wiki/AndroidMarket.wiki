@@ -1,5 +1,6 @@
 #summary 發佈到市集(Market)
 #labels tw,market
+#sidebar SideToc
 
 = Android Market =
 
