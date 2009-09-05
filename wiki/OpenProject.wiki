@@ -1,5 +1,6 @@
 #summary 開啟現有專案
 #labels tw,open,import
+#sidebar SideToc
 
 = 開啟專案 =
 
