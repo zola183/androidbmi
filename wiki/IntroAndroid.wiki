@@ -1,5 +1,6 @@
 #summary 初探 Android
 #labels tw
+#sidebar SideToc
 
 = 2008 年末最大的衝擊 =
 
