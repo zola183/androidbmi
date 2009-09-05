@@ -4,7 +4,7 @@
 
 = 後續章節 =
 
-[http://sites.google.com/site/gasodroid/Home/androidentry2 書籍網頁]
+[http://sites.google.com/site/gasodroid/Home/androidentry2 書籍介紹網頁]在連結中。
 
 我很喜歡讀書，但已經無法滿足於市面上出書的質量與速度，所以乾脆自己寫。
 
