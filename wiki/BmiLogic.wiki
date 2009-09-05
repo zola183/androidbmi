@@ -1,5 +1,6 @@
 #summary 完成 BMI 程式
 #labels tw
+#sidebar SideToc
 
 至此，我們已經完成了 bmi 程式的介面設計，並且理解了了新建立的程式。剩下我們要做的，只剩下為 BMI 程式加上程式邏輯囉。
 
