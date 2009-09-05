@@ -1,5 +1,6 @@
 #summary 開發不息
 #labels tw
+#sidebar SideToc
 
 {{{
 一個學習階段的結束，就是另一個學習階段的開始。
