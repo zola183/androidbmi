@@ -1,5 +1,6 @@
 #summary 加入選單(Menu)
 #labels tw,menu
+#sidebar SideToc
 
 在進一步學習 Intent 與 Activity 之前，我們先來完善我們的應用程式。
 在前幾章中，我們把  「openOptionsDialog」 這個用來彈出對話框的函式，放進「calcBMI」這個按鈕元件的「OnClickListener」方法中。現在，我們要把「openOptionsDialog」 移出「OnClickListener」方法，改成按下「Menu」鍵後，跳出一個選單列(Menu Bar)。當我們點擊選單列中的選項後，才彈出 「openOptionsDialog」 的對話框。
