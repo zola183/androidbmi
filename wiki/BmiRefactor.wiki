@@ -1,5 +1,6 @@
 #summary 重構程式
 #labels tw,refactor
+#sidebar SideToc
 
 {{{
 偉大的創意少之又少，多數時候只是一些小改進。小的改進也是好的。
