@@ -1,6 +1,7 @@
 #summary 存取識別符號
 #labels tw,XML,Resource
-    
+#sidebar SideToc
+
 在上一章談了 XML描述檔中介面元件的各種「android:」開頭的屬性。要使用一個介面元件，第一件事就是定義出介面描述檔。大部分的介面元件(如 LinearLayout、TextView)不需要在程式中作後續處理，因此可以直接描述。不過對於那些將在程式中被參考(reference)到的介面元件（如按鈕 Button、文字輸入欄位 EditText），我們需要透過在 XML描述檔中，定義該介面元件的「android:id」 識別符號屬性。之後在程式中所有與這個介面元件有關的操作，都能根據「android:id」識別符號來在調用這個介面元件。
 
 {{{
