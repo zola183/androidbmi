@@ -1,5 +1,5 @@
 * 入門
-  *  [IntroAndroid 初探 Android] 
+  * [IntroAndroid 初探 Android] 
   * [InstallAndroid 安裝 Android 開發工具]
   * [OpenProject 開啟現有專案]
   * [PlayEmulator 操作 Android 模擬器(Emulator)]
