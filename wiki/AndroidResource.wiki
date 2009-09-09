@@ -42,6 +42,7 @@
   * 動態語言環境 http://code.google.com/p/android-scripting/ 
   * OCR http://www.bitquill.net/trac/wiki/Android/OCR http://code.google.com/p/mezzofanti/
   * Remote Control PC http://sourceforge.net/apps/trac/android-tesla/
+  * BlueTooth http://code.google.com/p/android-bluetooth/
 
 其他開發
   * Native C development http://blog.sina.com.cn/s/articlelist_1242184131_6_1.html
