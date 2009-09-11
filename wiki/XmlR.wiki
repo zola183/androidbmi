@@ -92,9 +92,16 @@ android:id 屬性的內容長得比較特別：
 
 Google 官方文件是這麼解釋「R.java」檔案的作用的：
 {{{
-A project's R.java file is an index into all the resources defined in the file. You use this class in your source code as a sort of short-hand way to refer to resources you've included in your project. This is particularly powerful with the code-completion features of IDEs like Eclipse because it lets you quickly and interactively locate the specific reference you're looking for.
+A project's R.java file is an index into all the resources defined in the file. 
+You use this class in your source code as a sort of short-hand way to refer to 
+resources you've included in your project. This is particularly powerful with the 
+code-completion features of IDEs like Eclipse because it lets you quickly and 
+interactively locate the specific reference you're looking for.
 
-The important thing to notice for now is the inner class named "layout", and its member field "main". The Eclipse plugin noticed that you added a new XML layout file and then regenerated this R.java file. As you add other resources to your projects you'll see R.java change to keep up.
+The important thing to notice for now is the inner class named "layout", and 
+its member field "main". The Eclipse plugin noticed that you added a new XML 
+layout file and then regenerated this R.java file. As you add other resources to 
+your projects you'll see R.java change to keep up.
 }}}
 
 有了「R.java」做中介，在 XML 描述檔中，我們可以透過
