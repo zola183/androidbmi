@@ -8,6 +8,7 @@ import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -185,17 +186,22 @@ public class Abmi extends Activity {
                 double weight = Double.parseDouble(field_weight.getText().toString())*0.45359;
                 double BMI = weight / (height * height);
                 //Present result
-                view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+//                view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+                view_result.setText(nf.format(BMI));
 
                 //Give health advice
                 if(BMI > 27) {
                     view_suggest.setText(R.string.advice_fat);
+                    view_result.setTextColor(Color.RED);
                 } else if(BMI > 25) {
                      view_suggest.setText(R.string.advice_heavy);
+                     view_result.setTextColor(Color.YELLOW);
                 } else if(BMI < 20) {
                      view_suggest.setText(R.string.advice_light);
+                     view_result.setTextColor(Color.YELLOW);
                 } else {
                      view_suggest.setText(R.string.advice_average);
+                     view_result.setTextColor(Color.GREEN);
                 }
             } catch(Exception obj) {
                 Toast.makeText(Abmi.this, getString(R.string.input_error), Toast.LENGTH_SHORT).show();
@@ -203,16 +209,16 @@ public class Abmi extends Activity {
         }
     };
 
-    protected static final int MENU_ABOUT = Menu.FIRST+1;
-    protected static final int MENU_SWITCH = Menu.FIRST;
+    protected static final int MENU_ABOUT = Menu.FIRST;
+    protected static final int MENU_SWITCH = Menu.FIRST+1;
     
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
     	Log.d(TAG, "open Menu");
-        menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_help);
-        menu.add(0, MENU_SWITCH, 0, R.string.switch_label).setIcon(android.R.drawable.ic_menu_set_as);
-		return super.onCreateOptionsMenu(menu);
+    	menu.add(0, MENU_SWITCH, 0, R.string.switch_label).setIcon(android.R.drawable.ic_menu_set_as);
+    	menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_info_details);
+        return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override
