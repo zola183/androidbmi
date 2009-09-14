@@ -4,15 +4,12 @@ import java.text.DecimalFormat;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,11 +26,11 @@ public class Gbmi extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = Locale.TRADITIONAL_CHINESE;
-        res.updateConfiguration(conf, dm);*/
+//        Resources res = getResources();
+//        DisplayMetrics dm = res.getDisplayMetrics();
+//        Configuration conf = res.getConfiguration();
+//        conf.locale = Locale.TRADITIONAL_CHINESE;
+//        res.updateConfiguration(conf, dm);
         
         setContentView(R.layout.main);
         findViews();
@@ -87,16 +84,17 @@ public class Gbmi extends Activity {
 	            double weight = Double.parseDouble(field_weight.getText().toString());
 	            double BMI = weight / (height * height);
 	            //Present result 
-	            view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+//	            view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+	            view_result.setText(nf.format(BMI));
 	 
 	            //Give health advice 
 	            if(BMI>27){	            	
-	                NotificationManager barManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-	                
-	                Notification barmsg = new Notification(android.R.drawable.ic_notification_overlay, 
-	                		"fat ass",
-	                		System.currentTimeMillis()
-	                		);
+//	                NotificationManager barManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+//	                
+//	                Notification barmsg = new Notification(android.R.drawable.ic_notification_overlay, 
+//	                		"fat ass",
+//	                		System.currentTimeMillis()
+//	                		);
 	                //barmsg.tickerText = "fat ass";
 	                /*
 	                barmsg.defaults = Notification.DEFAULT_ALL;
@@ -110,14 +108,18 @@ public class Gbmi extends Activity {
 //	                barManager.notify(0, barmsg);
 	                
 	            	view_suggest.setText(R.string.advice_fat);
-
+	            	view_result.setTextColor(Color.RED);
 	            }else if(BMI>25){
 	                view_suggest.setText(R.string.advice_heavy);
+	                view_result.setTextColor(Color.YELLOW);
 	            }else if(BMI<20){
 	                view_suggest.setText(R.string.advice_light);
+	                view_result.setTextColor(Color.YELLOW);
 	            }else{
 	                view_suggest.setText(R.string.advice_average);
+	                view_result.setTextColor(Color.GREEN);
 	            }
+	            
             }
             catch(Exception err)
             {
@@ -126,14 +128,14 @@ public class Gbmi extends Activity {
         }
     };
     
-    protected static final int MENU_ABOUT = Menu.FIRST+1;
-    protected static final int MENU_SWITCH = Menu.FIRST;
+    protected static final int MENU_ABOUT = Menu.FIRST;
+    protected static final int MENU_SWITCH = Menu.FIRST+1;
     
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_help);;
 		menu.add(0, MENU_SWITCH, 0, R.string.switch_label).setIcon(android.R.drawable.ic_menu_set_as);
+		menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_info_details);;
 		return true;
 	}
 	
