@@ -194,28 +194,16 @@ public class Gbmi extends Activity {
 		.show();
 	}
 	
-	@Override 
-	protected void onSaveInstanceState(Bundle outState){
-		//super.onStop();
-		// Save user preferences. We need an Editor object to
-		// make changes. All objects are from android.context.Context
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		// TODO Auto-generated method stub
 		SharedPreferences settings = getSharedPreferences(PREF, 0);
 		settings.edit()
 			.putString(PREF_HEIGHT, field_height.getText().toString())
 			.commit();
-//		outState.putString(PREF_HEIGHT, field_height.getText().toString());
-		super.onSaveInstanceState(outState);
 	}
-	
-//	@Override
-//	protected void onPause() {
-//		// TODO Auto-generated method stub
-//		SharedPreferences settings = getSharedPreferences(PREF, 0);
-//		settings.edit()
-//			.putString(PREF_HEIGHT, field_height.getText().toString())
-//			.commit();
-//		super.onPause();
-//	}
 
 	private void openBMI() {
 //        Log.d(TAG, "open Dialog"); 
