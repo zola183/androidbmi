@@ -29,6 +29,8 @@ public class Abmi extends Activity {
     public static final String PREF = "BMI_PREF";
     public static final String PREF_FEET = "BMI_Feet";
     public static final String PREF_INCH = "BMI_Inch";
+    public static final String PREF_HEIGHT = "PREF_HEIGHT";
+	public static final String PREF_WEIGHT = "PREF_WEIGHT";
 
     /*
     static final String[] feets= new String[] {
@@ -211,12 +213,14 @@ public class Abmi extends Activity {
 
     protected static final int MENU_ABOUT = Menu.FIRST;
     protected static final int MENU_SWITCH = Menu.FIRST+1;
+    protected static final int MENU_BMR = Menu.FIRST+2;
     
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
     	Log.d(TAG, "open Menu");
     	menu.add(0, MENU_SWITCH, 0, R.string.switch_label).setIcon(android.R.drawable.ic_menu_set_as);
+    	menu.add(0, MENU_BMR, 0, R.string.bmr_label).setIcon(android.R.drawable.ic_menu_view);
     	menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_info_details);
         return super.onCreateOptionsMenu(menu);
 	}
@@ -231,6 +235,9 @@ public class Abmi extends Activity {
                 break;
             case MENU_SWITCH:
                 openBMI();
+                break;
+            case MENU_BMR:
+                openBMR();
                 break;
         }
 		return super.onOptionsItemSelected(item);
@@ -282,4 +289,37 @@ public class Abmi extends Activity {
 	             .show();
     	}
     }
+	
+	private void openBMR() {
+	      Intent intent_bmi = new Intent();
+	      intent_bmi.setClassName("com.gasolin.android.abmr", "com.gasolin.android.abmr.Abmr");
+//	      intent_bmi.putExtra(PREF_HEIGHT, field_height.getText().toString());
+//	      intent_bmi.putExtra(PREF_WEIGHT, field_weight.getText().toString());
+	      intent_bmi.setAction(Intent.ACTION_MAIN);
+	      intent_bmi.addCategory(Intent.CATEGORY_LAUNCHER);
+	      try{
+	  		startActivityForResult(intent_bmi,0);
+	  	}catch(ActivityNotFoundException e)
+	  	{
+		        new AlertDialog.Builder(this)
+		            .setTitle("Haven't install BMR calculator.")
+		            .setMessage("Want to install BMR Calculator for british system(aBMR) from Android Market?")
+		            .setPositiveButton(R.string.yes_label,
+		                new DialogInterface.OnClickListener(){
+			            	public void onClick(
+									DialogInterface dialoginterface, int i){
+				        	    Uri uri = Uri.parse("market://search?q=pname:com.gasolin.android.abmr");
+				        	    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				        	    startActivity(intent);
+							}
+		             })
+		             .setNegativeButton(R.string.no_label, 
+	                  				new DialogInterface.OnClickListener(){
+	          							public void onClick(
+	          							DialogInterface dialoginterface, int i){
+	          					}
+		             })
+		             .show();
+	  	}
+	  }
 }
