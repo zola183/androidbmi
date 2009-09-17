@@ -5,7 +5,7 @@
     <string name="us_height">Height</string>
     <string name="feet_prompt">Select Feet</string>
     <string name="inch_prompt">Select Inches</string>
-    <string name="pound">Weight (lbs)</string>
+    <string name="pound">Weight (lb)</string>
     <string name="bmi_btn">Calc BMI</string>
     <string name="bmi_result">Your BMI is...</string>
     <string name="input_error">oops, you should type numbers only</string>
@@ -15,11 +15,12 @@
     <string name="advice_fat">You could do something to improve your situation, right now</string>
     <string name="advice_tip">Enter your height and weight</string>
     <string name="about_label">About...</string>
-    <string name="about_title">About aBMI 1.31</string>
-    <string name="about_msg">aBMI is a BMI calculator for the British system, written by gasolin (gasolin+android@gmail.com)</string>
+    <string name="about_title">About aBMI 1.32</string>
+    <string name="about_msg">aBMI is a BMI calculator for the British system, brought to you by gasolin (gasolin+android@gmail.com)</string>
     <string name="ok_label">OK</string>
     <string name="yes_label">Yes</string>
     <string name="no_label">NO</string>
+    <string name="bmr_label">Calc BMR</string>
     <string name="switch_label">cm/kg</string>
 <string-array name="feets">
      <item>2 Feet</item>
