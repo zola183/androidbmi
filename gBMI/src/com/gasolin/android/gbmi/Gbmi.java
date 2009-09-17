@@ -7,9 +7,11 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,7 +22,8 @@ import android.widget.Toast;
 
 public class Gbmi extends Activity {
 	public static final String PREF = "BMI_PREF";
-	public static final String PREF_HEIGHT = "BMI_Height";
+	public static final String PREF_HEIGHT = "PREF_HEIGHT";
+	public static final String PREF_WEIGHT = "PREF_WEIGHT";
 	
     /** Called when the activity is first created. */
     @Override
@@ -57,16 +60,36 @@ public class Gbmi extends Activity {
     // Restore preferences
     private void restorePrefs(Bundle savedInstanceState)
     {
-    	//SharedPreferences settings = getSharedPreferences(PREF, 0);
-    	//String pref_height = settings.getString(PREF_HEIGHT, "");
-    	if (savedInstanceState != null){
-	    	String pref_height = savedInstanceState.getString(PREF_HEIGHT);
-	    	if(pref_height!="")
+    	SharedPreferences settings = getSharedPreferences(PREF, 0);
+    	String pref_height = settings.getString(PREF_HEIGHT, "");
+    	String pref_weight="";
+//    	if (savedInstanceState != null){
+//    		String pref_height = savedInstanceState.getString(PREF_HEIGHT);
+//    		String pref_weight = savedInstanceState.getString(PREF_WEIGHT);
+//    		
+    	//support intent
+    	Bundle bundle = this.getIntent().getExtras();
+    	if (bundle!=null){
+    		String temp = bundle.getString(PREF_HEIGHT);
+    		if (temp!=null)
+    			pref_height = bundle.getString(PREF_HEIGHT);
+    		temp = bundle.getString(PREF_WEIGHT);
+    		if (temp!=null)
+    			pref_weight = bundle.getString(PREF_WEIGHT);
+	    	Log.e("OOOO", "height "+pref_weight+" weight "+pref_weight);
+    	}
+    	
+    	
+    		if(!pref_height.equals(""))
 	    	{
 	    		field_height.setText(pref_height);
 	    		field_weight.requestFocus();
 	    	}
-    	}
+    		if(pref_weight!=null)
+	    	{
+	    		field_weight.setText(pref_weight);
+	    	}
+//    	}
     }
     
     //Listen for button clicks
@@ -130,12 +153,14 @@ public class Gbmi extends Activity {
     
     protected static final int MENU_ABOUT = Menu.FIRST;
     protected static final int MENU_SWITCH = Menu.FIRST+1;
+    protected static final int MENU_BMR = Menu.FIRST+2;
     
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		menu.add(0, MENU_SWITCH, 0, R.string.switch_label).setIcon(android.R.drawable.ic_menu_set_as);
-		menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_info_details);;
+		menu.add(0, MENU_BMR, 0, R.string.bmr_label).setIcon(android.R.drawable.ic_menu_view);
+		menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_info_details);
 		return true;
 	}
 	
@@ -148,6 +173,9 @@ public class Gbmi extends Activity {
 				break;
 			case MENU_SWITCH:
                 openBMI();
+                break;
+			case MENU_BMR:
+                openBMR();
                 break;
 		}
 		return true;
@@ -167,18 +195,28 @@ public class Gbmi extends Activity {
 	}
 	
 	@Override 
-	protected void onSaveInstanceState(Bundle savedInstanceState){
+	protected void onSaveInstanceState(Bundle outState){
 		//super.onStop();
 		// Save user preferences. We need an Editor object to
 		// make changes. All objects are from android.context.Context
-		/*SharedPreferences settings = getSharedPreferences(PREF, 0);
+		SharedPreferences settings = getSharedPreferences(PREF, 0);
 		settings.edit()
 			.putString(PREF_HEIGHT, field_height.getText().toString())
-			.commit();*/
-		savedInstanceState.putString(field_height.getText().toString(), "");
-		super.onSaveInstanceState(savedInstanceState);
+			.commit();
+//		outState.putString(PREF_HEIGHT, field_height.getText().toString());
+		super.onSaveInstanceState(outState);
 	}
 	
+//	@Override
+//	protected void onPause() {
+//		// TODO Auto-generated method stub
+//		SharedPreferences settings = getSharedPreferences(PREF, 0);
+//		settings.edit()
+//			.putString(PREF_HEIGHT, field_height.getText().toString())
+//			.commit();
+//		super.onPause();
+//	}
+
 	private void openBMI() {
 //        Log.d(TAG, "open Dialog"); 
         Intent intent_bmi = new Intent();
@@ -210,4 +248,42 @@ public class Gbmi extends Activity {
 	             .show();
     	}
     }
+	
+	private void openBMR() {
+	      Intent intent_bmi = new Intent();
+	      intent_bmi.setClassName("com.gasolin.android.gbmr", "com.gasolin.android.gbmr.Gbmr");
+	      
+	      Bundle bundle = new Bundle();
+	      bundle.putString(PREF_HEIGHT, field_height.getText().toString());
+	      bundle.putString(PREF_WEIGHT, field_weight.getText().toString());
+	      intent_bmi.putExtras(bundle);
+//	      intent_bmi.putExtra(PREF_HEIGHT, field_height.getText().toString());
+//	      intent_bmi.putExtra(PREF_WEIGHT, field_weight.getText().toString());
+//	      intent_bmi.setAction(Intent.ACTION_MAIN);
+//	      intent_bmi.addCategory(Intent.CATEGORY_LAUNCHER);
+	      try{
+	  		startActivityForResult(intent_bmi,0);
+	  	}catch(ActivityNotFoundException e)
+	  	{
+		        new AlertDialog.Builder(this)
+		            .setTitle("Haven't install BMR calculator.")
+		            .setMessage("Want to install BMR Calculator for metric system(gBMR) from Android Market?")
+		            .setPositiveButton(R.string.yes_label,
+		                new DialogInterface.OnClickListener(){
+			            	public void onClick(
+									DialogInterface dialoginterface, int i){
+				        	    Uri uri = Uri.parse("market://search?q=pname:com.gasolin.android.gbmr");
+				        	    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				        	    startActivity(intent);
+							}
+		             })
+		             .setNegativeButton(R.string.no_label, 
+	                  				new DialogInterface.OnClickListener(){
+	          							public void onClick(
+	          							DialogInterface dialoginterface, int i){
+	          					}
+		             })
+		             .show();
+	  	}
+	  }
 }
