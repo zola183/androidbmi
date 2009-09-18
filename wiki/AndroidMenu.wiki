@@ -19,19 +19,20 @@
 9      return true;
 10 }
 11
-12 public boolean onOptionsItemSelected(MenuItem item)
-13 {
-14     super.onOptionsItemSelected(item);
-15     switch(item.getItemId()){
-16	    case MENU_ABOUT:
-17	        openOptionsDialog();
-18		break;
-19         case MENU_Quit:
-20	        finish();
-21             break;
-22	 }
-23	 return true;
-24 }
+12 @Override
+13 public boolean onOptionsItemSelected(MenuItem item)
+14 {
+15     super.onOptionsItemSelected(item);
+16     switch(item.getItemId()){
+17	    case MENU_ABOUT:
+18	        openOptionsDialog();
+19		break;
+20         case MENU_Quit:
+21	        finish();
+22             break;
+23	 }
+24	 return true;
+25 }
 }}}
 
 每個選單都包含兩個部分：
@@ -90,6 +91,7 @@ protected static final int MENU_Quit = Menu.FIRST+1;
 在「OptionsItemSelected」函式中，我們分行講解如下：
 
 {{{
+@Override
 public boolean onOptionsItemSelected(MenuItem item)
 {
     super.onOptionsItemSelected(item);
