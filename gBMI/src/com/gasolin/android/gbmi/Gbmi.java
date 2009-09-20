@@ -143,6 +143,16 @@ public class Gbmi extends Activity {
 	                view_result.setTextColor(Color.GREEN);
 	            }
 	            
+	            //Support PICK
+	            String action = getIntent().getAction();
+	            if("com.gasolin.android.action.BMI_PICK".equals(action)){
+	            	Intent intent = new Intent();
+	            	Bundle bundle = new Bundle();
+	            	bundle.putString("BMI", nf.format(BMI));
+	            	intent.putExtras(bundle);
+	            	setResult(RESULT_OK, intent);
+	                finish();
+	            }
             }
             catch(Exception err)
             {
