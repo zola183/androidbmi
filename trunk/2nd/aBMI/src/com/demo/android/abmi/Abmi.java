@@ -4,9 +4,12 @@ import java.text.DecimalFormat;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -202,12 +205,14 @@ public class Abmi extends Activity {
     };
 
     protected static final int MENU_ABOUT = Menu.FIRST;
+    protected static final int MENU_SWITCH = Menu.FIRST+1;
     
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
     	Log.d(TAG, "open Menu");
         menu.add(0, MENU_ABOUT, 0, R.string.about_label);
+        menu.add(0, MENU_SWITCH, 0, R.string.switch_label);
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -218,6 +223,9 @@ public class Abmi extends Activity {
         switch(item.getItemId()) {
             case MENU_ABOUT:
                 openOptionsDialog();
+                break;
+            case MENU_SWITCH:
+                openBMI();
                 break;
         }
 		return super.onOptionsItemSelected(item);
@@ -235,5 +243,35 @@ public class Abmi extends Activity {
                         }
              })
              .show();
+    }
+
+	private void openBMI() {
+        Log.d(TAG, "open Dialog");
+        Intent intent_bmi = new Intent("com.gasolin.android.gbmi"); 
+//        intent_bmi.addCategory(Intent.CATEGORY_DEFAULT);
+        try{
+    		startActivityForResult(intent_bmi,0);
+    	}catch(ActivityNotFoundException e)
+    	{
+	        new AlertDialog.Builder(this)
+	            .setTitle("Haven't install cm/kg calculator.")
+	            .setMessage("Want to install BMI calculator for Metric system from Android Market?")
+	            .setPositiveButton(R.string.yes_label,
+	                new DialogInterface.OnClickListener(){
+		            	public void onClick(
+								DialogInterface dialoginterface, int i){
+			        	    Uri uri = Uri.parse("market://search?q=pname:com.gasolin.android.gbmi");
+			        	    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+			        	    startActivity(intent);
+						}
+	             })
+	             .setNegativeButton(R.string.no_label, 
+                    				new DialogInterface.OnClickListener(){
+            							public void onClick(
+            							DialogInterface dialoginterface, int i){
+            					}
+	             })
+	             .show();
+    	}
     }
 }

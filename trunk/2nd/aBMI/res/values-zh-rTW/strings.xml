@@ -14,9 +14,12 @@
     <string name="advice_heavy">你應該減肥囉！</string>
     <string name="advice_fat">為了健康，你應該馬上採取一些行動囉！</string>
     <string name="about_label">關於...</string>
-    <string name="about_title">關於 aBMI 1.0</string>
+    <string name="about_title">關於 aBMI 1.20</string>
     <string name="about_msg">aBMI 是個 BMI 值計算器程式, 由 gasolin (gasolin+android@gmail.com) 撰寫</string>
     <string name="ok_label">OK</string>
+    <string name="yes_label">Yes</string>
+    <string name="no_label">NO</string>
+    <string name="switch_label">cm/kg</string>
 <string-array name="feets">
      <item>2 呎</item>
      <item>3 呎</item>

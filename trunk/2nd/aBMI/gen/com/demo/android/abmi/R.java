@@ -43,8 +43,11 @@ public final class R {
         public static final int feet_prompt=0x7f040003;
         public static final int inch_prompt=0x7f040004;
         public static final int input_error=0x7f040008;
+        public static final int no_label=0x7f040012;
         public static final int ok_label=0x7f040010;
         public static final int pound=0x7f040005;
+        public static final int switch_label=0x7f040013;
         public static final int us_height=0x7f040002;
+        public static final int yes_label=0x7f040011;
     }
 }

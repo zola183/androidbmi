@@ -14,9 +14,12 @@
     <string name="advice_heavy">You should lose some weight</string>
     <string name="advice_fat">You should do something to improve your situation, right now</string>
     <string name="about_label">About...</string>
-    <string name="about_title">About aBMI 1.0</string>
+    <string name="about_title">About aBMI 1.20</string>
     <string name="about_msg">aBMI is a BMI calculator for the British system, written by gasolin (gasolin+android@gmail.com)</string>
     <string name="ok_label">OK</string>
+    <string name="yes_label">Yes</string>
+    <string name="no_label">NO</string>
+    <string name="switch_label">cm/kg</string>
 <string-array name="feets">
      <item>2 Feet</item>
      <item>3 Feet</item>
