@@ -23,7 +23,7 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
       你可以在命令行上輸入 「java -version」 來查看目前系統上已安裝的 java 版本(java 版本需 >1.5)。
       要注意的是 Android 與 Java Gnu 編譯器 (gcj) 還不相容。
     * **Eclipse IDE**，一個多用途的開發工具平台。
-      你可以下載安裝 Eclipse 3.3 (代號 Europa) 或 3.4 (代號 Ganymede) 版。
+      你可以下載安裝 Eclipse 3.5 (代號 Galileo) 、 3.4 (代號 Ganymede) 或 Eclipse 3.3 (代號 Europa) 版。
       請注意你選擇的版本需包含 Eclipse Java 開發工具擴充套件(Java Development Tool Plugin, JDT)。
       大多數 Eclipse IDE 包中都已含有 JDT 擴充套件。若對 Eclipse 平台不熟悉的話，建議直接選擇 「for Java Developers」版本來下載。
     * **ADT**，基於 Eclipse 的 Android 開發工具擴充套件 (Android Development Tools plugin)。
