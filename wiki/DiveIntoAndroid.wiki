@@ -89,9 +89,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
 ----
 
 == 當前版本 ==
-1.5_2
+1.5_3
 
 == 主要更新記錄 ==
+  * 2009/9/28 本教學相容於 Android SDK 1.6
   * 2009/9/5 加入邊欄目錄
   * 2009/8/10 實體書第二版已出版，請參考[http://sites.google.com/site/gasodroid/Home/androidentry2 書籍網站]
   * 2009/5/30 直接使用 1.5 版的範例已上線，請前往[GetSource 如何取得範例原始碼]照著說明下載
