@@ -143,8 +143,8 @@ your projects you'll see R.java change to keep up.
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BMI</string>
-    <string name="height">身高 (cm)</string>
-    <string name="weight">體重 (kg)</string>
+    <string name="bmi_height">身高 (cm)</string>
+    <string name="bmi_weight">體重 (kg)</string>
     <string name="bmi_btn">計算 BMI 值</string>
     <string name="bmi_result">你的 BMI 值是 </string>
 </resources>
@@ -157,8 +157,8 @@ your projects you'll see R.java change to keep up.
         public static final int app_name=0x7f040000;
         public static final int bmi_btn=0x7f040003;
         public static final int bmi_result=0x7f040004;
-        public static final int height=0x7f040001;
-        public static final int weight=0x7f040002;
+        public static final int bmi_height=0x7f040001;
+        public static final int bmi_weight=0x7f040002;
     }
 }}}
 
@@ -182,7 +182,7 @@ your projects you'll see R.java change to keep up.
 	<TextView 
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
-	    android:text="@string/height"
+	    android:text="@string/bmi_height"
 	    />
 	<EditText android:id="@+id/height" 
 	    android:layout_width="fill_parent" 
@@ -193,7 +193,7 @@ your projects you'll see R.java change to keep up.
 	<TextView 
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
-	    android:text="@string/weight"
+	    android:text="@string/bmi_weight"
 	    />
 	<EditText android:id="@+id/weight" 
 	    android:layout_width="fill_parent" 
