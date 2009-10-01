@@ -8,8 +8,17 @@
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.gasolin.android.action.BMI_PICK"/>
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="android.intent.action.GET_CONTENT"/>
+                <data android:scheme = "bmi"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="android.intent.action.GET_CONTENT"/>
+                <data android:scheme = "weight"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
