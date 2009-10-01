@@ -42,25 +42,23 @@
 		<TextView 
 		    android:layout_width="fill_parent" 
 		    android:layout_height="wrap_content" 
-		    android:text="@string/height"
+		    android:text="@string/bmi_height"
 		    />
 		<EditText android:id="@+id/height" 
 		    android:layout_width="fill_parent" 
 		    android:layout_height="wrap_content" 
 		    android:inputType="phone|numberDecimal"
-		    android:singleLine="true"
 		    android:text=""
 		    />
 		<TextView 
 		    android:layout_width="fill_parent" 
 		    android:layout_height="wrap_content" 
-		    android:text="@string/weight"
+		    android:text="@string/bmi_weight"
 		    />
 		<EditText android:id="@+id/weight" 
 		    android:layout_width="fill_parent" 
 		    android:layout_height="wrap_content"
 		    android:inputType="phone|numberDecimal"
-		    android:singleLine="true"
 		    android:text=""
 		    />
     </LinearLayout>

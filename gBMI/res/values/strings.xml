@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">gBMI</string>
-	<string name="height">Height (cm)</string>
-    <string name="weight">Weight (kg)</string>
+	<string name="bmi_height">Height (cm)</string>
+    <string name="bmi_weight">Weight (kg)</string>
     <string name="bmi_btn">Calc BMI</string>
     <string name="bmi_result">Your BMI is...</string>
     <string name="input_error">oops, you should type numbers only</string>

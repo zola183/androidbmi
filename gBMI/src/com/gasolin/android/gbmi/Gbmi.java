@@ -145,10 +145,11 @@ public class Gbmi extends Activity {
 	            
 	            //Support PICK
 	            String action = getIntent().getAction();
-	            if("com.gasolin.android.action.BMI_PICK".equals(action)){
+	            if(Intent.ACTION_GET_CONTENT.equals(action)){
 	            	Intent intent = new Intent();
 	            	Bundle bundle = new Bundle();
 	            	bundle.putString("BMI", nf.format(BMI));
+	            	bundle.putString("WEIGHT", nf.format(weight));
 	            	intent.putExtras(bundle);
 	            	setResult(RESULT_OK, intent);
 	                finish();
