@@ -71,5 +71,7 @@ Android 是個完整的平台，還有諸多內容值得研究。例如應用程
 
 如果您花時間讀了本書，請幫忙填寫只有4題的[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
 
+實體書的讀者請填寫[http://spreadsheets.google.com/viewform?formkey=cGZ0Snp6cWNrUEltanlKZkJfcjdkZlE6MA 讀者問卷]，可留言或回報錯誤。
+
 
 <  [AndroidMarket 發佈到 Android 市場(Market)]  | [DiveIntoAndroid 回目錄] | [AndroidResource Android 相關資源]
