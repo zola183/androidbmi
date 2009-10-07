@@ -28,7 +28,7 @@ android:id 屬性的內容長得比較特別：
 
 沒錯，如果 Android 是直接使用 XML 來儲存介面描述到手機上的話，一定會佔用比起現在大的多的檔案空間。解決的方法是Android 並不直接使用 XML 檔案，而是透過 Android 開發工具，自動將 XML 描述檔轉換成資源檔案。一旦應用程式要使用某個介面或是任何種類的資源(字串、圖片、圖示、音效...)，都使用索引來查詢。
 
-當你建立一個 BMI 新專案，打開位於 「src/com/demo/android/bmi」 目錄下的 「R.java」檔，你可以看到如下的程式碼：
+當你建立一個 BMI 新專案，打開位於 「gen/com/demo/android/bmi」 目錄下的 「R.java」檔，你可以看到如下的程式碼：
 
 {{{
     /* AUTO-GENERATED FILE.  DO NOT MODIFY.
@@ -55,7 +55,7 @@ android:id 屬性的內容長得比較特別：
     }
 }}}
 
-在照著前一章新增了 XML 描述後，再次打開打開 「src/com/demo/android/bmi」 目錄下的 「R.java」 檔 ，你可以看到如下的程式碼：
+在照著前一章新增了 XML 描述後，再次打開打開 「gen/com/demo/android/bmi」 目錄下的 「R.java」 檔 ，你可以看到如下的程式碼：
 {{{
     /* AUTO-GENERATED FILE.  DO NOT MODIFY.
      *
