@@ -176,7 +176,7 @@ id: 2
 
 要建立使用新模擬器外觀的模擬器，可以在之前命令後加入「--skin」選項。命令如下：
 {{{
-$ android create avd --target 2 --name devphone –skin G1
+$ android create avd --target 2 --name devphone -–skin G1
 }}}
 我們也可以偷懶不用參數的全名，將參數用簡寫表示。即用「-t」表示「--target」，用「-n」表示「--name」，用「-s」表示「--skin」。改輸入如下：
 {{{
