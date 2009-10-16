@@ -5,4 +5,4 @@
 || Web download || no  || yes    || no   || no                     || no || yes || no        || no            ||
 || ORM                   ||       || +       || +    ||                            ||       ||        ||             ||                  ||   
 || paid app           || yes || yes   || yes  || yes                     || no || no  || no      || no             ||
-|| Note                  ||        ||          ||         ||  中國移動 only   ||       ||        || 小筆電 || 遠傳 only ||
+|| Note                  || 需 Google 授權 ||          ||         ||  中國移動 only   ||       ||        || 小筆電 ||  ||
