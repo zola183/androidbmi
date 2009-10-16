@@ -1,4 +1,4 @@
-#summary 市場一覽
+#summary Android 市集一覽表
 
 || Name                 || [http://market.android.com Android Market]          || [http://andappstore.com AndAppStore]        || [http://www.slideme.org SlideMe]        || [http://mmarket.com MMarket]           ||  [http://soft.sj.91.com/pandaspace/android/ 熊貓空間] || [http://www.eoemarket.com/ eoemarket] || [http://www.insydemarket.com/ insyde market] || [http://www.smartapp.tw s市集] ||
 || Web App List    || no  || yes    || yes || yes                    || no || yes || no        || yes           ||
