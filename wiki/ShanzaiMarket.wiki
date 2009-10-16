@@ -1,0 +1,5 @@
+#summary 市場一覽
+
+|| Name                 || [http://market.android.com Android Market]          || [http://andappstore.com AndAppStore]        || [http://www.slideme.org SlideMe]        || [http://mmarket.com MMarket]           ||  [http://soft.sj.91.com/pandaspace/android/ 熊貓空間] || [http://www.eoemarket.com/ eoemarket] || [http://www.smartapp.tw s市集] ||
+|| Web interface || no                                 || yes                          || yes                || no                      || yes || yes || yes ||
+|| Note                  ||                                       ||                                 ||                       ||  中國移動 only   ||      ||        || 遠傳 only ||
