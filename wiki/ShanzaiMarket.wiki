@@ -4,4 +4,5 @@
 || Web App List    || no  || yes    || yes || yes                    || no || yes || no        || yes           ||
 || Web download || no  || yes    || no   || no                     || no || yes || no        || no            ||
 || ORM                   ||       || +       || +    ||                            ||       ||        ||             ||                  ||   
+|| paid app           || yes || yes   || yes  || yes                     || no || no  || no      || no             ||
 || Note                  ||        ||          ||         ||  中國移動 only   ||       ||        || 小筆電 || 遠傳 only ||
