@@ -75,7 +75,7 @@
 	<EditText android:id="@+id/weight" 
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content"
-	    android:inputType="numberDecimal"
+	    android:inputType="phone|numberDecimal"
 	    android:text=""
 	    android:singleLine="true"
 	    />
