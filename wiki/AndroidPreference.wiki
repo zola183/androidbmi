@@ -8,7 +8,7 @@
 
 = 使用偏好設定 =
 
-打開「src/com/demo/android/bmi/Bmi.java」，在「onCreate」和「onStop」中加入「Preference」(偏好設定)相關的程式碼。完整的程式碼如下：
+打開「src/com/demo/android/bmi/Bmi.java」，在「onCreate」和「onPause」中加入「Preference」(偏好設定)相關的程式碼。完整的程式碼如下：
 
 {{{
 public class Bmi extends Activity {
@@ -41,8 +41,8 @@ public class Bmi extends Activity {
 ......
 
 	@Override
-	protected void onStop(){
-		super.onStop();
+	protected void onPause(){
+		super.onPause();
 		// Save user preferences. use Editor object to make changes.
 		SharedPreferences settings = getSharedPreferences(PREF, 0);
 		settings.edit()
@@ -107,8 +107,8 @@ field_weight.requestFocus();
 
 {{{
     	@Override
-	protected void onStop(){
-		super.onStop();
+	protected void onPause(){
+		super.onPause();
 		// Save user preferences. use Editor object to make changes.
 		SharedPreferences settings = getSharedPreferences(PREF, 0);
 		settings.edit()
@@ -117,7 +117,7 @@ field_weight.requestFocus();
 	}
 }}}
 
-當我們使用「Home」、「Back」按鈕或其他方式離開當前的 Activity 時，我們才把身高的值儲存到偏好設定中。根據上一章[LifeCycle 活動的生命週期]，我們知道離開當前螢幕的最後一個狀態是「Stop」狀態。因此我們覆載(Override)了「onStop」函式，在其中加入儲存身高偏好設定的程式碼。「super.onStop」的作用是先將原本的「onStop」函式執行一遍。
+當我們使用「Home」、「Back」按鈕或其他方式離開當前的 Activity 時，我們才把身高的值儲存到偏好設定中。根據上一章[LifeCycle 活動的生命週期]，我們知道停止當前螢幕動作的狀態是「onPause」狀態。因此我們覆載(Override)了「onPause」函式，在其中加入儲存身高偏好設定的程式碼。「super.onPause」的作用是先將原本的「onPause」函式執行一遍。
 
 {{{
 SharedPreferences settings = getSharedPreferences(PREF, 0);
