@@ -112,8 +112,10 @@ public class Bmi extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
-	    menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(R.drawable.help_browser);
-	    menu.add(0, MENU_Quit, 0, "結束").setIcon(R.drawable.emblem_unreadable);
+	    //menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(R.drawable.help_browser);
+	    //menu.add(0, MENU_Quit, 0, "結束").setIcon(R.drawable.emblem_unreadable);
+		menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(android.R.drawable.ic_menu_help);
+		menu.add(0, MENU_Quit, 0, "結束").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
 		return super.onCreateOptionsMenu(menu);
 	}
 

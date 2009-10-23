@@ -46,15 +46,22 @@ public class Report extends Activity {
     };
 
     
-    protected void showNotification () {
+    protected void showNotification (double BMI) {
     	NotificationManager barManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-    	
+
+    	/*
+    	Notification barMsg = new Notification(
+    			android.R.drawable.stat_sys_warning, 
+        		"歐，你過重囉！",
+        		System.currentTimeMillis()
+        		);
+    	*/
     	Notification barMsg = new Notification(
     			R.drawable.icon_128, 
         		"歐，你過重囉！",
         		System.currentTimeMillis()
-        		);
-
+        		); 
+    	
     	barMsg.defaults |= Notification.DEFAULT_SOUND;
     	//barMsg.defaults |= Notification.DEFAULT_ALL;
     	
@@ -84,7 +91,7 @@ public class Report extends Activity {
         
         //Give health advice
         if(BMI>25) {
-        	showNotification();
+        	showNotification(BMI);
             view_suggest.setText(R.string.advice_heavy);
         } else if(BMI<20) {
             view_suggest.setText(R.string.advice_light);
