@@ -71,7 +71,7 @@ Android 的虛擬機(VM)是使用堆疊 (Stack based) 管理。主要有四種�
 
 == 記憶體不足時的行為 ==
 
-記憶體不足時，Dalvak 虛擬機會根據其記憶體回收規則來回收記憶體：
+記憶體不足時，Dalvik 虛擬機會根據其記憶體回收規則來回收記憶體：
 
   # 先回收與其他 Activity 或 Service/Intent Receiver 無關的行程(即優先回收獨立的Activity)
   # 再回收處於「Stopped」狀態的其他類型 Activity（在背景等待的Activity）。最久沒有使用的 Activity 優先回收（比較官方的說法是 "根據 LRU 演算法..."）
