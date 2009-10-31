@@ -20,6 +20,9 @@
 
 安裝好 SDK 套件後，我們就可以開始來熟悉開發環境了。
 
+== 參考資料 ==
+
+ * Adding SDK Components http://developer.android.com/sdk/adding-components.html
 
 < [InstallAndroid 安裝 Android 開發工具] | [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案] >
 
