@@ -136,7 +136,7 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 * 安裝擴充套件 http://developer.android.com/guide/developing/tools/adt.html
 
 
-< [IntroAndroid 初探 Android] | [DiveIntoAndroid 回目錄] | [OpenProject 開啟現有專案] >
+< [IntroAndroid 初探 Android] | [DiveIntoAndroid 回目錄] | [ManageSDK 管理 SDK] >
 
 ----
 
