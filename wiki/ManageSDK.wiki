@@ -4,7 +4,7 @@
 
 =  管理 SDK =
 
-== 下載目標 SDK ==
+== 下載 SDK 套件 ==
 
 在選單上選擇「Window > Android SDK and AVD Manager」選項，開啟 Android SDK/AVD 管理工具。
 
