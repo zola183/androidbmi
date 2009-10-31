@@ -1,3 +1,4 @@
+[DiveIntoAndroid 更新記錄]
 * 入門
   * [IntroAndroid 初探 Android] 
   * [InstallAndroid 安裝 Android 開發工具]
@@ -11,12 +12,13 @@
   * [XmlR 存取識別符號]
   * [AndroidLogic 解讀程式流程]
   * [BmiLogic 完成 BMI 程式]
-* 中階
+* 中階 (1)
   * [BmiRefactor 重構程式]
   * [AndroidDialog 加入對話框(Dialog)]
   * [AndroidUrl 初見 Intent]
   * [AndroidMenu 加入選單(Menu)]
   * [AndroidManifest 定義 Android 清單]
+* 中階 (2)
   * [AndroidActivity 加入新 Activity]
   * [AndroidIntent 傳送資料到新 Activity]
   * [AndroidDebug 記錄與偵錯 (Log)]
