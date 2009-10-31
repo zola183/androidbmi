@@ -89,9 +89,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
 ----
 
 == 當前版本 ==
-1.5_3
+2.0_alpha
 
 == 主要更新記錄 ==
+  * 2009/11/1 加入[ManageSDK 管理 SDK]一章，開始轉換至 Android 2.0。
   * 2009/9/28 本教學相容於 Android SDK 1.6
   * 2009/9/5 加入邊欄目錄
   * 2009/8/10 實體書第二版已出版，請參考[http://sites.google.com/site/gasodroid/Home/androidentry2 書籍網站]
