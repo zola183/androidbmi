@@ -1,0 +1,27 @@
+#summary 管理 SDK
+#labels Featured
+
+=  管理 SDK =
+
+
+== 下載目標 SDK ==
+
+在選單上選擇「Window > Android SDK and AVD Manager」選項，開啟 Android SDK/AVD 管理工具。
+
+在開啟的管理工具視窗中，切換到「Installed Packages」標籤頁，「Installed Packages」列表中預設只裝了「Android SDK Tools」，不包含目標 SDK。我們需要先自行安裝對應的 SDK 套件。
+
+切換到「Available Packages」 標籤頁，開始裝目標 SDK。點選預設的網址，可以看到目前可用的目標 SDK、文件、Add-On，要完成本書中範例，只要勾選對應版本的目標 SDK、文件、Add-On，然後按下「Install Selected」按鈕即可。
+
+在下一個視窗中可確認剛勾選預備要安裝的 SDK 套件。勾選「Accept All」選項後，按下「Install Accepted」按鈕即開始自動下載並安裝。
+
+如果不考慮頻寬與下載時間，也可以勾選下載全部。但每個安裝好的 SDK 套件都將花掉數百 MB 空間，您可以依此估計下載並安裝全部套件要花的時間。
+
+如果您不做 Google 地圖開發，那麼可以不下載 Google API Add-On。
+
+由於要讓應用程式支援多種解析度機型，必須使用 1.6 版之後的目標 SDK 來編譯。因此安裝舊版本目標 SDK 的功用，只剩下讓我們能在對應版本模擬器上測試這功能而已。需不需要安裝舊版本目標 SDK，請依照您自身的開發需求來決定。
+
+在安裝完成後，切換到「Installed Packages」標籤頁，可以看到剛剛勾選的 SDK 套件都已經安裝到開發環境中。
+
+經過幾次 Android 版本升級後，我們的列表中可能會包含許多舊版本的 SDK。這時可以透過選取列表中的套件，點選下方的「Delete...」按鈕來刪除這些過時的套件。我們隨時還可以回到「Available Packages」標籤頁，把套件下載回來。
+
+安裝好 SDK 套件後，我們就可以開始來熟悉開發環境了。
