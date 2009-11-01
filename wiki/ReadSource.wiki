@@ -110,7 +110,7 @@ res/ 中的程式:
 Android 應用程式的檔案組織方式與用途 http://developer.android.com/guide/appendix/faq/commontasks.html#filelist
     
 
-< [PlayEmulator 操作模擬器] | [DiveIntoAndroid 回目錄] | [AndroidUI 描述使用者介面] >
+< [PlayEmulator 操作虛擬機器] | [DiveIntoAndroid 回目錄] | [AndroidUI 描述使用者介面] >
 
 ----
 
