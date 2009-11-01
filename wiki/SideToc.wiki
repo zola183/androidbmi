@@ -5,7 +5,7 @@
   * [ManageSDK 管理 SDK]
   * [OpenProject 開啟現有專案]
   * [PlayEmulator 操作 Android 虛擬機器(Emulator)]
-  * [ReadSource 建立一個 Android 程式]
+  * [ReadSource 建立第一個程式]
 * 基礎
   * [AndroidUI 描述使用者介面] 
   * [BmiUI 設計使用者介面]
