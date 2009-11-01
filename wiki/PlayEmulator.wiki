@@ -1,26 +1,26 @@
-#summary 操作 Android 模擬器
+#summary 操作 Android 虛擬機器
 #labels tw,Emulator
 #sidebar SideToc
 
-= 使用 Android 模擬器 =
+= 使用 Android 虛擬機器 =
 
-我們已經透過「Eclipse」開發環境，開啟了「ApiDemos」專案。本章將講解如何設定和操作 Android 模擬器。
+我們已經透過「Eclipse」開發環境，開啟了「ApiDemos」專案。本章將講解如何設定和操作 Android 虛擬機器。
 
-== 設定 Android 模擬器 ==
+== 設定 Android 虛擬機器 ==
 
-現在我們還不忙著開始寫程式，先花點時間，來看看怎麼在開發環境中，透過「Android 模擬器」來執行應用程式吧。
+現在我們還不忙著開始寫程式，先花點時間，來看看怎麼在開發環境中，透過「Android 虛擬機器」來執行應用程式吧。
 
-「Android 軟體開發套件」（SDK） 1.5 以上的版本提供了支援不同版本模擬器的功能，在使用模擬器之前，必須先建立一個模擬器後才可在 Eclipse 開發環境中使用。
+由於在剛開始開發時，我們手邊並不一定已擁有 Android 設備。因此 Android 開發工具亦提供了相當強大的模擬器，能讓我們自由配置，模擬各種硬體規格的設備。在 Android 中一律把 Android 模擬器稱作「Android 虛擬機器」（Android Virtual Device），簡寫為「AVD」。
 
-SDK 中提供了一個「android」命令行工具（在 android-sdk/tools 中），可以用來建立新專案或是管理模擬器。在此我們使用「android」命令行工具來新建立一個模擬器。
+「Android 軟體開發套件」（SDK） 1.5 以上的版本提供了支援不同目標版本虛擬機器的功能，在使用虛擬機器之前，必須先建立一個虛擬機器後才可在 Eclipse 開發環境中使用。
 
-在新的 Android 文件中，一律把 Android 模擬器稱作「Android 虛擬機器」（Android Virtual Device），簡寫為「AVD」以作區別。
+SDK 中提供了一個「android」命令行工具（在 android-sdk/tools 中），可以用來建立新專案或是管理虛擬機器。在此我們使用「android」命令行工具來新建立一個虛擬機器。
 
 === 列出模擬器類型 ===
 
 首先，把「android-sdk/tools 」目錄加入系統路徑，我們以後就可以在任何地方使用「android-sdk/tools 」目錄下的各種命令。
 
-在 Windows 2000， XP， 2003 這些作業系統裡，點選「控制台 > 系統 > 進階 > 環境變數」。在「系統變數(S)」欄中，選取「PATH」變數名稱後，再點選「編輯(I)」按鈕。
+在 Windows 2000、XP、2003、Windows 7 這些作業系統裡，點選「控制台 > 系統 > 進階 > 環境變數」。在「系統變數(S)」欄中，選取「PATH」變數名稱後，再點選「編輯(I)」按鈕。
 
 再此假設您安裝 Android SDK 的路徑是「C:\android-sdk\tools」，接著在彈出的視窗中將「;C:\android-sdk\tools」（注意要以分號隔開）這字串添在原本的字串之後，按下確定後重新啟動作業系統。
 
@@ -36,7 +36,7 @@ $ android list targets
 $ ./android list targets
 }}}
 
-螢幕上會列出所有支援的模擬器類型
+螢幕上會列出所有支援的虛擬機器類型
 
 {{{
 $ android list targets
@@ -63,27 +63,27 @@ id: 3
      Skins: HVGA (default), HVGA-L, QVGA-P, HVGA-P, QVGA-L
 }}}
 
-在這邊列出了三種模擬器類型。分別是編號(id)為 1、2 的 Android 1.1、1.5 模擬器，與編號(id)為 3 的「Google APIs」，Google 把自己提供的應用程式（如 Google Map）放在「Google APIs」這個模擬器類型中，因此要開發 Google Map 等 Google 專屬應用程式時，就必須先建立編號 3 這類型的模擬器，稍後才能在適當的模擬器上作驗證。
+在這邊列出了三種虛擬機器類型。分別是編號(id)為 1、2 的 Android 1.1、1.5 虛擬機器，與編號(id)為 3 的「Google APIs」，Google 把自己提供的應用程式（如 Google Map）放在「Google APIs」這個虛擬機器類型中，因此要開發 Google Map 等 Google 專屬應用程式時，就必須先建立編號 3 這類型的虛擬機器，稍後才能在適當的虛擬機器上作驗證。
 
 === 建立模擬器  ===
 
-我們現在來建立一個基本的 Android SDK 1.5 模擬器。
+我們現在來建立一個基本的 Android SDK 2.0 虛擬機器。
 
 在命令行中輸入以下命令：
 
 {{{
-$ android create avd --target 2 --name cupcake
+$ android create avd --target 1 --name eclair
 }}}
 
-這段命令的意思是：使用「android create avd」命令來建立一個新的模擬器，「 --target 2」參數的意思是這個模擬器使用 id 為 2 的模擬器類型（Android 1.5），「--name cupcake」參數的意思是將這個建立的模擬器命名為「cupcake」。
+這段命令的意思是：使用「android create avd」命令來建立一個新的虛擬機器，「 --target 1」參數的意思是這個模擬器使用 id 為 1 的 SDK 套件（Android 1.5），「--name eclair」參數的意思是將這個建立的模擬器命名為「eclair」。
 
 產生的結果如下
 
 {{{
-$ android create avd --target 2 --name cupcake
-Android 1.5 is a basic Android platform.
+$ android create avd --target 1 --name eclair
+Android 2.0 is a basic Android platform.
 Do you wish to create a custom hardware profile [no]
-Created AVD 'cupcake' based on Android 1.5
+Created AVD 'cupcake' based on Android 2.0
 }}}
 
 === 列出已建立的模擬器  ===
@@ -98,13 +98,13 @@ $ android list avd
 {{{
 $ android list avd
 Available Android Virtual Devices:
-    Name: cupcake
+    Name: eclair
     Path: /Users/mac/.android/avd/cupcake.avd
-    Target: Android 1.5 (API level 3)
+    Target: Android 2.0 (API level 5)
     Skin: HVGA
 }}}
 
-使用「 android list avd」命令看到有輸出，即表示已成功建立模擬器，可以回到 Eclipse 環境來，設定執行應用程式專案所需的環境參數了。
+使用「 android list avd」命令看到有輸出，即表示已成功建立虛擬機器，可以回到 Eclipse 環境來，設定執行應用程式專案所需的環境參數了。
 
 == 設定環境參數 ==
 
@@ -123,68 +123,37 @@ Available Android Virtual Devices:
 
 在 「Launch Action」 選單中，確認預設選擇的是「Launch Default Activity」。
 
-至此我們就完成了模擬器環境參數的設定。 點選右下角的「Debug」按鈕，Eclipse 就會啟動 Android 模擬器。
+至此我們就完成了模擬器環境參數的設定。 點選右下角的「Debug」按鈕，Eclipse 就會啟動 Android 虛擬機器。
 
 小技巧: 
     在選單列中，也可以選擇設定「Run Configuration...」選項。這時我們得到的是一個幾乎完全相同的環境參數設定畫面，只是右下角的「Debug」按鈕變成了「Run」按鈕。「Debug」與「Run」模式的環境參數設定可以共用，差別在於「Debug」模式下可以使用在之後章節中會介紹的 logd，來顯示一些開發時所需的額外訊息。
 
-== 再次啟動 Android 模擬器 ==
+== 再次啟動 Android 虛擬機器 ==
 
-當我們設定好之後，以後碰到要再次啟動模擬器的情況時，只要在螢幕左上角的「Debug」或「Run」圖示右側小箭頭上按一下，從彈出的選單中選擇剛剛設定的環境參數名稱，模擬器即開始執行，並安裝好我們所指定的專案應用程式。
+當我們設定好之後，以後碰到要再次啟動虛擬機器的情況時，只要在螢幕左上角的「Debug」或「Run」圖示右側小箭頭上按一下，從彈出的選單中選擇剛剛設定的環境參數名稱，虛擬機器即開始執行，並安裝好我們所指定的專案應用程式。
 
-= 操作 Android 模擬器 =
+= 操作虛擬機器 =
 
-== 切換模擬器佈景 ==
+== 改變虛擬機器外觀 ==
 
-在命令列上執行「android list targets」命令後，我們可以看到螢幕上列出所有支援的模擬器類型。舉我們剛才建立過的第二種類型（id 2）模擬器為例，列出訊息如下：
+在建立虛擬機器的時候，我們可以透過「skin」欄位來選擇預設的虛擬機器外觀。「skin」欄位中會列出目標（Target）版本支援的所有外觀。「HVGA」（解析度 480x320）、「QVGA」（解析度 320x240）等分別代表著各種不同畫面的解析度
+
+在命令列上執行「android list targets」命令後，我們可以看到螢幕上列出所有支援的模擬器類型。舉我們剛才建立過的（id 1）虛擬機器為例，列出訊息如下：
 {{{
-id: 2
-     Name: Android 1.5
+id: 1
+     Name: Android 2.0
      Type: Platform
-     API level: 3
-     Skins: G1, HVGA (default), HVGA-L, HVGA-P, QVGA-L, QVGA-P
+     API level: 5
+     Skins: HVGA (default), QVGA, WQVGA400, WQVGA432, WVGA800, WVGA854
 }}}
 
-其中 Skins 欄位中會列出所有支援的模擬器佈景。
-
-預設有「HVGA」與「QVGA」兩種畫面配置選項可選擇，「HVGA」與「QVGA」又可以再各自分為「-L」(landscape, 橫式) 與「-P」(portrait 直式)。
+其中 Skins 欄位中會列出所有支援的模擬器佈景，預設有多種畫面配置選項可選擇。
 
 要建立「QVGA」模式的模擬器，則在前一節「android create avd」命令後，附加上「--skin QVGA」選項即可。要將預設的「HVGA 直式」顯示改為橫式，則可以透過使用快速鍵，直接切換螢幕來達成。
 
-== 切換螢幕 ==
+== 切換螢幕方向 ==
 
 在 Windows 作業系統上按下 「Ctrl」和「F12」鍵 ，或是在 Mac OS X 作業系統上同時按下「fn」 和「7」鍵，螢幕就會從預設的直式顯示改成橫式顯示，再按一次則切換回原來的直式顯示。
-
-
-== 新增模擬器外觀設定 ==
-
-Android 模擬器的用途，就是協助我們在電腦上也能模擬真實手機的動作。不禁會想，如果模擬器除了所模擬的動作之外，模擬器的外觀也能跟實機長的一樣，那不是整個更擬真，開發起來更有感覺嗎？
-
-沒錯，所以 Android 模擬器也允許使用者自行製作模擬器外觀！
-
-除了預設的模擬器外觀之外，以世界第一台發售的 Android 手機「T-Mobile G1」為例，有人已經製作好了「T-Mobile G1」的模擬器外觀。可以前往 http://www.jsharkey.org/downloads/G1.zip 下載。
-
-要新增模擬器外觀時，只需把下載後的模擬器外觀檔案解開成一個資料夾，再將資料夾放到「android_sdk/platforms/android-1.5/skins」目錄下。做完後在命令列中輸入「android list targets」命令，即可發現 id 2 (Android 1.5 ) 列表中的「Skins」項目新增加了「G1」一項(可透過更改目錄名稱來自行命名)。
-
-{{{
-id: 2
-     Name: Android 1.5
-     Type: Platform
-     API level: 3
-     Skins: G1, HVGA (default), HVGA-L, HVGA-P, QVGA-L, QVGA-P
-}}}
-
-要建立使用新模擬器外觀的模擬器，可以在之前命令後加入「--skin」選項。命令如下：
-{{{
-$ android create avd --target 2 --name devphone -–skin G1
-}}}
-我們也可以偷懶不用參數的全名，將參數用簡寫表示。即用「-t」表示「--target」，用「-n」表示「--name」，用「-s」表示「--skin」。改輸入如下：
-{{{
-$ android create avd -t 2 -n devphone –s G1
-}}}
-== 移除模擬器佈景 ==
-
-要移除一個模擬器佈景，直接刪除在「android_sdk/platforms/android-1.5/skins」中的對應目錄即可。
 
 == 移除程式 ==
 
@@ -203,12 +172,12 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
 使用 ls 命令(等同 windows 上命令行的 dir 命令)來檢視檔案列表
 {{{
     # ls
-    -rw-r--r-- system   system    1325833 2007-11-11 20:59 ApiDemos.apk
+    com.example.android.apis.apk
 }}}
 
 接著使用 rm 命令來刪除 ApiDemos 應用程式
 {{{
-    # rm ApiDemos.apk
+    # rm com.example.android.apis.apk
     # ls
 }}}
 
@@ -219,17 +188,17 @@ Android SDK 中提供一個 adb (Android Debugger) 命令行工具 (在 android-
 {{{
 $ android list avd
 Available Android Virtual Devices:
-    Name: cupcake
+    Name: eclair
     Path: /Users/mac/.android/avd/cupcake.avd
-  Target: Android 1.5 (API level 3)
+  Target: Android 2.0 (API level 5)
     Skin: HVGA
 }}}
 
-表示現在系統中有一個名為 cupcake 的模擬器。
-我們可以使用「android delete avd --name cupcake」命令來刪除名稱為「cupcake」的模擬器。
+表示現在系統中有一個名為 eclair 的模擬器。
+我們可以使用「android delete avd --name eclair」命令來刪除名稱為「eclair」的模擬器。
 {{{
-$ android delete avd --name cupcake
-AVD 'cupcake' deleted.
+$ android delete avd --name eclair
+AVD 'eclair' deleted.
 }}}
 刪除後再次執行「android list avd」命令，得到的結果為
 {{{
