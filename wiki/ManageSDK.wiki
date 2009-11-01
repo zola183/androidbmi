@@ -4,21 +4,23 @@
 
 =  管理 SDK =
 
-== 下載 SDK 套件 ==
+== 下載 SDK 組件 ==
 
 在選單上選擇「Window > Android SDK and AVD Manager」選項，開啟 Android SDK/AVD 管理工具。
 
-在開啟的管理工具視窗中，切換到「Installed Packages」標籤頁，「Installed Packages」列表中預設只裝了「Android SDK Tools」，不包含目標 SDK。我們需要先自行安裝對應的 SDK 套件。
+在開啟的管理工具視窗中，切換到「Installed Packages」標籤頁，「Installed Packages」列表中預設只裝了「Android SDK Tools」，不包含目標 SDK。我們需要先自行安裝對應的 SDK 組件。
 
 切換到「Available Packages」 標籤頁，開始裝目標 SDK。點選預設的網址，可以看到目前可用的目標 SDK、文件、Add-On，要完成本書中範例，只要勾選對應版本的目標 SDK、文件、Add-On，然後按下「Install Selected」按鈕即可。
 
-在下一個視窗中可確認剛勾選預備要安裝的 SDK 套件。勾選「Accept All」選項後，按下「Install Accepted」按鈕即開始自動下載並安裝。
+在下一個視窗中可確認剛勾選預備要安裝的 SDK 組件。勾選「Accept All」選項後，按下「Install Accepted」按鈕即開始自動下載並安裝。
 
-在安裝完成後，切換到「Installed Packages」標籤頁，可以看到剛剛勾選的 SDK 套件都已經安裝到開發環境中。
+在安裝完成後，切換到「Installed Packages」標籤頁，可以看到剛剛勾選的 SDK 組件都已經安裝到開發環境中。
 
-經過幾次 Android 版本升級後，我們的列表中可能會包含許多舊版本的 SDK。這時可以透過選取列表中的套件，點選下方的「Delete...」按鈕來刪除這些過時的套件。我們隨時還可以回到管理工具的「Available Packages」標籤頁，把套件下載回來。
+== 刪除 SDK 組件 ==
 
-安裝好 SDK 套件後，我們就可以開始來熟悉開發環境了。
+經過幾次 Android 版本升級後，我們的列表中可能會包含許多舊版本的 SDK。這時可以透過選取列表中的組件，點選下方的「Delete...」按鈕來刪除這些過時的組件。我們隨時還可以回到管理工具的「Available Packages」標籤頁，把組件下載回來。
+
+安裝好 SDK 組件後，我們就可以開始來熟悉開發環境了。
 
 == 參考資料 ==
 
