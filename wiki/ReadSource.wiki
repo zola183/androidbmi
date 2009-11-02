@@ -47,7 +47,7 @@ BMI值是一個中立而可靠的指標。
 || Application Name || BMI ||
 || Package Name || com.demo.android.bmi ||
 || Create  Activity || Bmi ||
-|| Min SDK Version || 3（自動填入）||
+|| Min SDK Version || 5（自動填入）||
 
 填好值後按下「Finish」 按鈕，就建立好新專案了。
 
