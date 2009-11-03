@@ -89,7 +89,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 ----
 
 == 當前版本 ==
-2.0_alpha
+2.0_alpha (改版到 建立一個 Android 程式)
 
 == 主要更新記錄 ==
   * 2009/11/1 加入[ManageSDK 管理 SDK]一章，開始轉換至 Android 2.0。
