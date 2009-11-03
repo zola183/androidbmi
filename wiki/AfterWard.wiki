@@ -95,5 +95,6 @@
   # [AndroidResource Android 相關資源] (相關資源)
 
 = 歷程記錄 =
-* 2009/8 月第二版正式出版（基於 1.5） [http://sites.google.com/site/gasodroid/Home/androidentry2 書籍網頁]
-* 2009/3/20 正式出版（基於 1.1），可至各大書局選購
+
+  * 2009/8 月第二版正式出版（基於 Android 1.5） [http://sites.google.com/site/gasodroid/Home/androidentry2 書籍網頁]
+  * 2009/3/20 正式出版（基於 Android 1.1），可至各大書局選購
