@@ -8,9 +8,9 @@
 
 = 表達使用者介面 =
 
-我們可以先用前幾章教的方法設定並執行模擬器，看看模擬器運作後的結果：
+我們可以先用前幾章教的方法設定並執行模擬器，看看模擬器運作後的結果。
 
- 我們看到一個文字欄位，上面有一串文字 「Hello World, Bmi!」。這就是 Android 預設程式架構的範例囉。
+我們看到一個文字欄位，上面有一串文字 「Hello World, Bmi!」。這就是 Android 預設程式架構的範例囉。
 
 由於才剛開始實際接觸到 Android 應用程式，我們先從簡單的開始：這一節中，我們的目標是將 「Hello World, Bmi!」 換成別的文字。
 
@@ -27,7 +27,7 @@
     7      <TextView 
     8          android:layout_width="fill_parent"
     9          android:layout_height="wrap_content"
-    10        android:text="Hello World, Bmi"
+    10        android:text="＠string/hello"
     11        />
     12 </LinearLayout>
 }}}
