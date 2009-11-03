@@ -29,8 +29,8 @@ public final class R {
         public static final int advice_light=0x7f040000;
         public static final int app_name=0x7f040003;
         public static final int bmi_btn=0x7f040006;
+        public static final int bmi_height=0x7f040004;
         public static final int bmi_result=0x7f040007;
-        public static final int height=0x7f040004;
-        public static final int weight=0x7f040005;
+        public static final int bmi_weight=0x7f040005;
     }
 }
