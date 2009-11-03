@@ -7,7 +7,7 @@
 	<TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="身高 (cm)"
+        android:text="@string/bmi_height"
         />
     <!--<EditText android:id="@+id/height"
         android:layout_width="fill_parent"
@@ -25,7 +25,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="體重 (kg)"
+        android:text="@string/bmi_weight"
         />
     <!--<EditText android:id="@+id/weight"
         android:layout_width="fill_parent"
@@ -43,7 +43,7 @@
     <Button android:id="@+id/submit"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="計算 BMI 值"
+        android:text="@string/bmi_btn"
         />
     <TextView android:id="@+id/result"
         android:layout_width="fill_parent"
