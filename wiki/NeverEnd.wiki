@@ -69,7 +69,7 @@ Android 是個完整的平台，還有諸多內容值得研究。例如應用程
 
 == 填寫讀後問卷 ==
 
-如果您花時間讀了本書，請幫忙填寫只有4題的[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
+如果您花時間讀了本書，請幫忙填寫只有4道的[http://spreadsheets.google.com/viewform?key=pftJzzqckPIll5elBVuuDWQ 讀後問卷]，以協助改善本書。
 
 因為 Android 在一年多的時間內出了多個版本，電子版有些不及更新之處，請您理解。
 遇到這種情況，請您直接在文章下方回文指出，筆者會盡量修改。
