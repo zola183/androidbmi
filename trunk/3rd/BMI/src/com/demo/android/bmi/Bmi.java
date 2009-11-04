@@ -1,8 +1,13 @@
 package com.demo.android.bmi;
 
+import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -75,16 +80,32 @@ public class Bmi extends Activity {
     private void openOptionsDialog() {
 //    	Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
     	
-//        new AlertDialog.Builder(Bmi.this)
-//        .setTitle(R.string.about_title)
-//        .setMessage(R.string.about_msg)
-//        .setPositiveButton("確認",
-//        new DialogInterface.OnClickListener(){
-//            public void onClick(
-//                DialogInterface dialoginterface, int i){
-//            }
-//        })
-//        .show();
+        new AlertDialog.Builder(Bmi.this)
+        .setTitle(R.string.about_title)
+        .setMessage(R.string.about_msg)
+        .setPositiveButton("確認",
+        new DialogInterface.OnClickListener(){
+            public void onClick(
+                DialogInterface dialoginterface, int i){
+            }
+        })
+       .setNegativeButton(R.string.homepage_label,
+    	new DialogInterface.OnClickListener(){
+        public void onClick(
+          DialogInterface dialoginterface, int i){
+        	//Home Page
+            Uri uri = Uri.parse("http://sites.google.com/site/gasodroid/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        	//MAP
+//        	Uri uri = Uri.parse("geo:25.047192, 121.516981");
+//        	final Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        	//DIAL
+//            Uri uri = Uri.parse("tel:12345678");  
+//            Intent intent = new Intent(Intent.ACTION_DIAL, uri);  
+            startActivity(intent);
+        }
+        })
+        .show();
     }
     
 }
