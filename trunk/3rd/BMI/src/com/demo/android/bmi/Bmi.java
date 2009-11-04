@@ -9,6 +9,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -107,5 +109,34 @@ public class Bmi extends Activity {
         })
         .show();
     }
+
+    protected static final int MENU_ABOUT = Menu.FIRST;
+    protected static final int MENU_QUIT = Menu.FIRST+1;
+    
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+//		menu.add(0, MENU_ABOUT, 0, "關於...");
+//		menu.add(0, MENU_QUIT, 0, "結束");
+//		menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(help_browser);
+//		menu.add(0, MENU_QUIT, 0, "結束").setIcon(emblem_unreadable);
+		menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(android.R.drawable.ic_menu_help);
+		menu.add(0, MENU_QUIT, 0, "結束").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch(item.getItemId()) {
+		case MENU_ABOUT:
+		    openOptionsDialog();
+		    break;
+		case MENU_QUIT:
+		    finish();
+		    break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
     
 }
