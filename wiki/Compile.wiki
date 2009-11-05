@@ -37,7 +37,7 @@ sudo apt-get install sun-java5-jdk
 
 將下載下來的 bin 檔改權限後執行
 {{{
-$ sudo chmod 777 jdk-1_5_0_22-linux-i586.bin
+$ sudo chmod +x jdk-1_5_0_22-linux-i586.bin
 $ ./jdk-1_5_0_22-linux-i586.bin
 }}}
 
