@@ -1,14 +1,15 @@
 package com.demo.android.bmi;
 
-import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,15 +19,44 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Bmi extends Activity {
+//	private static final String TAG = "Bmi";
+	private static final String TAG = Bmi.class.getSimpleName();
+	
+	public static final String PREF = "BMI_PREF";
+    public static final String PREF_HEIGHT = "BMI_HEIGHT";
+    
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Log.d(TAG, "find Views");
         findViews();
+        restorePrefs();
+        Log.d(TAG, "set Listensers");
         setListeners();
     }
 
+ // Restore preferences
+    private void restorePrefs() {
+        SharedPreferences settings = getSharedPreferences(PREF, 0);
+        String pref_height = settings.getString(PREF_HEIGHT, "");
+        if(! "".equals(pref_height)) {
+            field_height.setText(pref_height);
+            field_weight.requestFocus();
+        }
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Save user preferences. use Editor object to make changes.
+        SharedPreferences settings = getSharedPreferences(PREF, 0);
+            settings.edit()
+                .putString(PREF_HEIGHT, field_height.getText().toString())
+                .commit();
+    }
+    
     private Button calcbutton;
     private EditText field_height;
     private EditText field_weight;
@@ -48,36 +78,37 @@ public class Bmi extends Activity {
     
     private Button.OnClickListener calcBMI = new Button.OnClickListener() { 
         public void onClick(View v) {
-//            DecimalFormat nf = new DecimalFormat("0.00");
-//            try {
-//            double height = Double.parseDouble(fieldheight.getText().toString())/100;
-//            double weight = Double.parseDouble(fieldweight.getText().toString());
-//            double BMI = weight / (height * height);
-//            //Present result
-//            view_result.setText(getText(R.string.bmi_result)+nf.format(BMI));
-//
-//            //Give health advice
-//            view_suggest = (TextView)findViewById(R.id.suggest);
-//            if(BMI>25) {
-//            	view_suggest.setText(R.string.advice_heavy);
-//            } else if(BMI<20) {
-//            	view_suggest.setText(R.string.advice_light);
-//            } else {
-//            	view_suggest.setText(R.string.advice_average);
-//            }
+            DecimalFormat nf = new DecimalFormat("0.00");
+            try {
+            double height = Double.parseDouble(field_height.getText().toString())/100;
+            double weight = Double.parseDouble(field_weight.getText().toString());
+            double BMI = weight / (height * height);
+            //Present result
+            view_result.setText(getText(R.string.bmi_result)+nf.format(BMI));
+
+            //Give health advice
+            view_suggest = (TextView)findViewById(R.id.suggest);
+            if(BMI>25) {
+            	view_suggest.setText(R.string.advice_heavy);
+            } else if(BMI<20) {
+            	view_suggest.setText(R.string.advice_light);
+            } else {
+            	view_suggest.setText(R.string.advice_average);
+            }
 //            openOptionsDialog();
-//            }catch(Exception obj) {
-//            	  Toast.makeText(Bmi.this, R.string.input_error, Toast.LENGTH_SHORT).show();
-//            }
+            }catch(Exception obj) {
+            	Log.e(TAG, "error: " + obj.toString());
+            	Toast.makeText(Bmi.this, R.string.input_error, Toast.LENGTH_SHORT).show();
+            }
         	
         	//Switch to report page
-            Intent intent = new Intent();
-            intent.setClass(Bmi.this, Report.class);
-            Bundle bundle = new Bundle();
-            bundle.putString("KEY_HEIGHT", field_height.getText().toString());
-            bundle.putString("KEY_WEIGHT", field_weight.getText().toString());
-            intent.putExtras(bundle);
-            startActivity(intent);
+//            Intent intent = new Intent();
+//            intent.setClass(Bmi.this, Report.class);
+//            Bundle bundle = new Bundle();
+//            bundle.putString("KEY_HEIGHT", field_height.getText().toString());
+//            bundle.putString("KEY_WEIGHT", field_weight.getText().toString());
+//            intent.putExtras(bundle);
+//            startActivity(intent);
         }
     };
     
