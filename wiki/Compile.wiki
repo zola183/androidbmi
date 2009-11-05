@@ -14,7 +14,7 @@
 
 Android 原始碼相關資源可在 http://source.android.com/ 官方網站找到。
 
-本教學以 Ubuntu 9.04 為例。
+最好選擇 32 位元主機或模擬環境來編譯Android。本教學以 Ubuntu 9.10 32位元版為例。
 
 因為編譯整個 Android 系統是極度耗系統資源的工作。請讀者不要浪費時間嘗試在 Windows 上編譯 Android 的方法。 在電腦上留下 10 多 G 硬碟空間裝個 Ubuntu Linux 環境然後照著官方教學走，比在 Windows 下裝 Cygwin 並自行摸索簡單多了。
 
@@ -23,9 +23,25 @@ Android 原始碼相關資源可在 http://source.android.com/ 官方網站找�
 
 {{{
 sudo apt-get update
-sudo apt-get install git-core gnupg sun-java5-jdk flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev
+sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev
 }}}
 
+記得系統上也要裝 java 5 的 SDK
+{{{
+sudo apt-get install sun-java5-jdk 
+}}}
+
+由於 Ubuntu 9.10 等新的發佈套件不再支援 java 5，使用新系統的朋友得到 http://java.sun.com/javase/downloads/index_jdk5.jsp 手動下載。
+
+最終版本是 JDK 5.0 Update 22，必須先填一個表格，才會寄信來顯示下載地址。
+
+將下載下來的 bin 檔改權限後執行
+{{{
+$ sudo chmod 777 jdk-1_5_0_22-linux-i586.bin
+$ ./jdk-1_5_0_22-linux-i586.bin
+}}}
+
+執行中問到問題一律打「yes」即可。
 
 == 下載 Android 原始碼版本管理工具 ==
 {{{
