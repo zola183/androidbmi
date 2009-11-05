@@ -48,27 +48,32 @@ public class Bmi extends Activity {
     
     private Button.OnClickListener calcBMI = new Button.OnClickListener() { 
         public void onClick(View v) {
-            DecimalFormat nf = new DecimalFormat("0.00");
-            try {
-            double height = Double.parseDouble(fieldheight.getText().toString())/100;
-            double weight = Double.parseDouble(fieldweight.getText().toString());
-            double BMI = weight / (height * height);
-            //Present result
-            view_result.setText(getText(R.string.bmi_result)+nf.format(BMI));
-
-            //Give health advice
-            view_suggest = (TextView)findViewById(R.id.suggest);
-            if(BMI>25) {
-            	view_suggest.setText(R.string.advice_heavy);
-            } else if(BMI<20) {
-            	view_suggest.setText(R.string.advice_light);
-            } else {
-            	view_suggest.setText(R.string.advice_average);
-            }
-            openOptionsDialog();
-            }catch(Exception obj) {
-            	  Toast.makeText(Bmi.this, R.string.input_error, Toast.LENGTH_SHORT).show();
-            }
+//            DecimalFormat nf = new DecimalFormat("0.00");
+//            try {
+//            double height = Double.parseDouble(fieldheight.getText().toString())/100;
+//            double weight = Double.parseDouble(fieldweight.getText().toString());
+//            double BMI = weight / (height * height);
+//            //Present result
+//            view_result.setText(getText(R.string.bmi_result)+nf.format(BMI));
+//
+//            //Give health advice
+//            view_suggest = (TextView)findViewById(R.id.suggest);
+//            if(BMI>25) {
+//            	view_suggest.setText(R.string.advice_heavy);
+//            } else if(BMI<20) {
+//            	view_suggest.setText(R.string.advice_light);
+//            } else {
+//            	view_suggest.setText(R.string.advice_average);
+//            }
+//            openOptionsDialog();
+//            }catch(Exception obj) {
+//            	  Toast.makeText(Bmi.this, R.string.input_error, Toast.LENGTH_SHORT).show();
+//            }
+        	
+        	//Switch to report page
+            Intent intent = new Intent();
+            intent.setClass(Bmi.this, Report.class);
+            startActivity(intent);
         }
     };
     
