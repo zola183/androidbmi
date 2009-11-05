@@ -28,15 +28,15 @@ public class Bmi extends Activity {
     }
 
     private Button calcbutton;
-    private EditText fieldheight;
-    private EditText fieldweight;
+    private EditText field_height;
+    private EditText field_weight;
     private TextView view_result;
     private TextView view_suggest;
     
     private void findViews(){
     	calcbutton = (Button)findViewById(R.id.submit);
-    	fieldheight = (EditText)findViewById(R.id.height);
-        fieldweight = (EditText)findViewById(R.id.weight);
+    	field_height = (EditText)findViewById(R.id.height);
+        field_weight = (EditText)findViewById(R.id.weight);
         view_result = (TextView)findViewById(R.id.result);
         view_suggest = (TextView)findViewById(R.id.suggest);
     }
@@ -73,6 +73,10 @@ public class Bmi extends Activity {
         	//Switch to report page
             Intent intent = new Intent();
             intent.setClass(Bmi.this, Report.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("KEY_HEIGHT", field_height.getText().toString());
+            bundle.putString("KEY_WEIGHT", field_weight.getText().toString());
+            intent.putExtras(bundle);
             startActivity(intent);
         }
     };
