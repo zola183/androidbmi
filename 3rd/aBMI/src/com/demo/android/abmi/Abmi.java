@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -22,15 +23,19 @@ import android.widget.Toast;
 public class Abmi extends Activity {
     private static final String TAG = "aBmi";
 
-    static final String[] feets= new String[] {
-        "2 Feet",
-        "3 Feet",
-        "4 Feet",
-        "5 Feet",
-        "6 Feet",
-        "7 Feet",
-        "8 Feet"
-    };
+    public static final String PREF = "BMI_PREF";
+    public static final String PREF_FEET = "BMI_Feet";
+    public static final String PREF_INCH = "BMI_Inch";
+    
+//    static final String[] feets= new String[] {
+//        "2 Feet",
+//        "3 Feet",
+//        "4 Feet",
+//        "5 Feet",
+//        "6 Feet",
+//        "7 Feet",
+//        "8 Feet"
+//    };
     
     /** Called when the activity is first created. */
     @Override
@@ -39,13 +44,35 @@ public class Abmi extends Activity {
         setContentView(R.layout.main);
         findViews();
         setListensers();
-        
+        restorePrefs();
 //        ArrayAdapter<String> adapter_feet = new ArrayAdapter<String>(this,
 //        	    android.R.layout.simple_spinner_item,
 //        	    feets);
 //        adapter_feet.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);    	
     }
 
+ // Restore preferences
+    private void restorePrefs() {
+        SharedPreferences settings = getSharedPreferences(PREF, 0);
+        Integer pref_feet = settings.getInt(PREF_FEET, 5);
+        field_feet.setSelection(pref_feet);
+        field_inch.requestFocus();
+        Integer pref_inch = settings.getInt(PREF_INCH, 0);
+        field_inch.setSelection(pref_inch);
+        field_weight.requestFocus();
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Save user preferences. 
+        SharedPreferences settings = getSharedPreferences(PREF, 3);
+        settings.edit()
+            .putInt(PREF_FEET, field_feet.getSelectedItemPosition())
+            .putInt(PREF_INCH, field_inch.getSelectedItemPosition())
+            .commit();
+    }
+    
     private Button button_calc;
 //    private EditText field_feet;
 //    private EditText field_inch;
@@ -74,8 +101,9 @@ public class Abmi extends Activity {
         field_feet.setAdapter(adapter_feet);
         ArrayAdapter<CharSequence> adapter_inch = ArrayAdapter.createFromResource(
                 this, R.array.inches, 
-                android.R.layout.simple_spinner_dropdown_item);
-        adapter_inch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                android.R.layout.simple_spinner_item);
+        adapter_inch.setDropDownViewResource(
+        		android.R.layout.simple_spinner_dropdown_item);
         field_inch.setAdapter(adapter_inch);
     }
 
