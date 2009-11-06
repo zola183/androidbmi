@@ -14,5 +14,9 @@
 
     </application>
     <uses-sdk android:minSdkVersion="5" />
-
+	<supports-screens 
+	     largescreens="true" 
+	     normalscreens="true" 
+	     smallscreens="true" 
+	     anydensity="false"/>
 </manifest> 
