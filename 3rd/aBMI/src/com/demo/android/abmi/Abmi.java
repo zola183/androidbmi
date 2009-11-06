@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +20,16 @@ import android.widget.Toast;
 public class Abmi extends Activity {
     private static final String TAG = "aBmi";
 
+    static final String[] feets= new String[] {
+        "2 Feet",
+        "3 Feet",
+        "4 Feet",
+        "5 Feet",
+        "6 Feet",
+        "7 Feet",
+        "8 Feet"
+    };
+    
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +37,11 @@ public class Abmi extends Activity {
         setContentView(R.layout.main);
         findViews();
         setListensers();
+        
+        ArrayAdapter<String> adapter_feet = new ArrayAdapter<String>(this,
+        	    android.R.layout.simple_spinner_item,
+        	    feets);
+        	adapter_feet.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     }
 
     private Button button_calc;
@@ -43,6 +59,17 @@ public class Abmi extends Activity {
         field_weight = (EditText) findViewById(R.id.weight);
         view_result = (TextView) findViewById(R.id.result);
         view_suggest = (TextView) findViewById(R.id.suggest);
+        
+        ArrayAdapter<CharSequence> adapter_feet = ArrayAdapter.createFromResource(
+                this, R.array.feets, 
+                android.R.layout.simple_spinner_item);
+        adapter_feet.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item);
+
+        ArrayAdapter<CharSequence> adapter_inch = ArrayAdapter.createFromResource(
+                this, R.array.inches, 
+                android.R.layout.simple_spinner_item);
+        adapter_inch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     }
 
     //Listen for button clicks

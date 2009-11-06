@@ -17,4 +17,27 @@
     <string name="about_title">About aBMI 1.0</string>
     <string name="about_msg">aBMI is a BMI calculator for the British system, written by gasolin (gasolin+android@gmail.com)</string>
     <string name="ok_label">OK</string>
+    <string-array name="feets">
+     <item>2 Feet</item>
+     <item>3 Feet</item>
+     <item>4 Feet</item>
+     <item>5 Feet</item>
+     <item>6 Feet</item>
+     <item>7 Feet</item>
+     <item>8 Feet</item>
+ </string-array>
+<string-array name="inches">
+     <item>0 Inch</item>
+     <item>1 Inch</item>
+     <item>2 Inches</item>
+     <item>3 Inches</item>
+     <item>4 Inches</item>
+     <item>5 Inches</item>
+     <item>6 Inches</item>
+     <item>7 Inches</item>
+     <item>8 Inches</item>
+     <item>9 Inches</item>
+     <item>10 Inches</item>
+     <item>11 Inches</item>
+ </string-array>
 </resources>
