@@ -9,6 +9,7 @@
             android:layout_height="wrap_content"
             android:text="@string/us_height"
             />
+        <!--
         <EditText android:id="@+id/feet"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -19,6 +20,19 @@
             android:layout_height="wrap_content"
             android:text=""
             />
+        -->
+        <Spinner android:id="@+id/feet"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:drawSelectorOnTop="true"
+	        android:prompt="@string/feet_prompt"
+        	/>
+   		<Spinner android:id="@+id/inch"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:drawSelectorOnTop="true"
+	        android:prompt="@string/inch_prompt"
+	        />
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
