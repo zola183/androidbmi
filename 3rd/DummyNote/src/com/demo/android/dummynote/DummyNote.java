@@ -3,6 +3,8 @@ package com.demo.android.dummynote;
 import android.app.ListActivity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.SimpleCursorAdapter;
 
 public class DummyNote extends ListActivity {
@@ -48,5 +50,33 @@ public class DummyNote extends ListActivity {
         SimpleCursorAdapter adapter =
                     new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, mNotesCursor, from, to);
         setListAdapter(adapter);
+    }
+    
+    private int mNoteNumber = 1;
+    protected static final int MENU_INSERT = Menu.FIRST;
+    protected static final int MENU_DELETE = Menu.FIRST+1;
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // TODO Auto-generated method stub
+        menu.add(0, MENU_INSERT, 0, "新增記事");
+        menu.add(0, MENU_DELETE, 0, "刪除記事");
+        return super.onCreateOptionsMenu(menu);
+    }
+ 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // TODO Auto-generated method stub
+        switch(item.getItemId()) {
+        case MENU_INSERT:
+            String noteName = "Note " + mNoteNumber++;
+            mDbHelper.create(noteName);
+            fillData();
+        case MENU_DELETE:
+            mDbHelper.delete(getListView().getSelectedItemId());
+            fillData();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -1,5 +1,8 @@
 package com.demo.android.dummynote;
 
+import java.util.Date;
+
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -89,5 +92,41 @@ public class DB {
     	return db.query(DATABASE_TABLE,
     	        new String[] {KEY_ROWID, KEY_NOTE, KEY_CREATED},
     	        null, null, null, null, null);
+    }
+    
+    // add an entry
+    public long create(String Note) {
+        Date now = new Date();
+        ContentValues args = new ContentValues();
+        args.put(KEY_NOTE, Note);
+        args.put(KEY_CREATED, now.getTime());
+
+        return db.insert(DATABASE_TABLE, null, args);
+    }
+    
+    //remove an entry
+    public boolean delete(long rowId) {
+        return db.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
+    }
+    
+    //query single entry
+    public Cursor get(long rowId) throws SQLException {
+        Cursor mCursor = db.query(true,
+                DATABASE_TABLE,
+                new String[] {KEY_ROWID, KEY_NOTE, KEY_CREATED},
+                KEY_ROWID + "=" + rowId,
+                null, null, null, null, null);
+        if (mCursor != null) {
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
+
+    //update
+    public boolean update(long rowId, String note) {
+        ContentValues args = new ContentValues();
+        args.put(KEY_NOTE, note);
+
+        return db.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
     }
 }
