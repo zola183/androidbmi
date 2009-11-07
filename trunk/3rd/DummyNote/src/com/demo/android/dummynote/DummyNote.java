@@ -39,7 +39,7 @@ public class DummyNote extends ListActivity {
     }
     
     private void fillData() {
-        mNotesCursor = mDbHelper.getall();
+        mNotesCursor = mDbHelper.getAll();
         startManagingCursor(mNotesCursor);
 
 //        String[] from = new String[]{"note"};
