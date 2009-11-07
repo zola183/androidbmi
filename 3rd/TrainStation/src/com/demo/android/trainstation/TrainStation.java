@@ -1,6 +1,9 @@
 package com.demo.android.trainstation;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.ViewGroup;
 
 import com.google.android.maps.GeoPoint;
@@ -48,5 +51,71 @@ public class TrainStation extends MapActivity {
             map.setBuiltInZoomControls(true);
             controller.setZoom(17);
             controller.animateTo(station_taipei);
+    }
+    
+    protected static final int MENU_TAIPEI = Menu.FIRST;
+    protected static final int MENU_TAICHUNG = Menu.FIRST+1;
+    protected static final int MENU_KAOSHONG = Menu.FIRST+2;
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+            // TODO Auto-generated method stub
+            menu.add(0, MENU_TAIPEI, 0, "台北");
+            menu.add(0, MENU_TAICHUNG, 0, "台中");
+            menu.add(0, MENU_KAOSHONG, 0, "高雄");
+            return super.onCreateOptionsMenu(menu);
+    }
+
+    GeoPoint station_taipei = new GeoPoint(
+                (int) (25.047192 * 1000000),
+                    (int) (121.516981 * 1000000)
+            );
+    GeoPoint station_taichung = new GeoPoint(
+                (int) (24.136895 * 1000000),
+                    (int) (120.684975 * 1000000)
+            );
+    GeoPoint station_kaoshong = new GeoPoint(
+                (int) (22.639359 * 1000000),
+                    (int) (120.302628 * 1000000)
+            );
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+            // TODO Auto-generated method stub
+            super.onOptionsItemSelected(item);
+            switch(item.getItemId()) {
+                    case MENU_TAIPEI:
+                            controller.animateTo(station_taipei);
+                            break;
+                    case MENU_TAICHUNG:
+                            controller.animateTo(station_taichung);
+                            break;
+                    case MENU_KAOSHONG:
+                            controller.animateTo(station_kaoshong);
+                            break;
+            }
+            return super.onOptionsItemSelected(item);
+    }
+    
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_I) {
+            // Zooming In
+            controller.setZoom(map.getZoomLevel() + 1);
+            return true;
+        } else if (keyCode == KeyEvent.KEYCODE_O) {
+            // Zooming Out
+            controller.setZoom(map.getZoomLevel() - 1);
+            return true;
+        } else if (keyCode == KeyEvent.KEYCODE_S) {
+            // Switch to satellite view
+            map.setSatellite(true) ;
+            map.setTraffic(false);
+            return true;
+        } else if (keyCode == KeyEvent.KEYCODE_T) {
+            // Switch on traffic overlays
+            map.setSatellite(false) ;
+            map.setTraffic(true);
+            return true;
+        }
+        return false;
     }
 }
