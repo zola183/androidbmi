@@ -1,11 +1,14 @@
 package com.demo.android.mylocation;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.widget.Toast;
 
 public class MyLocation extends Activity implements LocationListener{
@@ -14,7 +17,14 @@ public class MyLocation extends Activity implements LocationListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        updateStat();
+        
+        LocationManager status = (LocationManager)(this.getSystemService(Context.LOCATION_SERVICE));
+        if(status.isProviderEnabled(LocationManager.GPS_PROVIDER)||status.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+            updateStat();        
+        }else{
+        	//TODO: use dialog instead
+            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+        }
     }
 
 	@Override
