@@ -66,7 +66,28 @@ public class DB {
     public static final String KEY_NOTE = "note";
     public static final String KEY_CREATED = "created";
     
-	public Cursor getall() {
-	    return db.rawQuery("SELECT * FROM notes", null);
-	}
+    String[] strCols = new String[] {
+    	    KEY_ROWID,
+    	    KEY_NOTE,
+    	    KEY_CREATED
+    	};
+    
+//	public Cursor getall() {
+//	    return db.rawQuery("SELECT * FROM notes", null);
+//	}
+    
+    // get all entries
+    public Cursor getall() {
+//        return db.query(DATABASE_TABLE, //Which table to Select
+//             strCols,// Which columns to return
+//             null, // WHERE clause
+//             null, // WHERE arguments
+//             null, // GROUP BY clause
+//             null, // HAVING clause
+//             null  //Order-by clause
+//             );
+    	return db.query(DATABASE_TABLE,
+    	        new String[] {KEY_ROWID, KEY_NOTE, KEY_CREATED},
+    	        null, null, null, null, null);
+    }
 }
