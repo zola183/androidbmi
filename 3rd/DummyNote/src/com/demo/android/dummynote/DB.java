@@ -75,12 +75,12 @@ public class DB {
     	    KEY_CREATED
     	};
     
-//	public Cursor getall() {
+//	public Cursor getAll() {
 //	    return db.rawQuery("SELECT * FROM notes", null);
 //	}
     
     // get all entries
-    public Cursor getall() {
+    public Cursor getAll() {
 //        return db.query(DATABASE_TABLE, //Which table to Select
 //             strCols,// Which columns to return
 //             null, // WHERE clause
