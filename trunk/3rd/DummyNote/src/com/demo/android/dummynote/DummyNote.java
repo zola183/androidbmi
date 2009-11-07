@@ -1,11 +1,15 @@
 package com.demo.android.dummynote;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 public class DummyNote extends ListActivity {
     /** Called when the activity is first created. */
@@ -78,5 +82,27 @@ public class DummyNote extends ListActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    
+    private static final int ACTIVITY_EDIT=0x1001;
+
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        Intent intent = new Intent(this, NoteEdit.class);
+        intent.putExtra(DB.KEY_ROWID, id);
+        startActivityForResult(intent, ACTIVITY_EDIT);
+    }
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,
+                                    Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        //fillData();
+        if(resultCode == RESULT_OK){
+        	if(requestCode == ACTIVITY_EDIT){
+        		fillData();
+        	}
+        }
     }
 }
