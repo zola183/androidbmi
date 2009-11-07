@@ -1,6 +1,7 @@
 package com.demo.android.trainstation;
 
 import android.os.Bundle;
+import android.view.ViewGroup;
 
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
@@ -28,10 +29,14 @@ public class TrainStation extends MapActivity {
 	
 	private MapView map;
     private MapController controller;
-
+    private ViewGroup zoom;
+    
     private void findViews() {
             map = (MapView) findViewById(R.id.map);
             controller = map.getController();
+            
+//            zoom = (ViewGroup) findViewById(R.id.zoom);
+//            zoom.addView(map.getZoomControls());
     }
 
     private void setupMap() {
@@ -40,6 +45,7 @@ public class TrainStation extends MapActivity {
                             (int) (121.516981 * 1000000)
             );
             map.setTraffic(true);
+            map.setBuiltInZoomControls(true);
             controller.setZoom(17);
             controller.animateTo(station_taipei);
     }
