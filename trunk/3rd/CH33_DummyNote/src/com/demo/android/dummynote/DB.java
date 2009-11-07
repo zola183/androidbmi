@@ -66,7 +66,7 @@ public class DB {
     public static final String KEY_NOTE = "note";
     public static final String KEY_CREATED = "created";
     
-	public Cursor getall() {
+	public Cursor getAll() {
 	    return db.rawQuery("SELECT * FROM notes", null);
 	}
 }
