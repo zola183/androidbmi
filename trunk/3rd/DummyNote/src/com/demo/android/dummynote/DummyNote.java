@@ -4,12 +4,15 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
-import android.widget.Toast;
 
 public class DummyNote extends ListActivity {
     /** Called when the activity is first created. */
@@ -19,6 +22,7 @@ public class DummyNote extends ListActivity {
         setContentView(R.layout.main);
         //Tell the list view which view to display when the list is empty
         getListView().setEmptyView(findViewById(R.id.empty));
+        registerForContextMenu(getListView()); 
         setAdapter();
     }
     
@@ -105,4 +109,30 @@ public class DummyNote extends ListActivity {
         	}
         }
     }
+
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+			ContextMenuInfo menuInfo) {
+		// TODO Auto-generated method stub
+		menu.add(0, MENU_DELETE, 0,  "§R°£°O¨Æ");
+	    menu.setHeaderTitle("Detail view");
+		super.onCreateContextMenu(menu, v, menuInfo);
+	}
+
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		AdapterView.AdapterContextMenuInfo info;
+		info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
+		switch (item.getItemId()) { 
+			case MENU_DELETE:
+				Log.d("MENU", "item"+info.id);
+				mDbHelper.delete(info.id);
+	            fillData();
+	            break;
+		}
+		return super.onContextItemSelected(item);
+	}
+    
 }
