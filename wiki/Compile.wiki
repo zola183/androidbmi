@@ -14,7 +14,7 @@
 
 Android 原始碼相關資源可在 http://source.android.com/ 官方網站找到。
 
-最好選擇 32 位元主機或模擬環境來編譯Android。本教學以 Ubuntu 9.10 32位元版為例。
+最好選擇 32 位元主機或模擬環境來編譯 Android。本教學以 Ubuntu 9.04, 9.10 32位元版為例。
 
 因為編譯整個 Android 系統是極度耗系統資源的工作。請讀者不要浪費時間嘗試在 Windows 上編譯 Android 的方法。 在電腦上留下 10 多 G 硬碟空間裝個 Ubuntu Linux 環境然後照著官方教學走，比在 Windows 下裝 Cygwin 並自行摸索簡單多了。
 
@@ -26,22 +26,27 @@ sudo apt-get update
 sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev
 }}}
 
-記得系統上也要裝 java 5 的 SDK
+注意系統上一定得裝 Java 5 的 JDK，因為 Android 尚不支援 java 6 的 JDK。
+
+由於 Sun 已經正式宣布不再支援 Java 5（End of Life），所以 Ubuntu 9.10 等新的發佈套件不再支援 java 5。
+
+在新系統上要安裝 Java 5 的 JDK 最容易的方法是打開 /etc/apt/source.list，將裡面的「karmic」（或任何後續版本代號）改為「jounty」（9.04），然後執行：
+
+{{{
+sudo apt-get update
+}}}
+
+接著執行 Java 5 SDK 安裝命令，即可順利安裝
+
 {{{
 sudo apt-get install sun-java5-jdk 
 }}}
 
-由於 Ubuntu 9.10 等新的發佈套件不再支援 java 5，使用新系統的朋友得到 http://java.sun.com/javase/downloads/index_jdk5.jsp 手動下載。
+安裝完可以用以下命令確認安裝是否成功
 
-最終版本是 JDK 5.0 Update 22，必須先填一個表格，才會寄信來顯示下載地址。
-
-將下載下來的 bin 檔改權限後執行
 {{{
-$ sudo chmod +x jdk-1_5_0_22-linux-i586.bin
-$ ./jdk-1_5_0_22-linux-i586.bin
+java --version
 }}}
-
-執行中問到問題一律打「yes」即可。
 
 == 下載 Android 原始碼版本管理工具 ==
 {{{
