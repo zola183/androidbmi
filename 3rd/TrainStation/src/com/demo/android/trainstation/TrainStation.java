@@ -1,19 +1,24 @@
 package com.demo.android.trainstation;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.maps.GeoPoint;
+import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.Overlay;
+import com.google.android.maps.OverlayItem;
 
 public class TrainStation extends MapActivity {
 
@@ -47,6 +52,7 @@ public class TrainStation extends MapActivity {
     }
 
     private MyLocationOverlay mylayer;
+    private LandMarkOverlay marklayer;
     
     private void setupMap() {
 //            GeoPoint station_taipei = new GeoPoint(
@@ -58,6 +64,7 @@ public class TrainStation extends MapActivity {
 //            controller.setZoom(17);
 //            controller.animateTo(station_taipei);
     	List<Overlay> overlays = map.getOverlays();
+    	
         mylayer = new MyLocationOverlay(this, map);
         mylayer.runOnFirstFix(new Runnable() {
             public void run() {
@@ -65,9 +72,14 @@ public class TrainStation extends MapActivity {
                 map.setTraffic(true);
                 controller.setZoom(17);
                 controller.animateTo(mylayer.getMyLocation());
-            }
+            } 
         });
         overlays.add(mylayer);
+        
+        Drawable pin=getResources().getDrawable(android.R.drawable.btn_star_big_on);
+            pin.setBounds(0, 0, pin.getMinimumWidth(), pin.getMinimumHeight());
+        marklayer = new LandMarkOverlay(pin);
+        overlays.add(marklayer);
     }
     
     
@@ -151,4 +163,54 @@ public class TrainStation extends MapActivity {
         }
         return false;
     }
+    
+    private class LandMarkOverlay extends ItemizedOverlay<OverlayItem> {
+
+        private List<OverlayItem> items = new ArrayList<OverlayItem>();
+
+        public LandMarkOverlay(Drawable defaultMarker) {
+                super(defaultMarker);
+                // TODO Auto-generated constructor stub
+                items.add(
+                    new OverlayItem(
+                                station_taipei,
+                                "台北",
+                                "台北車站")
+                        );
+                items.add(
+                    new OverlayItem(
+                                station_taichung,
+                                "台中",
+                                "台中車站")
+                        );
+                items.add(
+                    new OverlayItem(
+                                station_kaoshong,
+                                "高雄",
+                                "高雄車站")
+                        );
+                populate();
+        }
+
+        @Override
+        protected OverlayItem createItem(int i) {
+                // TODO Auto-generated method stub
+                return items.get(i);
+        }
+
+        @Override
+        public int size() {
+                // TODO Auto-generated method stub
+                return items.size();
+        }
+
+    @Override
+    protected boolean onTap(int pIndex) {
+        Toast.makeText(TrainStation.this,
+            "這裡是" + items.get(pIndex).getSnippet(),
+            Toast.LENGTH_SHORT).show();
+        return true;
+    }
 }
+}
+
