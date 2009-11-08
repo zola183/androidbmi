@@ -1,5 +1,7 @@
 package com.demo.android.trainstation;
 
+import java.util.List;
+
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -10,6 +12,8 @@ import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
+import com.google.android.maps.MyLocationOverlay;
+import com.google.android.maps.Overlay;
 
 public class TrainStation extends MapActivity {
 
@@ -42,18 +46,47 @@ public class TrainStation extends MapActivity {
 //            zoom.addView(map.getZoomControls());
     }
 
+    private MyLocationOverlay mylayer;
+    
     private void setupMap() {
-            GeoPoint station_taipei = new GeoPoint(
-                            (int) (25.047192 * 1000000),
-                            (int) (121.516981 * 1000000)
-            );
-            map.setTraffic(true);
-            map.setBuiltInZoomControls(true);
-            controller.setZoom(17);
-            controller.animateTo(station_taipei);
+//            GeoPoint station_taipei = new GeoPoint(
+//                            (int) (25.047192 * 1000000),
+//                            (int) (121.516981 * 1000000)
+//            );
+//            map.setTraffic(true);
+//            map.setBuiltInZoomControls(true);
+//            controller.setZoom(17);
+//            controller.animateTo(station_taipei);
+    	List<Overlay> overlays = map.getOverlays();
+        mylayer = new MyLocationOverlay(this, map);
+        mylayer.runOnFirstFix(new Runnable() {
+            public void run() {
+                // Zoom in to current location
+                map.setTraffic(true);
+                controller.setZoom(17);
+                controller.animateTo(mylayer.getMyLocation());
+            }
+        });
+        overlays.add(mylayer);
     }
     
-    protected static final int MENU_TAIPEI = Menu.FIRST;
+    
+    @Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		mylayer.enableMyLocation();
+	}
+
+    
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		mylayer.disableMyLocation();
+	}
+
+	protected static final int MENU_TAIPEI = Menu.FIRST;
     protected static final int MENU_TAICHUNG = Menu.FIRST+1;
     protected static final int MENU_KAOSHONG = Menu.FIRST+2;
     
