@@ -25,10 +25,10 @@
  * [http://www.1keydata.com/tw/sql/sql.html SQL 語法]
  * [http://www.droidnova.com/playing-with-graphics-in-android-part-i,147.html 2D Game 教學](英文)
  * [http://www.droidnova.com/android-3d-game-tutorial-part-i,312.htm 3D Game 教學](英文)
+ * 單元測試 http://blog.lv25.com/2009/06/android-simple-guide-to-unit-tests.html
 
 工具
   * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
-  * [http://code.google.com/p/android-positron/ positron] 自動測試工具
   * SD Card Image 使用方法 http://www.android123.com.cn/moniqi/48.html
   * Android 應用程式下載 http://andappstore.com/
   * Eclipse 開發環境中文化 http://download.eclipse.org/technology/babel/update-site/ganymede
