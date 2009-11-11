@@ -41,26 +41,23 @@ $ ./android list targets
 {{{
 $ android list targets
 Available Android targets:
-id: 1
-     Name: Android 1.1
+id: 1 or "android-5"
+     Name: Android 2.0
      Type: Platform
-     API level: 2
-     Skins: HVGA (default), HVGA-L, HVGA-P, QVGA-L, QVGA-P
-id: 2
-     Name: Android 1.5
-     Type: Platform
-     API level: 3
-     Skins: HVGA (default), HVGA-L, HVGA-P, QVGA-L, QVGA-P
-id: 3
+     API level: 5
+     Revision: 1
+     Skins: HVGA (default), QVGA, WQVGA400, WQVGA432, WVGA800, WVGA854
+id: 2 or "Google Inc.:Google APIs:5"
      Name: Google APIs
      Type: Add-On
      Vendor: Google Inc.
+     Revision: 1
      Description: Android + Google APIs
-     Based on Android 1.5 (API level 3)
+     Based on Android 2.0 (API level 5)
      Libraries:
       * com.google.android.maps (maps.jar)
           API for Google Maps
-     Skins: HVGA (default), HVGA-L, QVGA-P, HVGA-P, QVGA-L
+     Skins: WVGA854, WQVGA400, HVGA (default), WQVGA432, WVGA800, QVGA
 }}}
 
 在這邊列出了三種虛擬機器類型。分別是編號(id)為 1、2 的 Android 1.1、1.5 虛擬機器，與編號(id)為 3 的「Google APIs」，Google 把自己提供的應用程式（如 Google Map）放在「Google APIs」這個虛擬機器類型中，因此要開發 Google Map 等 Google 專屬應用程式時，就必須先建立編號 3 這類型的虛擬機器，稍後才能在適當的虛擬機器上作驗證。
