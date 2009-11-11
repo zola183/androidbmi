@@ -60,7 +60,7 @@ id: 2 or "Google Inc.:Google APIs:5"
      Skins: WVGA854, WQVGA400, HVGA (default), WQVGA432, WVGA800, QVGA
 }}}
 
-在這邊列出了三種虛擬機器類型。分別是編號(id)為 1 的 Android 2.0 虛擬機器，與編號(id)為 2 的「Google APIs」，Google 把自己提供的應用程式（如 Google Map）放在「Google APIs」這個虛擬機器類型中，因此要開發 Google Map 等 Google 專屬應用程式時，就必須先建立編號 3 這類型的虛擬機器，稍後才能在適當的虛擬機器上作驗證。
+在這邊列出了三種虛擬機器類型。分別是編號(id)為 1 的 Android 2.0 虛擬機器，與編號(id)為 2 的「Google APIs」，Google 把自己提供的應用程式（如 Google Map）放在「Google APIs」這個虛擬機器類型中，因此要開發 Google Map 等 Google 專屬應用程式時，就必須先建立「Google APIs」這類型的虛擬機器，稍後才能在適當的虛擬機器上作驗證。
 
 === 建立虛擬機器  ===
 
