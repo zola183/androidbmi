@@ -63,7 +63,7 @@ public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
     findViews();
-    setListensers(); 
+    setListeners(); 
 }
 }}}
 
@@ -88,7 +88,7 @@ private void findViews()
 
 {{{
 //Listen for button clicks
-private void setListensers() {
+private void setListeners() {
     calcbutton.setOnClickListener(calcBMI);
 }
 }}}
@@ -115,7 +115,7 @@ public class Bmi extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         findViews();
-        setListensers();
+        setListeners();
     }
 
     private Button button_calc;
@@ -134,7 +134,7 @@ public class Bmi extends Activity {
     }
 
     //Listen for button clicks
-    private void setListensers() {
+    private void setListeners() {
     	button_calc.setOnClickListener(calcBMI);
     }
 
