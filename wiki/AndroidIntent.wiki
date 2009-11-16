@@ -164,9 +164,9 @@ Bundle 型別額外提供了很多 API。在傳送 Intent 時，使用 Bundle �
 46 private void showResults() {
 47     DecimalFormat nf = new DecimalFormat("0.00");
 48
-49     Bundle bunde = this.getIntent().getExtras();
-50    	double height = Double.parseDouble(bunde.getString("KEY_HEIGHT"))/100;
-51    	double weight = Double.parseDouble(bunde.getString("KEY_WEIGHT"));
+49     Bundle bundle = this.getIntent().getExtras();
+50    	double height = Double.parseDouble(bundle.getString("KEY_HEIGHT"))/100;
+51    	double weight = Double.parseDouble(bundle.getString("KEY_WEIGHT"));
 52     double BMI = weight / (height * height);
 53     view_result.setText(getString(R.string.bmi_result) +nf.format(BMI));
 54        
@@ -188,13 +188,13 @@ Bundle 型別額外提供了很多 API。在傳送 Intent 時，使用 Bundle �
 整個程式的架構我們在「[BmiLogic 完成 BMI 程式]」與「[BmiRefactor 重構程式]」兩章中已經詳細說明過了。
 
 {{{
-Bundle bunde = this.getIntent().getExtras();
+Bundle bundle = this.getIntent().getExtras();
 }}}
-當我們透過 Intent 傳到新的 Activity 後，只要使用 Activity.getIntent() 函數，就可以得到傳來的 Intent 物件。然後使用「getExtras」函式，就能取得附加在 Intent 上的 bunde 物件。
+當我們透過 Intent 傳到新的 Activity 後，只要使用 Activity.getIntent() 函數，就可以得到傳來的 Intent 物件。然後使用「getExtras」函式，就能取得附加在 Intent 上的 bundle 物件。
 
 {{{
-		double height = Double.parseDouble(bunde.getString("KEY_HEIGHT"))/100;
-		double weight = Double.parseDouble(bunde.getString("KEY_WEIGHT"));
+		double height = Double.parseDouble(bundle.getString("KEY_HEIGHT"))/100;
+		double weight = Double.parseDouble(bundle.getString("KEY_WEIGHT"));
 }}}
 
 在當前的 Activity 取得了 bundle 物件後，我們可以透過指定儲存在 bundle 物件中的身高、體重值的識別符號「KEY_HEIGHT」、「KEY_WEIGHT」來取出身高、體重值的資料。由於我們傳參數值來時，所使用的是是字串格式，所以我們在此得做個型別轉換，將參數從字串轉換成雙倍精度浮點數(Double)型別。
