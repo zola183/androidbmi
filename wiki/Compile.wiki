@@ -30,7 +30,7 @@ sudo apt-get install git-core gnupg flex bison gperf libsdl-dev libesd0-dev libw
 
 由於 Sun 已經正式宣布不再支援 Java 5（End of Life），所以 Ubuntu 9.10 等新的發佈套件不再支援 java 5。
 
-在新系統上要安裝 Java 5 的 JDK 最容易的方法是打開 /etc/apt/source.list，將裡面的「karmic」（或任何後續版本代號）改為「jounty」（9.04），然後執行：
+在新系統上要安裝 Java 5 的 JDK 最容易的方法是打開 /etc/apt/source.list，將裡面的「karmic」（或任何後續版本代號）改為「jaunty」（9.04），然後執行：
 
 {{{
 sudo apt-get update
@@ -45,7 +45,7 @@ sudo apt-get install sun-java5-jdk
 安裝完可以用以下命令確認安裝是否成功
 
 {{{
-java --version
+java -version
 }}}
 
 == 下載 Android 原始碼版本管理工具 ==
