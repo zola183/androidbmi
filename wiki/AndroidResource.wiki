@@ -27,6 +27,7 @@
  * [http://www.droidnova.com/playing-with-graphics-in-android-part-i,147.html 2D Game 教學](英文)
  * [http://www.droidnova.com/android-3d-game-tutorial-part-i,312.htm 3D Game 教學](英文)
  * 單元測試 http://blog.lv25.com/2009/06/android-simple-guide-to-unit-tests.html
+ * [http://phandroid.com/2009/06/04/video-tutorial-creating-an-android-application-icon/ icon設計教學]
 
 工具
   * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
