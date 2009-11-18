@@ -1,8 +1,8 @@
 #summary Android 市集一覽表
 
-|| Name                 || [http://market.android.com Android Market]          || [http://andappstore.com AndAppStore]        || [http://mobentoo.com Mobentoo]        || [http://www.handango.com Handango] || [http://mmarket.com MMarket]           ||  [http://soft.sj.91.com/pandaspace/android/ 熊貓空間] || [http://www.eoemarket.com/ eoemarket] ||  [http://appslib.com/developers/index.html Appslib] || [http://www.insydemarket.com/ insyde market] || [http://www.smartapp.tw s市集] ||
-|| Web App List    || no  || yes    || yes || yes                    || yes || no || yes || no        || yes || yes           ||
-|| Web download || no  || yes    || no   || yes                     || no  || no || yes || no        ||  no  ||no            ||
-|| ORM                   ||       || +       || +    ||                            ||        ||       ||        ||             ||         ||         ||   
-|| paid app           || yes || yes   || yes  || yes                     || yes || no || no  || no      || no    || no       ||
-|| Note                  || 需 Google 授權 ||          ||         ||   ||  中國移動 only   ||       ||        ||  || 小筆電  || ||
+|| Name                 || [http://market.android.com Android Market]          || [http://andappstore.com AndAppStore]        || [http://mobentoo.com Mobentoo]        || [http://www.handango.com Handango] || [http://mmarket.com MMarket]           ||  [http://soft.sj.91.com/pandaspace/android/ 熊貓空間] || [http://www.eoemarket.com/ eoemarket] ||  [http://appslib.com/developers/index.html Appslib] || [http://www.insydemarket.com/ insyde Market] ||  [http://www.smartapp.tw s市集] || ShanzaiMarket || [http://www.camangimarket.com/ Camangi Market] ||
+|| Web App List    || no  || yes    || yes || yes                    || yes || no || yes || no        || yes || yes           || yes ||
+|| Web download || no  || yes    || no   || yes                     || no  || no || yes || no        ||  no  ||no            || no ||
+|| ORM                   ||       || +       || +    ||                            ||        ||       ||        ||             ||         ||         ||   ||
+|| paid app           || yes || yes   || yes  || yes                     || yes || no || no  || no      || no    || no       || no ||
+|| Note                  || 需 Google 授權 ||          ||         ||   ||  中國移動 only   ||       ||        ||  || 小筆電  || || 5"~9"||
