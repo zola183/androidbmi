@@ -69,6 +69,7 @@ Gears
   * [http://tango.freedesktop.org/Tango_Icon_Library Tango]
   * [http://www.icon-king.com/projects/nuvola/ Nuvola]
   * http://openclipart.org/
+  * http://webtint.net/resources/25-crazy-cool-icon-packs-for-general-use/
 
 OPhone
   * http://www.oms-sdn.com/
