@@ -8,5 +8,5 @@
 || Note                  || 需 Google 授權 ||          ||         ||   ||  中國移動 only   ||       ||        ||  || 小筆電  || || 5"~9"|| 成人 ||
 
 == Android Market 第三方 Web 端==
-* [http://www.androlib.com/ AndroLib]
-* [http://www.androidzoom.com/ AndroidZoom]
+
+|| Name || [http://www.androlib.com/ AndroLib] ||  [http://www.androidzoom.com/ AndroidZoom] ||
