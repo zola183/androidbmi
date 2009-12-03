@@ -29,6 +29,7 @@
  * 單元測試 http://blog.lv25.com/2009/06/android-simple-guide-to-unit-tests.html
  * [http://phandroid.com/2009/06/04/video-tutorial-creating-an-android-application-icon/ icon設計教學]
  * [http://www.slideshare.net/tedchien/android-in-a-nutshell-2559290 Android in a nutshell]
+* [http://www.slideshare.net/dtmilano/android-development-tutorial-v3 Android Development Tutorial]
 
 工具
   * [http://code.google.com/p/droiddraw/ DroidDraw] GUI 拖拉設計工具
