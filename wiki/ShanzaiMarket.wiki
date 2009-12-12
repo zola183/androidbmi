@@ -11,4 +11,4 @@
 == Android Market 第三方 Web 端==
 
 || Name || [http://www.cyrket.com Cyrket] ||  [http://androidstats.com/ AndroidStats] || [http://www.androlib.com/ AndroLib] ||  [http://www.androidzoom.com/ AndroidZoom] || [http://www.androidpit.de AndroidPit] || [http://bubiloop.com BubiLoop] ||
-|| ShutDown || || || || || || Android/iPhone/Windows Mobile||
+||Note ||已關站 || || || || || Android/iPhone/Windows Mobile||
