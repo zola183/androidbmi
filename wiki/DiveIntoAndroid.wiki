@@ -90,7 +90,7 @@ http://creativecommons.org.tw/files/icon_nd.gif
 2.0
 
 == 主要更新記錄 ==
-  * 2009/11/6 简体版实体书以「[http://www.ptpress.com.cn/Book.aspx?id=17669 Google Android 开发入门指南(第二版)]」出版（Android SDK 1.5）
+  * 2009/11/6 简体版实体书以「[http://www.china-pub.com/48756 Google Android 开发入门指南(第二版)]」出版（Android SDK 1.5）
   * 2009/11/4 本教學相容於 Android SDK 2.0
   * 2009/11/1 加入[ManageSDK 管理 SDK]一章，開始轉換至 Android 2.0。
   * 2009/9/28 本教學相容於 Android SDK 1.6
