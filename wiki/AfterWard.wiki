@@ -96,5 +96,6 @@
 
 = 歷程記錄 =
 
+  * 2009/11 [http://www.china-pub.com/48756 簡體版]發售，請幫忙推薦給其他新手! 
   * 2009/8 月第二版正式出版（基於 Android 1.5） [http://sites.google.com/site/gasodroid/Home/androidentry2 書籍網頁]
   * 2009/3/20 正式出版（基於 Android 1.1），可至各大書局選購
