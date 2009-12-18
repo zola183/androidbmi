@@ -45,7 +45,7 @@ Android 系統中的每一個應用程式，在安裝的過程裡，都得事先
 11            </intent-filter>
 12          </activity>
 13     </application>
-14     <uses-sdk android:minSdkVersion="3" />
+14     <uses-sdk android:minSdkVersion="X" />
 15 </manifest>
 }}}
 
@@ -110,10 +110,24 @@ Activity 是 Android 應用程式與使用者互動的主要元素，當使用�
 我們把整個檔案合到一起看，可以總結出這個檔案所傳達的訊息：在「com.demo.android.bmi」路徑下的「Bmi.java」這個檔案中，已定義了一個主要的 Activity; 當我們打開 Android 的時候，顯示的是位於「res/drawable/icon」的圖示。一旦我們按下圖示來啟動這個應用程式，Android 應用程式框架會去尋找到定義了「android.intent.action.MAIN」內容的 「.Bmi」activity，並呼叫執行。
 
 {{{
-<uses-sdk android:minSdkVersion="3" />
+<uses-sdk android:minSdkVersion="X" />
 }}}
 
-Android SDK 1.1 版之後引入了這條敘述。透過指定這個參數，系統可以依此辨別應用程式是否使用相容的 SDK 版本，好決定能否在這台機器上安裝執行。「1」代表 Android SDK 1.0，「2」代表 SDK 1.1，「3」代表 SDK 1.5。這也是一個可選填的選項。但如果我們的應用程式要發佈出去，一些強勢的通路如 Google Android Market 已規定所有新發佈的應用程式必須指定「android:minSdkVersion」這個參數。
+Android SDK 1.1 版之後引入了這條敘述，「X」代表了目標版本代號。透過指定這個參數，系統可以依此辨別應用程式是否使用相容的 SDK 版本，好決定能否在這台機器上安裝執行。這也是一個可選填的選項。但如果我們的應用程式要發佈出去，一些強勢的通路如 Google Android Market 已規定所有新發佈的應用程式必須指定「android:minSdkVersion」這個參數。
+
+|| 目標版本 || 代號 ||
+|| 2.1          || 7 ||
+|| 2.0.1       || 6 ||
+|| 2.0          || 5 ||
+|| 1.6          || 4 ||
+|| 1.5          || 3 ||
+|| 1.1          || 2 ||
+|| 1.0          || 1 ||
+
+目前各版本佔有率可以參考官方的版本佔有率圖表：
+http://developer.android.com/resources/dashboard/platform-versions.html
+
+這個圖表是根據最近 2 周間連上 Android Market 設備的比率來繪製。
 
 備註1
     除了「application」標籤外，還有「uses-permission」(例如允不允許存取SMS、能否存取聯絡簿、相機功能)、「permission」、「instrumentation」等主要標籤。相關的內容在後續章節用到時再一併解說。
