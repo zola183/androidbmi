@@ -37,6 +37,8 @@
   * SD Card Image 使用方法 http://www.android123.com.cn/moniqi/48.html
   * Android 應用程式下載 http://andappstore.com/
   * Eclipse 開發環境中文化 http://download.eclipse.org/technology/babel/update-site/ganymede
+  * Sony Add-On http://developer.sonyericsson.com/site/global/docstools/android/p_android.jsp
+ * Motorola Dev Tools http://developer.motorola.com/
 
 函式庫
   * 掃條碼 ZXing - Barcode reader http://code.google.com/p/zxing/
