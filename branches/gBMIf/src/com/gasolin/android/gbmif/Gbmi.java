@@ -1,4 +1,4 @@
-package com.gasolin.android.gbmi;
+package com.gasolin.android.gbmif;
 
 import java.text.DecimalFormat;
 
@@ -169,8 +169,8 @@ public class Gbmi extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, MENU_SWITCH, 0, R.string.switch_label).setIcon(android.R.drawable.ic_menu_set_as);
-		menu.add(0, MENU_BMR, 0, R.string.bmr_label).setIcon(android.R.drawable.ic_menu_view);
+//		menu.add(0, MENU_SWITCH, 0, R.string.switch_label).setIcon(android.R.drawable.ic_menu_set_as);
+//		menu.add(0, MENU_BMR, 0, R.string.bmr_label).setIcon(android.R.drawable.ic_menu_view);
 		menu.add(0, MENU_ABOUT, 0, R.string.about_label).setIcon(android.R.drawable.ic_menu_info_details);
 		return true;
 	}
