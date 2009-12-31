@@ -2,6 +2,7 @@ package com.gasolin.android.gbmif;
 
 import java.text.DecimalFormat;
 
+import net.fet.android.license.sdk.LicenseToolkit;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
@@ -206,6 +207,14 @@ public class Gbmi extends Activity {
 	}
 	
 	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		//FET SDK
+		if( ! LicenseToolkit.acquireClientAndLicense(this, LicenseToolkit.BLOCK_MODE) )
+			return;
+	}
+
 	@Override
 	protected void onPause() {
 		super.onPause();
