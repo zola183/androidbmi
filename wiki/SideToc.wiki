@@ -15,7 +15,7 @@
 * 中階 (1)
   * [BmiRefactor 重構程式]
   * [AndroidDialog 加入對話框(Dialog)]
-  * [AndroidUrl 初見 Intent]
+  * [AndroidUrl 查看線上內容 (Uri)]
   * [AndroidMenu 加入選單(Menu)]
   * [AndroidManifest 定義 Android 清單]
 * 中階 (2)
