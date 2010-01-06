@@ -1,4 +1,4 @@
-#summary 初見 Intent
+#summary 查看線上內容 (Uri)
 #labels tw,intent,uri,getString
 #sidebar SideToc
 
