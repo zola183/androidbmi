@@ -4,7 +4,7 @@
 || Name                 || [http://market.android.com Android Market]          || [http://andappstore.com AndAppStore]        || [http://mobentoo.com SlideMe (Mobentoo)]        || [http://www.handango.com Handango] || [http://mmarket.com MMarket]           ||  [http://soft.sj.91.com/pandaspace/android/ 熊貓空間] || [http://www.eoemarket.com/ eoemarket] ||  [http://appslib.com/developers/index.html Appslib] || [http://www.insydemarket.com/ insyde Market] ||  [http://www.smartapp.tw s市集] ||  [http://www.camangimarket.com/ Camangi Market] || [http://mikandi.com/ MiKandi] || [http://www.mappn.com/ mAPPn] ||
 || Web App List    || no  || yes    || yes || yes                    || yes || no || yes || no        || yes || yes           || yes || no || no || 
 || Web download || no  || yes    || no   || yes                     || no  || no || yes || no        ||  no  ||no            || no || no || no ||
-|| ORM                   ||       || +       || +    ||                            ||        ||       ||        ||             ||         ||         ||   ||  || ||
+|| ORM                   ||       || +       || +    ||                            ||        ||       ||        ||             ||         || yes        ||   ||  || ||
 || Paid app           || yes || yes   || yes  || yes                     || yes || no || no  || no      || no    || Yes       || no || no || no ||
 || Note                  || Google License ||          ||         ||   ||  China Mobile only   ||       ||        ||  || Netbook  || || 5"~9" screen size || Adult || ||
 
