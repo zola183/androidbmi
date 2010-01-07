@@ -1,0 +1,9 @@
+#summary 視頻/影音教學
+
+2009/11月於高雄講 Android 2.0 應用程式設計入門
+
+http://whoswho.openfoundry.org/workshop/details/61-kalug--android-.html
+
+[DiveIntoAndroid 回目錄]
+----
+對於本章，您還期望知道什麼樣的內容呢？請在下方提出建議！
