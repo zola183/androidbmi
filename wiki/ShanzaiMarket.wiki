@@ -5,8 +5,8 @@
 || Web App List    || no  || yes    || yes || yes                    || yes || no || yes || no        || yes || yes           || yes || no || no || 
 || Web download || no  || yes    || no   || yes                     || no  || no || yes || no        ||  no  ||no            || no || no || no ||
 || ORM                   ||       || +       || +    ||                            ||        ||       ||        ||             ||         ||         ||   ||  || ||
-|| paid app           || yes || yes   || yes  || yes                     || yes || no || no  || no      || no    || no       || no || no || no ||
-|| Note                  || 需 Google 授權 ||          ||         ||   ||  中國移動 only   ||       ||        ||  || 小筆電  || || 5"~9"|| 成人 || ||
+|| Paid app           || yes || yes   || yes  || yes                     || yes || no || no  || no      || no    || Yes       || no || no || no ||
+|| Note                  || Google License ||          ||         ||   ||  China Mobile only   ||       ||        ||  || Netbook  || || 5"~9" screen size || Adult || ||
 
 == Android Market 第三方 Web 端==
 
