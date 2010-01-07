@@ -27,6 +27,7 @@
   * [AndroidMarket 發佈到 Android 市集(Market)] 
   * [NeverEnd 開發不息]
 * 附錄
+  * [http://whoswho.openfoundry.org/workshop/details/61-kalug--android-.html 影音教學]
   * [AndroidResource Android 相關資源] (相關資源)
   * [AfterWard 後續章節]
   * [GetSource 取得原始碼]
