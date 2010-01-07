@@ -38,6 +38,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 = 目錄 =
 
+# [http://whoswho.openfoundry.org/workshop/details/61-kalug--android-.html 視頻/影音教學]
+
 === 入門 ===
   # [IntroAndroid 初探 Android] 
   # [InstallAndroid 安裝 Android 開發工具]
