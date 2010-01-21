@@ -4,7 +4,7 @@
 
 http://whoswho.openfoundry.org/workshop/details/61-kalug--android-.html
 
-<wiki:video url=http://blip.tv/play/AYGxw0EC" type="application/x-shockwave-flash" width="480" height="350" allowscriptaccess="always" allowfullscreen="true"/>
+<wiki:video url="http://blip.tv/play/AYGxw0EC" type="application/x-shockwave-flash" width="480" height="350" allowscriptaccess="always" allowfullscreen="true"/>
 
 [DiveIntoAndroid 回目錄]
 ----
