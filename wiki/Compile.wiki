@@ -118,6 +118,7 @@ cd ~/mydroid/out/target/product/generic
  * Using repo http://source.android.com/download/using-repo
  * JF build environment http://jf.andblogs.net/2009/05/24/jfv151-images-are-out/#more-88
  * http://www.johandekoning.nl/index.php/2009/06/07/building-android-15-build-environment/
+* 訂製 ROM http://www.androidin.net/bbs/thread-36391-1-1.html
 
 ----
 
