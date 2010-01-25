@@ -40,7 +40,7 @@
   * Sony Add-On http://developer.sonyericsson.com/site/global/docstools/android/p_android.jsp
  * Motorola Dev Tools http://developer.motorola.com/
  * http://tech-droid.blogspot.com/2009/11/android-market-on-emulator.html
-
+ * http://code.google.com/intl/zh-TW/apis/analytics/docs/tracking/mobileAppsTracking.html
 
 函式庫
   * 掃條碼 ZXing - Barcode reader http://code.google.com/p/zxing/
