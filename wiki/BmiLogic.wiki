@@ -109,6 +109,8 @@ button.setOnClickListener(calcBMI);
 
 當使用者按下按鈕時，即觸發「OnClickListener」類型的事件函式。也有人將這種函式稱為回呼（Call Back）函式，因為是當有動作做完（使用者按下了按鈕），才會呼叫（算出 BMI 值）。
 
+onClick(View v) 是 OnClickListener 中實作的方法，代表按下按鈕時會執行的事件方法。
+
 == 編輯欄位 ==
 
 {{{
