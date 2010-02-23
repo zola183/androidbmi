@@ -142,7 +142,7 @@ $ adb shell reboot recovery
 * http://blog.csdn.net/dong_miao/archive/2009/04/13/4068701.aspx
 * http://haykuro.theiphoneproject.org/?page_id=35
 * Recovery 更新系統 http://android.cool3c.com/article/2482
-
+* Nexus One 刷機流程 http://www.mobile01.com/topicdetail.php?f=423&t=1435633&last=17699129
 
 * adp & fastboot http://www.htc.com/www/support/android/adp.html
 
