@@ -63,7 +63,7 @@
   * Native C development http://blog.sina.com.cn/s/articlelist_1242184131_6_1.html
   * android app 轉 iphone app http://xmlvm.org/android/
 
-Gears
+Gears (Deprecated)
   * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
 
 遊戲
