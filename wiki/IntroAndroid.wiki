@@ -79,7 +79,7 @@ Android 在 Linux 核心的基礎上，提供了各種合用的函式庫，和�
  * http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html
  * CNet專訪：Google手機平台背後的原創者 http://www.zdnet.com.tw/news/comm/0,2000085675,20125898,00.htm
  * Android 原始碼網站 http://source.android.com
-
+ * Android 相關事件時間表 http://www.androidacademy.com/4-android-timeline
 
 [DiveIntoAndroid 回目錄] | [InstallAndroid 安裝 Android 開發工具]
 
