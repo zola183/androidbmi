@@ -55,6 +55,7 @@
   * Remote Control PC http://sourceforge.net/apps/trac/android-tesla/
   * BlueTooth http://code.google.com/p/android-bluetooth/
   * Chart http://code.google.com/p/chartdroid/
+  * aChartEngine http://www.achartengine.org/
   * 第三方 intent 列表 http://www.openintents.org/en/intentstable
   * DRM http://andappstore.com/AndroidApplications/licensing.jsp
   * Google Analytics http://code.google.com/intl/zh-TW/apis/analytics/docs/tracking/mobileAppsTracking.html
