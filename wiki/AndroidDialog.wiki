@@ -117,7 +117,7 @@ private void openOptionsDialog() {
     })
 }}}
 
-「setPositiveButton」、「setNegativeButton」 或  「setNeutralButton」 函式都可以用來定義按鈕，各按鈕分別預設代表正面/中立/負面的結果。
+「setPositiveButton」、「setNegativeButton」 或  「setNeutralButton」 函式都可以用來定義按鈕，各按鈕分別預設代表正面/中立/負面的結果（下一章會用到）。
 
 上方程式碼中定義的「setPositiveButton」裡，包含了一個沒有作用的對話框介面(DialogInterface)。
 表示當我們按下按鈕時，不做任何事就直接退出對話框。
