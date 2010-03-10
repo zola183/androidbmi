@@ -183,6 +183,8 @@ Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
 Toast.makeText(Bmi.this, R.string.input_error, Toast.LENGTH_SHORT).show();
 }}}
 
+別忘了不管是 AlertDialog 或者 Toast，這些函式後都必須加上「show()」方法，這樣提醒訊息才會顯示到螢幕上。
+
 <  [BmiRefactor 重構程式] | [DiveIntoAndroid 回目錄] | [AndroidUrl 初見 Intent] >
 
 ----
