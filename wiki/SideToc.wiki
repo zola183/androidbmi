@@ -1,4 +1,5 @@
 [DiveIntoAndroid 更新記錄]
+
 * 入門
   * [IntroAndroid 初探 Android] 
   * [InstallAndroid 安裝 Android 開發工具]
