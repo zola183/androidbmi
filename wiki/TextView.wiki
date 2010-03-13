@@ -1,4 +1,5 @@
 #summary TextView 文字欄位
+#sidebar SideUi
 
 = XML宣告 =
 
