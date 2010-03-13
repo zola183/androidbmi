@@ -7,5 +7,5 @@
 
 = 介面元件 =
 
-* TextView
-* EditText
+ * TextView
+ * EditText
