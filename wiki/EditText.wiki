@@ -3,7 +3,7 @@
 = XML宣告 =
 
 {{{
-<EditText  
+<EditText  android:id="@+id/edt1"
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
     android:text="string"
@@ -20,15 +20,15 @@ import android.widget.EditText;
 
 Reference
 {{{
-EditText txt = (EditText)findViewById(R.id.txt1);
+EditText edt = (EditText)findViewById(R.id.edt1);
 }}}
 
 get
 {{{
-txt.getText().toString();
+edt.getText().toString();
 }}}
 
 set
 {{{
-txt.setText("string2");
+edt.setText("string2");
 }}}
