@@ -12,4 +12,5 @@
 狀態提示元件
  * [ToastMsg 彈出訊息]
  * [AlertDialog 彈出視窗]
+ * [Notification 狀態欄]
  * [ProgressBar 進度條]
