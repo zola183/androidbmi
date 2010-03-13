@@ -1,0 +1,34 @@
+#summary EditText 編輯欄位
+
+= XML宣告 =
+
+{{{
+<EditText  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="string"
+    />
+}}}
+
+
+= Code =
+
+Import
+{{{
+import android.widget.EditText;
+}}}
+
+Reference
+{{{
+EditText txt = (EditText)findViewById(R.id.txt1);
+}}}
+
+get
+{{{
+txt.getText().toString();
+}}}
+
+set
+{{{
+txt.setText("string2");
+}}}
