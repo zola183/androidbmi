@@ -1,4 +1,5 @@
 #summary EditText 編輯欄位
+#sidebar SideUi
 
 = XML宣告 =
 
