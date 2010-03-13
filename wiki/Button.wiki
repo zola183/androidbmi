@@ -4,10 +4,10 @@
 = XML宣告 =
 
 {{{
-<EditText  android:id="@+id/edt1"
+<Button  android:id="@+id/btn1"
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
-    android:text="string"
+    android:text="button"
     />
 }}}
 
