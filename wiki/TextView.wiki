@@ -1,0 +1,34 @@
+#summary TextView 文字欄位
+
+= XML宣告 =
+
+{{{
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="string"
+    />
+}}}
+
+
+= Code =
+
+Import
+{{{
+import android.widget.TextView;
+}}}
+
+Reference
+{{{
+TextView txt = (TextView)findViewById(R.id.txt1);
+}}}
+
+get
+{{{
+txt.getText().toString();
+}}}
+
+set
+{{{
+txt.setText("string2");
+}}}
