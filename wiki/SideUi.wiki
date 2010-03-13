@@ -1,13 +1,13 @@
 表單元件
- * [文字欄位 TextView]
- * [編輯欄位 EditText]
- * [按鈕 Button]
- * [確認方塊 Checkbox]
- * [群組按鈕 RadioButton]
+ * [TextView 文字欄位]
+ * [EditText 編輯欄位]
+ * [Button 按鈕]
+ * [Checkbox 確認方塊]
+ * [RadioButton 群組按鈕]
 選單元件
- * [選單 OptionsMenu]
- * [長按選單 ContextMenu]
+ * [OptionsMenu 選單]
+ * [ContextMenu 長按選單]
 狀態提示元件
- * [彈出訊息 ToastMsg]
- * [彈出視窗 AlertDialog]
- * [進度條 ProgressBar]
+ * [ToastMsg 彈出訊息]
+ * [AlertDialog 彈出視窗]
+ * [ProgressBar 進度條]
