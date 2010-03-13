@@ -1,0 +1,52 @@
+#summary Button 按鈕
+#sidebar SideUi
+
+= XML宣告 =
+
+{{{
+<EditText  android:id="@+id/edt1"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="string"
+    />
+}}}
+
+
+= Code =
+
+Import
+{{{
+import android.widget.Button;
+}}}
+
+Reference
+{{{
+Button btn = (Button)findViewById(R.id.btn1);
+}}}
+
+== 文字 ==
+get text
+{{{
+btn.getText().toString();
+}}}
+
+set text
+{{{
+btn.setText("string2");
+}}}
+
+== call back ==
+set callback
+{{{
+btn.setOnClickListener(callBack)
+}}}
+
+Callback function
+{{{
+private Button.OnClickListener callBack = new Button.OnClickListener()
+    {
+        public void onClick(View v)
+        {
+        }
+}
+}}}
