@@ -1,0 +1,48 @@
+#summary Checkbox 確認方塊
+#sidebar SideUi
+
+= XML宣告 =
+
+{{{
+<Checkbox android:id="@+id/chk1"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="checkbox"
+    />
+}}}
+
+
+= Code =
+
+Import
+{{{
+import android.widget.CheckBox;
+}}}
+
+Reference
+{{{
+CheckBox chk=(CheckBox)findViewById(R.id.chk1);
+}}}
+
+設定勾選狀態
+{{{
+chk.setChecked(true);
+chk.setChecked(false);
+}}}
+
+已勾選?
+{{{
+chk.isChecked()
+}}}
+
+Callback
+{{{
+public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if (isChecked) {
+        chk.setText("This checkbox is: checked");
+        }
+        else {
+        chk.setText("This checkbox is: unchecked");
+        }
+}
+}}}
