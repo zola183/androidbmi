@@ -37,6 +37,6 @@ public boolean onOptionsItemSelected(MenuItem item)
             //do something
             break;
         }
-        return super.onOptionsItemSelected(item);
+    return super.onOptionsItemSelected(item);
 }
 }}}
