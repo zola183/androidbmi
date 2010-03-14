@@ -17,6 +17,7 @@
 Import
 {{{
 import android.widget.Button;
+import android.view.View;
 }}}
 
 Reference
@@ -48,5 +49,5 @@ private Button.OnClickListener callBack = new Button.OnClickListener()
         public void onClick(View v)
         {
         }
-}
+};
 }}}
