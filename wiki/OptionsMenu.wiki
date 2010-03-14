@@ -32,11 +32,11 @@ ClickEvent
 {{{
 public boolean onOptionsItemSelected(MenuItem item)
 {
-    super.onOptionsItemSelected(item);
     switch(item.getItemId()){
         case MENU_ABOUT:
             //do something
             break;
-        return true;
+        }
+        return super.onOptionsItemSelected(item);
 }
 }}}
