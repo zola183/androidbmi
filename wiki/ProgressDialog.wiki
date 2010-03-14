@@ -1,0 +1,12 @@
+#summary 進度框
+#sidebar SideUi
+
+Popup
+{{{
+ProgressDialog pd = ProgressDialog.show(this, "title", "message...", true, false);
+}}}
+
+Dimiss
+{{{
+pd.dismiss()
+}}}
