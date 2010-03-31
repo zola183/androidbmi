@@ -51,3 +51,8 @@ private Button.OnClickListener callBack = new Button.OnClickListener()
         }
 };
 }}}
+
+
+= 參考文件 =
+
+http://developer.android.com/reference/android/widget/Button.html
