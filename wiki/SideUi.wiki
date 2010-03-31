@@ -6,6 +6,7 @@
  * [Button 按鈕]
  * [Checkbox 確認方塊]
  * [RadioButton 群組按鈕]
+ * [ImageView 圖片]
 選單元件
  * [OptionsMenu 選單]
  * [ContextMenu 長按選單]
