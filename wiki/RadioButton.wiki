@@ -48,3 +48,8 @@ rdg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
     });
 
 }}}
+
+= 參考文件 =
+
+http://developer.android.com/reference/android/widget/RadioButton.html
+http://developer.android.com/reference/android/widget/RadioGroup.html
