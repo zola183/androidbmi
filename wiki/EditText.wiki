@@ -33,3 +33,7 @@ set
 {{{
 edt.setText("string2");
 }}}
+
+= 參考文件 =
+
+http://developer.android.com/reference/android/widget/EditText.html
