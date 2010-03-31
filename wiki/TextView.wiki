@@ -33,3 +33,7 @@ set
 {{{
 txt.setText("string2");
 }}}
+
+= 參考文件 =
+
+http://developer.android.com/reference/android/widget/TextView.html
