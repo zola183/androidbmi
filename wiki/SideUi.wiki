@@ -16,8 +16,8 @@
  * [ProgressBar 進度條]
  * [ProgressDialog 進度框]
 排版元件
-* [LinearLayout 線性排版]
-* [RelativeLayout 相對排版]
-* [TableLayout 表格排版]
-* [FrameLayout 格線排版]
-* [Tab 標籤頁]
+ * [LinearLayout 線性排版]
+ * [RelativeLayout 相對排版]
+ * [TableLayout 表格排版]
+ * [FrameLayout 格線排版]
+ * [Tab 標籤頁]
