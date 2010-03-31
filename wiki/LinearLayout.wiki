@@ -18,7 +18,7 @@
 由左而右的版面配置
 {{{
 <LinearLayout
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
