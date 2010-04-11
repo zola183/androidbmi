@@ -37,9 +37,9 @@ btn.setText("string2");
 }}}
 
 == call back ==
-set callback
+set callback in onCreate
 {{{
-btn.setOnClickListener(callBack)
+btn.setOnClickListener(callBack);
 }}}
 
 Callback function
