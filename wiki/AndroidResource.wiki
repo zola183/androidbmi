@@ -9,6 +9,7 @@
   * [http://www.planetandroid.com/ Planet Android] 部落格文章收集地
   * [http://android-developers.blogspot.com/ Google Android 開發者部落格]
   * [http://www.androphones.com/available-android-phones.php Android 已上市機種一覽表]
+  * [http://en.wikipedia.org/wiki/List_of_Android_devices Android 設備(手機, 平板, 電子書..)一覽表]
   * [ShanzaiMarket Android 公開市集一覽表]
   * [http://www.anddev.org/ Anddev 論壇]，有許多教程
   * [http://bakhtiyor.com/category/30-days-of-android-apps/ 30 Days of Android Apps]
