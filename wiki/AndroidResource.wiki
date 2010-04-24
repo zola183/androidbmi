@@ -42,6 +42,7 @@
  * Motorola Dev Tools http://developer.motorola.com/
  * http://tech-droid.blogspot.com/2009/11/android-market-on-emulator.html
  * http://code.google.com/intl/zh-TW/apis/analytics/docs/tracking/mobileAppsTracking.html
+ * android scripting environment http://code.google.com/p/android-scripting/  
  * scala android-plugin http://github.com/jberkel/android-plugin
 
 函式庫
