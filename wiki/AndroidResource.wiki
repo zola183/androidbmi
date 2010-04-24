@@ -42,8 +42,6 @@
  * Motorola Dev Tools http://developer.motorola.com/
  * http://tech-droid.blogspot.com/2009/11/android-market-on-emulator.html
  * http://code.google.com/intl/zh-TW/apis/analytics/docs/tracking/mobileAppsTracking.html
- * android scripting environment http://code.google.com/p/android-scripting/  
- * scala android-plugin http://github.com/jberkel/android-plugin
 
 函式庫
   * 掃條碼 ZXing - Barcode reader http://code.google.com/p/zxing/
@@ -62,9 +60,12 @@
   * 第三方 intent 列表 http://www.openintents.org/en/intentstable
   * DRM http://andappstore.com/AndroidApplications/licensing.jsp
   * Google Analytics http://code.google.com/intl/zh-TW/apis/analytics/docs/tracking/mobileAppsTracking.html
+  * Busybox http://benno.id.au/blog/2007/11/14/android-busybox
 
 其他開發
   * Native C development http://blog.sina.com.cn/s/articlelist_1242184131_6_1.html
+  * android scripting environment http://code.google.com/p/android-scripting/  
+  * scala android-plugin http://github.com/jberkel/android-plugin
   * android app 轉 iphone app http://xmlvm.org/android/
 
 Gears (Deprecated)
