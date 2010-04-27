@@ -36,6 +36,10 @@ http://creativecommons.org.tw/files/icon_nd.gif
 
 想在簡單易學和提供完整詳盡的資訊之間取得平衡，一直是種永恆的掙扎。 期望讀者您能提供一些反饋，讓作者能更好地掌握主題深入的程度。
 
+== 贊助 ==
+
+如果您希望以實際行動支持這個專案，可以依您的意願以發表回應、線上捐款，或[http://sites.google.com/site/gasodroid/Home/androidentry3 購買實體書籍]等方式贊助本專案
+
 [https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V69PVW95S8QVC https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif]
 [https://pay.pchome.com.tw/adm/buyinfo.htm?pid=czo0MToiSXhZeWFMZi4uQlBNQUZVZXJiRGdvVUVycWJEZzdGSVZyYkQ1N0ZJc2oiOw== http://img.pay.pchome.com.tw/img/buybn01.gif]
 
