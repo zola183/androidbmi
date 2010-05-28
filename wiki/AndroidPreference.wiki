@@ -142,7 +142,7 @@ SharedPreferences settings = getSharedPreferences(PREF, 0);
  * http://code.google.com/android/devel/data/preferences.html
  * http://developer.android.com/guide/topics/data/data-storage.html
 
-< [AndroidIntent 傳送資料到新 Activity]  | [DiveIntoAndroid 回目錄] | [AndroidMarket 發佈到 Android 市場(Market)] >
+< [LifeCycle 活動的生命週期]  | [DiveIntoAndroid 回目錄] | [AndroidMarket 發佈到 Android 市場(Market)] >
 
 ----
 
