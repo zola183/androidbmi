@@ -50,7 +50,6 @@
   * XML-RPC - http://code.google.com/p/android-xmlrpc/
   * PhoneGap http://phonegap.com/
   * 擴增實境 AR http://www.noritsuna.com/archives/2008/11/nyartoolkitandroid.html
-  * 動態語言環境 http://code.google.com/p/android-scripting/ 
   * 線上 OCR http://www.bitquill.net/trac/wiki/Android/OCR
   * OCR http://code.google.com/p/mezzofanti/
   * Remote Control PC http://sourceforge.net/apps/trac/android-tesla/
