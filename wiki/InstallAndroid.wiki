@@ -54,11 +54,15 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 範例中所選擇的是「Eclipse IDE for Java Developers」版本。
 下載完同樣先解壓縮到適當目錄下。
 
+----
+
 == 2. 安裝 Eclipse ==
 
 Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直接開啟 Eclipse 資料夾，點擊 Eclipse 開始執行 Eclipse 整合開發環境。
 第一次啟動 Eclipse 時會彈出視窗讓你決定預設的工作目錄。一般使用 Eclipse 預設的工作目錄即可。
 進入到 Eclipse IDE 後，不必急著四處觀望。我們先來安裝 Android 開發工具擴充套件。
+
+----
 
 == 3. 安裝 ADT 擴充套件 ==
 
@@ -112,18 +116,24 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 選擇右上角的「Local...」按鈕，並選取剛下載的 Android 最新開發工具檔案，選到之後按下 "OK" 按鈕離開。
 在視窗中全選新出現項目的所有選項後，按下右方的「Install」按鈕。Eclipse 會花一點時間開始安裝 ADT 擴充套件。
 
+----
+
 == 4. 下載 Android SDK ==
 
 接著我們要從 [ http://developer.android.com/ Android 官方網站]下載 「Android 軟體開發套件」 (Software Development Kit, SDK)。
 下載下來的 SDK 檔案需要先解壓縮。Windows 平台需要先另行安裝解壓縮程式，如免費的 [http://www.7-zip.org/zh-tw/ 7-zip] 解壓縮工具。
 解壓縮後會出現一個資料夾。為了之後描述方便，我們將解壓縮後的 Android SDK 檔案夾命名為「android_sdk」。
     
+----
+
 == 5. 設定 Android SDK ==
 
 打開偏好設定頁面(Preference)，選擇 Android 標籤(請確認您已安裝好 ADT 擴充套件，Android 標籤才會出現在偏好設定頁面中)，在 SDK Location 欄位按下 " Browse..."鍵，選擇剛剛解壓縮完的「android_sdk」檔案夾所在地，然後按下視窗右下角的套用(Apply) 按鈕。
 這樣一來，Android SDK 就算是設定好啦。
 
     註解：若您安裝過 SDK 1.5 版之前的版本，請先移除後再重新安裝一次 ADT 擴充套件，才能順利設定新版的 Android SDK。 方法是在螢幕上方的選單列，選擇「Help > Software Updates」選項，在彈出的視窗上方點選「Installed Software」頁籤，選擇「Android」開頭的選項，點選右側的「Uninstall..」按鈕移除這些相關的插件。
+
+----
 
 = 下一步 =
 
