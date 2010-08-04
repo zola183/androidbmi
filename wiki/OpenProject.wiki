@@ -8,7 +8,7 @@
 Eclipse 是通用的編輯環境，可根據你所安裝的不同擴充套件而支援許多種類的專案。
 點擊 「Android」 資料夾下的「Android Project」，會開啟「New Android Project」對話視窗。
 
-我們將開啟「SDK 組件」中提供的 ApiDemos 範例。在「New Android Project」對話視窗中，點選 "Browse..."按鈕以選擇「開啟已經存在的專案」(Create project from existing source)。我們在此選擇位於「android_sdk/platforms/android-2.0/samples」目錄中的 Android 應用程式專案 (android_sdk/platforms/android-2.0/samples/ApiDemos)。
+我們將開啟「SDK 組件」中提供的 ApiDemos 範例。在「New Android Project」對話視窗中，點選 "Browse..."按鈕以選擇「開啟已經存在的專案」(Create project from existing source)。我們在此選擇位於「android_sdk/platforms/android-2.x/samples」目錄中的 Android 應用程式專案 (android_sdk/platforms/android-2.x/samples/ApiDemos)。
 
 當我們選擇了現存的範例程式專案時，「New Android Project」對話視窗中的諸如專案名稱（Project Name）與屬性等內容都將被自動填寫好。這時我們可以按下 「Finish」按鈕，完成從現存專案新增專案到 Eclipse 環境的動作。
 
