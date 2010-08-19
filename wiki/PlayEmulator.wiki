@@ -14,7 +14,7 @@
 
 「Android 軟體開發套件」（SDK） 1.5 以上的版本提供了支援不同目標版本虛擬機器的功能，在使用虛擬機器之前，必須先建立一個虛擬機器後才可在 Eclipse 開發環境中使用。
 
-在1.6版之後可以直接在AVD管理工具中建立虛擬機器。在Eclipse中選擇「Window->Android SDK and AVD Manager」來開啟AVD管理工具，AVD管理工具的使用方式在SDK管理一章有提及，不在此詳述。
+在1.6版之後可以直接在AVD管理工具中建立虛擬機器。在Eclipse中選擇「Window->Android SDK and AVD Manager」來開啟AVD管理工具，AVD管理工具的使用方式在[ManageSDK 管理 SDK]一章有提及，不在此詳述。
 
 SDK 中也提供了一個「android」命令行工具（在 android-sdk/tools 中），可以用來建立新專案或是管理虛擬機器。在此我們使用「android」命令行工具來新建立一個虛擬機器。
 
