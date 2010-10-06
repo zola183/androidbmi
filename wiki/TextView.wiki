@@ -24,12 +24,13 @@ Xml Binding
 TextView txt = (TextView)findViewById(R.id.txt1);
 }}}
 
-get
+== 文字 ==
+get text
 {{{
 txt.getText().toString();
 }}}
 
-set
+set text
 {{{
 txt.setText("any string");
 }}}
