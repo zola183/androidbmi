@@ -19,7 +19,7 @@ Import
 import android.widget.CheckBox;
 }}}
 
-Reference
+Xml Binding
 {{{
 CheckBox chk=(CheckBox)findViewById(R.id.chk1);
 }}}
