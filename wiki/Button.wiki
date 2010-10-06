@@ -45,10 +45,11 @@ btn.setOnClickListener(callBack);
 Callback function
 {{{
 private Button.OnClickListener callBack = new Button.OnClickListener() {
-        @Override
-        public void onClick(View v)
-        {
-        }
+    @Override
+    public void onClick(View v)
+    {
+        //actions
+    }
 };
 }}}
 
