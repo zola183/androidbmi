@@ -19,7 +19,7 @@ Import
 import android.widget.EditText;
 }}}
 
-Reference
+Xml Binding
 {{{
 EditText edt = (EditText)findViewById(R.id.edt1);
 }}}
