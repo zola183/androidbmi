@@ -33,7 +33,7 @@ btn.getText().toString();
 
 set text
 {{{
-btn.setText("string2");
+btn.setText("any string");
 }}}
 
 == call back ==
