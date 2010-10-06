@@ -20,7 +20,7 @@ import android.widget.Button;
 import android.view.View;
 }}}
 
-Reference
+Xml Binding
 {{{
 Button btn = (Button)findViewById(R.id.btn1);
 }}}
