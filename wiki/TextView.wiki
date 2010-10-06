@@ -19,7 +19,7 @@ Import
 import android.widget.TextView;
 }}}
 
-Reference
+Xml Binding
 {{{
 TextView txt = (TextView)findViewById(R.id.txt1);
 }}}
@@ -31,7 +31,7 @@ txt.getText().toString();
 
 set
 {{{
-txt.setText("string2");
+txt.setText("any string");
 }}}
 
 = 參考文件 =
