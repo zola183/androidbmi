@@ -31,7 +31,7 @@ edt.getText().toString();
 
 set
 {{{
-edt.setText("string2");
+edt.setText("any string");
 }}}
 
 = 參考文件 =
