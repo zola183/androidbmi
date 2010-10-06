@@ -36,8 +36,8 @@ set text
 btn.setText("any string");
 }}}
 
-== call back ==
-set callback in onCreate
+== Call back ==
+in onCreate
 {{{
 btn.setOnClickListener(callBack);
 }}}
