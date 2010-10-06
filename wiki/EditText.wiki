@@ -24,12 +24,13 @@ Xml Binding
 EditText edt = (EditText)findViewById(R.id.edt1);
 }}}
 
-get
+== 文字 ==
+get text
 {{{
 edt.getText().toString();
 }}}
 
-set
+set text
 {{{
 edt.setText("any string");
 }}}
