@@ -130,18 +130,21 @@ private void openOptionsDialog() {
 		.setTitle(R.string.about_title)
 		.setMessage(R.string.about_msg)
 		.setPositiveButton(R.string.ok_label,
-				new DialogInterface.OnClickListener(){
-					public void onClick(
-							DialogInterface dialoginterface, int i){
-					}
-				})
+		    new DialogInterface.OnClickListener(){
+			public void onClick(
+				DialogInterface dialoginterface, int i){
+				}
+			})
 		.show();
 	}
 }
 }}}
 
 更詳細的對話框使用可參考官方文件
-http://code.google.com/android/reference/android/app/AlertDialog.Builder.html		
+http://code.google.com/android/reference/android/app/AlertDialog.Builder.html	
+
+註: Android 本身也有預先定義了一些基本訊息，如這裡使用到的「ok」訊息，其實可以使用系統預設的「android.R.string.ok」字串來替換。
+
 == 順道一提 -「Toast 」介面元件 ==
 
 對話框的使用模式，限制了使用者得按下某些按鍵以跳出對話框，才能繼續使用原本程式。如果我們只是要顯示一小段提示訊息，而不想打擾使用者的注意力，有沒有更適合的方法哩？
