@@ -8,10 +8,9 @@
  * [RadioButton 群組按鈕]
  * [ImageView 圖片]
  * [RatingBar 評分按鈕]
-選單元件
+選單與狀態提示元件
  * [OptionsMenu 選單]
  * [ContextMenu 長按選單]
-狀態提示元件
  * [ToastMsg 彈出訊息]
  * [AlertDialog 彈出視窗]
  * [Notification 狀態欄訊息]
