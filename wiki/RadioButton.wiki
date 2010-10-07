@@ -28,15 +28,15 @@ Import
 import android.widget.RadioGroup;
 }}}
 
-Reference
+XML Binding
 {{{
 RadioGroup rdg=(RadioGroup)findViewById(R.id.rdg1);
 }}}
 
 {{{
 rdg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-        public void onCheckedChanged(RadioGroup group, final int checkedId) {
-            switch (checkedId) {
+    public void onCheckedChanged(RadioGroup group, final int checkedId) {
+        switch (checkedId) {
             case R.id.rdo1:
                 //do something
                 break;
@@ -44,9 +44,8 @@ rdg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 //do something
                 break;
             }
-        }
     });
-
+}
 }}}
 
 = 參考文件 =
