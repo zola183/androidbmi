@@ -40,13 +40,12 @@ chk.isChecked();
 chk.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener() { 
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (isChecked) {
-        chk.setText("This checkbox is: checked");
+            chk.setText("This checkbox is: checked");
+        } else {
+            chk.setText("This checkbox is: unchecked");
         }
-        else {
-        chk.setText("This checkbox is: unchecked");
-        }
+    })
 }
-)
 }}}
 
 = 參考文件 =
