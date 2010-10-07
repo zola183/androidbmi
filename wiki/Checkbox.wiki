@@ -30,9 +30,9 @@ chk.setChecked(true);
 chk.setChecked(false);
 }}}
 
-已勾選?
+是否已勾選?
 {{{
-chk.isChecked()
+chk.isChecked();
 }}}
 
 
