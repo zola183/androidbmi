@@ -80,9 +80,11 @@ public class DummyNote extends ListActivity {
             String noteName = "Note " + mNoteNumber++;
             mDbHelper.create(noteName);
             fillData();
+            break;
         case MENU_DELETE:
             mDbHelper.delete(getListView().getSelectedItemId());
             fillData();
+            break;
         }
 
         return super.onOptionsItemSelected(item);
