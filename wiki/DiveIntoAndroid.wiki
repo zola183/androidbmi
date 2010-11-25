@@ -100,8 +100,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
 2.2
 
 == 主要更新記錄 ==
-  * 2009/6/29 本教學相容於 Android SDK 2.2
-  * 2009/3/11 本教學相容於 Android SDK 2.1
+  * 2010/6/29 本教學相容於 Android SDK 2.2
+  * 2010/3/11 本教學相容於 Android SDK 2.1
   * 2010/1/7 加入[Video 影音教學]
   * 2009/11/6 简体版实体书以「[http://www.china-pub.com/48756 Google Android 开发入门指南(第二版)]」出版（Android SDK 1.5）
   * 2009/11/4 本教學相容於 Android SDK 2.0
