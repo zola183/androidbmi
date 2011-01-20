@@ -12,16 +12,16 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 支援的作業系統如下：
 
     * Windows XP 或 Vista
-    * Mac OS X 10.4.8 或之後版本 (適用 x86 架構的 Intel Mac)
-    * Linux (官方於 Ubuntu 6.10 Dapper Drake 上測試) 
+    * Mac OS X 10.4.8 或之後版本 (僅適用 2007 年後出廠，採用 x86 架構的 Intel Mac)
+    * Linux (官方是在 Ubuntu 上測試) 
 
 我們需要安裝一些 Android 開發環境所需的程式工具，這些工具都是可以免費上網取得的：
 
     * **JDK 5 或 JDK 6**
-      你需要安裝 Java 開發工具 (JDK 5 或 JDK 6)。
-      只安裝 Java 運行環境(JRE) 是不夠的，你需要安裝 Java 開發環境 (JDK)。
-      你可以在命令行上輸入 「java -version」 來查看目前系統上已安裝的 java 版本(java 版本需 >1.5)。
-      要注意的是 Android 與 Java Gnu 編譯器 (gcj) 還不相容。
+      * 只安裝 Java 運行環境(JRE) 是不夠的，你需要安裝的是Java開發環境 (JDK)。
+      * 各平台的 JDK 可以前往   http://www.oracle.com/technetwork/java/index.html 網站，找到「Java SE」連結，從「Java Platform, Standard Edition」表格中點選「Download JDK」連結來免費下載。
+      * 可以在命令行上輸入 「java -version」 來查看目前系統上已安裝的 java 版本(java 版本需 >1.5)。
+      * 要注意的是 Android 與 Java Gnu 編譯器 (gcj) 還不相容。
     * **Eclipse IDE**，一個多用途的開發工具平台。
       你可以下載安裝 Eclipse 3.6 (代號 Helios) 、Eclipse 3.5 (代號 Galileo)。
       請注意你選擇的版本需包含 Eclipse Java 開發工具擴充套件(Java Development Tool Plugin, JDT)。
