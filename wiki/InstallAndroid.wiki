@@ -109,9 +109,9 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 
 === 離線安裝 ===
 
-已經安裝成功的讀者可以跳過這段。有些讀者因為網路環境的關係，無法順利地直接線上安裝 Android 開發工具。這時我們可以先前往 http://developer.android.com/sdk/adt_download.html ，手動下載最新的開發工具版本來離線安裝。
+已經安裝成功的讀者可以跳過這段。有些讀者因為網路環境的關係，無法順利地直接線上安裝 Android 開發工具。這時我們可以先前往 http://developer.android.com/sdk/eclipse-adt.html ，手動下載最新的開發工具版本來離線安裝。
 
-下載完最新的ADT 擴充套件後，打開 Eclipse 開發環境，找到螢幕上方的選單列， 選擇 「Help->Software Updates」 選項，這選項會帶出一個新視窗。選擇「Available Software」標籤，選擇右方的 「Add Site...」 (新增網站)按鈕，會彈出一個輸入框。
+下載完最新的 ADT 擴充套件後，打開 Eclipse 開發環境，找到螢幕上方的選單列， 選擇 「Help->Software Updates」 選項，這選項會帶出一個新視窗。選擇「Available Software」標籤，選擇右方的 「Add Site...」 (新增網站)按鈕，會彈出一個輸入框。
 
 選擇右上角的「Local...」按鈕，並選取剛下載的 Android 最新開發工具檔案，選到之後按下 "OK" 按鈕離開。
 在視窗中全選新出現項目的所有選項後，按下右方的「Install」按鈕。Eclipse 會花一點時間開始安裝 ADT 擴充套件。
