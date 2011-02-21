@@ -100,8 +100,8 @@ http://creativecommons.org.tw/files/icon_nd.gif
 2.3
 
 == 主要更新記錄 ==
- * 2011/2 本教學相容於 Android SDK 2.3 
- * 2010/11 简体版实体书以「GoogleAndroid2手机应用程序设计入门第3版」出版, 9787894764973, 電腦報電子音像出版社
+  * 2011/2 本教學相容於 Android SDK 2.3 
+  * 2010/11 简体版实体书以「GoogleAndroid2手机应用程序设计入门第3版」出版, 9787894764973, 電腦報電子音像出版社
   * 2010/6/29 本教學相容於 Android SDK 2.2
   * 2010/3/11 本教學相容於 Android SDK 2.1
   * 2010/1/7 加入[Video 影音教學]
