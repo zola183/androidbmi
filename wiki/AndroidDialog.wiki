@@ -63,6 +63,8 @@ new AlertDialog.Builder(Bmi.this).show()
 
 我們建立了一個 AlertDialog 對話框類別實體，AlertDialog 呼叫 Builder 方法來預備對應的介面元件。最後使用 show() 方法來將對話框顯示在螢幕上。
 
+在「Builder」方法中傳入的「Bmi.this」指的是我們建立的「Bmi」這個Activity的實體。也可以這麼想，因為在onCreate的過程中，我們將main.xml介面描述檔繫結到了「Bmi」這個Activity，因此「Bmi.this」指的也是目前顯示的畫面。我們透過傳入「Bmi.this」，指定這個對話框將顯示在當前的畫面上。
+
 透過
 {{{
 .setTitle("關於 Android BMI")
