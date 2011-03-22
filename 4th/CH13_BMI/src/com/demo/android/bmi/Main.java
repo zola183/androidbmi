@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main extends Activity {
 	/** Called when the activity is first created. */
@@ -19,9 +20,6 @@ public class Main extends Activity {
 
 		findViews();
 		setListensers();
-		// Listen for button clicks
-		Button button = (Button) findViewById(R.id.submit);
-		button.setOnClickListener(calcBMI);
 	}
 	
 	private Button button_calc;
@@ -46,23 +44,55 @@ public class Main extends Activity {
 	private Button.OnClickListener calcBMI = new OnClickListener() {
 		public void onClick(View v) {
 			DecimalFormat nf = new DecimalFormat("0.00");
-			double height = Double
-					.parseDouble(field_height.getText().toString()) / 100;
-			double weight = Double
-					.parseDouble(field_weight.getText().toString());
-			double BMI = weight / (height * height);
-
-			//Present result
-			view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
-
-			// Give health advice
-			if (BMI > 25) {
-				view_suggest.setText(R.string.advice_heavy);
-			} else if (BMI < 20) {
-				view_suggest.setText(R.string.advice_light);
-			} else {
-				view_suggest.setText(R.string.advice_average);
+			try {
+				double height = Double
+						.parseDouble(field_height.getText().toString()) / 100;
+				double weight = Double
+						.parseDouble(field_weight.getText().toString());
+				double BMI = weight / (height * height);
+	
+				//Present result
+				view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+	
+				// Give health advice
+				if (BMI > 25) {
+					view_suggest.setText(R.string.advice_heavy);
+				} else if (BMI < 20) {
+					view_suggest.setText(R.string.advice_light);
+				} else {
+					view_suggest.setText(R.string.advice_average);
+				}
+				
+				openOptionsDialog();
+			} catch(Exception obj) {
+				Toast toast = Toast.makeText(Main.this, R.string.input_error, Toast.LENGTH_SHORT);
+				toast.show();
 			}
 		}
 	};
+	
+	private void openOptionsDialog() {
+		Toast.makeText(Main.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
+		
+		/*
+//		private void openOptionsDialog() {
+//			AlertDialog.Builder builder = new  AlertDialog.Builder(Main.this);
+//			    builder.setTitle("關於 Android BMI");
+//			    builder.setMessage("Android BMI Calc");
+//			    builder.show();
+//			}
+		    new AlertDialog.Builder(Main.this)
+//		    .setTitle("關於 Android BMI")
+//		    .setMessage("Android BMI Calc")
+		    .setTitle(R.string.about_title)
+	        .setMessage(R.string.about_msg)
+	        .setPositiveButton("確認",
+			    new DialogInterface.OnClickListener(){
+			        public void onClick(
+			            DialogInterface dialoginterface, int i){
+			        }
+			    })
+		    .show();
+		*/
+		}
 }
