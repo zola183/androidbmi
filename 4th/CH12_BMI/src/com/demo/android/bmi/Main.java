@@ -19,9 +19,6 @@ public class Main extends Activity {
 
 		findViews();
 		setListensers();
-		// Listen for button clicks
-		Button button = (Button) findViewById(R.id.submit);
-		button.setOnClickListener(calcBMI);
 	}
 	
 	private Button button_calc;
