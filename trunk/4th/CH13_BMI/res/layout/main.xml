@@ -18,7 +18,7 @@
      <EditText android:id="@+id/weight"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="number|phone"
+        android:singleLine="true"
         android:text=""
         />
      <Button android:id="@+id/submit"
