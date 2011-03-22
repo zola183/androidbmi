@@ -17,33 +17,51 @@ public class Main extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
+		findViews();
+		setListensers();
 		// Listen for button clicks
 		Button button = (Button) findViewById(R.id.submit);
 		button.setOnClickListener(calcBMI);
 	}
+	
+	private Button button_calc;
+	private EditText field_height;
+	private EditText field_weight;
+	private TextView view_result;
+	private TextView view_suggest;
 
-	private OnClickListener calcBMI = new OnClickListener() {
+	private void findViews() {
+		button_calc = (Button) findViewById(R.id.submit);
+	    field_height = (EditText) findViewById(R.id.height);
+	    field_weight = (EditText) findViewById(R.id.weight);
+	    view_result = (TextView) findViewById(R.id.result);
+	    view_suggest = (TextView) findViewById(R.id.suggest);
+	}
+
+	//Listen for button clicks
+	private void setListensers() {
+		button_calc.setOnClickListener(calcBMI);
+	}
+	
+	private Button.OnClickListener calcBMI = new OnClickListener() {
 		public void onClick(View v) {
 			DecimalFormat nf = new DecimalFormat("0.00");
-			EditText fieldheight = (EditText) findViewById(R.id.height);
-			EditText fieldweight = (EditText) findViewById(R.id.weight);
 			double height = Double
-					.parseDouble(fieldheight.getText().toString()) / 100;
+					.parseDouble(field_height.getText().toString()) / 100;
 			double weight = Double
-					.parseDouble(fieldweight.getText().toString());
+					.parseDouble(field_weight.getText().toString());
 			double BMI = weight / (height * height);
 
-			TextView result = (TextView) findViewById(R.id.result);
-			result.setText("Your BMI is " + nf.format(BMI));
+			//Present result
+			view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
 
 			// Give health advice
-			TextView fieldsuggest = (TextView) findViewById(R.id.suggest);
 			if (BMI > 25) {
-				fieldsuggest.setText(R.string.advice_heavy);
+				view_suggest.setText(R.string.advice_heavy);
 			} else if (BMI < 20) {
-				fieldsuggest.setText(R.string.advice_light);
+				view_suggest.setText(R.string.advice_light);
 			} else {
-				fieldsuggest.setText(R.string.advice_average);
+				view_suggest.setText(R.string.advice_average);
 			}
 		}
 	};
