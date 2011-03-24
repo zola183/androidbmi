@@ -8,4 +8,7 @@
     <string name="about_title">關於 Android BMI</string>
     <string name="about_msg">Android BMI Calc</string>
     <string name="input_error">打錯了嗎？只能輸入數字喔</string>
+    <string name="ok_label">確認</string>
+    <string name="homepage_label">首頁</string>
+	<string name="homepage_uri">http://android.gasolin.idv.tw/</string>
 </resources>

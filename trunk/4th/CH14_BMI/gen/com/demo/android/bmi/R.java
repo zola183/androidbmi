@@ -34,6 +34,9 @@ public final class R {
         public static final int bmi_height=0x7f040004;
         public static final int bmi_result=0x7f040007;
         public static final int bmi_weight=0x7f040005;
+        public static final int homepage_label=0x7f04000c;
+        public static final int homepage_uri=0x7f04000d;
         public static final int input_error=0x7f04000a;
+        public static final int ok_label=0x7f04000b;
     }
 }

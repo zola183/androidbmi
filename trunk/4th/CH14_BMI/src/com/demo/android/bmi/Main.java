@@ -3,6 +3,10 @@ package com.demo.android.bmi;
 import java.text.DecimalFormat;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -72,9 +76,9 @@ public class Main extends Activity {
 	};
 	
 	private void openOptionsDialog() {
-		Toast.makeText(Main.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
+//		Toast.makeText(Main.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
 		
-		/*
+		
 //		private void openOptionsDialog() {
 //			AlertDialog.Builder builder = new  AlertDialog.Builder(Main.this);
 //			    builder.setTitle("關於 Android BMI");
@@ -86,13 +90,25 @@ public class Main extends Activity {
 //		    .setMessage("Android BMI Calc")
 		    .setTitle(R.string.about_title)
 	        .setMessage(R.string.about_msg)
-	        .setPositiveButton("確認",
+	        .setPositiveButton(R.string.ok_label,
 			    new DialogInterface.OnClickListener(){
 			        public void onClick(
 			            DialogInterface dialoginterface, int i){
 			        }
 			    })
+			.setNegativeButton(R.string.homepage_label,
+			    new DialogInterface.OnClickListener(){
+			        public void onClick(
+			            DialogInterface dialoginterface, int i){
+			            //go to url
+//			            Uri uri = Uri.parse("http://android.gasolin.idv.tw/");
+//			        	Uri uri = Uri.parse("tel:12345678");
+			        	Uri uri = Uri.parse(getString(R.string.homepage_uri));
+			        	Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+			            startActivity(intent);
+			        }
+			    })
 		    .show();
-		*/
+		
 		}
 }
