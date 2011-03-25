@@ -102,6 +102,7 @@ public class Main extends Activity {
 			            DialogInterface dialoginterface, int i){
 			            //go to url
 //			            Uri uri = Uri.parse("http://android.gasolin.idv.tw/");
+//			        	Uri uri = Uri.parse("geo:25.047192, 121.516981");
 //			        	Uri uri = Uri.parse("tel:12345678");
 			        	Uri uri = Uri.parse(getString(R.string.homepage_uri));
 			        	Intent intent = new Intent(Intent.ACTION_VIEW, uri);
