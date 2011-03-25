@@ -47,10 +47,10 @@ Bmi.java
 
 {{{
 private void openOptionsDialog() {
-    new AlertDialog.Builder(Bmi.this)
-    .setTitle("關於 Android BMI")
-    .setMessage("Android BMI Calc")
-    .show();
+    AlertDialog.Builder dialog = new AlertDialog.Builder(Bmi.this)
+    dialog.setTitle("關於 Android BMI")
+    dialog.setMessage("Android BMI Calc")
+    dialog.show();
 }}}
 
 我們來分析這個對話框程式。
@@ -58,7 +58,7 @@ private void openOptionsDialog() {
 首先，顯示一個最基本的對話框所需的程式碼如下。
 
 {{{
-new AlertDialog.Builder(Bmi.this).show()
+AlertDialog.Builder dialog = new AlertDialog.Builder(Bmi.this)
 }}}
 
 我們建立了一個 AlertDialog 對話框類別實體，AlertDialog 呼叫 Builder 方法來預備對應的介面元件。最後使用 show() 方法來將對話框顯示在螢幕上。
@@ -67,13 +67,13 @@ new AlertDialog.Builder(Bmi.this).show()
 
 透過
 {{{
-.setTitle("關於 Android BMI")
+dialog.setTitle("關於 Android BMI")
 }}}
 我們設定了對話框的標題。
 
 透過
 {{{
-.setMessage("Android BMI Calc")
+dialog.setMessage("Android BMI Calc")
 }}}
 我們設定了對話框的主要內容。
 
@@ -98,10 +98,10 @@ res/values/strings.xml
 
 {{{
 private void openOptionsDialog() {
-    new AlertDialog.Builder(Bmi.this)
-        .setTitle(R.string.about_title)
-        .setMessage(R.string.about_msg)
-        .show();
+    AlertDialog.Builder dialog = new AlertDialog.Builder(Bmi.this)
+    dialog.setTitle(R.string.about_title)
+    dialog.setMessage(R.string.about_msg)
+    dialog.show();
 }}}
 
 打開模擬器，在按下按鈕後，我們看到計算出 BMI 值的同時，螢幕上也彈出了一個有標題的對話框。
@@ -111,7 +111,7 @@ private void openOptionsDialog() {
 目前的對話框中，並沒有提供離開對話框的方法。所以我們得按下 「Undo」按鈕來離開對話框，有點不便，所以我們來為這個對話框加入一個「確認」按鈕。
 
 {{{
-.setPositiveButton("確認",
+dialog.setPositiveButton("確認",
     new DialogInterface.OnClickListener(){
         public void onClick(
             DialogInterface dialoginterface, int i){
@@ -128,16 +128,16 @@ private void openOptionsDialog() {
 
 {{{
 	private void openOptionsDialog() {
-		new AlertDialog.Builder(Bmi.this)
-		.setTitle(R.string.about_title)
-		.setMessage(R.string.about_msg)
-		.setPositiveButton(R.string.ok_label,
+		AlertDialog.Builder dialog = new AlertDialog.Builder(Bmi.this)
+		dialog.setTitle(R.string.about_title)
+		dialog.setMessage(R.string.about_msg)
+		dialog.setPositiveButton(R.string.ok_label,
 		    new DialogInterface.OnClickListener(){
 			public void onClick(
 				DialogInterface dialoginterface, int i){
 				}
 			})
-		.show();
+		dialog.show();
 	}
 }
 }}}
@@ -157,7 +157,8 @@ http://code.google.com/android/reference/android/app/AlertDialog.Builder.html
 import android.widget.Toast;
 ...
 private void openOptionsDialog() {
-    Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
+    Toast popup =  Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT);
+    popup.show();
     /*new AlertDialog.Builder(this) //註解掉原本的對話框
    ...
    */
@@ -166,9 +167,10 @@ private void openOptionsDialog() {
 
 打開模擬器。我們按下「計算 BMI 值」按鈕後，螢幕上不再出現一個對話框，而改成彈出一段「BMI 計算器」文字訊息，過幾秒之後即自動隱去。
 
-整段程式值得注意的一行是
+整段程式值得注意的兩行是
 {{{
-Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
+Toast popup = Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT)
+popup.show();
 }}}
 
 我們對 Toast 元件指定了欲顯示文字，與Toast 元件的顯示時間長短(LENGTH_SHORT，即短訊息)，最後與處理對話框一樣，呼叫 「show() 」方法來將 Toast 元件顯示在螢幕上。
@@ -185,7 +187,8 @@ Toast.makeText(Bmi.this, "BMI 計算器", Toast.LENGTH_SHORT).show();
 
 然後在程式中使用「R.string.input_error」來取得字串
 {{{
-Toast.makeText(Bmi.this, R.string.input_error, Toast.LENGTH_SHORT).show();
+Toast popup = Toast.makeText(Bmi.this, R.string.input_error, Toast.LENGTH_SHORT);
+popup.show();
 }}}
 
 別忘了不管是 AlertDialog 或者 Toast，這些函式後都必須加上「show()」方法，這樣提醒訊息才會顯示到螢幕上。
