@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -67,7 +69,7 @@ public class Main extends Activity {
 					view_suggest.setText(R.string.advice_average);
 				}
 				
-				openOptionsDialog();
+//				openOptionsDialog();
 			} catch(Exception obj) {
 				Toast toast = Toast.makeText(Main.this, R.string.input_error, Toast.LENGTH_SHORT);
 				toast.show();
@@ -112,4 +114,32 @@ public class Main extends Activity {
 		    .show();
 		
 		}
+	
+	protected static final int MENU_ABOUT = Menu.FIRST;
+	protected static final int MENU_QUIT = Menu.FIRST+1;
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    // TODO Auto-generated method stub
+//	    menu.add(0, MENU_ABOUT, 0, "關於...");
+//	    menu.add(0, MENU_QUIT, 0, "結束");
+//		menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(R.drawable.help_browser);
+//	    menu.add(0, MENU_QUIT, 0, "結束").setIcon(R.drawable.emblem_unreadable);
+		menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(android.R.drawable.ic_menu_help);
+        menu.add(0, MENU_QUIT, 0, "結束").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // TODO Auto-generated method stub
+	    switch(item.getItemId()) {
+	        case MENU_ABOUT:
+	             openOptionsDialog();
+	             break;
+	        case MENU_QUIT:
+	             finish();
+	             break;
+	    }
+	    return super.onOptionsItemSelected(item);
+	}
 }
