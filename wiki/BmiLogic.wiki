@@ -51,7 +51,7 @@
 40             TextView fieldsuggest = (TextView)findViewById(R.id.suggest);
 41             if(BMI>25){
 42                 fieldsuggest.setText(R.string.advice_heavy);
-43             }else if(BMI<20){
+43             }else if(BMI<20 && BMI <= 25){
 44                 fieldsuggest.setText(R.string.advice_light);
 45             }else{
 46                 fieldsuggest.setText(R.string.advice_average);
