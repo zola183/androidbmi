@@ -49,31 +49,36 @@ public class Main extends Activity {
 	
 	private Button.OnClickListener calcBMI = new OnClickListener() {
 		public void onClick(View v) {
-			DecimalFormat nf = new DecimalFormat("0.00");
-			try {
-				double height = Double
-						.parseDouble(field_height.getText().toString()) / 100;
-				double weight = Double
-						.parseDouble(field_weight.getText().toString());
-				double BMI = weight / (height * height);
-	
-				//Present result
-				view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
-	
-				// Give health advice
-				if (BMI > 25) {
-					view_suggest.setText(R.string.advice_heavy);
-				} else if (BMI < 20) {
-					view_suggest.setText(R.string.advice_light);
-				} else {
-					view_suggest.setText(R.string.advice_average);
-				}
-				
-//				openOptionsDialog();
-			} catch(Exception obj) {
-				Toast toast = Toast.makeText(Main.this, R.string.input_error, Toast.LENGTH_SHORT);
-				toast.show();
-			}
+//			DecimalFormat nf = new DecimalFormat("0.00");
+//			try {
+//				double height = Double
+//						.parseDouble(field_height.getText().toString()) / 100;
+//				double weight = Double
+//						.parseDouble(field_weight.getText().toString());
+//				double BMI = weight / (height * height);
+//	
+//				//Present result
+//				view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+//	
+//				// Give health advice
+//				if (BMI > 25) {
+//					view_suggest.setText(R.string.advice_heavy);
+//				} else if (BMI < 20) {
+//					view_suggest.setText(R.string.advice_light);
+//				} else {
+//					view_suggest.setText(R.string.advice_average);
+//				}
+//				
+////				openOptionsDialog();
+//			} catch(Exception obj) {
+//				Toast toast = Toast.makeText(Main.this, R.string.input_error, Toast.LENGTH_SHORT);
+//				toast.show();
+//			}
+			
+			//Switch to report page
+	        Intent intent = new Intent();
+	       intent.setClass(Main.this, Report.class);
+	       startActivity(intent);
 		}
 	};
 	
