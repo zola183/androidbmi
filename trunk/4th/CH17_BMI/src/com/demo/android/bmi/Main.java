@@ -77,8 +77,8 @@ public class Main extends Activity {
 			
 			//Switch to report page
 	        Intent intent = new Intent();
-	       intent.setClass(Main.this, Report.class);
-	       startActivity(intent);
+	        intent.setClass(Main.this, Report.class);
+	        startActivity(intent);
 		}
 	};
 	
