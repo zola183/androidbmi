@@ -77,8 +77,13 @@ public class Main extends Activity {
 			
 			//Switch to report page
 	        Intent intent = new Intent();
-	       intent.setClass(Main.this, Report.class);
-	       startActivity(intent);
+	        intent.setClass(Main.this, Report.class);
+			
+		    Bundle bundle = new Bundle();
+		    bundle.putString("KEY_HEIGHT", field_height.getText().toString());
+		    bundle.putString("KEY_WEIGHT", field_weight.getText().toString());
+		    intent.putExtras(bundle);
+		    startActivity(intent);
 		}
 	};
 	
