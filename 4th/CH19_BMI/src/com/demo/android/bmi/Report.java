@@ -3,6 +3,10 @@ package com.demo.android.bmi;
 import java.text.DecimalFormat;
 
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +57,7 @@ public class Report extends Activity {
 
         //Give health advice
         if(BMI>25) {
+        	showNotification(BMI);
             view_suggest.setText(R.string.advice_heavy);
         } else if(BMI<20) {
             view_suggest.setText(R.string.advice_light);
@@ -60,5 +65,32 @@ public class Report extends Activity {
             view_suggest.setText(R.string.advice_average);
         }
 
+    }
+    
+    protected void showNotification (double BMI) {
+        NotificationManager barManager = 
+    (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            
+        Notification barMsg = new Notification(
+//        	     R.drawable.icon, 
+        		android.R.drawable.stat_sys_warning,
+            	"歐，你過重囉！",
+            	System.currentTimeMillis()
+         );
+
+        PendingIntent contentIntent = PendingIntent.getActivity(
+            this,
+            0,
+            new Intent(this, Main.class),
+//            null,
+            PendingIntent.FLAG_UPDATE_CURRENT);
+        		
+        barMsg.setLatestEventInfo(
+            Report.this,
+            "您的 BMI 值過高",
+            "通知監督人",
+            contentIntent
+        );
+        barManager.notify(0, barMsg);
     }
 }
