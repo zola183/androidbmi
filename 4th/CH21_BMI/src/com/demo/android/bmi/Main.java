@@ -19,19 +19,62 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main extends Activity {
-//	private static final String TAG = "Bmi";
-	private static final String TAG = Main.class.getSimpleName();
+	private static final String TAG = "Bmi";
+//	private static final String TAG = Main.class.getSimpleName();
 	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Log.v(TAG,"onCreate");
 		setContentView(R.layout.main);
 
 		findViews();
 		setListensers();
 	}
 	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		Log.v(TAG,"onDestroy");
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		Log.v(TAG,"onPause");
+	}
+
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+		Log.v(TAG,"onReStart");
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Log.v(TAG,"onResume");
+	}
+
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		Log.v(TAG,"onStart");
+	}
+
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		Log.v(TAG,"onStop");
+	}
+
 	private Button button_calc;
 	private EditText field_height;
 	private EditText field_weight;
