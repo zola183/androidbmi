@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +19,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main extends Activity {
+//	private static final String TAG = "Bmi";
+	private static final String TAG = Main.class.getSimpleName();
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,7 @@ public class Main extends Activity {
 	private TextView view_suggest;
 
 	private void findViews() {
+		if(Debug.On) Log.d(TAG, "find Views");
 		button_calc = (Button) findViewById(R.id.submit);
 	    field_height = (EditText) findViewById(R.id.height);
 	    field_weight = (EditText) findViewById(R.id.weight);
@@ -44,6 +49,7 @@ public class Main extends Activity {
 
 	//Listen for button clicks
 	private void setListensers() {
+		if(Debug.On) Log.d(TAG, "set Listensers");
 		button_calc.setOnClickListener(calcBMI);
 	}
 	
@@ -70,7 +76,8 @@ public class Main extends Activity {
 				}
 				
 //				openOptionsDialog();
-			} catch(Exception obj) {
+			} catch(Exception err) {
+				Log.e(TAG, "error: " + err.toString());
 				Toast toast = Toast.makeText(Main.this, R.string.input_error, Toast.LENGTH_SHORT);
 				toast.show();
 			}
