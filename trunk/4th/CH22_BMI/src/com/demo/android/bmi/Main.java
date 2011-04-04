@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,7 +23,9 @@ import android.widget.Toast;
 public class Main extends Activity {
 	private static final String TAG = "Bmi";
 //	private static final String TAG = Main.class.getSimpleName();
-	
+//	public static final String PREF = "BMI_PREF";
+//    public static final String PREF_HEIGHT = "BMI_HEIGHT";
+    
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,7 @@ public class Main extends Activity {
 		setContentView(R.layout.main);
 
 		findViews();
+		restorePrefs();
 		setListensers();
 	}
 	
@@ -45,6 +50,16 @@ public class Main extends Activity {
 		// TODO Auto-generated method stub
 		super.onPause();
 		Log.v(TAG,"onPause");
+//		SharedPreferences settings = getSharedPreferences(PREF, 0);
+//		Editor editor = settings.edit();
+//		editor.putString(PREF_HEIGHT, field_height.getText().toString());
+//		editor.commit();
+		
+//        settings.edit()
+//            .putString(PREF_HEIGHT, field_height.getText().toString())
+//            .commit();
+		
+		Pref.setHeight(this, field_height.getText().toString());
 	}
 
 	@Override
@@ -90,6 +105,17 @@ public class Main extends Activity {
 	    view_suggest = (TextView) findViewById(R.id.suggest);
 	}
 
+	// Restore preferences
+    private void restorePrefs() {
+//        SharedPreferences settings = getSharedPreferences(PREF, 0);
+//        String pref_height = settings.getString(PREF_HEIGHT, "");
+    	String pref_height = Pref.getHeight(this);
+    	if(! "".equals(pref_height)) {
+            field_height.setText(pref_height);
+            field_weight.requestFocus();
+        }
+    }
+    
 	//Listen for button clicks
 	private void setListensers() {
 		if(Debug.On) Log.d(TAG, "set Listensers");
