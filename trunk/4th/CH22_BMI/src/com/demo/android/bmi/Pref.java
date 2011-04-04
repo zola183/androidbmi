@@ -3,6 +3,7 @@ package com.demo.android.bmi;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
@@ -10,7 +11,13 @@ public class Pref extends PreferenceActivity {
 	public static final String PREF = "BMI_PREF";
     public static final String PREF_HEIGHT = "BMI_HEIGHT";
     
-    public static String getHeight(Context context){
+    @Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		addPreferencesFromResource(R.xml.pref);
+	}
+
+	public static String getHeight(Context context){
     	SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
         return pref.getString(PREF_HEIGHT, "");
     }

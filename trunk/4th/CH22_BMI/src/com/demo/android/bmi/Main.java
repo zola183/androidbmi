@@ -34,7 +34,7 @@ public class Main extends Activity {
 		setContentView(R.layout.main);
 
 		findViews();
-		restorePrefs();
+//		restorePrefs();
 		setListensers();
 	}
 	
@@ -74,6 +74,7 @@ public class Main extends Activity {
 		// TODO Auto-generated method stub
 		super.onResume();
 		Log.v(TAG,"onResume");
+		restorePrefs();
 	}
 
 	@Override
@@ -210,7 +211,10 @@ public class Main extends Activity {
 	    // TODO Auto-generated method stub
 	    switch(item.getItemId()) {
 	        case MENU_ABOUT:
-	             openOptionsDialog();
+//	             openOptionsDialog();
+	        	 Intent intent = new Intent(Intent.ACTION_VIEW);
+	        	 intent.setClass(Main.this, Pref.class);
+	             startActivity(intent);
 	             break;
 	        case MENU_QUIT:
 	             finish();
