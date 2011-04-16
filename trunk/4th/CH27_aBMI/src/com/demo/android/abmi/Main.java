@@ -26,6 +26,13 @@ public class Main extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        Resources res = getResources();
+        Configuration conf = res.getConfiguration();
+        conf.locale = Locale.TRADITIONAL_CHINESE;
+        DisplayMetrics dm = res.getDisplayMetrics();
+        res.updateConfiguration(conf, dm);
+        
         setContentView(R.layout.main);
         findViews();
         setListensers();
