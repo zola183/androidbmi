@@ -6,6 +6,7 @@ import java.util.Locale;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -14,24 +15,30 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main extends Activity {
 	private static final String TAG = Main.class.getSimpleName();
 	
-	static final String[] feets= new String[] {
-	    "2 Feet",
-	    "3 Feet",
-	    "4 Feet",
-	    "5 Feet",
-	    "6 Feet",
-	    "7 Feet",
-	    "8 Feet"
-	};
+//	static final String[] feets= new String[] {
+//	    "2 Feet",
+//	    "3 Feet",
+//	    "4 Feet",
+//	    "5 Feet",
+//	    "6 Feet",
+//	    "7 Feet",
+//	    "8 Feet"
+//	};
+	
+	public static final String PREF = "BMI_PREF";
+	public static final String PREF_FEET = "BMI_Feet";
+	public static final String PREF_INCH = "BMI_Inch";
 	
     /** Called when the activity is first created. */
     @Override
@@ -47,11 +54,14 @@ public class Main extends Activity {
         setContentView(R.layout.main);
         findViews();
         setListensers();
+        restorePrefs();
     }
     
     private Button button_calc;
-    private EditText field_feet;
-    private EditText field_inch;
+//    private EditText field_feet;
+//    private EditText field_inch;
+    private Spinner field_feet;
+    private Spinner field_inch;
     private EditText field_weight;
     private TextView view_result;
     private TextView view_suggest;
@@ -59,8 +69,10 @@ public class Main extends Activity {
     private void findViews() {
         Log.d(TAG, "find Views");
         button_calc = (Button) findViewById(R.id.submit);
-        field_feet = (EditText) findViewById(R.id.feet);
-        field_inch = (EditText) findViewById(R.id.inch);
+//        field_feet = (EditText) findViewById(R.id.feet);
+//        field_inch = (EditText) findViewById(R.id.inch);
+        field_feet = (Spinner) findViewById(R.id.feet);
+        field_inch = (Spinner) findViewById(R.id.inch);
         field_weight = (EditText) findViewById(R.id.weight);
         view_result = (TextView) findViewById(R.id.result);
         view_suggest = (TextView) findViewById(R.id.suggest);
@@ -72,27 +84,75 @@ public class Main extends Activity {
         ArrayAdapter<CharSequence> adapter_feet = ArrayAdapter.createFromResource(
                 this, R.array.feets, 
                 android.R.layout.simple_spinner_item);
-        adapter_feet.setDropDownViewResource(
-                android.R.layout.simple_spinner_dropdown_item);
-
+        adapter_feet.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        field_feet.setAdapter(adapter_feet);
+        
         ArrayAdapter<CharSequence> adapter_inch = ArrayAdapter.createFromResource(
                 this, R.array.inches, 
                 android.R.layout.simple_spinner_item);
         adapter_inch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        field_inch.setAdapter(adapter_inch);
     }
 
     //Listen for button clicks
     private void setListensers() {
         Log.d(TAG, "set Listensers");
+        field_feet.setOnItemSelectedListener(getFeet);
+        field_inch.setOnItemSelectedListener(getInch);
         button_calc.setOnClickListener(calcUsBMI);
     }
+    
+ // Restore preferences
+    private void restorePrefs() {
+        SharedPreferences settings = getSharedPreferences(PREF, 0);
+        Integer pref_feet = settings.getInt(PREF_FEET, 5);
+        field_feet.setSelection(pref_feet);
+        field_inch.requestFocus();
+        Integer pref_inch = settings.getInt(PREF_INCH, 0);
+        field_inch.setSelection(pref_inch);
+        field_weight.requestFocus();
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Save user preferences. 
+        SharedPreferences settings = getSharedPreferences(PREF, 3);
+        Log.d(TAG, "save feet:"+field_feet.getSelectedItemPosition()
+        		+",inch:"+field_inch.getSelectedItemPosition());
+        settings.edit()
+            .putInt(PREF_FEET, field_feet.getSelectedItemPosition())
+            .putInt(PREF_INCH, field_inch.getSelectedItemPosition())
+            .commit();
+    }
+    
+    private int feet;
+    private int inch;
+
+    private Spinner.OnItemSelectedListener getFeet = new Spinner.OnItemSelectedListener() {
+        public void onItemSelected(AdapterView parent, View v, int position, long id) {
+                feet = parent.getSelectedItemPosition()+2;
+        }
+        public void onNothingSelected(AdapterView parent) {
+        }
+    };
+
+    private Spinner.OnItemSelectedListener getInch = new Spinner.OnItemSelectedListener() {
+        public void onItemSelected(AdapterView parent, View v, int position, long id) {
+                inch = parent.getSelectedItemPosition();
+        }
+        public void onNothingSelected(AdapterView parent) {
+
+        }
+    };
     
     private Button.OnClickListener calcUsBMI = new Button.OnClickListener() {
         public void onClick(View v) {
             DecimalFormat nf = new DecimalFormat("0.00");
             try {
-                double height = (Double.parseDouble(field_feet.getText().toString())*12+Double.parseDouble(field_inch.getText().toString()))*2.54/100;
-                double weight = Double.parseDouble(field_weight.getText().toString())*0.45359;
+//                double height = (Double.parseDouble(field_feet.getText().toString())*12+Double.parseDouble(field_inch.getText().toString()))*2.54/100;
+            	double height = (feet*12+inch)*2.54/100;
+            	double weight = Double.parseDouble(field_weight.getText().toString())*0.45359;
                 double BMI = weight / (height * height);
                 //Present result
                  view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
