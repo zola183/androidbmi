@@ -4,9 +4,10 @@
  * [TextView 文字欄位]
  * [EditText 編輯欄位]
  * [Button 按鈕]
+ * [ImageView 圖片]
+ * [ImageButton 圖片按鈕]
  * [Checkbox 確認方塊]
  * [RadioButton 群組按鈕]
- * [ImageView 圖片]
  * [RatingBar 評分按鈕]
 選單與狀態提示元件
  * [OptionsMenu 選單]
