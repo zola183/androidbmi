@@ -1,0 +1,28 @@
+#summary 圖片按鈕
+#sidebar SideUi
+
+= XML宣告 =
+{{{
+<ImageButton android:id="@+id/imgbtn1" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+        android:src="@drawable/icon"/>
+}}}
+
+= Code =
+
+Import
+{{{
+import android.widget.ImageButton;
+}}}
+
+
+Reference
+{{{
+ImageButton imgbtn = (ImageButton)findViewById(R.id.imgbtn1);
+}}}
+
+
+= 參考文件 =
+
+http://developer.android.com/reference/android/widget/ImageButton.html
