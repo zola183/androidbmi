@@ -26,6 +26,10 @@ ToggleButton tglbtn=(ToggleButton)findViewById(R.id.tglbtn1);
 {{{
 tglbtn.setChecked(true);
 }}}
+或
+{{{
+tglbtn.toggle()
+}}}
 
 是否已勾選?
 
