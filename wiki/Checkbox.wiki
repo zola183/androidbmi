@@ -40,9 +40,9 @@ chk.isChecked();
 chk.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener() { 
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (isChecked) {
-            chk.setText("This checkbox is: checked");
+            Log.d("chk", "This checkbox is: checked");
         } else {
-            chk.setText("This checkbox is: unchecked");
+            Log.d("chk", "This checkbox is: unchecked");
         }
     })
 }
