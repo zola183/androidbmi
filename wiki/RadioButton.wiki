@@ -22,10 +22,7 @@
 </RadioGroup>
 }}}
 
-設定預設狀態：
-{{{
-android:checked="true"
-}}}
+「android:checked」屬性可用來設定預設狀態
 
 = Code =
 
