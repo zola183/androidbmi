@@ -1,4 +1,6 @@
 #summary 開關按鈕
+#sidebar SideUi
+
 = XML宣告 =
 
 {{{
