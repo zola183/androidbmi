@@ -7,6 +7,7 @@
  * [ImageView 圖片]
  * [ImageButton 圖片按鈕]
  * [Checkbox 確認方塊]
+ * [ToggleButton 開關按鈕]
  * [RadioButton 群組按鈕]
  * [RatingBar 評分按鈕]
 選單與狀態提示元件
