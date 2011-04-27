@@ -1,0 +1,38 @@
+#summary 評分按鈕
+#sidebar SideUi
+
+= XML宣告 =
+
+{{{
+<RatingBar android:id="@+id/rtbar1"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:rating = "1.2"
+    android:numStars="5"
+    android:stepSize = "0.3"
+    />
+}}}
+
+= Code =
+
+Import
+{{{
+import android.widget.RatingBar;
+}}}
+
+Xml Binding
+{{{
+final RatingBar rtbar = (RatingBar) findViewById(R.id.rtbar1);
+}}}
+
+
+{{{
+rtbar.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
+    public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+        Log.d("rtbar", "New Rating: " + rating);
+    }
+});}}}
+
+= 參考文件 =
+
+http://developer.android.com/reference/android/widget/RatingBar.html
