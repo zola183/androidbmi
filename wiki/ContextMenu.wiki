@@ -12,11 +12,11 @@
 
 = Code =
 
-為上下文選單加入 
+為上下文選單加入宣告，指定長按後會顯示上下文選單的介面元件。
 {{{
 registerForContextMenu(View)
 }}}
-宣告，指定長按後會顯示上下文選單的介面元件。
+
 
 Import
 {{{
@@ -35,6 +35,7 @@ public boolean onCreateContextMenu(Menu menu) {
     }
 }}}
 
+ContextMenu中不能顯示圖示。
 
 ClickEvent
 {{{
