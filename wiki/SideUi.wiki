@@ -13,6 +13,7 @@
 選單與狀態提示元件
  * [OptionsMenu 選單]
  * [ContextMenu 上下文選單]
+ * [SubMenu 子選單]
  * [ToastMsg 彈出訊息]
  * [AlertDialog 彈出視窗]
  * [Notification 狀態欄訊息]
