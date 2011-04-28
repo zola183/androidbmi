@@ -29,7 +29,13 @@ Xml Binding
 final RatingBar rtbar = (RatingBar) findViewById(R.id.rtbar1);
 }}}
 
+設定星星數目
 
+{{{
+rtbar.setNumStars(5);
+}}}
+
+監看選取狀態
 {{{
 rtbar.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
     public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
