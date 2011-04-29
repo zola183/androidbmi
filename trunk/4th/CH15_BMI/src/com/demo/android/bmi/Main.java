@@ -129,6 +129,13 @@ public class Main extends Activity {
         menu.add(0, MENU_QUIT, 0, "µ²§ô").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
 		return super.onCreateOptionsMenu(menu);
 	}
+	
+//	@Override
+//	public boolean onPrepareOptionsMenu(Menu menu) {
+//		menu.clear();
+//		menu.add(0, MENU_ABOUT, 0, "Ãö©ó...").setIcon(android.R.drawable.ic_menu_help);
+//		return super.onPrepareOptionsMenu(menu);
+//	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // TODO Auto-generated method stub
