@@ -1,26 +1,30 @@
 package com.demo.android.dummynote;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DB {
 	
+    public static final String KEY_ROWID = "_id";
+    public static final String KEY_NOTE = "note";
+    public static final String KEY_CREATED = "created";
+    public static final String KEY_MODIFIED = "modified";
+
+    private static final String DATABASE_TABLE = "notes";
+
 	private static class DatabaseHelper extends SQLiteOpenHelper {
-
 		private static final String DATABASE_NAME = "notes.db";
-	    private static final int DATABASE_VERSION = 1;
-
-	    private static final String DATABASE_TABLE = "notes";
+	    private static final int DATABASE_VERSION = 2;
 	    
 	    private static final String DATABASE_CREATE =
-	        "create table notes("
-	            +"_id INTEGER PRIMARY KEY,"
-	            +"note TEXT,"
-	            +"created TIMESTAMP,"
-	            +"modified TIMESTAMP"
+	        "create table "+ DATABASE_TABLE +"("
+	            + KEY_ROWID + " INTEGER PRIMARY KEY,"
+	            + KEY_NOTE + " note TEXT NOT NULL,"
+	            + KEY_CREATED + " TIMESTAMP,"
+	            + KEY_MODIFIED + " TIMESTAMP"
 	        +");";
 	    
 		public DatabaseHelper(Context context) {
@@ -61,5 +65,9 @@ public class DB {
 
 	public void close() {
 	    dbHelper.close();
+	}
+	
+	public Cursor getAll() {
+	    return db.rawQuery("SELECT * FROM "+DATABASE_TABLE, null);
 	}
 }
