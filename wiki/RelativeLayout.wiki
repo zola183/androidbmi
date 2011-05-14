@@ -1,0 +1,44 @@
+#summary 相對版面配置
+#sidebar SideUi
+
+= XML宣告 =
+
+{{{
+<RelativeLayout  
+    xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_height="fill_parent"  
+    android:layout_width="fill_parent">  
+    <TextView  
+        android:id="@+id/leftobj"  
+        android:hint="left of the base"  
+        android:layout_alignParentLeft="true"  
+        android:layout_width="fill_parent"  
+        android:layout_toLeftOf="@+id/base"  
+        android:layout_height="wrap_content"></TextView>  
+    <TextView 
+        android:id="@+id/base" 
+        android:text="Align Right"  
+        android:layout_width="wrap_content"  
+        android:layout_alignParentRight="true"  
+        android:layout_height="wrap_content"></TextView>  
+</RelativeLayout> 
+}}}
+
+= Details =
+
+在目標左側
+android:layout_toLeftOf
+
+在目標右側
+android:layout_toRightOf
+
+在目標上方
+android:layout_above
+
+在目標下方
+android:layout_below
+
+= 參考資料 =
+
+ * http://developer.android.com/reference/android/widget/RelativeLayout.html
+ * http://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams.html
