@@ -28,5 +28,5 @@
 
 = 參考資料 =
 
- * http://developer.android.com/intl/zh-TW/reference/android/widget/LinearLayout.html
- * http://developer.android.com/intl/zh-TW/reference/android/widget/LinearLayout.LayoutParams.html
+ * http://developer.android.com/reference/android/widget/LinearLayout.html
+ * http://developer.android.com/reference/android/widget/LinearLayout.LayoutParams.html
