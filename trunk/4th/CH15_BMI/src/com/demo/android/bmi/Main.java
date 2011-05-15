@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -115,6 +116,7 @@ public class Main extends Activity {
 		
 		}
 	
+	
 	protected static final int MENU_ABOUT = Menu.FIRST;
 	protected static final int MENU_QUIT = Menu.FIRST+1;
 
@@ -125,8 +127,11 @@ public class Main extends Activity {
 //	    menu.add(0, MENU_QUIT, 0, "結束");
 //		menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(R.drawable.help_browser);
 //	    menu.add(0, MENU_QUIT, 0, "結束").setIcon(R.drawable.emblem_unreadable);
-		menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(android.R.drawable.ic_menu_help);
-        menu.add(0, MENU_QUIT, 0, "結束").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		
+//		menu.add(0, MENU_ABOUT, 0, "關於...").setIcon(android.R.drawable.ic_menu_help);
+//      menu.add(0, MENU_QUIT, 0, "結束").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.menu, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 	
@@ -140,13 +145,17 @@ public class Main extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // TODO Auto-generated method stub
 	    switch(item.getItemId()) {
-	        case MENU_ABOUT:
+//	        case MENU_ABOUT:
+	    	case R.id.about:
 	             openOptionsDialog();
 	             break;
-	        case MENU_QUIT:
+//	        case MENU_QUIT:
+	    	case R.id.finish:
 	             finish();
 	             break;
 	    }
 	    return super.onOptionsItemSelected(item);
 	}
+	
+	
 }
