@@ -1,10 +1,13 @@
 package com.demo.android.dummynote;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 public class Main extends ListActivity {
@@ -62,6 +65,27 @@ public class Main extends ListActivity {
         SimpleCursorAdapter adapter =
                     new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, mNotesCursor, from, to);
         setListAdapter(adapter);
+    }
+    
+    private static final int ACTIVITY_EDIT=1;
+
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        Intent intent = new Intent(this, NoteEdit.class);
+        intent.putExtra(DB.KEY_ROWID, id);
+        startActivityForResult(intent, ACTIVITY_EDIT);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,
+                                    Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+//        if(resultCode == RESULT_OK){
+//            if(requestCode == ACTIVITY_EDIT){
+            	fillData();
+//           	}
+//        }
     }
     
     private int mNoteNumber = 1;
