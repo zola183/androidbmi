@@ -76,7 +76,7 @@ public class DB {
 //	}
 
     // get all entries    public Cursor getAll() {        return db.query(DATABASE_TABLE, //Which table to Select            //strCols,// Which columns to return            new String[] {KEY_ROWID, KEY_NOTE, KEY_CREATED},
-            null, // WHERE clause            null, // WHERE arguments            null, // GROUP BY clause            null, // HAVING clause            null //Order-by clause        );    }
+            null, // WHERE clause            null, // WHERE arguments            null, // GROUP BY clause            null, // HAVING clause            KEY_MODIFIED+" DESC" //Order-by clause        );    }
     
     // add an entry    public long create(String Note) {        Date now = new Date();        ContentValues args = new ContentValues();        args.put(KEY_NOTE, Note);        args.put(KEY_CREATED, now.getTime());
         args.put(KEY_MODIFIED, now.getTime());            return db.insert(DATABASE_TABLE, null, args);    }
