@@ -56,7 +56,7 @@ public class Main extends ListActivity {
         mNotesCursor = mDbHelper.getAll();
         startManagingCursor(mNotesCursor);
 
-        String[] from = new String[]{"note"};
+        String[] from = new String[]{DB.KEY_NOTE};
         int[] to = new int[]{android.R.id.text1};
 
         // Now create a simple cursor adapter
