@@ -4,9 +4,12 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -18,6 +21,7 @@ public class Main extends ListActivity {
         setContentView(R.layout.main);
         //Tell the list view which view to display when the list is empty
         getListView().setEmptyView(findViewById(R.id.empty));
+        registerForContextMenu(getListView());
         setAdapter();
     }
     
@@ -115,4 +119,30 @@ public class Main extends ListActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		AdapterView.AdapterContextMenuInfo info;
+		info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
+		switch (item.getItemId()) { 
+			case MENU_DELETE:
+				mDbHelper.delete(info.id);
+	            fillData();
+	            break;
+			}
+		return super.onContextItemSelected(item);
+	}
+
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+			ContextMenuInfo menuInfo) {
+		// TODO Auto-generated method stub
+		super.onCreateContextMenu(menu, v, menuInfo);
+		menu.add(0, MENU_DELETE, 0,  "刪除記事");
+	    menu.setHeaderTitle("要怎麼處理這筆項目？");
+	}
+    
+    
 }
