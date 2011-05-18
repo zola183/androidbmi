@@ -55,12 +55,12 @@ public class Main extends ListActivity {
         mNotesCursor = mDbHelper.getAll();
         startManagingCursor(mNotesCursor);
 
-        String[] from = new String[]{DB.KEY_NOTE};
-        int[] to = new int[]{android.R.id.text1};
+        String[] from_column = new String[]{DB.KEY_NOTE};
+        int[] to_layout = new int[]{android.R.id.text1};
 
         // Now create a simple cursor adapter
         SimpleCursorAdapter adapter =
-                    new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, mNotesCursor, from, to);
+                    new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, mNotesCursor, from_column, to_layout);
         setListAdapter(adapter);
     }
     
