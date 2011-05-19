@@ -4,11 +4,11 @@ import java.text.DecimalFormat;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -125,34 +125,89 @@ public class Main extends Activity {
 	
 	private Button.OnClickListener calcBMI = new OnClickListener() {
 		public void onClick(View v) {
-			DecimalFormat nf = new DecimalFormat("0.00");
-			try {
-				double height = Double
-						.parseDouble(field_height.getText().toString()) / 100;
-				double weight = Double
-						.parseDouble(field_weight.getText().toString());
-				double BMI = weight / (height * height);
-	
+			new BmiCalcTask().execute();
+//			Double height = Double
+//			.parseDouble(field_height.getText().toString()) / 100;
+//			Double weight = Double
+//					.parseDouble(field_weight.getText().toString());
+			
+//			DecimalFormat nf = new DecimalFormat("0.00");
+//			try {
+//				Double height = Double
+//						.parseDouble(field_height.getText().toString()) / 100;
+//				Double weight = Double
+//						.parseDouble(field_weight.getText().toString());
+				
+//				double BMI = weight / (height * height);				
 				//Present result
-				view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
-	
-				// Give health advice
-				if (BMI > 25) {
-					view_suggest.setText(R.string.advice_heavy);
-				} else if (BMI < 20) {
-					view_suggest.setText(R.string.advice_light);
-				} else {
-					view_suggest.setText(R.string.advice_average);
-				}
+//				view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+//	
+//				// Give health advice
+//				if (BMI > 25) {
+//					view_suggest.setText(R.string.advice_heavy);
+//				} else if (BMI < 20) {
+//					view_suggest.setText(R.string.advice_light);
+//				} else {
+//					view_suggest.setText(R.string.advice_average);
+//				}
 				
 //				openOptionsDialog();
-			} catch(Exception err) {
-				Log.e(TAG, "error: " + err.toString());
-				Toast toast = Toast.makeText(Main.this, R.string.input_error, Toast.LENGTH_SHORT);
-				toast.show();
-			}
+//			} catch(Exception err) {
+//				Log.e(TAG, "error: " + err.toString());
+//				Toast toast = Toast.makeText(Main.this, R.string.input_error, Toast.LENGTH_SHORT);
+//				toast.show();
+//			}
 		}
 	};
+	
+	
+	private class BmiCalcTask extends AsyncTask<Void, Void, Void> {
+
+		private ProgressDialog Dialog = new ProgressDialog(Main.this);
+		Double BMI;
+		Double height;
+		Double weight;
+		
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+			Dialog.setMessage("calc...");
+			Dialog.show();
+			
+			height = Double
+			.parseDouble(field_height.getText().toString()) / 100;
+			weight = Double
+					.parseDouble(field_weight.getText().toString());
+		}
+		
+		@Override
+		protected Void doInBackground(Void... arg0) {
+			// TODO Auto-generated method stub
+			BMI = weight / (height * height);
+			
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(Void unused) {
+			// TODO Auto-generated method stub
+			Dialog.dismiss();
+			
+			DecimalFormat nf = new DecimalFormat("0.00");
+			view_result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+			
+			// Give health advice
+			if (BMI > 25) {
+				view_suggest.setText(R.string.advice_heavy);
+			} else if (BMI < 20) {
+				view_suggest.setText(R.string.advice_light);
+			} else {
+				view_suggest.setText(R.string.advice_average);
+			}
+		}
+		
+	}
 	
 	private void openOptionsDialog() {
 //		Toast.makeText(Main.this, "BMI ­pºâ¾¹", Toast.LENGTH_SHORT).show();
