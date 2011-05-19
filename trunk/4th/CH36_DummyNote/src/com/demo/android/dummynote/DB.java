@@ -23,7 +23,7 @@ public class DB {
 	    private static final int DATABASE_VERSION = 2;
 	    
 	    private static final String DATABASE_CREATE =
-	        "create table "+ DATABASE_TABLE +"("
+	        "CREATE TABLE "+ DATABASE_TABLE +"("
 	            + KEY_ROWID + " INTEGER PRIMARY KEY,"
 	            + KEY_NOTE + " note TEXT NOT NULL,"
 	            + KEY_CREATED + " TIMESTAMP,"
