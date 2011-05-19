@@ -16,4 +16,5 @@
         <activity android:name="NoteEdit"></activity>
 
     </application>
+    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
 </manifest>
