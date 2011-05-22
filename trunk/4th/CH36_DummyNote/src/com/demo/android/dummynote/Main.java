@@ -3,6 +3,7 @@ package com.demo.android.dummynote;
 import android.app.ListActivity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SimpleCursorAdapter;
@@ -53,9 +54,12 @@ public class Main extends ListActivity {
     
     private void fillData() {
         mNotesCursor = mDbHelper.getAll();
-        startManagingCursor(mNotesCursor);
+//    	mNotesCursor = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null,
+//                null, null, ContactsContract.Contacts.DISPLAY_NAME + " ASC");
+//    	startManagingCursor(mNotesCursor);
 
         String[] from_column = new String[]{DB.KEY_NOTE};
+//        String[] from_column = new String[]{ContactsContract.Contacts.DISPLAY_NAME};
         int[] to_layout = new int[]{android.R.id.text1};
 
         // Now create a simple cursor adapter
