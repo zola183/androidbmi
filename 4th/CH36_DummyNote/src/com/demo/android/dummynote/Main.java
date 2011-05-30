@@ -54,9 +54,7 @@ public class Main extends ListActivity {
     
     private void fillData() {
         mNotesCursor = mDbHelper.getAll();
-//    	mNotesCursor = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null,
-//                null, null, ContactsContract.Contacts.DISPLAY_NAME + " ASC");
-//    	startManagingCursor(mNotesCursor);
+    	startManagingCursor(mNotesCursor);
 
         String[] from_column = new String[]{DB.KEY_NOTE};
 //        String[] from_column = new String[]{ContactsContract.Contacts.DISPLAY_NAME};
