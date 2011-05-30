@@ -26,6 +26,18 @@
 </LinearLayout>
 }}}
 
+= 程式碼 =
+{{{
+LinearLayout layout = new LinearLayout(this);
+layout.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,
+                                         LayoutParams.FILL_PARENT));
+layout.setOrientation(LinearLayout.VERTICAL);
+    
+TextView txt1 = new TextView(this);     
+txt1.setText("hello");		
+layout.addView(txt1);
+}}}
+
 = 參考資料 =
 
  * http://developer.android.com/reference/android/widget/LinearLayout.html
