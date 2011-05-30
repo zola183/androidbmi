@@ -53,13 +53,13 @@ public class Main extends ListActivity {
     }
     
     private void fillData() {
-        mNotesCursor = mDbHelper.getAll();
-//    	mNotesCursor = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null,
-//                null, null, ContactsContract.Contacts.DISPLAY_NAME + " ASC");
-//    	startManagingCursor(mNotesCursor);
+//        mNotesCursor = mDbHelper.getAll();
+    	mNotesCursor = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null,
+                null, null, ContactsContract.Contacts.DISPLAY_NAME + " ASC");
+    	startManagingCursor(mNotesCursor);
 
-        String[] from_column = new String[]{DB.KEY_NOTE};
-//        String[] from_column = new String[]{ContactsContract.Contacts.DISPLAY_NAME};
+//        String[] from_column = new String[]{DB.KEY_NOTE};
+        String[] from_column = new String[]{ContactsContract.Contacts.DISPLAY_NAME};
         int[] to_layout = new int[]{android.R.id.text1};
 
         // Now create a simple cursor adapter
