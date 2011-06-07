@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -134,12 +135,8 @@ public class Main extends MapActivity {
         	.setTitle("No Connection")
         	.setMessage("Please enable internet connection before use this app")
         	.setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-    			public void onClick(DialogInterface dialog, int whichButton) {  
-    				Intent intent_setting = new Intent();
-    				intent_setting.addCategory(Intent.CATEGORY_DEFAULT);
-    				intent_setting.setClassName("com.android.settings", "com.android.settings.Settings");
-    		    	startActivity(intent_setting);
-    				finish();
+    			public void onClick(DialogInterface dialog, int whichButton) {
+    		    	startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
     			}
         	})
         	.show();
