@@ -6,6 +6,12 @@ import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -114,4 +120,29 @@ public class Main extends MapActivity {
         }
         return false;
     }
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		
+		//check connectivity
+    	ConnectivityManager connectivityMgr =  (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
+    	NetworkInfo netInfo = connectivityMgr.getActiveNetworkInfo();
+    	if (netInfo == null) {
+    		new AlertDialog.Builder(Main.this)
+        	.setTitle("No Connection")
+        	.setMessage("Please enable internet connection before use this app")
+        	.setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+    			public void onClick(DialogInterface dialog, int whichButton) {  
+    				Intent intent_setting = new Intent();
+    				intent_setting.addCategory(Intent.CATEGORY_DEFAULT);
+    				intent_setting.setClassName("com.android.settings", "com.android.settings.Settings");
+    		    	startActivity(intent_setting);
+    				finish();
+    			}
+        	})
+        	.show();
+    	}
+	}
 }
