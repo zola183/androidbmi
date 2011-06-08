@@ -1,9 +1,13 @@
 package com.demo.android.trainstation;
 
+import java.util.List;
+
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
+import com.google.android.maps.MyLocationOverlay;
+import com.google.android.maps.Overlay;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -44,17 +48,33 @@ public class Main extends MapActivity {
             controller = map.getController();
     }
 
+    private MyLocationOverlay locLayer;
+
     private void setupMap() {
             GeoPoint station_taipei = new GeoPoint(
                             (int) (25.047192 * 1000000),
                             (int) (121.516981 * 1000000)
             );
-//            map.setTraffic(true);
+            map.setTraffic(false);
+            map.setBuiltInZoomControls(true);
             controller.setZoom(17);
             controller.animateTo(station_taipei);
+    		
+//            List<Overlay> overlays = map.getOverlays();
+    		locLayer = new MyLocationOverlay(this, map);
+    		map.getOverlays().add(locLayer);    
+    		locLayer.runOnFirstFix(new Runnable() {
+                public void run() {
+                    // Zoom in to current location
+                    map.setTraffic(true);
+                    controller.setZoom(17);
+                    controller.animateTo(locLayer.getMyLocation());
+                }
+            });
+//            overlays.add(locLayer);
     }
-    
-    protected static final int MENU_TAIPEI = Menu.FIRST;
+
+	protected static final int MENU_TAIPEI = Menu.FIRST;
     protected static final int MENU_TAICHUNG = Menu.FIRST+1;
     protected static final int MENU_KAOSHONG = Menu.FIRST+2;
 
@@ -140,6 +160,15 @@ public class Main extends MapActivity {
     			}
         	})
         	.show();
+    	} else {
+    		locLayer.enableMyLocation();
     	}
+	}
+	
+    @Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		locLayer.disableMyLocation();
 	}
 }
