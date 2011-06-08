@@ -39,7 +39,8 @@ public class Main extends MapActivity {
                             (int) (25.047192 * 1000000),
                             (int) (121.516981 * 1000000)
             );
-//            map.setTraffic(true);
+            map.setTraffic(false);
+            map.setBuiltInZoomControls(true);
             controller.setZoom(17);
             controller.animateTo(station_taipei);
     }
