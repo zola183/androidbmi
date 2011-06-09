@@ -1,19 +1,13 @@
 package com.demo.android.trainstation;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import com.google.android.maps.GeoPoint;
-import com.google.android.maps.MapActivity;
-import com.google.android.maps.MapController;
-import com.google.android.maps.MapView;
-import com.google.android.maps.MyLocationOverlay;
-import com.google.android.maps.Overlay;
-
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -21,6 +15,15 @@ import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.google.android.maps.GeoPoint;
+import com.google.android.maps.ItemizedOverlay;
+import com.google.android.maps.MapActivity;
+import com.google.android.maps.MapController;
+import com.google.android.maps.MapView;
+import com.google.android.maps.MyLocationOverlay;
+import com.google.android.maps.OverlayItem;
 
 public class Main extends MapActivity {
     /** Called when the activity is first created. */
@@ -49,6 +52,7 @@ public class Main extends MapActivity {
     }
 
     private MyLocationOverlay locLayer;
+    private LandMarkOverlay markLayer;
 
     private void setupMap() {
             GeoPoint station_taipei = new GeoPoint(
@@ -62,7 +66,7 @@ public class Main extends MapActivity {
     		
 //            List<Overlay> overlays = map.getOverlays();
     		locLayer = new MyLocationOverlay(this, map);
-    		map.getOverlays().add(locLayer);    
+    		map.getOverlays().add(locLayer);
     		locLayer.runOnFirstFix(new Runnable() {
                 public void run() {
                     // Zoom in to current location
@@ -72,6 +76,12 @@ public class Main extends MapActivity {
                 }
             });
 //            overlays.add(locLayer);
+    		
+    		Drawable pin=getResources().getDrawable(android.R.drawable.btn_star_big_on);
+            pin.setBounds(0, 0, pin.getMinimumWidth(), pin.getMinimumHeight());
+
+            markLayer = new LandMarkOverlay(pin);
+            map.getOverlays().add(markLayer);
     }
 
 	protected static final int MENU_TAIPEI = Menu.FIRST;
@@ -171,4 +181,53 @@ public class Main extends MapActivity {
 		super.onPause();
 		locLayer.disableMyLocation();
 	}
+    
+    private class LandMarkOverlay extends ItemizedOverlay<OverlayItem> {
+
+        private List<OverlayItem> items = new ArrayList<OverlayItem>();
+
+        public LandMarkOverlay(Drawable defaultMarker) {
+                super(defaultMarker);
+                // TODO Auto-generated constructor stub
+                items.add(
+                    new OverlayItem(
+                                station_taipei,
+                                "台北",
+                                "台北車站")
+                        );
+                items.add(
+                    new OverlayItem(
+                                station_taichung,
+                                "台中",
+                                "台中車站")
+                        );
+                items.add(
+                    new OverlayItem(
+                                station_kaoshong,
+                                "高雄",
+                                "高雄車站")
+                        );
+                populate();
+        }
+
+        @Override
+        protected OverlayItem createItem(int i) {
+                // TODO Auto-generated method stub
+                return items.get(i);
+        }
+
+        @Override
+        public int size() {
+                // TODO Auto-generated method stub
+                return items.size();
+        }
+
+    @Override
+    protected boolean onTap(int pIndex) {
+        Toast.makeText(Main.this,
+            "這裡是" + items.get(pIndex).getSnippet(),
+            Toast.LENGTH_SHORT).show();
+        return true;
+    }
+}
 }
