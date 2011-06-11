@@ -109,9 +109,12 @@ public class Main extends ListActivity {
         // TODO Auto-generated method stub
         switch(item.getItemId()) {
         case MENU_INSERT:
-            String noteName = "Note " + mNoteNumber++;
-            mDbHelper.create(noteName);
-            fillData();
+//            String noteName = "Note " + mNoteNumber++;
+//            mDbHelper.create(noteName);
+//            fillData();
+        	Intent intent = new Intent(Intent.ACTION_INSERT);
+        	intent.setClass(Main.this, NoteEdit.class);
+        	startActivity(intent);
         case MENU_DELETE:
             mDbHelper.delete(getListView().getSelectedItemId());
             fillData();
