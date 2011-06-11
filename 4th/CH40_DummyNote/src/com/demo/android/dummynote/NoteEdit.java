@@ -46,8 +46,12 @@ public class NoteEdit extends Activity {
         button_confirm.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                mDbHelper.update(mRowId, field_note.getText().toString());
-                setResult(RESULT_OK);
+            	if (mRowId == null) {
+            		mDbHelper.create(field_note.getText().toString());
+            	} else {
+	                mDbHelper.update(mRowId, field_note.getText().toString());
+	                setResult(RESULT_OK);
+            	}
                 finish();
             }
 
