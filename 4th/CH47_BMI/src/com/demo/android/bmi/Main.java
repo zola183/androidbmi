@@ -2,6 +2,10 @@ package com.demo.android.bmi;
 
 import java.text.DecimalFormat;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdSize;
+import com.google.ads.AdView;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,6 +21,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +38,14 @@ public class Main extends Activity {
 		Log.v(TAG,"onCreate");
 		setContentView(R.layout.main);
 
+		// Look up the AdView as a resource and load a request.
+		LinearLayout layout = (LinearLayout)findViewById(R.id.linearLayoutAd);
+		AdView adView = new AdView(this, AdSize.BANNER, "a14e07eed7aa259");
+		layout.addView(adView);
+		AdRequest request = new AdRequest();
+//		request.setTesting(true);
+		adView.loadAd(request);
+		  
 		findViews();
 //		restorePrefs();
 		setListensers();
