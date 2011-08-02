@@ -91,21 +91,6 @@ Eclipse 不需要安裝，只要確認你的系統上有安裝 Java，即可直�
 
 按下 「Next」 (下一步)鍵。照著步驟就安裝完成。安裝完會提示需重新啟動 Eclipse，按下 「Yes」 重新啟動。
 
-=== Eclipse 3.3 版 ===
-
-找到螢幕上方的選單列， 選擇 「Help->Software Updates->Find and Install」 選項，這選項會帶出一個新視窗。    
-
-選擇 「Search for new features to install」 (搜尋新功能供安裝)選項，按下 「Next」 (下一步)鍵。出現設定畫面。
-
-選擇右上角的 「New Remote Site」 (新增遠端網站)按鈕，會彈出一個 「New Update Site」 (新增更新網站)輸入框。
-
-在輸入框中輸入擴充套件的名稱(Name) 「ADT」 跟網址(URL) 「http://dl-ssl.google.com/android/eclipse/site.xml 」，按下 「OK」 按鈕離開。
-
-按下 「Finish」 按紐繼續下一步。Eclipse 會花一點時間尋找合適的版本。
-
-接著我們要做的，就是等 Eclipse 顯示出選項時，勾選合適的版本安裝。
-
-安裝完會提示需重新啟動 Eclipse，按下 「OK」 重新啟動。
 
 === 離線安裝 ===
 
