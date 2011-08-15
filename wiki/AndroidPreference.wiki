@@ -87,7 +87,7 @@ SharedPreferences settings = getSharedPreferences(PREF, 0);
 {{{
 if(! "".equals(pref_height))
     	{
-    		pref_height.setText(pref_height);
+    		field_height.setText(pref_height);
             ...
         }
 }}}
