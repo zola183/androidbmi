@@ -31,7 +31,7 @@
 增加了「連線到首頁」按鈕，完整「openOptionsDialog」函式的新版程式碼如下：
 {{{
 1  private void openOptionsDialog() {
-2      new AlertDialog.Builder(this)
+2      new AlertDialog.Builder(Bmi.this)
 3	    .setTitle(R.string.about_title)
 4	    .setMessage(R.string.about_msg)
 5	    .setPositiveButton(R.string.ok_label,
