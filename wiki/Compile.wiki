@@ -57,23 +57,24 @@ curl http://android.git.kernel.org/repo >~/bin/repo
 chmod a+x ~/bin/repo
 }}}
 
-== 準備原始碼目錄 ==
+== 準備映像站目錄 ==
+
+{{{
+mkdir android-mirror
+cd android-mirror
+~/bin/repo init --mirror -u https://android.googlesource.com/mirror/manifest
+~/bin/repo sync
+}}}
+
+== 配置抓取不同版本 ==
+
+同樣命令後面加上分支版本(branch)代號，如要配置成抓取 android-2.3.7_r1 分支，可用以下命令
 
 {{{
 mkdir mydroid
 cd mydroid
-~/bin/repo init -u git://android.git.kernel.org/platform/manifest.git
+~/bin/repo init -u {path}/android-mirror/platform/manifest.git -b android-2.3.7_r1
 }}}
-
-
-== 配置抓取不同版本 ==
-
-同樣命令後面加上分支版本(branch)代號，如要配置成抓取 cupcake 分支，可用以下命令
-
-{{{
-~/bin/repo init -u git://android.git.kernel.org/platform/manifest.git -b cupcake
-}}}
-
 
 == 下載原始碼 ==
 
@@ -82,6 +83,9 @@ cd mydroid
 }}}
 
 == 編譯(預設值) ==
+
+參考 http://source.android.com/source/building.html
+
 {{{
 make
 }}}
