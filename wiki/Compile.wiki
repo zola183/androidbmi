@@ -3,7 +3,7 @@
 
 = 從頭建立編譯環境 =
 
-官方文件可在http://source.android.com/source/initializing.html找到
+官方文件可在 http://source.android.com/source/initializing.html 找到
 
 == 系統需求 ==
 
@@ -68,12 +68,12 @@ cd android-mirror
 
 == 配置抓取不同版本 ==
 
-同樣命令後面加上分支版本(branch)代號，如要配置成抓取 android-2.3.7_r1 分支，可用以下命令
+同樣命令後面加上分支版本(branch)代號，如要配置成抓取 android-4.0.1_r1 分支，可用以下命令
 
 {{{
 mkdir mydroid
 cd mydroid
-~/bin/repo init -u {path}/android-mirror/platform/manifest.git -b android-2.3.7_r1
+~/bin/repo init -u {path}/android-mirror/platform/manifest.git -b android-4.0.1_r1
 }}}
 
 == 下載原始碼 ==
