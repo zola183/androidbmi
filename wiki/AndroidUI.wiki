@@ -92,7 +92,7 @@ xmlns 開頭的這串敘述，是用來宣告這個 XML 描述檔案的的名稱
 
 介面元件彼此間也會有一些不同的屬性，例如 「LinearLayout」(線性版面配置) 標籤的「android:orientation」(版面走向) 屬性。在此填入 「vertical」 (垂直)屬性值，表示這個介面的版面配置方式是從上而下垂直地排列其內含的介面元件。
 
-「android.view.ViewGroup」 是各種佈局配置(layout)和視圖(View)元件的基礎類別。常見的實現有
+「android.view.ViewGroup」 是各種佈局配置(layout)元件的基礎類別。常見的實現有
 
 LinearLayout(線性版面配置)、FrameLayout(框架版面配置)、TableLayout(表格版面配置)、AbsoluteLayout(絕對位置版面配置)、RelativeLayout(相對位置版面配置)等。
 
