@@ -3,6 +3,7 @@
 #sidebar SideToc
 
   * [http://www.android.com/ Android 官方網站
+  * [http://developer.android.com/design Android UI設計指南]
   * [http://www.android.com/market/ Android Market]
   * [http://code.google.com/android/documentation.html Android 線上文件]
   * [http://source.android.com/roadmap RoadMap]，最新的 Android 平台開發進度 
