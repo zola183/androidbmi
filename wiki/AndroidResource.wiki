@@ -70,9 +70,6 @@
   * scala android-plugin http://github.com/jberkel/android-plugin
   * android app 轉 iphone app http://xmlvm.org/android/
 
-Gears (Deprecated)
-  * [http://gearsblog.blogspot.com/2008/08/gears-best-practices.html Gears Best Practice]
-
 遊戲
   * http://sites.google.com/site/drpaulthomasandroidstuff/Home/voxel-fun/how-it-works
   
