@@ -98,7 +98,7 @@ http://creativecommons.org.tw/sites/creativecommons.tw/files/cc-by-nc-nd-88x31.p
 2.3, 相容 Android 4.1
 
 == 主要更新記錄 ==
-  * 2012/7/3 本教學相容於 Android SDK 4.1
+  * 2012/7/3 本教學即將相容於 Android SDK 4.1
   * 2011/8 [http://www.books.com.tw/exep/assp.php/gasolin/exep/prod/booksfile.php?item=0010513881 實體書第四版]已出版
   * 2011/2 本教學相容於 Android SDK 2.3 
   * 2010/11 简体版实体书以「GoogleAndroid2手机应用程序设计入门第3版」出版, 9787894764973, 電腦報電子音像出版社
