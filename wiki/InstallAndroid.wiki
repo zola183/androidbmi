@@ -12,7 +12,7 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 支援的作業系統如下：
 
     * Windows XP 或 Vista
-    * Mac OS X 10.4.8 或之後版本 (僅適用 2007 年後出廠，採用 x86 架構的 Intel Mac)
+    * Mac OS X 10.5.8 或之後版本
     * Linux (官方是在 Ubuntu 上測試) 
 
 我們需要安裝一些 Android 開發環境所需的程式工具，這些工具都是可以免費上網取得的：
@@ -20,7 +20,7 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
     * **JDK 6**
       * 只安裝 Java 運行環境(JRE) 是不夠的，你需要安裝的是Java開發環境 (JDK)。
       * 各平台的 JDK 可以前往   http://www.oracle.com/technetwork/java/index.html 網站，找到「Java SE」連結，從「Java Platform, Standard Edition」表格中點選「Download JDK」連結來免費下載。
-      * 可以在命令行上輸入 「java -version」 來查看目前系統上已安裝的 java 版本(java 版本需 >1.5)。
+      * 可以在命令行上輸入 「java -version」 來查看目前系統上已安裝的 java 版本(java 版本需為 1.6)。
       * 要注意的是 Android 與 Java Gnu 編譯器 (gcj) 還不相容。
     * **Eclipse IDE**，一個多用途的開發工具平台。
       你可以下載安裝 Eclipse 3.6 (代號 Helios) 以上版本。
@@ -29,7 +29,7 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
     * **ADT**，基於 Eclipse 的 Android 開發工具擴充套件 (Android Development Tools plugin)。
     * **Android SDK**，Android 程式開發套件，包含 Android 手機模擬器(Emulator)。
     * 其他開發環境工具（非必要安裝）
-         o Linux 和 Mac 環境上需要自動編譯的話可以自行安裝 Apache Ant 1.6.5 或之後版本，Windows 環境上則需要 Apache Ant 1.7 或之後版本。
+         o 各平台上需要自動編譯的話可以自行安裝 Apache Ant 1.8 或之後版本。
          o NetBeans、IDEA 等開發平台亦有推出自己的 Android 開發工具，但本書中還是以討論官方基於 Eclipse 平台的開發工具為準，其他平台不予涉及。
 
 = 安裝流程 =
@@ -47,11 +47,13 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 == 1. 下載 Eclipse ==
 
 首先我們需要下載 Android 開發時會用到的整合開發環境 Eclipse。
-目前 Android 應用程式只支援使用「Java」程式語言來編寫 Android 應用程式。所以開發前必須先安裝 Java 開發套件(Java Development Kit, JDK)。
-各平台的 JDK 可至 http://java.sun.com 下載。 Mac OS X 作業系統則已內建 JDK。
+目前 Android 應用程式只支援使用「Java」程式語言來編寫 Android 應用程式。所以開發前必須先安裝 Java 開發套件(Java SE Development Kit, JDK)。
+各平台的JDK可以前往   「http://www.oracle.com/technetwork/java/javase/downloads/index.html」網站，選擇「Previous Releases」連結，找到Java標準版第6版(Java SE 6)連結，
+Mac OS X 作業系統則已內建 JDK，可以通過「應用程式/工具程式/Java偏好設定」來調整預設的Java版本。
+
 安裝好 JDK 後，我們可以前往 [http://www.eclipse.org/downloads/ Eclipse] 網站下載 Eclipse 這個方便的整合開發環境。
-下載 Eclipse 時請選「Eclipse IDE for Java Developers」或「Eclipse IDE for Java EE Developers」這兩種版本，只有這兩種版本才會預裝 Eclipse JDT 擴充套件。
-範例中所選擇的是「Eclipse IDE for Java Developers」版本。
+下載 Eclipse 時請選「Eclipse for Mobile Developers」版本。
+
 下載完同樣先解壓縮到適當目錄下。
 
 ----
