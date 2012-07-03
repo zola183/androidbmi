@@ -19,7 +19,9 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 
     * **JDK 6**
       * 只安裝 Java 運行環境(JRE) 是不夠的，你需要安裝的是Java開發環境 (JDK)。
-      * 各平台的 JDK 可以前往   http://www.oracle.com/technetwork/java/index.html 網站，找到「Java SE」連結，從「Java Platform, Standard Edition」表格中點選「Download JDK」連結來免費下載。
+      * 各平台的 JDK 可以前往   http://www.oracle.com/technetwork/java/index.html 網站，選擇「Previous Releases」連結，找到Java標準版第6版(Java SE 6)連結後下載對應平台的Java SE 6版本。
+Mac OS X 作業系統則已內建 JDK，可以通過「應用程式/工具程式/Java偏好設定」來調整預設的Java版本。
+
       * 可以在命令行上輸入 「java -version」 來查看目前系統上已安裝的 java 版本(java 版本需為 1.6)。
       * 要注意的是 Android 與 Java Gnu 編譯器 (gcj) 還不相容。
     * **Eclipse IDE**，一個多用途的開發工具平台。
@@ -48,9 +50,6 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 
 首先我們需要下載 Android 開發時會用到的整合開發環境 Eclipse。
 目前 Android 應用程式只支援使用「Java」程式語言來編寫 Android 應用程式。所以開發前必須先安裝 Java 開發套件(Java SE Development Kit, JDK)。
-各平台的JDK可以前往   「http://www.oracle.com/technetwork/java/javase/downloads/index.html」網站，選擇「Previous Releases」連結，找到Java標準版第6版(Java SE 6)連結，
-Mac OS X 作業系統則已內建 JDK，可以通過「應用程式/工具程式/Java偏好設定」來調整預設的Java版本。
-
 安裝好 JDK 後，我們可以前往 [http://www.eclipse.org/downloads/ Eclipse] 網站下載 Eclipse 這個方便的整合開發環境。
 下載 Eclipse 時請選「Eclipse for Mobile Developers」版本。
 
