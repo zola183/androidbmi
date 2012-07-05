@@ -4,21 +4,19 @@
 
 = 開啟專案 =
 
-我們回到 Eclipse 環境來。在螢幕上方的選單列上，選擇「File->New->Project」，會彈出「New Project」對話視窗。
-Eclipse 是通用的編輯環境，可根據你所安裝的不同擴充套件而支援許多種類的專案。
-點擊 「Android」 資料夾下的「Android Project」，會開啟「New Android Project」對話視窗。
+我們回到 Eclipse 環境來。在螢幕上方的選單列上，選擇「File > New > Project...」，會彈出精靈選擇視窗（Select a Wizard），在精靈選擇視窗中可以選擇要開啟新專案還是開啟現有專案。
 
-我們將開啟「SDK 組件」中提供的 ApiDemos 範例。在「New Android Project」對話視窗中，點選 "Browse..."按鈕以選擇「開啟已經存在的專案」(Create project from existing source)。我們在此選擇位於「android_sdk/platforms/android-2.x/samples」目錄中的 Android 應用程式專案 (android_sdk/platforms/android-2.x/samples/ApiDemos)。
+在精靈選擇視窗（Select a Wizard）中，從中選擇「Android Project from Existing Code」（透過現成程式碼建立Android專案），會彈出「 Import Projects」視窗。
 
-當我們選擇了現存的範例程式專案時，「New Android Project」對話視窗中的諸如專案名稱（Project Name）與屬性等內容都將被自動填寫好。這時我們可以按下 「Finish」按鈕，完成從現存專案新增專案到 Eclipse 環境的動作。
+在「Import Projects」對話視窗中，點選「Browse...」按鈕以選擇要開啟的專案。我們在此選擇位於「android_sdk/samples/android-x/」目錄中的 「ApiDemos」應用程式專案 (android_sdk/samples/android-x/ ApiDemos)。 「x」代表目標版本號。
 
-= 匯入專案 =
+當我們選擇了現存的範例程式專案時，對話視窗中會自動找到對應的專案內容。這時我們就可以按下 「Finish」按鈕，完成從現存專案新增專案進「Eclipse」開發環境的動作。
 
-如果你的程式專案已位於工作環境(WorkSpace)資料夾下，想使用上述方法開啟專案時，會得到欲開啟的資料夾已在工作目錄下的警告。因此我們得用另一個方法：匯入專案。
+= 刪除專案 =
 
-在螢幕上方的選單列上，選擇「File->Import」選項，會跳出「Import」視窗。選擇「General->Existing Projects into WorkSpace」項目，然後按下「Next」按鈕帶到新一個畫面。在「Select Root Directory」欄位旁，按下右方的「Browse...」按鈕，選擇對應的專案。選擇好後，按下「Finish」按鈕完成從現存在工作環境(WorkSpace)資料夾下的專案匯入到 Eclipse 環境的動作。
+開啟專案後，「 ApiDemos 」專案會產生一個資料夾圖示，並示在Eclipse環境左側的「Package Explorer」視窗中。
 
-不同 SDK 版本的範例專案會放在「android_sdk/platforms/android-版本/samples」目錄中，請自行根據要開發的版本來選擇範例。
+要移除專案，只要點選「tests」和「com.example.android.apis.ApiDemos 」專案資料夾圖示上，按右鍵選擇「Delete」選項，在彈出視窗中選擇「OK」即可移除專案。
 
 = 修復專案 =
 
@@ -42,7 +40,7 @@ Android 在 SDK 1.5 版之後引入了支援多個版本 SDK 與模擬器的新�
 
 == 參考資料 ==
 
- * 如何開啟 Hello World 程式 http://developer.android.com/guide/tutorials/hello-world.html 
+ * 如何開啟 Hello World 程式 http://developer.android.com/training/basics/firstapp/index.html
  
 < [ManageSDK 管理 SDK] | [DiveIntoAndroid 回目錄] | [PlayEmulator 操作虛擬機器] >
 
