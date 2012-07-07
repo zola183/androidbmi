@@ -1,4 +1,4 @@
-summary: android命令行工具
+#summary android命令行工具
 
 SDK 中也提供了一個「android」命令行工具（在 android-sdk/tools 中），可以用來建立新專案或是管理虛擬機器。在此我們使用「android」命令行工具來新建立一個虛擬機器。
 
