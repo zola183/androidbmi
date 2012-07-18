@@ -34,7 +34,7 @@ Android 應用程式的生命週期是由 Android 框架進行管理，而不是
 
 == Activity 的狀態 ==
 
-Android 的虛擬機(VM)是使用堆疊 (Stack based) 管理。主要有四種狀態：
+Android 的虛擬機(VM)執行Activity時主要有四種狀態：
 
   * Active (活動)
   * Paused (暫停)
