@@ -11,15 +11,15 @@ Android 提供免費而且跨平台的整合開發環境，只要電腦能連接
 
 支援的作業系統如下：
 
-    * Windows XP 或 Vista
+    * Windows XP 或之後版本
     * Mac OS X 10.5.8 或之後版本
     * Linux (官方是在 Ubuntu 上測試) 
 
 我們需要安裝一些 Android 開發環境所需的程式工具，這些工具都是可以免費上網取得的：
 
-    * **JDK 6**
+    * **JDK 6以上**
       * 只安裝 Java 運行環境(JRE) 是不夠的，你需要安裝的是Java開發環境 (JDK)。
-      * 各平台的 JDK 可以前往   http://www.oracle.com/technetwork/java/index.html 網站，選擇「Previous Releases」連結，找到Java標準版第6版(Java SE 6)連結後下載對應平台的Java SE 6版本。
+      * 各平台的 JDK 可以前往   http://www.oracle.com/technetwork/java/index.html 網站，選擇「Previous Releases」連結，找到Java標準版(Java SE)連結後下載對應平台的Java SE版本。
 Mac OS X 作業系統則已內建 JDK，可以通過「應用程式/工具程式/Java偏好設定」來調整預設的Java版本。
 
       * 可以在命令行上輸入 「java -version」 來查看目前系統上已安裝的 java 版本(java 版本需為 1.6)。
