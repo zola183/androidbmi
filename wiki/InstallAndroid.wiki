@@ -37,7 +37,13 @@ Mac OS X 作業系統則已內建 JDK，可以通過「應用程式/工具程式
 = 安裝流程 =
 
 假設讀者已先安裝了 JDK 6。
-那麼 Android 的安裝流程可以分為以下五個步驟
+
+現在可前往 http://developer.android.com/sdk/index.html 下載包含 Eclipse，ADT擴充套件，Android SDK的開發套件包。解壓縮後點選「Eclipse」圖示，即可開始使用。若開啟成功即可繼續閱讀下一章。
+
+
+= 手動安裝步驟 =
+
+舊版的 Android 手動安裝流程可以分為以下五個步驟
  # 下載 Eclipse
  # 安裝 Eclipse
  # 安裝 ADT 擴充套件
